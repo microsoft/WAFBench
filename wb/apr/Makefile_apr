@@ -1,0 +1,7 @@
+all:libapr-1.la
+
+libapr-1.la:
+	PWD=`pwd`
+	./configure --prefix=$(PWD)/apr/apr-build
+	make
+	make install
