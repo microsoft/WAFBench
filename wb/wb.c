@@ -301,7 +301,7 @@ struct data {
 #ifdef _WAF_BENCH_  // globals and definitions for WAF_BENCH
 
 #define WAF_BENCH_VERSION   "1.0.0" /* start from version 0.1.0, now it's 1.0.0           */
-#define WAF_BENCH_SUBVERSION "2018-07-15-01:36:03" /* subversion, using git commit time */
+#define WAF_BENCH_SUBVERSION "2018-07-16-08:48:20" /* subversion, using git commit time */
 #define INI_FILENAME        "wb.ini"/* ini file filename                                */
 #define DEFAULT_TEST_TIME   5       /* default test time in seconds                     */
 #define MB                  1000000/* Million Bytes                                    */
@@ -3250,25 +3250,22 @@ static void usage(const char *progname)
     fprintf(stderr,"\033[1;33m"); // Yellow
     fprintf(stderr, "New options for wb:\n");
     fprintf(stderr,"\033[0m"); // no color
-    fprintf(stderr, "    -a/F pkt_file   File of packet seperated by \\0 or a leading size,-a or -F\n");
-    fprintf(stderr, "                    note: when this's specified, \"-n\" specifies # of pkt_file\n");
-    fprintf(stderr, "    -Q max_count    # of packets in packet file (default=0:all pkts in file)\n");
-    fprintf(stderr, "    -o msg_file     Save received http messages to filename\n");
-    fprintf(stderr, "    -R RPS          Rate limiting to RPS(Requests per sec,kKmMgG can be used)\n");
-    fprintf(stderr, "    -K              Keep body during save (default: save header only)\n");
+    fprintf(stderr, "    -F pkt_file     File of packet seperated by \\0 or a leading size\n");
+    fprintf(stderr, "                    note: \"-n\" now is the total times to be sent for pkt_file\n");
     fprintf(stderr, "    -G max_size     Maximum output file size (in MB, default=0:unlimited)\n");
-    fprintf(stderr, "    -U/Y URL_prefix Add prefix(\"/prefix<seq#>/\" to each request URL\n");
-    fprintf(stderr, "    -J sub_string   Replace the sub_string with the internal number of wb\n");
-    fprintf(stderr, "    -j interval     Progress report every interval sec (default=1, 0:disable)\n");
+    fprintf(stderr, "    -j interval     Progress report interval (set 0 to disable, default=1)\n");
+    fprintf(stderr, "    -J sub_string   Replace the sub_string in pkt content with <seq#> of wb\n");
+    fprintf(stderr, "    -K              Keep body during save (default: save header only)\n");
+    fprintf(stderr, "    -o msg_file     Save received http messages to filename\n");
+    fprintf(stderr, "    -Q max_count    # of packets in packet file (default=0:all pkts in file)\n");
+    fprintf(stderr, "    -U URL_prefix   Add prefix \"/URL_prefix<seq#>/\" to each request URL\n");
     fprintf(stderr, "    -W stats_num    Window of stats, number of stats values (default=50000)\n");
-    fprintf(stderr, "    -O opt_file     Save the options of wb to opt_file, default:wb.ini\n");
-    fprintf(stderr, "    -E opt_file     Executing options stored in opt_file, default:wb.ini\n");
-    fprintf(stderr, "    -0              (digit 0) Read the options in ini file, default disabled\n");
-    fprintf(stderr, "    -1              Don't append Host:localhost if absent(default to add)\n");
-    fprintf(stderr, "    -2              Don't append Connection:close if absent(default to add)\n");
-    fprintf(stderr, "    -3              Use micro-second granularity in output,default enabled\n");
-    fprintf(stderr, "    -4              always set keep alive option for real traffic testing\n");
-    fprintf(stderr, "    -5              Extended progress(Conn/Recv/Len/Exception/Write/Non-2xx)\n");
+    fprintf(stderr, "    -1              (for testing) Don't append Host:localhost if absent (\n");
+    fprintf(stderr, "                    default to add)\n");
+    fprintf(stderr, "    -2              (for testing) Don't append Connection:close if absent (\n");
+    fprintf(stderr, "                    default to add)\n");
+    fprintf(stderr, "    -3              (for testing) Use micro-second granularity in output,\n");
+    fprintf(stderr, "                    default disabled\n");
 /*
     fprintf(stderr, "    -D min_time     Lower bound of stats histogram(us) (default: 0 us)\n");
     fprintf(stderr, "    -U max_time     Upper bound of stats histogram(us) (default: 10000 us)\n");
@@ -4015,3 +4012,4 @@ PARSE_ARGS:
 
     return 0;
 }
+
