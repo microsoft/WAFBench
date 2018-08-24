@@ -297,7 +297,6 @@ struct data {
 
 /* --------------------- GLOBALS ---------------------------- */
 
-// Added by Yongqiang Xiong, Dec 5, 2017
 #ifdef _WAF_BENCH_  // globals and definitions for WAF_BENCH
 
 #define WAF_BENCH_VERSION   "1.0.0" /* start from version 0.1.0, now it's 1.0.0           */
@@ -2853,7 +2852,7 @@ static void test(void)
         }
     }
 #endif
-// Added by Yongqiang Xiong, Dec 5, 2017
+
 #ifdef _WAF_BENCH_ //  connection:close option, "-2"
     // if no Connection specified in arguments and g_add_connection_close is not disabled (-2)
     // Add "Connection:Close" in header
@@ -3705,7 +3704,7 @@ PARSE_ARGS:
                     opt_host = host;
                 } else if (strncasecmp(opt_arg, "Accept:", 7) == 0) {
                     opt_accept = 1;
-// Added by Yongqiang Xiong, Dec 5, 2017
+                    
 #ifdef _WAF_BENCH_ // Connection:close header
                 } else if (strncasecmp(opt_arg, "Connection:", 11) == 0) {
                     opt_connection = 1;
