@@ -299,7 +299,7 @@ struct data {
 
 #ifdef _WAF_BENCH_  // globals and definitions for WAF_BENCH
 
-#define WAF_BENCH_VERSION   "1.0.1" /* start from version 0.1.0, now it's 1.0.1           */
+#define WAF_BENCH_VERSION   "1.0.2" /* start from version 0.1.0, now it's 1.0.0           */
 #define WAF_BENCH_SUBVERSION "2018-08-01-11:46:05" /* subversion, using git commit time */
 #define INI_FILENAME        "wb.ini"/* ini file filename                                */
 #define DEFAULT_TEST_TIME   5       /* default test time in seconds                     */
@@ -1575,12 +1575,15 @@ static void write_request(struct connection * c)
                 int new_estimated_len;
                 g_new_header_len = strlen(g_new_header);
                 // assume each sub_string appears no than 10 times with less than 10-digits seq
-                new_estimated_len = g_new_header_len + (g_request_end - request_pos) + g_sub_string_num * 10 * 10 + 1;
+                new_estimated_len = g_new_header_len + (g_request_end - request_pos) + reqlen + g_sub_string_num * 10 * 10 + 1;
                 if (new_estimated_len > g_header_len_MAX) {
                     g_header_len_MAX = new_estimated_len; 
                     char *new_header;
                     new_header = xmalloc(g_header_len_MAX);
-                    if (g_new_header) free(g_new_header);
+                    if (g_new_header) {
+                        memcpy(new_header, g_new_header, g_new_header_len);
+                        free(g_new_header);
+                    }
                     g_new_header = new_header;
                 }
                 // copy the remaining header bytes  
@@ -1595,14 +1598,15 @@ static void write_request(struct connection * c)
 
 
                 // mark its end so that we can use strstr
-                g_new_header[g_new_header_len] = 0; 
-                
+                g_new_header[g_new_header_len] = 0;
+                char * new_request_end = g_new_header + g_new_header_len;
+
                 // enumerate to process all sub_strings
                 int i;
                 for (i = 0; i < g_sub_string_num; i ++) {
                     char *sub;
                     while (sub = strstr(g_new_header, g_sub_string[i])) { 
-                        if (sub - g_request_end > 0)
+                        if (sub - new_request_end > 0)
                             break;
 
                         char *copy_pos;
@@ -1631,7 +1635,7 @@ static void write_request(struct connection * c)
 	            connection_hdr = strcasestr(g_new_header,"\nConnection:");
 
 	            // add connection:close header to the request
-	            if (g_add_connection_close && (connection_hdr == NULL || connection_hdr >= g_request_end)) {
+	            if (g_add_connection_close && (connection_hdr == NULL || connection_hdr >= new_request_end)) {
 	                char conn_str[]="\r\nConnection: Close";
 	                int conn_str_len = sizeof(conn_str) - 1;
 	                char *dst = g_new_header+g_new_header_len+conn_str_len;
