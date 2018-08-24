@@ -1174,7 +1174,7 @@ static ulong parse_pktfile(char *pkt_data, struct _g_pkt_array_ *pkt_array)
             // remove '\0' by +1
             parsed_bytes += pkt->pkt_length + 1;
             if (pkt->pkt_length < 4){
-                if (!pkt_array && pkt->pkt_data[0] != '0' && pkt->pkt_data[0] != '\r' && pkt->pkt_data[0] != 'n' ) 
+                if (!pkt_array && pkt->pkt_data[0] != '\0' && pkt->pkt_data[0] != '\r' && pkt->pkt_data[0] != '\n' ) 
                     fprintf(stderr, "Warning: this packet (%s) does not have a valid packet size(%d), ignore it!\n", 
                             pkt->pkt_data,pkt->pkt_length);
             }
