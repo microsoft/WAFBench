@@ -297,11 +297,10 @@ struct data {
 
 /* --------------------- GLOBALS ---------------------------- */
 
-// Added by Yongqiang Xiong, Dec 5, 2017
 #ifdef _WAF_BENCH_  // globals and definitions for WAF_BENCH
 
-#define WAF_BENCH_VERSION   "1.0.0" /* start from version 0.1.0, now it's 1.0.0           */
-#define WAF_BENCH_SUBVERSION "2018-07-16-08:48:20" /* subversion, using git commit time */
+#define WAF_BENCH_VERSION   "1.1.0" /* start from version 0.1.0, now it's 1.1.0           */
+#define WAF_BENCH_SUBVERSION "2018-08-01-11:46:05" /* subversion, using git commit time */
 #define INI_FILENAME        "wb.ini"/* ini file filename                                */
 #define DEFAULT_TEST_TIME   5       /* default test time in seconds                     */
 #define MB                  1000000/* Million Bytes                                    */
@@ -875,7 +874,7 @@ static void ssl_proceed_handshake(struct connection *c)
 int get_write_pkt_id(int connection_socket_id)
 {
     int return_id;
-    static cur_id = 0;
+    static int cur_id = 0;
 
     return_id = cur_id;
 
@@ -944,8 +943,8 @@ void print_progress(int forced_print )
 		delta_t = time_now - prev_heartbeat_time;
         if (forced_print || prev_heartbeat_time) {
 			if (!g_extended_progress) // print out simple info
-            fprintf(stderr, "%2d: Completed %6d requests, rate is %d #/sec.\n", 
-                ++heartbeats_num, done, APR_USEC_PER_SEC * (done - prev_done)/delta_t);
+            fprintf(stderr, "%2d: Completed %6d requests, rate is %lld #/sec.\n", 
+                ++heartbeats_num, done, (long long int)(APR_USEC_PER_SEC * (done - prev_done)/delta_t));
 			else { 	// print out additional info
 		        apr_time_t totalcon = 0, total = 0, totald = 0, totalwait = 0;
 		        apr_time_t meancon, meantot, meand, meanwait;
@@ -1030,16 +1029,16 @@ void print_progress(int forced_print )
 				sample_start = (sample_start + req_num)%g_stats_window;
 				
 				//fprintf(stderr, "\nTime Req(#/sec) Recv(kBps) Failed(C/R/L/E/W/Non-2xx)");
-				fprintf(stderr, "%-5d%-11d%-11d", 
+				fprintf(stderr, "%-5d%-11lld%-11lld", 
 						++heartbeats_num,  
-						APR_USEC_PER_SEC * (done - prev_done)/delta_t,
-						APR_USEC_PER_SEC * (totalread - prev_totalread)/delta_t/1000);
+						(long long int)(APR_USEC_PER_SEC * (done - prev_done)/delta_t),
+						(long long int)(APR_USEC_PER_SEC * (totalread - prev_totalread)/delta_t/1000));
 				if (send_body)
 					//fprintf(stderr, "Sent(kBps) ");
-					fprintf(stderr, "%-11d", APR_USEC_PER_SEC*(totalposted - prev_totalposted)/delta_t/1000);
+					fprintf(stderr, "%-11lld", (long long int)(APR_USEC_PER_SEC*(totalposted - prev_totalposted)/delta_t/1000));
 
 				//fprintf(stderr, "Latency(min/max/avg/+-sd) Failed(C/R/L/E/W/Non-2xx)");
-				fprintf(stderr, "%-6d/%-8d/%-6d/%-8.1f/",mintot,maxtot,meantot,sdtot);
+				fprintf(stderr, "%-6lld/%-8lld/%-6lld/%-8.1f/",(long long int)mintot,(long long int)maxtot,(long long int)meantot,sdtot);
 				fprintf(stderr, "%d", bad - prev_bad);
 				if (bad) {
 					fprintf(stderr, "(%d/%d/%d/%d/%d/%d)",
@@ -1076,6 +1075,24 @@ void print_progress(int forced_print )
 
 /* parse the packet strings */
 static ulong parse_pktfile(char *pkt_data, struct _g_pkt_array_ *pkt_array);
+
+/* compare to packet by time to send*/
+int compare_pkt_by_time_to_send(const void * pkt1,const void * pkt2) {
+    const struct _g_pkt_array_ * ppkt1 = (const struct _g_pkt_array_ *)pkt1;
+    const struct _g_pkt_array_ * ppkt2 = (const struct _g_pkt_array_ *)pkt2;
+
+    if (ppkt1->pkt_time_to_send < ppkt2->pkt_time_to_send) {
+        return -1;
+    } else if (ppkt1->pkt_time_to_send > ppkt2->pkt_time_to_send) {
+        return 1;
+    } else if (ppkt1->pkt_data < ppkt2->pkt_data) {
+        return -1;
+    } else if (ppkt1->pkt_data > ppkt2->pkt_data) {
+        return 1;
+    } else {
+        return 0;
+    }
+}
 
 /* read packets from file, save contents and length to global variables */
 static apr_status_t open_pktfile(const char *pfile)
@@ -1133,6 +1150,10 @@ static apr_status_t open_pktfile(const char *pfile)
     // allocate packet array memory and parse the packets again to save them
     g_pkt_array = xcalloc(g_MAX_PKT_COUNT, sizeof(struct _g_pkt_array_));
     g_pkt_count = parse_pktfile(g_pkt_data, g_pkt_array);
+    //sort pkt by time
+    if (g_pkt_count > 1) {
+        qsort(g_pkt_array, g_pkt_count, sizeof(struct _g_pkt_array_), compare_pkt_by_time_to_send);
+    }
     if (g_pkt_count > 1)
         nolength = 1; // no constant packet length if g_pkt_count >= 2
 
@@ -1175,7 +1196,7 @@ static ulong parse_pktfile(char *pkt_data, struct _g_pkt_array_ *pkt_array)
             // remove '\0' by +1
             parsed_bytes += pkt->pkt_length + 1;
             if (pkt->pkt_length < 4){
-                if (!pkt_array && pkt->pkt_data[0] != '0' && pkt->pkt_data[0] != '\r' && pkt->pkt_data[0] != 'n' ) 
+                if (!pkt_array && pkt->pkt_data[0] != '\0' && pkt->pkt_data[0] != '\r' && pkt->pkt_data[0] != '\n' ) 
                     fprintf(stderr, "Warning: this packet (%s) does not have a valid packet size(%d), ignore it!\n", 
                             pkt->pkt_data,pkt->pkt_length);
             }
@@ -1236,7 +1257,7 @@ static ulong parse_pktfile(char *pkt_data, struct _g_pkt_array_ *pkt_array)
 			c = *p2; 
 			*p2 = 0;
 			// use string scanf to fetch numbers
-			sscanf(p,"%d %d.%d",&l_pkt_size, &time_sec, &time_usec);
+			sscanf(p,"%lu %lu.%lu",&l_pkt_size, &time_sec, &time_usec);
 			*p2 = c;
 
 			if (l_pkt_size > 0) {
@@ -1412,6 +1433,10 @@ void save_logfile (char * buf, apr_size_t buflen)
     apr_size_t saved_len = 0;
     apr_size_t next_save_length;
 
+    if (!g_save_file_fd) {
+        return;
+    }
+
     // if exceeding max file size, rewind it to the beginning
     g_saved_bytes += need_save_length;
     if (g_MAX_FILE_SIZE > 0 && g_saved_bytes >= g_MAX_FILE_SIZE) {
@@ -1430,9 +1455,9 @@ void save_logfile (char * buf, apr_size_t buflen)
         buflen = 0;
     
     if (need_add_LN) {
-        sprintf(size_str,"\n%d\n",buflen);
+        sprintf(size_str,"\n%zu\n",buflen);
     } else 
-        sprintf(size_str,"%d\n",buflen);
+        sprintf(size_str,"%zu\n",buflen);
     
     next_save_length = strlen(size_str);
     rv = apr_file_write(g_save_file_fd, size_str, &next_save_length);
@@ -1513,7 +1538,7 @@ static void write_request(struct connection * c)
 
                 char req_id_string[1024]; // normally len of id string < 1024
                 int req_id_string_len = 0;
-                sprintf(req_id_string, "%d",req_sent++);
+                sprintf(req_id_string, "%lu",req_sent++);
                 req_id_string_len = strlen(req_id_string);
 
                 g_new_header_len = 0;
@@ -1572,12 +1597,15 @@ static void write_request(struct connection * c)
                 int new_estimated_len;
                 g_new_header_len = strlen(g_new_header);
                 // assume each sub_string appears no than 10 times with less than 10-digits seq
-                new_estimated_len = g_new_header_len + (g_request_end - request_pos) + g_sub_string_num * 10 * 10 + 1;
+                new_estimated_len = g_new_header_len + (g_request_end - request_pos) + reqlen + g_sub_string_num * 10 * 10 + 1;
                 if (new_estimated_len > g_header_len_MAX) {
                     g_header_len_MAX = new_estimated_len; 
                     char *new_header;
                     new_header = xmalloc(g_header_len_MAX);
-                    if (g_new_header) free(g_new_header);
+                    if (g_new_header) {
+                        memcpy(new_header, g_new_header, g_new_header_len);
+                        free(g_new_header);
+                    }
                     g_new_header = new_header;
                 }
                 // copy the remaining header bytes  
@@ -1592,14 +1620,15 @@ static void write_request(struct connection * c)
 
 
                 // mark its end so that we can use strstr
-                g_new_header[g_new_header_len] = 0; 
-                
+                g_new_header[g_new_header_len] = 0;
+                char * new_request_end = g_new_header + g_new_header_len;
+
                 // enumerate to process all sub_strings
                 int i;
                 for (i = 0; i < g_sub_string_num; i ++) {
                     char *sub;
                     while (sub = strstr(g_new_header, g_sub_string[i])) { 
-                        if (sub - g_request_end > 0)
+                        if (sub - new_request_end > 0)
                             break;
 
                         char *copy_pos;
@@ -1628,7 +1657,7 @@ static void write_request(struct connection * c)
 	            connection_hdr = strcasestr(g_new_header,"\nConnection:");
 
 	            // add connection:close header to the request
-	            if (g_add_connection_close && (connection_hdr == NULL || connection_hdr >= g_request_end)) {
+	            if (g_add_connection_close && (connection_hdr == NULL || connection_hdr >= new_request_end)) {
 	                char conn_str[]="\r\nConnection: Close";
 	                int conn_str_len = sizeof(conn_str) - 1;
 	                char *dst = g_new_header+g_new_header_len+conn_str_len;
@@ -1688,7 +1717,7 @@ static void write_request(struct connection * c)
         } else  // send postdata, reqlen is already sent
             sendbuf = postdata + c->rwrote - reqlen;
         if (verbosity >= 2)
-            printf("writing request(%d bytes)=>[%s]\n",l, sendbuf);
+            printf("writing request(%zu bytes)=>[%s]\n",l, sendbuf);
 #endif // _WAF_BENCH_ // avoid copying post data to request
 
 #ifdef USE_SSL
@@ -2289,7 +2318,7 @@ static void start_connect(struct connection * c)
         return;
 
 #ifdef _WAF_BENCH_ // make sure not exceeding RPS limit
-	static connection_rps_banned = 0;
+	static int connection_rps_banned = 0;
     if  (g_RPS_NUMBER > 0 && done > (g_RPS_NUMBER * (apr_time_now() - start) / APR_USEC_PER_SEC )) {
 		connection_rps_banned ++;
 
@@ -2585,7 +2614,7 @@ read_more:
         if (!c->gotheader || g_save_body)
             save_logfile(buffer, r);
         if (verbosity >= 2) {
-            printf("LOG: http packet received(%d bytes):\n%s\n", r,buffer);
+            printf("LOG: http packet received(%zu bytes):\n%s\n", r,buffer);
         }
     }
 #endif //_WAF_BENCH_ , // save packets to file
@@ -2853,7 +2882,7 @@ static void test(void)
         }
     }
 #endif
-// Added by Yongqiang Xiong, Dec 5, 2017
+
 #ifdef _WAF_BENCH_ //  connection:close option, "-2"
     // if no Connection specified in arguments and g_add_connection_close is not disabled (-2)
     // Add "Connection:Close" in header
@@ -2923,7 +2952,7 @@ static void test(void)
 // previous system allocates one single buffer holding header and body
 // wb uses seperate buffers to hold them, and send them seperately
     if (g_pkt_length > 0)
-        fprintf(stderr, "\n read %d packets from file with total length(%d).\n", 
+        fprintf(stderr, "\n read %zu packets from file with total length(%zu).\n", 
             g_MAX_PKT_COUNT, g_pkt_length);
 #else // original code goes here
     if (send_body) {
@@ -3705,7 +3734,7 @@ PARSE_ARGS:
                     opt_host = host;
                 } else if (strncasecmp(opt_arg, "Accept:", 7) == 0) {
                     opt_accept = 1;
-// Added by Yongqiang Xiong, Dec 5, 2017
+                    
 #ifdef _WAF_BENCH_ // Connection:close header
                 } else if (strncasecmp(opt_arg, "Connection:", 11) == 0) {
                     opt_connection = 1;

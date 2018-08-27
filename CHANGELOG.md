@@ -6,6 +6,20 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) a
 
 ## [Unreleased]
 
+## [1.1.0] - 2018-08-01
+### Added
+- [wb.c](./wb/wb.c) Add a feature of sending requests ordered by timestamp
+
+### Removed
+- [wb.c](./wb/wb.c) Remove useless comments
+
+### Fixed
+- [wb.c](./wb/wb.c) Fix compiling warning
+- [wb.c](./wb/wb.c) Fix typo
+- [wb.c](./wb/wb.c) Fix crash bug of unspecified log
+- [wb.c](./wb/wb.c) Fix carsh bug of sending huge packets
+
+
 ## [1.0.0] - 2018-07-16
 ### Added
 - [README.md](./README.md) describes WAF Bench tool suits probject.
