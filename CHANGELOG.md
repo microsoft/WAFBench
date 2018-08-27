@@ -6,6 +6,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) a
 
 ## [Unreleased]
 
+## [1.2.1] - 2018-08-01
+### Added
+- [wb.c](./wb/wb.c) Add a feature to forcefully assert the "Connection: close" for each request packets.
+
+### Changed
+- [wb.c](./wb/wb.c) Polish the output
+
+
 ## [1.1.0] - 2018-08-01
 ### Added
 - [wb.c](./wb/wb.c) Add a feature of sending requests ordered by timestamp

@@ -299,8 +299,8 @@ struct data {
 
 #ifdef _WAF_BENCH_  // globals and definitions for WAF_BENCH
 
-#define WAF_BENCH_VERSION   "1.1.0" /* start from version 0.1.0, now it's 1.1.0           */
-#define WAF_BENCH_SUBVERSION "2018-08-01-11:46:05" /* subversion, using git commit time */
+#define WAF_BENCH_VERSION   "1.2.1" /* start from version 0.1.0, now it's 1.2.1           */
+#define WAF_BENCH_SUBVERSION "2018-08-14-11:46:05" /* subversion, using git commit time */
 #define INI_FILENAME        "wb.ini"/* ini file filename                                */
 #define DEFAULT_TEST_TIME   5       /* default test time in seconds                     */
 #define MB                  1000000/* Million Bytes                                    */
@@ -1523,7 +1523,7 @@ static void write_request(struct connection * c)
             int hdr_delim = 0;
             int header_len = 0;
             
-            if (g_opt_prefix || g_sub_string_num) {  // need to add prefix
+            if (g_add_connection_close || g_opt_prefix || g_sub_string_num) {  // packet need to be modify
                 static ulong req_sent = 0;
 
                 // keep original request length when adding seq#
@@ -1654,7 +1654,33 @@ static void write_request(struct connection * c)
                 reqlen = g_new_header_len;
 
 	            char *connection_hdr;
-	            connection_hdr = strcasestr(g_new_header,"\nConnection:");
+	            connection_hdr = strcasestr(g_new_header,"\r\nConnection:");
+                if (connection_hdr == NULL) {
+                    connection_hdr = strcasestr(g_new_header,"\n\nConnection:");
+                }
+                
+                //if always connection:close, remove old connection:type
+                if (g_add_connection_close == 2 && connection_hdr != NULL ) {
+                    char * connection_hdr_end = strstr(connection_hdr + sizeof("\r\nConnection:") - 1, "\r\n");
+                    if (connection_hdr_end == NULL) {
+                        connection_hdr_end = strstr(connection_hdr + sizeof("\n\nConnection:") - 1, "\n\n");
+                    }
+                    
+                    if (connection_hdr_end == NULL || connection_hdr_end > new_request_end) {
+                        break;
+                    }
+
+                    int moved_bytes = g_new_header_len - (connection_hdr - g_new_header);
+                    int j;
+
+                    g_new_header_len = g_new_header_len - (connection_hdr_end - connection_hdr);
+                    header_len = header_len - (connection_hdr_end - connection_hdr);
+
+                    for (j = 0; j < moved_bytes; j++) {
+                        *connection_hdr++ = *connection_hdr_end ++;
+                    }
+                    connection_hdr = NULL;
+                }
 
 	            // add connection:close header to the request
 	            if (g_add_connection_close && (connection_hdr == NULL || connection_hdr >= new_request_end)) {
@@ -3276,9 +3302,9 @@ static void usage(const char *progname)
 #endif
 
 #ifdef _WAF_BENCH_ // print waf-bench new usage
-    fprintf(stderr,"\033[1;33m"); // Yellow
+    fprintf(stderr,"\033[1;33m\n"); // Yellow
     fprintf(stderr, "New options for wb:\n");
-    fprintf(stderr,"\033[0m"); // no color
+    fprintf(stderr,"\033[0m\n"); // no color
     fprintf(stderr, "    -F pkt_file     File of packet seperated by \\0 or a leading size\n");
     fprintf(stderr, "                    note: \"-n\" now is the total times to be sent for pkt_file\n");
     fprintf(stderr, "    -G max_size     Maximum output file size (in MB, default=0:unlimited)\n");
@@ -3291,8 +3317,9 @@ static void usage(const char *progname)
     fprintf(stderr, "    -W stats_num    Window of stats, number of stats values (default=50000)\n");
     fprintf(stderr, "    -1              (for testing) Don't append Host:localhost if absent (\n");
     fprintf(stderr, "                    default to add)\n");
-    fprintf(stderr, "    -2              (for testing) Don't append Connection:close if absent (\n");
-    fprintf(stderr, "                    default to add)\n");
+    fprintf(stderr, "    -2 option       (for testing)  Don't append Connection:close if option is 0, \n");
+    fprintf(stderr, "                    Append connection:close to those packets without connection attribution if option is 1,\n");
+    fprintf(stderr, "                    Append or replace connection attribution to close for any packets if option is 2\n");
     fprintf(stderr, "    -3              (for testing) Use micro-second granularity in output,\n");
     fprintf(stderr, "                    default disabled\n");
 /*
@@ -3454,6 +3481,7 @@ int main(int argc, const char * const argv[])
     proxyhost = "";
     hdrs = "";
 
+    setbuf(stdout, NULL);
     apr_app_initialize(&argc, &argv, NULL);
     atexit(apr_terminate);
     apr_pool_create(&cntxt, NULL);
@@ -3498,7 +3526,7 @@ PARSE_ARGS:
             "Z:f:"
 #endif
 #ifdef _WAF_BENCH_ // adding more options 0-9,aFINRDUYWEGKQ 
-            "Y:a:o:F:j:J:O:R:D:U:Y:W:E:G:Q:K0123456789"
+            "Y:a:o:F:j:J:O:R:D:U:Y:W:E:G:Q:K012:3456789"
 #endif // _WAF_BENCH_, adding more options 0-9,aFINRDUYWEGKQ 
             ,&c, &opt_arg)) == APR_SUCCESS) {
         switch (c) {
@@ -3509,8 +3537,13 @@ PARSE_ARGS:
             case '1': // Don't append Host:localhost if it is set
                 g_add_localhost = 0;
                 break;
-            case '2': // Don't append Connection:close if
-                g_add_connection_close = 0;
+            case '2': // Don't append Connection:close if option is 0, 
+                      // Append connection:close to those packets without connection attribution if option is 1,
+                      // Append or replace connection attribution to close for any packets if option is 2
+                g_add_connection_close = atoi(opt_arg);
+                if (g_add_connection_close < 0 || g_add_connection_close > 2) {
+                    err("Error option to -2\n");
+                }
                 break;
             case '3': // microsec-granularity in output-results
                 // by default, it's not microsec-granularity
