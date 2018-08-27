@@ -1,10 +1,6 @@
-#APR=apr-1.5.2
-#APRUTIL=apr-util-1.5.4
-#SITE=http://apache.techartifact.com/mirror//apr
-
 APR=apr-1.6.3
 APRUTIL=apr-util-1.6.1
-SITE=http://ftp.meisei-u.ac.jp/mirror/apache/dist//apr
+SITE=https://archive.apache.org/dist/apr
 
 all:$(APR) $(APRUTIL) buildapr
 
