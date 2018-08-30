@@ -1,0 +1,37 @@
+---
+  meta: 
+    author: "ze"
+    enabled: true
+    name: "Example_Tests"
+    description: "This file contains example tests."
+  tests: 
+    - 
+      test_title: test1
+      stages: 
+        - 
+          stage: 
+            input:
+              dest_addr: "127.0.0.1"
+              port: 12701
+              uri: "/index.html"
+              headers:
+                  User-Agent: "WAFBench"              
+                  Host: "localhost"
+                  Connection: "close"
+            output: 
+              no_log_contains: ""   
+    - 
+      test_title: test2
+      stages: 
+        - 
+          stage: 
+            input:
+              dest_addr: "127.0.0.1"
+              port: 12701
+              uri: "/index.html"
+              headers:
+                  User-Agent: "WAFBench"              
+                  Host: "localhost"
+                  Connection: "close"
+            output: 
+              no_log_contains: ""   

@@ -1,0 +1,24 @@
+---
+  meta: 
+    author: "ze"
+    enabled: true
+    name: "Example_Tests"
+    description: "This file contains example tests."
+  tests: 
+    - 
+      test_title: "1kb packet"
+      stages: 
+        - 
+          stage: 
+            input:
+              dest_addr: "127.0.0.1"
+              port: 12701
+              uri: "/index.html"
+              headers:
+                  User-Agent: "WAFBench"              
+                  Host: "localhost"
+                  Connection: "close"
+                  Cookie: "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
+"
+            output: 
+              no_log_contains: ""   
