@@ -3,19 +3,19 @@
 # Copyright (c) Microsoft Corporation. All rights reserved.
 # Licensed under the MIT License.
 
-""" Export packets
+""" Dump packets
 
 This exports:
-    - PacketsExporter is a object to export packets into a file
+    - PacketsDumper is a class to dump packets into a file
 """
 
-__all__ = ["PacketsExporter"]
+__all__ = ["PacketsDumper"]
 
 import sys
 
 
-class PacketsExporter(object):
-    """ Export packets into a file
+class PacketsDumper(object):
+    """ Dump packets into a file
 
     Arguments:
         file_name: A path to save the packets(default = None).
@@ -30,7 +30,7 @@ class PacketsExporter(object):
         _is_empty: A flag means the file for saving packets is empty
     """
     def __init__(self, file_name=None):
-        """ Create a packets exporter
+        """ Create a packets dumper
         """
         if file_name:
             self.file_name = file_name
@@ -40,8 +40,8 @@ class PacketsExporter(object):
 
         self._is_empty = True
 
-    def export(self, packets):
-        """ export packets into the file
+    def dump(self, packets):
+        """ dump packets into the file
         """
         if not hasattr(packets, "__iter__"):
             packets = [packets]
