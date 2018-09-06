@@ -8,7 +8,7 @@
 This exports:
     - get_wb_path is a function to get the path of 'wb'
     - MIME_TYPE_DICT is a dict that save the MIME TYPE
-    - accept_iterable is a decorator to make the argument
+    - accept_iterable is a decorator to make the first argument
         of the func to be iterable.
     - expand_nest_generator is a decorator to
         recursively expand the return values of the func,
@@ -44,7 +44,8 @@ def get_wb_path():
         if os.path.exists(position) and os.path.isfile(position):
             print position
             return position
-    raise IOError("wb cannot be found")
+    raise IOError(
+        "No executable under such paths: '%s'" % (search_positions, ))
 
 
 mimetypes.init()  # To load all mime types from system
@@ -52,12 +53,21 @@ MIME_TYPE_DICT = mimetypes.types_map  # The dict of MIME TYPE
 
 
 def accept_iterable(func):
-    """ This is a decorator to make the argument of the func to be iterable """
+    """ This is a decorator to make the first argument
+        of the func to be iterable.
+
+    Because the func only supports an iterator as its first argument,
+    this decorator will guarantee that the first argument always is iterable
+    make the caller of func can pass a single variable as the first argument
+    to the func.
+    """
     @functools.wraps(func)
-    def _decorator(iterable_, *args, **kw):
-        if not hasattr(iterable_, "__iter__"):
-            iterable_ = [iterable_]
-        return func(iterable_, *args, **kw)
+    def _decorator(*args, **kw):
+        if hasattr(args[0], "__iter__"):
+            iterator = args[0]
+        else:
+            iterator = [args[0]]
+        return func(iterator, *args[1:], **kw)
     return _decorator
 
 
@@ -71,21 +81,21 @@ def expand_nest_generator(func):
     """
     @functools.wraps(func)
     def _decorator(*args, **kw):
-        iterable_ = func(*args, **kw)
-        if not isinstance(iterable_, types.GeneratorType):
-            yield iterable_
+        ret = func(*args, **kw)
+        if not isinstance(ret, types.GeneratorType):
+            yield ret
         else:
-            iterable_ = iterable_.__iter__()
-            visit_stack = [iterable_]
+            visitor = ret.__iter__()
+            visit_stack = [visitor]
             while visit_stack:
-                iterable_ = visit_stack[-1]
+                visitor = visit_stack[-1]
                 try:
-                    iterable_ = next(iterable_)
-                    if isinstance(iterable_, types.GeneratorType):
-                        iterable_ = iterable_.__iter__()
-                        visit_stack.append(iterable_)
+                    visitor = next(visitor)
+                    if isinstance(visitor, types.GeneratorType):
+                        visitor = visitor.__iter__()
+                        visit_stack.append(visitor)
                     else:
-                        yield iterable_
+                        yield visitor
                 except StopIteration:
                     visit_stack.pop()
     return _decorator
