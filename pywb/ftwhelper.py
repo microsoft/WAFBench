@@ -46,21 +46,42 @@ class FTW_TYPE(enum.IntEnum):
 
 
 class FtwDict(dict):
-    """ Store the data from ftw """
-    def __init__(self, *args, **kw):
-        super(FtwDict, self).__init__(*args, **kw)
-        self.FTW_TYPE = FTW_TYPE.INVALID
-        self.ORIGIN_FILE = None
-        self.ORIGIN_DATA = None
+    """ Store the data from ftw
+
+    Argument:
+        - ftw_type: a value of FTW_TYPE.
+        - original_file: a string of path to specified
+            where this dict come from
+        - original_data: an internal type of ftw.
+        - *args, **kw: arguments to initialize a dict.
+            It's the dict format of original data.
+    """
+    def __new__(cls, ftw_type, original_file, original_data, *args, **kw):
+        obj = dict.__new__(cls, *args, **kw)
+        return obj
+
+    def __init__(self, ftw_type, original_file, original_data, *args, **kw):
+        self.FTW_TYPE = ftw_type
+        self.ORIGINAL_FILE = original_file
+        self.ORIGINAL_DATA = original_data
 
 
 class FtwStr(str):
-    """ Store the data from ftw """
-    def __init__(self, content):
-        super(FtwStr, self).__init__(content)
-        self.FTW_TYPE = FTW_TYPE.INVALID
-        self.ORIGIN_FILE = None
-        self.ORIGIN_DATA = None
+    """ Store the data from ftw
+
+    Argument:
+        - ftw_type: a value of FTW_TYPE.
+        - original_file: a string of path to specified
+            where this dict come from
+        - original_data: an string.
+    """
+    def __new__(cls, ftw_type, original_file, original_data):
+        obj = str.__new__(cls, original_data)
+        return obj
+
+    def __init__(self, ftw_type, original_file, original_data):
+        self.FTW_TYPE = ftw_type
+        self.ORIGINAL_FILE = original_file
 
 
 @pywbutil.accept_iterable
@@ -68,9 +89,11 @@ class FtwStr(str):
 def _load_ftw_rules_from_strings(strings):
     for string_ in strings:
         ftw_rule = ftw.ruleset.Ruleset(yaml.load(string_))
-        rule = FtwDict(ftw_rule.yaml_file)
-        rule.ORIGIN_DATA = ftw_rule
-        rule.FTW_TYPE = FTW_TYPE.RULE
+        rule = FtwDict(
+            FTW_TYPE.RULE,
+            None,
+            ftw_rule,
+            ftw_rule.yaml_file)
         yield rule
 
 
@@ -82,10 +105,11 @@ def _load_ftw_rules_from_files(files):
             raise ValueError(file_ + "is not a .yaml file")
         rules = ftw.util.get_rulesets(file_, False)
         for ftw_rule in rules:
-            rule = FtwDict(ftw_rule.yaml_file)
-            rule.ORIGIN_DATA = ftw_rule
-            rule.ORIGIN_FILE = file_
-            rule.FTW_TYPE = FTW_TYPE.RULE
+            rule = FtwDict(
+                FTW_TYPE.RULE,
+                file_,
+                ftw_rule,
+                ftw_rule.yaml_file)
             yield rule
 
 
@@ -127,30 +151,32 @@ def _convert(source, target_type):
     elif source.FTW_TYPE == FTW_TYPE.STAGE \
             and target_type == FTW_TYPE.PACKETS:
         http_ua = ftw.http.HttpUA()
-        http_ua.request_object = source.ORIGIN_DATA.input
+        http_ua.request_object = source.ORIGINAL_DATA.input
         http_ua.build_request()
-        packet = FtwStr(http_ua.request)
-        packet.FTW_TYPE = FTW_TYPE.PACKETS
-        packet.ORIGIN_DATA = http_ua.request
-        packet.ORIGIN_FILE = source.ORIGIN_FILE
+        packet = FtwStr(
+            FTW_TYPE.PACKETS,
+            source.ORIGINAL_FILE,
+            http_ua.request)
         yield packet
     # ftw.test => ftw.stage
     elif source.FTW_TYPE == FTW_TYPE.TEST \
             and target_type == FTW_TYPE.STAGE:
-        for ftw_stage in source.ORIGIN_DATA.stages:
-            stage = FtwDict(ftw_stage.stage_dict)
-            stage.FTW_TYPE = FTW_TYPE.STAGE
-            stage.ORIGIN_DATA = ftw_stage
-            stage.ORIGIN_FILE = source.ORIGIN_FILE
+        for ftw_stage in source.ORIGINAL_DATA.stages:
+            stage = FtwDict(
+                FTW_TYPE.STAGE,
+                source.ORIGINAL_FILE,
+                ftw_stage,
+                ftw_stage.stage_dict)
             yield stage
     # ftw.rule => ftw.test
     elif source.FTW_TYPE == FTW_TYPE.RULE \
             and target_type == FTW_TYPE.TEST:
-        for ftw_test in source.ORIGIN_DATA.tests:
-            test = FtwDict(ftw_test.test_dict)
-            test.FTW_TYPE = FTW_TYPE.TEST
-            test.ORIGIN_DATA = ftw_test
-            test.ORIGIN_FILE = source.ORIGIN_FILE
+        for ftw_test in source.ORIGINAL_DATA.tests:
+            test = FtwDict(
+                FTW_TYPE.TEST,
+                source.ORIGINAL_FILE,
+                ftw_test,
+                ftw_test.test_dict)
             yield test
     # ftw.* => ftw.*
     else:
