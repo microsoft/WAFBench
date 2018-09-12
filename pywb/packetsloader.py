@@ -11,8 +11,6 @@ This exports:
         a packets generator from file.
     - load_packets_from_paths: is a function that load a set of paths
         that include .pkt or .yaml files to a packets generator.
-    - execute: is a function that export all of packets
-        into the exporter
 
 Load packets saved in files(.yaml, .pkt) or strings into a packets generator
 """
@@ -20,7 +18,6 @@ Load packets saved in files(.yaml, .pkt) or strings into a packets generator
 __all__ = [
     "LOADERS",
     "load_packets_from_paths",
-    "execute",
 ]
 
 import os
@@ -31,7 +28,6 @@ import functools
 import ftw
 import yaml
 
-import packetsdumper
 import pywbutil
 import ftwhelper
 
@@ -104,19 +100,3 @@ def load_packets_from_paths(paths):
         else:
             raise IOError("No such file or path: '%s'" % (path_, ))
 
-
-def execute(paths, dumper=None):
-    """ Export all of packets into the dumper
-
-    Arguments:
-        paths: a set of paths includes %s files
-            or directories contain those kind of files
-        exporter: a exporter for receiving packets
-    """
-    if not isinstance(dumper, packetsdumper.PacketsDumper):
-        with packetsdumper.PacketsDumper(dumper) as dumper:
-            for packet in load_packets_from_paths(paths):
-                dumper.dump(packet)
-    else:
-        for packet in load_packets_from_paths(paths):
-            dumper.dump(packet)

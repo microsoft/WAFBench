@@ -26,6 +26,7 @@ import collections
 import optionparser
 import outputfilter
 import packetsloader
+import packetsdumper
 import pywbutil
 
 
@@ -61,7 +62,9 @@ class _PacketFileEnhance(optionparser.OptionParser):
         """ See OptionParser.dump """
         if not self._read_packets_paths:
             return []
-        packetsloader.execute(self._read_packets_paths, self._packets_file)
+        with packetsdumper.PacketsDumper(self._packets_file) as dumper:
+            for packet in packetsloader.load_packets_from_paths(self._read_packets_paths):
+                dumper.dump(packet)
         return ["-F", self._packets_file]
 
     def help(self):
