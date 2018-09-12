@@ -33,12 +33,13 @@ def get_wb_path():
     """ Get the path of 'wb'
     """
     search_positions = [
-        "./wb",
-        "../wb/wb",
-        "/bin/wb",
-        "/usr/bin/wb",
+        ".",
+        "../wb/",
     ]
+    if "PATH" in os.environ:
+        search_positions += os.environ["PATH"].split(":")
     for position in search_positions:
+        position = os.path.join(position, "wb")
         if not os.path.isabs(position):
             position = os.path.join(os.path.dirname(__file__), position)
         if os.path.exists(position) and os.path.isfile(position):
