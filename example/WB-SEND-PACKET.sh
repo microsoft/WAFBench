@@ -5,5 +5,5 @@
 
 basepath=$(cd `dirname $0`; pwd)
 echo "Send custom traffics"
-echo "command: wb -F packets/test-2-packets.pkt -c 20 -t 5 10.0.1.44:12701"
-wb -F packets/test-2-packets.pkt -c 20 -t 5 10.0.1.44:12701
+echo "command: $basepath/../wb/wb -F $basepath/packets/test-2-packets.pkt -c 20 -t 5 10.0.1.44:12701"
+$basepath/../wb/wb -F $basepath/packets/test-2-packets.pkt -c 20 -t 5 10.0.1.44:12701
