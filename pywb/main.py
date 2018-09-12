@@ -66,7 +66,7 @@ class _PacketFileEnhance(optionparser.OptionParser):
 
     def help(self):
         """ See OptionParser.help """
-        help_string = "    -F pkt_files    support \"%s\" or direcotries that \
+        help_string = "    -F pkt_files    support \"%s\" or directories that \
 include these kind of files\n" % (",".join(packetsloader.LOADERS.keys()))
         return help_string
 

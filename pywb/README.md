@@ -90,7 +90,7 @@ class OutputFilter(object):
 
     Return is a string. If the return is None, this filter will be a
         terminator, which means that all of the filters after this will
-        lose the information of this lien.
+        lose the information of this line.
     """
     def __call__(self, line):
         return line
