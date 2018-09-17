@@ -15,7 +15,6 @@ This is a wrapper to provied the access to FTW(https://github.com/fastly/ftw).
 """
 
 import os
-import enum
 import yaml
 import types
 
@@ -31,7 +30,7 @@ __all__ = [
 ]
 
 
-class FTW_TYPE(enum.IntEnum):
+class FTW_TYPE:
     """ FTW_TYPE
         RULE is a FtwDict
         TEST is a FtwDict
