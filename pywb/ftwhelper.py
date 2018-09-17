@@ -60,6 +60,7 @@ class FtwDict(dict):
         return obj
 
     def __init__(self, ftw_type, original_file, original_data, *args, **kw):
+        self.update(*args, **kw)
         self.FTW_TYPE = ftw_type
         self.ORIGINAL_FILE = original_file
         self.ORIGINAL_DATA = original_data
@@ -100,6 +101,7 @@ def _load_ftw_rules_from_strings(strings):
 @pywbutil.expand_nest_generator
 def _load_ftw_rules_from_files(files):
     for file_ in files:
+        file_ = os.path.abspath(os.path.expanduser(file_))
         if os.path.splitext(file_)[-1].lower() != ".yaml":
             raise ValueError(file_ + "is not a .yaml file")
         rules = ftw.util.get_rulesets(file_, False)
@@ -116,7 +118,7 @@ def _load_ftw_rules_from_files(files):
 @pywbutil.expand_nest_generator
 def _load_ftw_rules_from_paths(paths):
     for path_ in paths:
-        path_ = os.path.abspath(path_)
+        path_ = os.path.abspath(os.path.expanduser(path_))
         if os.path.isdir(path_):
             for root, _, files in os.walk(path_):
                 for file_ in files:
@@ -218,8 +220,9 @@ def get(source, target_type):
         else:
             sources = source
         for source in sources:
-            if os.path.exists(source):
-                rules = _load_ftw_rules_from_paths(source)
+            path_ = os.path.abspath(os.path.expanduser(source))
+            if os.path.exists(path_):
+                rules = _load_ftw_rules_from_paths(path_)
             else:
                 rules = _load_ftw_rules_from_strings(source)
             for rule in rules:

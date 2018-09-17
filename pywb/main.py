@@ -50,9 +50,11 @@ class _PacketFileEnhance(optionparser.OptionParser):
         while file_count < len(options):
             if options[file_count].startswith("-"):  # is a option
                 break
-            if not os.path.exists(options[file_count]):  # isn't a file
+            path_ = options[file_count]
+            path_ = os.path.expanduser(path_)
+            if not os.path.exists(path_):  # isn't a file
                 break
-            self._read_packets_paths.append(options[file_count])
+            self._read_packets_paths.append(path_)
             file_count += 1
         if file_count == 0:
             raise ValueError("-F needs an argument")
@@ -63,7 +65,9 @@ class _PacketFileEnhance(optionparser.OptionParser):
         if not self._read_packets_paths:
             return []
         with packetsdumper.PacketsDumper(self._packets_file) as dumper:
-            for packet in packetsloader.load_packets_from_paths(self._read_packets_paths):
+            for packet in\
+                    packetsloader.load_packets_from_paths(
+                        self._read_packets_paths):
                 dumper.dump(packet)
         return ["-F", self._packets_file]
 
@@ -104,9 +108,11 @@ class _UploadFileEnhance(optionparser.OptionParser):
         while file_count < len(options):
             if options[file_count].startswith("-"):  # is a option
                 break
-            if not os.path.exists(options[file_count]):  # isn't a file
+            path_ = options[file_count]
+            path_ = os.path.expanduser(path_)
+            if not os.path.exists(path_):  # isn't a file
                 break
-            self._upload_files.append(options[file_count])
+            self._upload_files.append(path_)
             file_count += 1
         if file_count == 0:
             raise ValueError(self._action + " needs an argument")
@@ -119,6 +125,7 @@ class _UploadFileEnhance(optionparser.OptionParser):
             sys.stderr.write("<Current version just\
 supports to upload one files>")
         upload_file = self._upload_files[0]
+        upload_file = os.path.expanduser(upload_file)
         if not os.path.exists(upload_file):
             raise IOError(upload_file + " isn't exist")
         # if Content-Type is set, we don't need automatic inferring

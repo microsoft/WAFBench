@@ -43,7 +43,7 @@ def _load_packets_from_yaml_files(files):
 def _load_packets_from_pkt_files(files):
     buffer_ = ""
     for file_ in files:
-        file_ = os.path.abspath(file_)
+        file_ = os.path.abspath(os.path.expanduser(file_))
         with open(file_, "rb", io.DEFAULT_BUFFER_SIZE) as fd:
             while True:
                 bytes_ = fd.read(io.DEFAULT_BUFFER_SIZE)
@@ -83,7 +83,7 @@ def load_packets_from_paths(paths):
         that will generate all of packets saved in those paths
     """
     for path_ in paths:
-        path_ = os.path.abspath(path_)
+        path_ = os.path.abspath(os.path.expanduser(path_))
         if os.path.isdir(path_):
             for root, _, files in os.walk(path_):
                 for file_ in files:
