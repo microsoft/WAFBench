@@ -30,7 +30,7 @@ __all__ = [
 ]
 
 
-class FTW_TYPE:
+class FTW_TYPE(object):
     """ FTW_TYPE
         RULE is a FtwDict
         TEST is a FtwDict
