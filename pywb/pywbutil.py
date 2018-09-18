@@ -43,7 +43,6 @@ def get_wb_path():
         if not os.path.isabs(position):
             position = os.path.join(os.path.dirname(__file__), position)
         if os.path.exists(position) and os.path.isfile(position):
-            print position
             return position
     raise IOError(
         "No executable under such paths: '%s'" % (search_positions, ))
