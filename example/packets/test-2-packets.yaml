@@ -20,6 +20,7 @@
                   User-Agent: "WAFBench"              
                   Host: "localhost"
                   Connection: "close"
+                  Accept: "*/*"
             output: 
               no_log_contains: ""   
     - 
@@ -35,5 +36,6 @@
                   User-Agent: "WAFBench"              
                   Host: "localhost"
                   Connection: "close"
+                  Accept: "*/*"
             output: 
               no_log_contains: ""   
