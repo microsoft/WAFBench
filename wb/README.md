@@ -1,12 +1,3 @@
-```
- __     __     ______     ______      ______     ______     __   __     ______     __  __    
-/\ \  _ \ \   /\  __ \   /\  ___\    /\  == \   /\  ___\   /\ "-.\ \   /\  ___\   /\ \_\ \   
-\ \ \/ ".\ \  \ \  __ \  \ \  __\    \ \  __<   \ \  __\   \ \ \-.  \  \ \ \____  \ \  __ \  
- \ \__/".~\_\  \ \_\ \_\  \ \_\       \ \_____\  \ \_____\  \ \_\\"\_\  \ \_____\  \ \_\ \_\ 
-  \/_/   \/_/   \/_/\/_/   \/_/        \/_____/   \/_____/   \/_/ \/_/   \/_____/   \/_/\/_/ 
-                                                                                             
-```
-
 # WAF-Bench (wb): a benchmarking tool for Web Application Firewall (WAF)
 
 wb is based on the latest ApacheBench (ab) and add several new features for WAF testing. 
@@ -77,26 +68,40 @@ wb -t 10 live.com/home.html
 
 Benchmark "live.com/home.html" for 10 seconds just like ab.
 
+### WAF performance testing
+
+```
+wb -t 10 -c 20 10.0.1.131:18081
+```
+
+The three options are:    
+
+* duration of testing (-t 10, 10 seconds) 
+* connection number (-c 20) 
+* destination server/URL (10.0.1.131:18081). Note that, unlike ab, wb does not require "/" at the end of URL.
+
 ### Examples
 
-There are several examples in `../sample/` to help understanding usage.
+There are several examples in `../example/` to help understanding usage.
 
 - `WB-GET.sh` uses `wb` to conduct GET test.
 - `WB-POST.sh` uses `wb` to conduct POST test.
+- `WB-SEND-PACKET.sh` uses `wb` to send HTTP packets directly.
 
 ## Synopsis
 
 ```
-    wb [ -A auth-username:password ] [ -b windowsize ] [ -c concurrency
-    ] [ -C cookie-name=value ] [ -d ] [ -e csv-file ] [ -F pkt_file ]
-    [ -G max_size ] [ -h ] [ -H custom-header ] [ -i ] [ -j interval ]
-    [ -J sub_string ] [ -k ] [ -K ] [ -n requests ] [ -o msg_file ]
-    [ -p POST-file ] [ -P proxy-auth-username:password ] [ -q ] [ -Q
-    max_count ] [ -r ] [ -s ] [  -S  ] [ -t timelimit ] [ -T content-type
-    ] [ -u PUT-file ] [ -U URL_prefix ] [ -v verbosity] [ -V ] [ -w ]
-    [ -W stats_num ] [ -x <table>-attributes ] [ -X proxy[:port] ]
-    [ -y <tr>-attributes ] [ -z <td>-attributes ] [ -1 ] [ -2 ] [ -3 ]
-    [http[s]://]hostname[:port]/path
+    wb [ -A auth-username:password ] [ -b windowsize ] [ -B local-address
+    ] [ -c concurrency ] [ -C cookie-name=value ] [ -d ] [ -e csv-file ]
+    [ -f protocol ] [ -F pkt_file ] [ -g gnuplot-file ] [ -G max_size ]
+    [ -h ] [ -H custom-header ] [ -i ] [ -j interval ] [ -J sub_string ]
+    [ -k ] [ -K ] [ -l ] [ -m HTTP-method ] [ -n requests ] [ -o msg_file
+    ] [ -p POST-file ] [ -P proxy-auth-username:password ] [ -q ] [
+    -Q max_count ] [ -r ] [ -s timeout ] [ -S ] [ -t timelimit ] [ -T
+    content-type ] [ -u PUT-file ] [ -U URL_prefix ] [ -v verbosity] [ -V
+    ] [ -w ] [ -W stats_num ] [ -x <table>-attributes ] [ -X proxy[:port]
+    ] [ -y <tr>-attributes ] [ -z <td>-attributes ] [ -Z ciphersuite ]
+    [ -1 ] [ -2 ] [ -3 ] [http[s]://]hostname[:port]/path
 ```
 
 ## Options
@@ -105,110 +110,142 @@ There are several examples in `../sample/` to help understanding usage.
 
 ```
     -A auth-username:password
-           Supply BASIC Authentication credentials to the server. The user‐
-           name  and  password  are separated by a single : and sent on the
-           wire base64 encoded. The string is sent  regardless  of  whether
-           the  server  needs  it  (i.e.,  has sent an 401 authentication
-           needed).
+        Supply BASIC Authentication credentials to the server. The
+        username and password are separated by a single : and sent on
+        the wire base64 encoded. The string is sent regardless of whether
+        the server needs it (i.e., has sent an 401 authentication needed).
 
     -b windowsize
-           Size of TCP send/receive buffer, in bytes.
+        Size of TCP send/receive buffer, in bytes.
+
+    -B local-address
+        Address to bind to when making outgoing connections.
 
     -c concurrency
-           Number of multiple requests to perform at a time. Default is one
-           request at a time.
+        Number of multiple requests to perform at a time. Default is
+        one request at a time.
 
     -C cookie-name=value
-           Add  a Cookie: line to the request. The argument is typically in
-           the form of a name=value pair. This field is repeatable.
+        Add a Cookie: line to the request. The argument is typically in
+        the form of a name=value pair. This field is repeatable.
 
-    -d     Do not display the "percentage served  within  XX  [ms]  table".
-           (legacy support).
+    -d
+        Do not display the "percentage served within XX [ms]
+        table". (legacy support).
 
     -e csv-file
-           Write a Comma separated value (CSV) file which contains for each
-           percentage (from 1% to 100%) the time (in milliseconds) it  took
-           to  serve  that percentage of the requests. This is usually more
-           useful than the 'gnuplot'  file;  as  the  results  are  already
-           'binned'.
+        Write a Comma separated value (CSV) file which contains for each
+        percentage (from 1% to 100%) the time (in milliseconds) it took to
+        serve that percentage of the requests. This is usually more useful
+        than the 'gnuplot' file; as the results are already 'binned'.
 
-    -h     Display usage information.
+    -f protocol
+        Specify SSL/TLS protocol (SSL2, SSL3, TLS1, TLS1.1, TLS1.2,
+        or ALL). TLS1.1 and TLS1.2 support available in 2.4.4 and later.
+
+    -g gnuplot-file
+        Write all measured values out as a 'gnuplot' or TSV (Tab separate
+        values) file. This file can easily be imported into packages
+        like Gnuplot, IDL, Mathematica, Igor or even Excel. The labels
+        are on the first line of the file.
+
+    -h
+        Display usage information.
 
     -H custom-header
-           Append extra headers to the request. The argument  is  typically
-           in the form of a valid header line, containing a colon-separated
-           field-value pair (i.e., "Accept-Encoding: zip/zop;8bit").
+        Append extra headers to the request. The argument is typically
+        in the form of a valid header line, containing a colon-separated
+        field-value pair (i.e., "Accept-Encoding: zip/zop;8bit").
 
-    -i     Do HEAD requests instead of GET.
+    -i
+        Do HEAD requests instead of GET.
 
-    -k     Enable  the  HTTP  KeepAlive  feature,  i.e.,  perform  multiple
-           requests within one HTTP session. Default is no KeepAlive.
+    -k
+        Enable the HTTP KeepAlive feature, i.e., perform multiple requests
+        within one HTTP session. Default is no KeepAlive.
+
+    -l
+        Do not report errors if the length of the responses is not
+        constant. This can be useful for dynamic pages. Available in
+        2.4.7 and later.
+
+    -m HTTP-method
+        Custom HTTP method for the requests. Available in 2.4.10 and
+        later.
 
     -n requests
-           Number  of requests to perform for the benchmarking session. The
-           default is to just perform a single request which usually  leads
-           to non-representative benchmarking results.
+        Number of requests to perform for the benchmarking session. The
+        default is to just perform a single request which usually leads
+        to non-representative benchmarking results.
 
     -p POST-file
-           File containing data to POST. Remember to also set -T.
+        File containing data to POST. Remember to also set -T.
 
     -P proxy-auth-username:password
-           Supply BASIC Authentication credentials to a proxy en-route. The
-           username and password are separated by a single :  and  sent  on
-           the  wire  base64  encoded.  The  string  is  sent regardless of
-           whether the proxy needs it (i.e., has sent an 407 proxy  authen‐
-           tication needed).
+        Supply BASIC Authentication credentials to a proxy en-route. The
+        username and password are separated by a single : and sent on the
+        wire base64 encoded. The string is sent regardless of whether
+        the proxy needs it (i.e., has sent an 407 proxy authentication
+        needed).
 
-    -q     When  processing  more  than 150 requests, ab outputs a progress
-           count on stderr every 10% or 100 requests or  so.  The  -q  flag
-           will suppress these messages.
+    -q
+        When processing more than 150 requests, ab outputs a progress
+        count on stderr every 10% or 100 requests or so. The -q flag
+        will suppress these messages.
 
-    -r     Don't exit on socket receive errors.
+    -r
+        Don't exit on socket receive errors.
 
-    -s     When  compiled  in  (ab  -h will show you) use the SSL protected
-           https rather than the http protocol. This feature is  experimen‐
-           tal and very rudimentary. You probably do not want to use it.
+    -s timeout
+        Maximum number of seconds to wait before the socket times
+        out. Default is 30 seconds. Available in 2.4.4 and later.
 
-    -S     Do  not  display  the  median and standard deviation values, nor
-           display the warning/error messages when the average  and  median
-           are more than one or two times the standard deviation apart. And
-           default to the min/avg/max values. (legacy support).
+    -S
+        Do not display the median and standard deviation values, nor
+        display the warning/error messages when the average and median
+        are more than one or two times the standard deviation apart. And
+        default to the min/avg/max values. (legacy support).
 
     -t timelimit
-           Maximum number  of  seconds  to  spend  for  benchmarking.  This
-           implies a -n 50000 internally. Use this to benchmark the server
-           within a fixed total amount of time. Per  default  there  is  no
-           timelimit. (implicit "-n 50000" is removed in wb)
+        Maximum number of seconds to spend for benchmarking. This
+        implies a -n 50000 internally. Use this to benchmark the server
+        within a fixed total amount of time. Per default there is no
+        timelimit. (implicit "-n 50000" is removed in wb)
 
     -T content-type
-           Content-type header to use for POST/PUT data, eg. application/x-
-           www-form-urlencoded. Default: text/plain.
+        Content-type header to use for POST/PUT data,
+        eg. application/x-www-form-urlencoded. Default is text/plain.
 
     -u PUT-file
-           File containing data to PUT. Remember to also set -T.
+        File containing data to PUT. Remember to also set -T.
 
     -v verbosity
-           Set verbosity level - 4 and above prints information on headers,
-           3  and above prints response codes (404, 200, etc.), 2 and above
-           prints warnings and info.
+        Set verbosity level - 4 and above prints information on headers,
+        3 and above prints response codes (404, 200, etc.), 2 and above
+        prints warnings and info.
 
-    -V     Display version number and exit.
+    -V
+        Display version number and exit.
 
-    -w     Print out results in HTML tables. Default table is  two  columns
-           wide, with a white background.
+    -w
+        Print out results in HTML tables. Default table is two columns
+        wide, with a white background.
 
     -x <table>-attributes
-           String to use as attributes for <table>. Attributes are inserted
-           <table here >.
+        String to use as attributes for <table>. Attributes are inserted
+        <table here >.
 
     -X proxy[:port]
-           Use a proxy server for the requests.
+        Use a proxy server for the requests.
 
     -y <tr>-attributes
-           String to use as attributes for <tr>.
+        String to use as attributes for <tr>.
 
     -z <td>-attributes
-           String to use as attributes for <td>.
+        String to use as attributes for <td>.
+
+    -Z ciphersuite
+        Specify SSL/TLS cipher suite (See openssl ciphers)
 ```
 
 ## WAF-Bench's New Options
@@ -226,13 +263,16 @@ There are several examples in `../sample/` to help understanding usage.
     -W stats_num    Window of stats, number of stats values (default=50000)
     -1              (for testing) Don't append Host:localhost if absent (
                     default to add)
-    -2              (for testing) Don't append Connection:close if absent (
-                    default to add)
+    -2 option       (for testing)  Don't append Connection:close if option is 0,
+                    Append connection:close to those packets without connection attribution if option is 1,
+                    Append or replace connection attribution to close for any packets if option is 2
     -3              (for testing) Use micro-second granularity in output,
                     default disabled
 ```
 
 ## Packet Format
+
+**Note**: Because handwritten packets are error-prone, we highly recommend you to edit the information of packets with YAML format and it can be directly sent by [`pywb`](../pywb).
 
 This section describes the format of the packet file used in wb's `-F` option.
 
