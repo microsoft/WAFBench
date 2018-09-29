@@ -37,8 +37,10 @@ def parse(options, enhance_options):
             the value is option parser of processing arguments
     """
 
-    acceptable_wb_options = "n:c:t:s:b:T:p:u:v:lrkVhwiIx:y:z:C:H:P:A:g:X:de:\
-SqB:m:Z:f:Y:a:o:F:j:J:O:R:D:U:Y:W:E:G:Q:K012:3456789"
+    acceptable_wb_options = "n:c:t:s:b:T:p:u:v:lrkVhwiIx:"\
+                            "y:z:C:H:P:A:g:X:de:SqB:m:Z:f:"\
+                            "Y:a:o:F:j:J:O:R:D:U:Y:W:E:G:Q:"\
+                            "K012:3456789"
     # Anonymous_options are those options without prefix dash.
     # They were not defined at acceptable_wb_option.
     # e.g. destination hostname
