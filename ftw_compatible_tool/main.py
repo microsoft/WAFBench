@@ -35,8 +35,7 @@ def parse(arguments):
     return arguments
 
 
-def execute(arguments, ui=user_interface.CLI):
-    brk = broker.Broker()
+def execute(arguments, ui=user_interface.CLI, brk=broker.Broker()):
 
     ctx = context.Context(brk, delimiter=traffic.Delimiter("magic"))
 
