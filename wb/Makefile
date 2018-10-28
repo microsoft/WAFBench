@@ -18,5 +18,5 @@ install: wb
 
 clean:
 	make -C ./apr/ clean
-	rm wb
+	rm -rf wb
 
