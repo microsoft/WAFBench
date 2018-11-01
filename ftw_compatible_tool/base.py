@@ -170,11 +170,25 @@ class Base(object):
         return ret
 
     def _import_log(self, log):
+        def readlines_reverse(filename, mode):
+            with open(filename, mode) as qfile:
+                qfile.seek(0, os.SEEK_END)
+                position = qfile.tell()
+                line = ''
+                while position >= 0:
+                    qfile.seek(position)
+                    next_char = qfile.read(1)
+                    if next_char == "\n":
+                        yield line[::-1]
+                        line = ''
+                    else:
+                        line += next_char
+                    position -= 1
+                yield line[::-1]
         log_path = os.path.abspath(os.path.expanduser(log))
         if os.path.exists(log_path):
-            with open(log_path, "r") as fd:
-                for line in fd:
-                    self._ctx.broker.publish(broker.TOPICS.RAW_LOG, line)
+            for line in readlines_reverse(log_path, "r"):
+                self._ctx.broker.publish(broker.TOPICS.RAW_LOG, line+"\n")
         else:
             self._ctx.broker.publish(broker.TOPICS.RAW_LOG, log)
 
