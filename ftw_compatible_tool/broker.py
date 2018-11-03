@@ -4,6 +4,13 @@
 # Copyright (c) Microsoft Corporation. All rights reserved.
 # Licensed under the MIT License.
 """ broker
+
+This exports:
+    - TOPICS is an enum that means various message kinds.
+    - Broker is a class that forwards messages among components.
+    - Subscriber is a class that receive messages from Broker.
+
+We use Broker Pattern to realize messages' flexibile transmitting.
 """
 
 import copy
@@ -12,6 +19,24 @@ import copy
 
 
 class TOPICS(object):
+    """ TOPICS
+        COMMAND means user's command
+        RESET means to reset ftw_compatible_tool
+        SQL_QUERY means a sql query
+
+        PYWB_OUTPUT means the output from pywb
+
+        RAW_REQUEST means the requests sent by ftw_compatible_tool
+        RAW_RESPONSE means the responses from the server
+        RAW_TRAFFIC means a traffic including requests and responses with an unique id
+        RAW_LOG means ModSecurity's error log
+        
+        CHECK_RESULT means to show the result of checking output
+
+        SHOW_UI means to show specific UI
+
+        DEBUG, INFO, WARNING, ERROR, FATAL mean log info.
+    """
     COMMAND = "COMMAND"
     RESET = "RESET"
     SQL_QUERY = "SQL_QUERY"
@@ -35,16 +60,40 @@ class TOPICS(object):
 
 
 class Broker(object):
+    """ Forward messages to subscribers.
+
+    Attributes:
+        - _topic_items: a dict mapping TOPIC to subscribers.
+            Key is a TOPICS value.
+            Value is a TopicItem object.
+    """
     class TopicItem(object):
+        """ Store a topic's subscribers.
+
+        Argument:
+            - topic: a TOPICS value.
+            - type_limit: a dict containing the topic's arguments' proper types.
+                Key is the argument's name.
+                Value is the type that the argument should be.
+            - subscribers: a set containing this topic's subscribers.
+        """
         def __init__(self, topic):
             self.topic = topic
             self.type_limit = dict()
             self.subscribers = set()
 
     def __init__(self):
+        """ Create a Broker.
+        """
         self._topic_items = {}
 
     def subscribe(self, topic, subscriber, type_limit={}):
+        """ Subscribe the subscriber to the topic.
+
+        Aruguments:
+            - topic: A TOPICS value.
+            - subscriber: A callable object, e.g. a function.
+        """
         if not hasattr(subscriber, "__call__"):
             self._ctx.broker.publish(
                 TOPICS.FATAL, "subscriber<%s> is not callable" % (subscriber))
@@ -62,6 +111,13 @@ class Broker(object):
         item.subscribers.add(subscriber)
 
     def unsubscribe(self, topic, subscriber):
+        """ Unsubscribe the subscriber from the topic.
+            If the subscriber has not subscribed the topic, nothing will happen.
+
+        Aruguments:
+            - topic: A TOPICS value.
+            - subscriber: A callable object, e.g. a function.
+        """
         if topic not in self._topic_items:
             return
         item = self._topic_items[topic]
@@ -72,6 +128,13 @@ class Broker(object):
             del self._topic_items[topic]
 
     def publish(self, topic, *args, **kwargs):
+        """ Publish messages to the topic's subscribers.
+
+        Arguments:
+            - topic: A TOPICS value.
+            - args, kwargs: Arguments sent to subscribers.
+                Type check will be done on these.
+        """
         item = self._topic_items.get(topic, Broker.TopicItem(topic))
         type_limit = item.type_limit
         subscribers = item.subscribers
@@ -95,15 +158,29 @@ class Broker(object):
 
 
 class Subscriber(object):
+    """ Manage subscribing and unsubscribing of a kind of subscribers.
+
+    Arguments:
+        - borker: A Borker object.
+        - subscribe_items: A tuple. A list of
+            the tuples of topic, subscriber and type_limit.
+            To be managed by this Subscriber.
+    """
     def __init__(self, broker, subscribe_items=()):
+        """ Create a Subscriber.
+        """
         self._broker = broker
         self._subscribe_items = subscribe_items
 
     def start(self):
+        """ Subscribe the subscribers that this SubScriber is managing.
+        """
         for i in self._subscribe_items:
             self._broker.subscribe(*i)
 
     def end(self):
+        """ Unsubscribe the subscribers that this SubScriber is managing.
+        """
         for i in self._subscribe_items:
             self._broker.unsubscribe(i[0], i[1])
 

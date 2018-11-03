@@ -4,6 +4,11 @@
 # Copyright (c) Microsoft Corporation. All rights reserved.
 # Licensed under the MIT License.
 """ user_interface
+
+This exports:
+     - Interactor is an abstract class that declares Interactor's interfaces.
+     - CLI is a class inherited from Interactor
+        that implement ftw_compatible_tool's user interface.
 """
 
 import re
@@ -25,9 +30,25 @@ from functools import reduce
 
 
 class Interactor(object):
+    """ Interactor's ABC.
+
+    Arguments:
+        - ctx: A Context object.
+    
+    Attributes:
+        - _ctx: Same as ctx.
+        - _current_progress_monitor: A callable object
+            with arguments(traffic_id, raw_request, raw_response),
+            used for showing progress.
+        - _components: A dict mapping ui name to ui function.
+            Key is a string meaning a kind of ui.
+            Value is a callable object implementing a kind of ui.
+    """
     __metaclass__ = abc.ABCMeta
 
     def __init__(self, ctx):
+        """ Initialize self and subscribe itself to SHOW_UI, CHECK_RESULT and PYWB_OUTPUT.
+        """
         self._ctx = ctx
         self._current_progress_monitor = None
         self._ctx.broker.subscribe(broker.TOPICS.CHECK_RESULT,
@@ -110,12 +131,32 @@ class Interactor(object):
 
 
 class CLI(Interactor):
+    """ ftw_compatible_tool's user interface.
+
+    Arguments:
+        - ctx: A Context object.
+
+    Attributes:
+        See Interactor for the same attributes.
+        - _debug: Function for debug ui.
+        - _info: Function for info ui.
+        - _warning: Function for warning ui.
+        - _error: Function for error ui.
+        - _fatal: Function for fatal ui.
+    """
     class STYLE:
+        """ Define ui's style. Most of them are easy to see meaning.
+            Simply print them can do the work.
+            
+            RESET means to clear style set before.
+        """
         RESET = '\033[0m'
         BOLD = '\033[01m'
         UNDERLINE = '\033[04m'
 
         class FG:
+            """ Define frontground's color.
+            """
             BLACK = '\033[30m'
             RED = '\033[31m'
             YELLOW = '\033[93m'
@@ -125,10 +166,15 @@ class CLI(Interactor):
             MAGENTA = '\033[35m'
 
         class BG:
+            """ Define background's color.
+            """
             RED = '\033[41m'
             LIGHTGREY = '\033[47m'
 
     def __init__(self, ctx):
+        """ Create a CLI object.
+            Subscribe itself to DEBUG, INFO, WARNING, ERROR and FATAL.
+        """
         super(CLI, self).__init__(ctx)
         self._components.update({
             "welcome": self._welcome,
@@ -330,6 +376,8 @@ ________________________      __          _________
         print("\n")
 
     def interact(self):
+        """ Start interactive user interface.
+        """
         def auto_completer(text, state):
             text = text.lower()
             keywords = [

@@ -4,6 +4,20 @@
 # Copyright (c) Microsoft Corporation. All rights reserved.
 # Licensed under the MIT License.
 """ traffic
+
+This exports:
+    - REQUEST_PATTERN is a regex string that matches request's start pattern.
+    - RESPONSE_PATTERN is a regex string that matches response's start pattern.
+    - FINISH_PATTERN is a regex string that matches traffics' end pattern.
+    - RawRequestCollector is a class inherited from _RawPacketCollector
+        that collects request from pywb's output.
+    - RawResponseCollecotr is a class inerited from _RawPacketCollecotr 
+        that collects response from pywb's output.
+    - RealTrafficCollector is a class
+        that collects each traffic's requests and responses 
+        from RawRequestCollector and RawResponseCollector,
+        and query database to save.
+    - Delimiter is a class that manages delimiters for rules, packets and logs.
 """
 
 from __future__ import print_function
@@ -44,6 +58,11 @@ class _RawPacketCollector(collector.SwitchCollector):
 
 
 class RawRequestCollector(_RawPacketCollector):
+    """ Collect requests from pywb's output.
+
+    Arguments:
+        - ctx: A Context object.
+    """
     def __init__(self, ctx):
         super(RawRequestCollector, self).__init__(
             REQUEST_PATTERN, r"(%s)|(%s)|(%s)" %
@@ -52,6 +71,11 @@ class RawRequestCollector(_RawPacketCollector):
 
 
 class RawResponseCollector(_RawPacketCollector):
+    """ Collect responses from pywb's output.
+
+    Arguments:
+        - ctx: A Context object.
+    """
     def __init__(self, ctx):
         super(RawResponseCollector, self).__init__(
             RESPONSE_PATTERN, r"(%s)|(%s)|(%s)" %
@@ -60,7 +84,23 @@ class RawResponseCollector(_RawPacketCollector):
 
 
 class RealTrafficCollector(object):
+    """ Collect each traffic's requests and responses.
+        Using delimiter request to separate each traffic.
+
+    Arguments:
+        - ctx: A Context object.
+    
+    Attributes:
+        - _ctx: A Context object.
+        - _current_key: The collecting traffic's id.
+        - _request_buffer: Buffer for the collecting traffic's requests.
+        - _response_buffer: Buffer for the collecting traffic's responses.
+        _ _state: Traffic collect state.
+    """
     def __init__(self, ctx):
+        """ Create a RealTrafficCollector object.
+            Subscribe itself to RAW_REQUEST, RAW_RESPONSE and RESET.
+        """
         self._ctx = ctx
         self._current_key = None
         self._request_buffer = ""
@@ -101,6 +141,13 @@ class RealTrafficCollector(object):
         self._state = collector.COLLECT_STATE.FINISH_COLLECT
 
     def collect_raw_request(self, raw_request):
+        """ Collect requests for each traffic.
+            If one traffic's requests are collected,
+            publish this traffic's requests and responses to database.
+
+        Arguments:
+            - raw_request: A string which is a single request.
+        """
         key = self._ctx.delimiter.get_delimiter_key(raw_request)
         if key:
             if self._current_key is None:
@@ -119,6 +166,11 @@ class RealTrafficCollector(object):
             self._request_buffer += raw_request
 
     def collect_raw_response(self, raw_response):
+        """ Collect responses for each traffic.
+
+        Arguments:
+            - raw_resonse: A string which is a single response.
+        """
         if self._current_key is None:
             if self._state == collector.COLLECT_STATE.START_COLLECT:
                 self._state = collector.COLLECT_STATE.FINISH_COLLECT
@@ -134,6 +186,17 @@ class RealTrafficCollector(object):
 
 
 class Delimiter(object):
+    """ Manages delimiters used to separate each traffic.
+
+    Arguments:
+        - magic_string: An abnormal string that no normal operations will use.
+            We use this string to identify our delimiter.
+        
+    Attributes:
+        - _magic_string: Same as magic_string.
+        - _magic_searcher: A re.Pattern object.
+            We use this to search our delimiter.
+    """
     _MAGIC_PATTERN = r"{magic_string}-<{unique_key}>"
 
     _DELIMITER_PACKET_FORMAT = r'''
@@ -174,6 +237,9 @@ SecRule REQUEST_HEADERS:Host "{magic_pattern}" \
         return "%s" % (uuid.uuid1().int, )
 
     def __init__(self, magic_string=None):
+        """ Create a Delimiter object.
+            Initialize the magic's string for delimiters.
+        """
         if magic_string:
             self._magic_string = magic_string
         else:
@@ -186,10 +252,21 @@ SecRule REQUEST_HEADERS:Host "{magic_pattern}" \
         self._magic_searcher = re.compile(pattern)
 
     def get_delimiter_rule(self):
+        """ Return the rule that should be inserted into ModSecurity's conf file's head,
+            used for generating delimiter in log.
+        """
         return Delimiter._DELIMITER_RULE_FORMAT.format(
             **{"magic_pattern": self._magic_searcher.pattern})
 
     def get_delimiter_key(self, line):
+        """ Check whether line is a delimiter line.
+
+        Arguments:
+            - line: A string to be checked.
+
+        Return the delimiter's key(unique id) if the line is a delimiter line,
+        otherwise return None.
+        """
         result = self._magic_searcher.search(line)
         if result:
             return result.group(1)
@@ -197,6 +274,14 @@ SecRule REQUEST_HEADERS:Host "{magic_pattern}" \
             return None
 
     def get_delimiter_packet(self, key):
+        """ Return the packet that should be sent before and after one traffic,
+            used for generating delimiter in requests, responses and logs.
+
+        Arguments:
+            - key: The traffic's unique id.
+            
+        Return packet is a string in yaml format.
+        """
         yaml_string = Delimiter._DELIMITER_PACKET_FORMAT.format(
             **{
                 "magic_pattern":
@@ -209,6 +294,8 @@ SecRule REQUEST_HEADERS:Host "{magic_pattern}" \
         return yaml_string
 
     def get_delimiter_log(self):
+        """ Return the delimiter's log msg that separates each traffic.
+        """
         return "msg \"delimiter-%s\"" % (self._magic_searcher.pattern, )
 
 

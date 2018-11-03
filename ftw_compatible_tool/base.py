@@ -4,6 +4,10 @@
 # Copyright (c) Microsoft Corporation. All rights reserved.
 # Licensed under the MIT License.
 """ base
+
+This exports:
+    - BaseConf is a class that contains Base 's configurations.
+    - Base is a class that implements ftw_compatible_tool's basic functions.
 """
 
 import uuid
@@ -24,6 +28,19 @@ import collector
 
 
 class BaseConf(object):
+    """ Contain class Base's configurations.
+
+    Arguments:
+        - pkt_path: A path to save the packet(default = test.<pid>.pkt).
+        - timeout: An integer means the maximum number of seconds to wait 
+            before the socket times out(default = 1).
+        - functions: A dict maps commands and functions.
+            Key is the name of command.
+            Value is the process function.
+
+    Attributes:
+        The same with Arguments.
+    """
     def __init__(self,
                  pkt_path="test." + str(os.getpid()) + ".pkt",
                  timeout=1,
@@ -34,8 +51,20 @@ class BaseConf(object):
 
 
 class Base(object):
-    def __init__(self, ctx, conf=BaseConf()):
+    """ Implement Basic functions of ftw_compatible_tool
 
+    Arguments:
+        - ctx: A Context object.
+        - conf: A BaseConf object.
+
+    Attributes:
+        - _ctx: A Context object.
+        - _conf: A BaseConf Object.
+    """
+    def __init__(self, ctx, conf=BaseConf()):
+        """ Create a Base object.
+            And subscribe itself for COMMAND and FATAL.
+        """
         self._ctx = ctx
         self._conf = conf
 

@@ -4,6 +4,10 @@
 # Copyright (c) Microsoft Corporation. All rights reserved.
 # Licensed under the MIT License.
 """ ftwcomp(FTW-compatible-Tool)
+
+This exports:
+    - parse is a function that parse cmdline's args
+    - execute is a function that executes ftw_compatible_tool
 """
 
 import argparse
@@ -20,6 +24,11 @@ import base
 
 
 def parse(arguments):
+    """ Parse cmdline's args into a struct.
+
+    Arguments:
+        - arguments: A string list of cmdline's args.
+    """
     parser = argparse.ArgumentParser()
 
     parser.add_argument("-d", "--database", default=":memory:")
@@ -36,6 +45,15 @@ def parse(arguments):
 
 
 def execute(arguments, ui=user_interface.CLI, brk=broker.Broker()):
+    """ Execute ftw_compatible_tool.
+
+    Arguments:
+        - arguments: A string list fo the arguments for pywb.
+        - ui: A class inherited from user_interface.Interactor.
+            This will be used for output and interaction.
+        - brk: A Broker object.
+            Pass this into execute if you have your own subscriber or publisher.
+    """
 
     ctx = context.Context(brk, delimiter=traffic.Delimiter("magic"))
 
