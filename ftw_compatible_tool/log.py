@@ -10,6 +10,10 @@ This exports:
         that collects each traffic's log.
 """
 
+__all__ = [
+    "LogCollector"
+]
+
 import collector
 import context
 import sql

@@ -9,6 +9,10 @@ This exports:
     - Context is a class shared by all components in ftw_compatible_tool.
 """
 
+__all__ = [
+    "Context"
+]
+
 import traffic
 
 

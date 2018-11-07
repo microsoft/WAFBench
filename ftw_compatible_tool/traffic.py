@@ -11,7 +11,7 @@ This exports:
     - FINISH_PATTERN is a regex string that matches traffics' end pattern.
     - RawRequestCollector is a class inherited from _RawPacketCollector
         that collects request from pywb's output.
-    - RawResponseCollecotr is a class inerited from _RawPacketCollecotr 
+    - RawResponseCollector is a class inerited from _RawPacketCollecotr 
         that collects response from pywb's output.
     - RealTrafficCollector is a class
         that collects each traffic's requests and responses 
@@ -19,6 +19,16 @@ This exports:
         and query database to save.
     - Delimiter is a class that manages delimiters for rules, packets and logs.
 """
+
+__all__ = [
+    "REQUEST_PATTERN",
+    "RESPONSE_PATTERN",
+    "FINISH_PATTERN",
+    "RawRequestCollector",
+    "RawResponseCollector",
+    "RealTrafficCollector",
+    "Delimiter",
+]
 
 from __future__ import print_function
 import uuid

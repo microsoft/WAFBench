@@ -13,6 +13,12 @@ This exports:
         that uses SQLite3 as its database type.
 """
 
+__all__ = [
+    "QueryResult",
+    "Database",
+    "Sqlite3DB"
+]
+
 import sqlite3
 import abc
 

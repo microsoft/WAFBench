@@ -12,6 +12,12 @@ This exports:
         that is designed for collecting content with start_pattern and end_pattern.
 """
 
+__all__ = [
+    "COLLECT_STATE",
+    "Collector",
+    "SwitchCollector"
+]
+
 import abc
 import re
 

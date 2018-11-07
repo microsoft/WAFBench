@@ -10,6 +10,11 @@ This exports:
     - Base is a class that implements ftw_compatible_tool's basic functions.
 """
 
+__all__ = [
+    "BaseConf",
+    "Base"
+]
+
 import uuid
 import os
 import ast

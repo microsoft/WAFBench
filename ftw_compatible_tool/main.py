@@ -10,6 +10,11 @@ This exports:
     - execute is a function that executes ftw_compatible_tool
 """
 
+__all__ = [
+    "parse",
+    "execute"
+]
+
 import argparse
 import sys
 import ast

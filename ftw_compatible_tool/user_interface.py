@@ -11,6 +11,11 @@ This exports:
         that implement ftw_compatible_tool's user interface.
 """
 
+__all__ = [
+    "Interactor",
+    "CLI"
+]
+
 import re
 import os
 import sys

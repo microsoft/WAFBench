@@ -16,6 +16,17 @@ This exports:
     - SQL_QUERY_TEST_TITLE is the query for the test title of a traffic.
 """
 
+__all__ = [
+    "SQL_INITIALIZE_DATABASE",
+    "SQL_INSERT_REQUEST",
+    "SQL_QUERY_REQUEST",
+    "SQL_CLEAN_RAW_DATA",
+    "SQL_INSERT_RAW_TRAFFIC",
+    "SQL_INSERT_LOG",
+    "SQL_QUERY_RESULT",
+    "SQL_QUERY_TEST_TITLE",
+]
+
 SQL_INITIALIZE_DATABASE = '''
 CREATE TABLE Traffic (
     traffic_id TEXT PRIMARY KEY,
