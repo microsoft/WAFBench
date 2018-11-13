@@ -3,7 +3,9 @@
 
 # Copyright (c) Microsoft Corporation. All rights reserved.
 # Licensed under the MIT License.
-""" testdata
+""" testdata, created for ftw_compatible_tool's test.
+
+If you are using ftw_compatible_tool, you must have no need to use this module.
 """
 
 TEST_PYWB_OUTPUT = '''

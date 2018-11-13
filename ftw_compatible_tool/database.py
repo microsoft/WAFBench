@@ -4,7 +4,20 @@
 # Copyright (c) Microsoft Corporation. All rights reserved.
 # Licensed under the MIT License.
 """ database
+
+This exports:
+    - QueryResult is a class that stores result of one database query.
+    - Database is an abstract class that delcares database's interface,
+        and implements interactions with broker.
+    - Sqlite3DB is a class inherited from Database
+        that uses SQLite3 as its database type.
 """
+
+__all__ = [
+    "QueryResult",
+    "Database",
+    "Sqlite3DB"
+]
 
 import sqlite3
 import abc
@@ -15,6 +28,16 @@ import broker
 
 
 class QueryResult(object):
+    """ Stores result of one database query.
+
+    Arguments:
+        - rows: A list. Each element is a row in database.
+        - row_count: The number of valid elements in rows.
+        - title: Row's title in database.
+
+    Attributes:
+        Same as Arguments.
+    """
     def __init__(self, rows=[], row_count=0, title=None):
         self._rows = rows
         self._row_count = row_count
@@ -32,9 +55,21 @@ class QueryResult(object):
 
 
 class Database(object):
+    """ Database's ABC.
+
+    Arguments:
+        - context: A Context object.
+
+    Attributes:
+        Same as Arguments.
+    """
     __metaclass__ = abc.ABCMeta
 
     def __init__(self, context):
+        """ Create a Database,
+            subscribe itself to SQL_QUERY,
+            query for initializing database.
+        """
         self.context = context
         self.context.broker.subscribe(broker.TOPICS.SQL_QUERY, self._query)
         try:
@@ -48,6 +83,14 @@ class Database(object):
 
     @abc.abstractmethod
     def query(self, script, *args):
+        """ Query database by script with args.
+
+        Arguments:
+            - script: A database query.
+            - args: Query's arguments.
+
+        Return is a QueryResult object saving query result.
+        """
         return QueryResult()
 
     def _query(self, script, *args, **kwargs):
@@ -57,12 +100,33 @@ class Database(object):
 
 
 class Sqlite3DB(Database):
+    """ Database using SQLite3 as its kernel.
+
+    Arguments:
+        - context: A Context object.
+        - path: Database's path(default is in memory).
+
+    Attributes:
+        - _connector: A sqlite3.Connection object.
+    """
     def __init__(self, context, path=":memory:"):
+        """ Create a Sqlite3DB object,
+            connect to the database in path,
+            call Database's initializing.
+        """
         self._connector = sqlite3.connect(path)
         self._connector.text_factory = str
         super(Sqlite3DB, self).__init__(context)
 
     def query(self, script, *args):
+        """ See Database.query.
+
+        Arguments:
+            - script: A string meaning a SQLite3 query.
+            - args: Query's arguments.
+
+        Return see Database.query.
+        """
         cursor = self._connector.cursor()
         try:
             cursor.execute(script, args)

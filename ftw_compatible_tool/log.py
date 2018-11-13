@@ -4,7 +4,15 @@
 # Copyright (c) Microsoft Corporation. All rights reserved.
 # Licensed under the MIT License.
 """ log
+
+This exports:
+    - LogCollector is a class inherited from collector.SwitchCollector
+        that collects each traffic's log.
 """
+
+__all__ = [
+    "LogCollector"
+]
 
 import collector
 import context
@@ -14,7 +22,21 @@ import traffic
 
 
 class LogCollector(collector.SwitchCollector):
+    """ Collects each traffic's log.
+        Use delimiter log to separate traffic's logs.
+        After it has collected one traffic's log, it query database to insert the log.
+
+    Arguments:
+        - ctx: A Context object.
+
+    Attributes:
+        Same as Arguments.
+    """
     def __init__(self, ctx):
+        """ Create a LogCollector object.
+            Initialize SwitchCollector with delimiter log.
+            Subscribe itself to RAW_LOG and RESET.
+        """
         self._ctx = ctx
         super(LogCollector, self).__init__(
             self._ctx.delimiter.get_delimiter_log(),

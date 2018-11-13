@@ -4,7 +4,28 @@
 # Copyright (c) Microsoft Corporation. All rights reserved.
 # Licensed under the MIT License.
 """ sql
+
+This exports:
+    - SQL_INITIALIZE_DATABASE is the query for initializing database.
+    - SQL_INSERT_REQUEST is the query for inserting a request.
+    - SQL_QUERY_REQUEST is the query for a traffic's request.
+    - SQL_CLEAN_RAW_DATA is the query for clearing raw request, raw response and raw log.
+    - SQL_INSERT_RAW_TRAFFIC is the query for updating one traffic with raw request and raw response.
+    - SQL_INSERT_LOG is the query for updating one traffic with raw log.
+    - SQL_QUERY_RESULT is the query for all traffic's output, request, response and log. 
+    - SQL_QUERY_TEST_TITLE is the query for the test title of a traffic.
 """
+
+__all__ = [
+    "SQL_INITIALIZE_DATABASE",
+    "SQL_INSERT_REQUEST",
+    "SQL_QUERY_REQUEST",
+    "SQL_CLEAN_RAW_DATA",
+    "SQL_INSERT_RAW_TRAFFIC",
+    "SQL_INSERT_LOG",
+    "SQL_QUERY_RESULT",
+    "SQL_QUERY_TEST_TITLE",
+]
 
 SQL_INITIALIZE_DATABASE = '''
 CREATE TABLE Traffic (
