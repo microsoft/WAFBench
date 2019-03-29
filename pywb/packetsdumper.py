@@ -50,6 +50,7 @@ class PacketsDumper(object):
                 continue
             if not self._is_empty:
                 self._file_fd.write("\0")
+            self._file_fd.write(str(len(packet)) + "\n")
             self._file_fd.write(str(packet))
             self._is_empty = False
 
