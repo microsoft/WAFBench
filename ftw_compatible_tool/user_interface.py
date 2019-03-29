@@ -286,7 +286,7 @@ ________________________      __          _________
 
     def _tutorial(self):
         tutorials = (
-            ("Add this rule into the head of SecRule\n" +
+            ("Add this rule into the head of SecRule(Optional, for white-box testing)\n" +
              self._ctx.delimiter.get_delimiter_rule(), ),
             (
                 "Import testcases, "
@@ -307,7 +307,7 @@ ________________________      __          _________
                 "start [hostname]",
                 "start localhost:18080",
             ),
-            ("Import server log, copy or mount server log to local.",
+            ("Import server log, copy or mount server log to local.(Optional, for white-box testing)",
              "import <PATH of log>",
              "import ~/testbed/default-nginx-1.11.5-ModSecurity-original/logs/error.log"
              ),

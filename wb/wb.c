@@ -1208,8 +1208,8 @@ static ulong parse_pktfile(char *pkt_data, struct _g_pkt_array_ *pkt_array)
     } else { // chunked file, each packet has a PKT_SIZE number in the first line   
         parsed_bytes = 0;
         ulong l_pkt_size = 0;
-		long time_sec, time_usec;
-		char c;
+		long time_sec = 0, time_usec = 0;
+		char c = 0;
         do {
 			/*
             //  p points to first non-space char, skip the leading space
@@ -1257,6 +1257,8 @@ static ulong parse_pktfile(char *pkt_data, struct _g_pkt_array_ *pkt_array)
 			c = *p2; 
 			*p2 = 0;
 			// use string scanf to fetch numbers
+            l_pkt_size = 0;
+            time_sec = 0, time_usec = 0;
 			sscanf(p,"%lu %lu.%lu",&l_pkt_size, &time_sec, &time_usec);
 			*p2 = c;
 
@@ -1266,7 +1268,8 @@ static ulong parse_pktfile(char *pkt_data, struct _g_pkt_array_ *pkt_array)
 	                pkt = &pkt_array[pkt_count];
 	            else
 	                pkt = &_pkt;
-				for (p=p2+1; *p && apr_isspace(*p); p++);
+                p = p2 + 1;
+				// for (p=p2+1; *p && apr_isspace(*p); p++);
 	            
 	            pkt->pkt_data = p;
 	            pkt->pkt_length = l_pkt_size;

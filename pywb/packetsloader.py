@@ -24,6 +24,7 @@ import os
 import io
 import sys
 import functools
+import itertools
 
 import ftw
 import yaml
@@ -42,6 +43,7 @@ def _load_packets_from_yaml_files(files):
 @pywbutil.expand_nest_generator
 def _load_packets_from_pkt_files(files):
     buffer_ = ""
+    packet_len = 0
     for file_ in files:
         file_ = os.path.abspath(os.path.expanduser(file_))
         with open(file_, "rb", io.DEFAULT_BUFFER_SIZE) as fd:
@@ -51,17 +53,35 @@ def _load_packets_from_pkt_files(files):
                     if buffer_:
                         yield buffer_
                     break
-                while bytes_:
-                    delimit_pos = bytes_.find('\0')
-                    if delimit_pos == -1:
-                        buffer_ += bytes_
-                        bytes_ = None
+                buffer_ += bytes_
+                while buffer_:
+
+                    delimite_pos = 0
+                    while delimite_pos < len(buffer_) and buffer_[delimite_pos] == '\0':
+                        delimite_pos += 1
+                    buffer_ = buffer_[delimite_pos:]
+
+                    if not buffer_ or buffer_.isdigit():
+                        break
+
+                    if packet_len == 0:
+                        if buffer_[0].isdigit():
+                            packet_len = int(''.join(itertools.takewhile(str.isdigit, buffer_)))
+                            # add 1 to skip \n 
+                            buffer_ = buffer_[len(str(packet_len)) + 1:]
+                        else:
+                            packet_len = buffer_.find('\0')
+                            if packet_len == -1:
+                                break
+                    if packet_len >= 0:
+                        if len(buffer_) >= packet_len:
+                            yield buffer_[:packet_len]
+                            buffer_ = buffer_[packet_len:]
+                            packet_len = 0
+                        else:
+                            break
                     else:
-                        buffer_ += bytes_[:delimit_pos]
-                        if buffer_:
-                            yield buffer_
-                        buffer_ = ""
-                        bytes_ = bytes_[delimit_pos + 1:]
+                        raise ValueError("Internal error, get buffer(%s)" % (buffer_, ))
 
 
 LOADERS = {
