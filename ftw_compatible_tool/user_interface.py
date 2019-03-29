@@ -95,7 +95,7 @@ class Interactor(object):
 
             self._traffic_finished += 1
             self._ctx.broker.publish(
-                broker.TOPICS.SQL_QUERY,
+                broker.TOPICS.SQL_COMMAND,
                 sql.SQL_QUERY_TEST_TITLE,
                 traffic_id,
                 callback=show_progress)
@@ -408,7 +408,7 @@ ________________________      __          _________
         readline.set_completer(auto_completer)
         while True:
             try:
-                command_buffer = raw_input("Input command : ")
+                command_buffer = raw_input("\nInput command : ")
                 if not command_buffer:
                     continue
             except (KeyboardInterrupt, EOFError):

@@ -48,7 +48,7 @@ class BaseConf(object):
     """
     def __init__(self,
                  pkt_path="test." + str(os.getpid()) + ".pkt",
-                 timeout=1,
+                 timeout=30,
                  functions={}):
         self.pkt_path = pkt_path
         self.timeout = timeout
@@ -132,15 +132,15 @@ class Base(object):
                     for packet in pywb.ftwhelper.get(
                             stage, pywb.ftwhelper.FTW_TYPE.PACKETS):
                         self._ctx.broker.publish(
-                            broker.TOPICS.SQL_QUERY,
+                            broker.TOPICS.SQL_COMMAND,
                             sql.SQL_INSERT_REQUEST,
-                            str(uuid.uuid1().int),
-                            test["test_title"],
-                            str(test),
-                            str(test.ORIGINAL_FILE),
-                            str(stage['input']),
-                            str(stage['output']),
-                            packet,
+                            str(uuid.uuid1().int), # traffic_id
+                            test["test_title"], # test_title
+                            str(test), # meta
+                            str(test.ORIGINAL_FILE), # file
+                            str(stage['input']), # input 
+                            str(stage['output']), # output
+                            packet, # request
                         )
         except ValueError as e:
             self._ctx.broker.publish(broker.TOPICS.ERROR, str(e))
@@ -173,7 +173,7 @@ class Base(object):
                         dumper.dump(delimiter_packet)
 
         self._ctx.broker.publish(
-            broker.TOPICS.SQL_QUERY,
+            broker.TOPICS.SQL_COMMAND,
             request_sql_script
             if request_sql_script else sql.SQL_QUERY_REQUEST,
             *args,
@@ -187,7 +187,7 @@ class Base(object):
                     broker.TOPICS.WARNING,
                     " %s is not existed " % (self._conf.pkt_path, ))
                 return
-        self._ctx.broker.publish(broker.TOPICS.SQL_QUERY,
+        self._ctx.broker.publish(broker.TOPICS.SQL_COMMAND,
                                  sql.SQL_CLEAN_RAW_DATA)
         self._ctx.broker.publish(broker.TOPICS.RESET)
 
@@ -197,10 +197,8 @@ class Base(object):
         ret = pywb.execute([
             "-F", self._conf.pkt_path, "-v", "4", destination, "-n", "1", "-c",
             "1", "-r", "-s",
-            str(self._conf.timeout), "-o", "/dev/null"
-        ],
-                           customized_filters=[collect_pywb_ouput])
-        print("")
+            str(self._conf.timeout), "-o", "/dev/null"],
+            customized_filters=[collect_pywb_ouput])
         return ret
 
     def _import_log(self, log):
@@ -250,7 +248,7 @@ class Base(object):
                     self._ctx.broker.publish(broker.TOPICS.WARNING, str(e))
 
         self._ctx.broker.publish(
-            broker.TOPICS.SQL_QUERY,
+            broker.TOPICS.SQL_COMMAND,
             sql.SQL_QUERY_RESULT,
             callback=report_experiment)
 
@@ -279,6 +277,6 @@ if __name__ == "__main__":
     ctx.broker.publish(broker.TOPICS.COMMAND, "report")
 
     ctx.broker.publish(
-        broker.TOPICS.SQL_QUERY,
+        broker.TOPICS.SQL_COMMAND,
         testdata.TEST_SHOW_DATABASE,
         callback=testdata.PrintQueryResult)

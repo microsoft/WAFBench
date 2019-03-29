@@ -1742,8 +1742,11 @@ static void write_request(struct connection * c)
                 l = reqlen - c->rwrote; 
         } else  // send postdata, reqlen is already sent
             sendbuf = postdata + c->rwrote - reqlen;
-        if (verbosity >= 2)
-            printf("writing request(%zu bytes)=>[%s]\n",l, sendbuf);
+        if (verbosity >= 2) {
+            printf("writing request(%zu bytes)=>[",l);
+            fwrite(sendbuf, l, 1, stdout);
+            printf("]\n");
+        }
 #endif // _WAF_BENCH_ // avoid copying post data to request
 
 #ifdef USE_SSL
@@ -2640,7 +2643,9 @@ read_more:
         if (!c->gotheader || g_save_body)
             save_logfile(buffer, r);
         if (verbosity >= 2) {
-            printf("LOG: http packet received(%zu bytes):\n%s\n", r,buffer);
+            printf("LOG: http packet received(%zu bytes):\n", r);
+            fwrite(buffer, r, 1, stdout);
+            printf("\n");
         }
     }
 #endif //_WAF_BENCH_ , // save packets to file
@@ -3050,9 +3055,9 @@ static void test(void)
 #ifdef _WAF_BENCH_ // wb will not quit when there's a timeout
        if (status == APR_TIMEUP) {
             struct connection *c = &con[0];
-            if  (c->state != STATE_READ) 
+            if  (c->state != STATE_READ && c->state != STATE_CONNECTING) {
                 apr_err("Timeout_in_non_STATE_READ", status);
-            else {              
+            } else {              
                 err_recv++;
                 bad ++;
                 if (recverrok) {

@@ -67,11 +67,11 @@ class Database(object):
 
     def __init__(self, context):
         """ Create a Database,
-            subscribe itself to SQL_QUERY,
+            subscribe itself to SQL_COMMAND,
             query for initializing database.
         """
         self.context = context
-        self.context.broker.subscribe(broker.TOPICS.SQL_QUERY, self._query)
+        self.context.broker.subscribe(broker.TOPICS.SQL_COMMAND, self._query)
         try:
             self.query(sql.SQL_INITIALIZE_DATABASE)
         except sqlite3.OperationalError:
@@ -79,7 +79,7 @@ class Database(object):
             pass
 
     def __del__(self):
-        self.context.broker.unsubscribe(broker.TOPICS.SQL_QUERY, self._query)
+        self.context.broker.unsubscribe(broker.TOPICS.SQL_COMMAND, self._query)
 
     @abc.abstractmethod
     def query(self, script, *args):
@@ -154,7 +154,7 @@ if __name__ == "__main__":
 
     db = Sqlite3DB(context)
     context.broker.publish(
-        broker.TOPICS.SQL_QUERY,
+        broker.TOPICS.SQL_COMMAND,
         sql.SQL_INSERT_REQUEST,
         "id_1",
         "test_title",
@@ -165,14 +165,14 @@ if __name__ == "__main__":
         "request_data",
     )
     context.broker.publish(
-        broker.TOPICS.SQL_QUERY,
+        broker.TOPICS.SQL_COMMAND,
         sql.SQL_INSERT_RAW_TRAFFIC,
         "raw_request_data",
         "raw_response_data",
         "id_1",
     )
     context.broker.publish(
-        broker.TOPICS.SQL_QUERY,
+        broker.TOPICS.SQL_COMMAND,
         sql.SQL_INSERT_LOG,
         "log_data",
         "id_1",
@@ -185,6 +185,6 @@ if __name__ == "__main__":
 
     print_result(db.query("select * from Traffic;"))
     context.broker.publish(
-        broker.TOPICS.SQL_QUERY,
+        broker.TOPICS.SQL_COMMAND,
         "select * from Traffic;",
         callback=print_result)

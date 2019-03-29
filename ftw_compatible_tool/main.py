@@ -18,6 +18,19 @@ __all__ = [
 import argparse
 import sys
 import ast
+import os
+
+sys.path.append(
+    os.path.realpath(
+        os.path.join(
+            os.path.dirname(
+                __file__
+            ),
+            os.pardir
+        )
+    )
+)
+
 
 import context
 import broker

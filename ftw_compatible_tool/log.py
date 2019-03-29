@@ -61,7 +61,7 @@ class LogCollector(collector.SwitchCollector):
             return
         log_buffer = "\n".join(collected_buffer[1:-1])
         self._ctx.broker.publish(
-            broker.TOPICS.SQL_QUERY,
+            broker.TOPICS.SQL_COMMAND,
             sql.SQL_INSERT_LOG,
             log_buffer,
             key,
@@ -75,7 +75,7 @@ if __name__ == "__main__":
         broker.Broker(),
         delimiter=traffic.Delimiter("334787923864975794240893756898805143302"))
     log_collector = LogCollector(ctx)
-    ctx.broker.subscribe(broker.TOPICS.SQL_QUERY, testdata.PrintMessage)
+    ctx.broker.subscribe(broker.TOPICS.SQL_COMMAND, testdata.PrintMessage)
 
     for line in testdata.TEST_MODSECURITY_LOG.splitlines():
         ctx.broker.publish(broker.TOPICS.RAW_LOG, line + "\n")

@@ -28,7 +28,7 @@ class TOPICS(object):
     """ TOPICS
         COMMAND means user's command
         RESET means to reset ftw_compatible_tool
-        SQL_QUERY means a sql query
+        SQL_COMMAND means a sql query
 
         PYWB_OUTPUT means the output from pywb
 
@@ -45,7 +45,7 @@ class TOPICS(object):
     """
     COMMAND = "COMMAND"
     RESET = "RESET"
-    SQL_QUERY = "SQL_QUERY"
+    SQL_COMMAND = "SQL_COMMAND"
 
     PYWB_OUTPUT = "PYWB_OUTPUT"
 

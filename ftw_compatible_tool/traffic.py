@@ -3,6 +3,9 @@
 
 # Copyright (c) Microsoft Corporation. All rights reserved.
 # Licensed under the MIT License.
+
+from __future__ import print_function
+
 """ traffic
 
 This exports:
@@ -30,7 +33,6 @@ __all__ = [
     "Delimiter",
 ]
 
-from __future__ import print_function
 import uuid
 import re
 
@@ -60,8 +62,8 @@ class _RawPacketCollector(collector.SwitchCollector):
         received_size = int(start_result.group(1))
         if len(collected_buffer) < received_size:
             self._ctx.broker.publish(
-                broker.TOPICS.WARNING, "package lose message(%s)" %
-                (received_size - len(collected_buffer), ))
+                broker.TOPICS.WARNING, "package lose message(%s/%s)" %
+                (len(collected_buffer), received_size ))
             received_size = len(collected_buffer)
         package = collected_buffer[:received_size]
         self._ctx.broker.publish(self._topic, package)
@@ -131,7 +133,7 @@ class RealTrafficCollector(object):
 
     def _publish(self):
         self._ctx.broker.publish(
-            broker.TOPICS.SQL_QUERY,
+            broker.TOPICS.SQL_COMMAND,
             sql.SQL_INSERT_RAW_TRAFFIC,
             self._request_buffer,
             self._response_buffer,
@@ -323,7 +325,7 @@ if __name__ == "__main__":
         print(repr(args))
         print(repr(kwargs))
 
-    ctx.broker.subscribe(broker.TOPICS.SQL_QUERY, PrintMessage)
+    ctx.broker.subscribe(broker.TOPICS.SQL_COMMAND, PrintMessage)
 
     for line in testdata.TEST_PYWB_OUTPUT.split('\n'):
         ctx.broker.publish(broker.TOPICS.PYWB_OUTPUT, line + '\n')
