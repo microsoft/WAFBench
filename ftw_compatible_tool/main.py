@@ -92,7 +92,7 @@ def execute(arguments, ui=user_interface.CLI, brk=broker.Broker()):
         brk.publish(broker.TOPICS.SHOW_UI, "tutorial")
         ui.interact()
     else:
-        commands = args.execute.decode("string_escape").strip().splitlines()
+        commands = args.execute.strip().split("|")
         for command in commands:
             brk.publish(broker.TOPICS.COMMAND,
                         *tuple(command.strip().split(' ')))

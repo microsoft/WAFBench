@@ -190,7 +190,8 @@ class RealTrafficCollector(object):
         elif self._state == collector.COLLECT_STATE.FINISH_COLLECT:
             self._state = collector.COLLECT_STATE.START_COLLECT
         elif self._state == collector.COLLECT_STATE.START_COLLECT:
-            self._response_buffer += raw_response
+            if self._request_buffer:
+                self._response_buffer += raw_response
         else:
             self._ctx.broker.publish(broker.TOPICS.ERROR,
                                      "Internal state error")
