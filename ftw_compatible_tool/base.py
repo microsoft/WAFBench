@@ -213,10 +213,10 @@ class Base(object):
 
     def _report_experiment(self):
         def regex_match(item, value):
-            return bool(value) and re.search(unicode(item), value)
+            return bool(value) and bool(re.search(unicode(item), value))
 
         def regex_not_match(item, value):
-            return not regex_match(item, value)
+            return not bool(regex_match(item, value))
 
         check_items = {
             "status": ("raw_response", regex_match),
@@ -246,8 +246,8 @@ class Base(object):
                     self._ctx.broker.publish(
                         broker.TOPICS.SQL_COMMAND,
                         sql.SQL_UPDATE_TESTING_RESULT,
-                        str(not check_result \
-                        or reduce(lambda x, y: x and y, check_result.values())),
+                        str(bool(not check_result \
+                        or reduce(lambda x, y: x and y, check_result.values()))),
                         row["traffic_id"]
                         )
                     self._ctx.broker.publish(broker.TOPICS.CHECK_RESULT, row,
