@@ -21,6 +21,7 @@ import ast
 import re
 import sys
 import traceback
+import collections
 
 import pywb
 
@@ -230,7 +231,7 @@ class Base(object):
 
         def report_experiment(query_result):
             for row in query_result:
-                row = dict(zip(query_result.title(), row))
+                row = collections.OrderedDict(zip(query_result.title(), row))
                 # this test not be sent
                 if row["raw_request"] is None:
                     continue
@@ -242,6 +243,13 @@ class Base(object):
                             continue
                         check_item = check_items[k]
                         check_result[k] = check_item[1](v, row[check_item[0]])
+                    self._ctx.broker.publish(
+                        broker.TOPICS.SQL_COMMAND,
+                        sql.SQL_UPDATE_TESTING_RESULT,
+                        str(not check_result \
+                        or reduce(lambda x, y: x and y, check_result.values())),
+                        row["traffic_id"]
+                        )
                     self._ctx.broker.publish(broker.TOPICS.CHECK_RESULT, row,
                                              check_result)
                 except re.error as e:

@@ -359,6 +359,9 @@ ________________________      __          _________
             wrapper.initial_indent = prefix + " : "
 
             buffer_ = ""
+            # skip traffic_id
+            if k in ["traffic_id"]:
+                continue
             if k == "output":
                 buffer_ += "{"
                 len_ = len(v.keys())

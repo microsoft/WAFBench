@@ -39,6 +39,7 @@ CREATE TABLE Traffic (
     raw_request BLOB,
     raw_response BLOB,
     raw_log TEXT,
+    testing_result TEXT,
     duration_time REAL
 );
 CREATE INDEX idx_title on Traffic(test_title);
@@ -65,7 +66,7 @@ SELECT traffic_id, request FROM Traffic GROUP BY traffic_id;
 
 SQL_CLEAN_RAW_DATA = '''
 UPDATE Traffic
-SET raw_request = NULL, raw_response = NULL, raw_log = NULL;
+SET raw_request = NULL, raw_response = NULL, raw_log = NULL, testing_result = NULL;
 '''
 
 SQL_INSERT_RAW_TRAFFIC = '''
@@ -82,6 +83,7 @@ WHERE traffic_id = ?;
 
 SQL_QUERY_RESULT = '''
 SELECT
+    traffic_id,
     test_title ,
     output ,
     raw_request ,
@@ -93,5 +95,11 @@ FROM Traffic;
 SQL_QUERY_TEST_TITLE = '''
 SELECT test_title
 FROM Traffic
+WHERE traffic_id = ?;
+'''
+
+SQL_UPDATE_TESTING_RESULT = '''
+UPDATE Traffic
+SET testing_result = ?
 WHERE traffic_id = ?;
 '''
