@@ -210,7 +210,7 @@ class Delimiter(object):
         - _magic_searcher: A re.Pattern object.
             We use this to search our delimiter.
     """
-    _MAGIC_PATTERN = r"{magic_string}-<{unique_key}>"
+    _MAGIC_PATTERN = r"{magic_string}-{unique_key}"
 
     _DELIMITER_PACKET_FORMAT = r'''
 ---
@@ -238,10 +238,10 @@ class Delimiter(object):
 
     _DELIMITER_RULE_FORMAT = r'''
 SecRule REQUEST_HEADERS:Host "{magic_pattern}" \
-    "phase:5,\
+    "phase:1,\
     id:010203,\
     t:none,\
-    block,\
+    deny,\
     msg:'delimiter-%{{matched_var}}'"
     '''
 

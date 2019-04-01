@@ -76,6 +76,8 @@ class SwitchCollector(Collector):
             when it's collecing,
             it stops collecting.
             Should not be empty string.
+        - save_entire_line: If retain entire line includes start pattern 
+            or end pattern
         
     Attributes:
         - _start_pattern: The re.Pattern object compiled from start_pattern.
@@ -85,7 +87,7 @@ class SwitchCollector(Collector):
     """
     __metaclass__ = abc.ABCMeta
 
-    def __init__(self, start_pattern, end_pattern):
+    def __init__(self, start_pattern, end_pattern, save_entire_line = False):
         """ Initialize patterns and results.
         """
         super(SwitchCollector, self).__init__()
@@ -98,6 +100,7 @@ class SwitchCollector(Collector):
                 (start_pattern, end_pattern))
         self._start_result = None
         self._end_result = None
+        self._save_entire_line = save_entire_line
 
     @abc.abstractmethod
     def _execute(self, collected_buffer, start_result, end_result):
@@ -122,14 +125,21 @@ class SwitchCollector(Collector):
                 self._start_result = self._start_pattern.search(line)
                 if self._start_result:
                     self.state = COLLECT_STATE.START_COLLECT
-                    line = line[self._start_result.end():]
+                    if self._save_entire_line:
+                        self._collected_buffer += line
+                        break
+                    else:
+                        line = line[self._start_result.end():]
                 else:
                     break
             elif self.state == COLLECT_STATE.START_COLLECT:
                 self._end_result = re.search(self._end_pattern, line)
                 if self._end_result:
-                    self._collected_buffer += line[:self._end_result.start()]
-                    line = line[self._end_result.start():]
+                    if self._save_entire_line:
+                        self._collected_buffer += line
+                    else:
+                        self._collected_buffer += line[:self._end_result.start()]
+                        line = line[self._end_result.start():]
                     self._execute(self._collected_buffer, self._start_result,
                                   self._end_result)
                     self._reset()

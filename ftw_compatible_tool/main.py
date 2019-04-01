@@ -100,4 +100,3 @@ def execute(arguments, ui=user_interface.CLI, brk=broker.Broker()):
 
 if __name__ == "__main__":
     execute(sys.argv[1:])
-    import gc
