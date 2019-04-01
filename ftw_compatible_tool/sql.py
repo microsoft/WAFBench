@@ -61,7 +61,7 @@ INSERT INTO Traffic (
 '''
 
 SQL_QUERY_REQUEST = '''
-SELECT traffic_id, request FROM Traffic GROUP BY test_title;
+SELECT traffic_id, request FROM Traffic ORDER BY test_title;
 '''
 
 SQL_CLEAN_RAW_DATA = '''
