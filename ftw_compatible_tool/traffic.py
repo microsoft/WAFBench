@@ -35,6 +35,7 @@ __all__ = [
 
 import uuid
 import re
+import time
 
 import collector
 import context
@@ -117,6 +118,8 @@ class RealTrafficCollector(object):
         self._current_key = None
         self._request_buffer = ""
         self._response_buffer = ""
+        self._request_time = None
+        self._response_time = None
         self._state = collector.COLLECT_STATE.FINISH_COLLECT
         self._ctx.broker.subscribe(broker.TOPICS.RAW_REQUEST,
                                    self.collect_raw_request)
@@ -132,11 +135,15 @@ class RealTrafficCollector(object):
         self._ctx.broker.unsubscribe(broker.TOPICS.RESET, self._reset)
 
     def _publish(self):
+        elapse_time = None
+        if self._request_time and self._response_time:
+            elapse_time = self._response_time - self._request_time
         self._ctx.broker.publish(
             broker.TOPICS.SQL_COMMAND,
             sql.SQL_INSERT_RAW_TRAFFIC,
             self._request_buffer,
             self._response_buffer,
+            elapse_time,
             self._current_key,
         )
         self._ctx.broker.publish(
@@ -150,6 +157,8 @@ class RealTrafficCollector(object):
         self._current_key = None
         self._request_buffer = ""
         self._response_buffer = ""
+        self._request_time = None
+        self._response_time = None
         self._state = collector.COLLECT_STATE.FINISH_COLLECT
 
     def collect_raw_request(self, raw_request):
@@ -166,15 +175,15 @@ class RealTrafficCollector(object):
                 self._current_key = key
             elif self._current_key == key:
                 self._publish()
-                self._current_key = None
-                self._request_buffer = ""
-                self._response_buffer = ""
+                self._reset()
             else:
                 self._ctx.broker.publish(
                     broker.TOPICS.ERROR,
                     "Lose request %s" % (self._current_key))
                 return
         else:
+            if not self._request_time:
+                self._request_time = time.time()
             self._request_buffer += raw_request
 
     def collect_raw_response(self, raw_response):
@@ -191,7 +200,10 @@ class RealTrafficCollector(object):
             self._state = collector.COLLECT_STATE.START_COLLECT
         elif self._state == collector.COLLECT_STATE.START_COLLECT:
             if self._request_buffer:
+                if not self._response_time:
+                    self._response_time = time.time()
                 self._response_buffer += raw_response
+
         else:
             self._ctx.broker.publish(broker.TOPICS.ERROR,
                                      "Internal state error")

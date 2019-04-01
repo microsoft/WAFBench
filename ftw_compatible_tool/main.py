@@ -18,6 +18,7 @@ __all__ = [
 import argparse
 import sys
 import ast
+import shlex
 import os
 
 sys.path.append(
@@ -95,7 +96,7 @@ def execute(arguments, ui=user_interface.CLI, brk=broker.Broker()):
         commands = args.execute.strip().split("|")
         for command in commands:
             brk.publish(broker.TOPICS.COMMAND,
-                        *tuple(command.strip().split(' ')))
+                        *tuple(shlex.split(command)))
 
 
 if __name__ == "__main__":

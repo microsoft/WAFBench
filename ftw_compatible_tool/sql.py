@@ -61,7 +61,7 @@ INSERT INTO Traffic (
 '''
 
 SQL_QUERY_REQUEST = '''
-SELECT traffic_id, request FROM Traffic GROUP BY traffic_id;
+SELECT traffic_id, request FROM Traffic GROUP BY test_title;
 '''
 
 SQL_CLEAN_RAW_DATA = '''
@@ -71,7 +71,7 @@ SET raw_request = NULL, raw_response = NULL, raw_log = NULL, testing_result = NU
 
 SQL_INSERT_RAW_TRAFFIC = '''
 UPDATE Traffic
-SET raw_request = ?, raw_response = ?
+SET raw_request = ?, raw_response = ?, duration_time = ?
 WHERE traffic_id = ?;
 '''
 
