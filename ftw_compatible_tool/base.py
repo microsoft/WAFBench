@@ -212,6 +212,19 @@ class Base(object):
             self._ctx.broker.publish(broker.TOPICS.RAW_LOG, log)
 
     def _report_experiment(self):
+        def check_http_code(item, http_content):
+            if not http_content:
+                return False
+            result = re.search(r"HTTP[\S]+ (\d{3})", http_content)
+            if not result:
+                return False
+            http_code = result.group(1)
+            if isinstance(item, list):
+                item = list(map(str, item))
+                return http_code in item
+            else:
+                return str(item) == http_code
+
         def regex_match(item, value):
             return bool(value) and bool(re.search(unicode(item), value))
 
@@ -219,7 +232,7 @@ class Base(object):
             return not bool(regex_match(item, value))
 
         check_items = {
-            "status": ("raw_response", regex_match),
+            "status": ("raw_response", check_http_code ),
             "log_contains": ("raw_log", regex_match),
             "no_log_contains": ("raw_log", regex_not_match),
             "response_contains": ("raw_response", regex_match),
