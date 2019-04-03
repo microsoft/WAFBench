@@ -41,7 +41,9 @@ def get_wb_path():
     for position in search_positions:
         position = os.path.join(position, "wb")
         if not os.path.isabs(position):
-            position = os.path.join(os.path.dirname(__file__), position)
+            position = os.path.join(
+                os.path.dirname(
+                    os.path.realpath(__file__)), position)
         if os.path.exists(position) and os.path.isfile(position):
             return position
     raise IOError(
