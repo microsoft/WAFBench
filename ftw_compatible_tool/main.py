@@ -50,13 +50,32 @@ def parse(arguments):
     """
     parser = argparse.ArgumentParser()
 
-    parser.add_argument("-d", "--database", default=":memory:")
+    parser.add_argument(
+        "-d",
+        "--database",
+        default=":memory:",
+        help='''
+        You can specify a database file to store or restore your testing procedure.
+        If this argument wasn't provied the memory database wil be used, which means
+        the procedure will not be perserved.
+        ''')
 
     mode_group = parser.add_mutually_exclusive_group(required=True)
-    mode_group.add_argument("-i", "--interact", action="store_true")
+    mode_group.add_argument(
+        "-i",
+        "--interact",
+        action="store_true",
+        help = '''
+        You can use a interact mode to use this program.
+        '''
+    )
     mode_group.add_argument(
         "-x",
         "--execute",
+        help = '''
+        You can use a batch mode to use this program, each internal commands seperated by '|'.
+        e.g. -x 'load ~/testcases | gen | start targetserver | report'
+        '''
     )
 
     arguments = parser.parse_args(arguments)
@@ -79,6 +98,7 @@ def execute(arguments, ui=user_interface.CLI, brk=broker.Broker()):
     ui = ui(ctx)
 
     brk.publish(broker.TOPICS.SHOW_UI, "welcome")
+    brk.publish(broker.TOPICS.SHOW_UI, "tutorial")
     traffic.RawRequestCollector(ctx)
     traffic.RawResponseCollector(ctx)
     traffic.RealTrafficCollector(ctx)
@@ -90,7 +110,6 @@ def execute(arguments, ui=user_interface.CLI, brk=broker.Broker()):
     database.Sqlite3DB(ctx, args.database)
 
     if args.interact:
-        brk.publish(broker.TOPICS.SHOW_UI, "tutorial")
         ui.interact()
     else:
         commands = args.execute.strip().split("|")
