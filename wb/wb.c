@@ -1578,15 +1578,15 @@ static void write_request(struct connection * c)
 
                 // duplicate the whole request header
                 // starting from URL position
-                if (g_request_end = strstr(request_pos, "\r\n\r\n"))
+                if (g_request_end = memmem(request_pos, reqlen, "\r\n\r\n", 4))
                     hdr_delim = 4;
                 /*
                  * this next line is so that we talk to NCSA 1.5 which blatantly
                  * breaks the http specifaction
                  */
-                else if (g_request_end = strstr(request_pos, "\n\n")) 
+                else if (g_request_end = memmem(request_pos, reqlen, "\n\n", 2)) 
                     hdr_delim = 2;
-                else if (g_request_end = strstr(request_pos, "\r\r")) 
+                else if (g_request_end = memmem(request_pos, reqlen, "\r\r", 2)) 
                     hdr_delim = 2;
                 else {
                     fprintf(stderr, "Error! Request does not have a valid header(end with 2 LNs):\n%s", request);
@@ -1650,10 +1650,11 @@ static void write_request(struct connection * c)
                                 *(sub+sub_len+j) = *(sub+req_id_string_len+j);
                         //memmove(sub+req_id_string_len, copy_pos, 
                         memcpy(sub, req_id_string, req_id_string_len);
+                        g_new_header_len += req_id_string_len;
                     }
                 }
-                g_new_header_len = strlen(g_new_header);
-                //reqlen += g_new_header_len - (g_request_end - request);
+                // g_new_header_len = strlen(g_new_header);
+                // reqlen += g_new_header_len - (g_request_end - request);
                 reqlen = g_new_header_len;
 
                 char *connection_hdr;
@@ -1700,7 +1701,8 @@ static void write_request(struct connection * c)
 
                     // now copy the connection string
                     memcpy(g_new_header + header_len, conn_str, conn_str_len);              
-                    g_new_header_len = strlen(g_new_header);
+                    // g_new_header_len = strlen(g_new_header);
+                    g_new_header_len += conn_str_len;
                     //reqlen += g_new_header_len - (g_request_end - request);
                     reqlen = g_new_header_len;
                }
