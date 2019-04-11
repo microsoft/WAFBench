@@ -51,7 +51,17 @@ class BaseConf(object):
                  pkt_path="test." + str(os.getpid()) + ".pkt",
                  timeout=30,
                  functions={}):
-        self.pkt_path = pkt_path
+
+        abspath = os.path.abspath(os.sep)
+        abstmp = os.path.join(abspath, "tmp")
+        if os.path.exists(abstmp):
+            self.pkt_path = os.path.join(abstmp,  pkt_path)
+        else:
+            curtmp = os.path.join(os.getcwd(), "tmp")
+            if not os.path.exists(curtmp):
+                os.makedirs(curtmp)
+            self.pkt_path = os.path.join(curtmp,  pkt_path)
+
         self.timeout = timeout
         self.functions = functions
 
