@@ -51,10 +51,17 @@ class BaseConf(object):
                  pkt_path="test." + str(os.getpid()) + ".pkt",
                  timeout=30,
                  functions={}):
-        if not os.path.exists("./temp"):
-            os.makedirs("./temp")
 
-        self.pkt_path = os.getcwd()+ "/temp/" +  pkt_path
+        abspath = os.path.abspath(os.sep)
+        abstmp = os.path.join(abspath, "tmp")
+        if os.path.exists(abstmp):
+            self.pkt_path = os.path.join(abstmp,  pkt_path)
+        else:
+            curtmp = os.path.join(os.getcwd(), "tmp")
+            if not os.path.exists(curtmp):
+                os.makedirs(curtmp)
+            self.pkt_path = os.path.join(curtmp,  pkt_path)
+
         self.timeout = timeout
         self.functions = functions
 
@@ -92,8 +99,9 @@ class Base(object):
                                    self._notification_processor)
 
     def __del__(self):
-        if os.path.exists("temp"):
-            os.system("rm -rf " + "temp")
+        if os.path.exists(self._conf.pkt_path) and os.path.isfile(
+                self._conf.pkt_path):
+            os.remove(self._conf.pkt_path)
         self._ctx.broker.unsubscribe(broker.TOPICS.COMMAND, self._command)
         self._ctx.broker.unsubscribe(broker.TOPICS.FATAL,
                                      self._notification_processor)
