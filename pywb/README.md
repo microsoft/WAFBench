@@ -1,5 +1,3 @@
- [WB Home Page](../README.md)
-
 # pywb
 
 `pywb` is an enhanced interface for `wb`. It is more friendly to use and easier for developing.
@@ -12,14 +10,13 @@ Some software or libraries may be necessary for have been listed in [WB Home Pag
 
 ### Synopsis
 
-```
+```bash
 ./main.py [options] [http[s]://]hostname[:port]/path
 ```
 
 ### Options
 
 **options** are compatible with [wb](../wb/README.md).
-
 
 ***ENHANCE OPTION***
 
@@ -28,7 +25,7 @@ Some software or libraries may be necessary for have been listed in [WB Home Pag
 
 ### Example
 
-```
+```bash
 # post a json file, automatically infer the Content-Type
 ./main.py  10.0.1.131:18080  -p ../example/packets/requestbody2kb.json  -t 5 -c 20
 
@@ -42,8 +39,10 @@ Some software or libraries may be necessary for have been listed in [WB Home Pag
 ```
 
 ### Develop
+
 Two interfaces are provided to developers to customize new features. 
-```
+
+```python
 # optionparser.py
 class OptionParser(object):
     """ OptionParser is an abstract class and defines the interfaces.

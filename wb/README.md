@@ -22,21 +22,21 @@ wb has some new features:
 10. wb can also add a message seq# to the header. To do this, you can:
     * use -U option to specify a fixed prefix to each URL, or you can:
     * use -J <sub_string> to specify the string to be substitued in header.
-    
+
     For example, to add a prefix "YAML_TEST_[SEQ_ID]" to URL like this:
 
-    ```
+    ```text
     GET /YAML_TEST_0/64b HTTP/1.0
     GET /YAML_TEST_1/64b HTTP/1.0
     GET /YAML_TEST_2/64b HTTP/1.0
     ```
-    
+
     Command a: `wb -U YAML_TEST_ -n 3 10.0.1.131:18081`
-    
+
     Command b: `wb -F get64b.pkt -J [PACKET_SEQ_ID] -n 3 10.0.1.131:18081`
     Packet file "get64b.pkt" has the [PACKET_SEQ_ID] in its header like this:
-    
-    ```
+
+    ```text
     GET /YAML_TEST_[PACKET_SEQ_ID]/64b HTTP/1.0
     Host: localhost
     User-Agent: ApacheBench/2.3
@@ -45,16 +45,16 @@ wb has some new features:
 
 ## Build Instructions
 
-### Build   
+### Build
 
-```
+```bash
 make clean
 make
-```    
+```
 
 ### Install
 
-```
+```bash
 make install
 ```
 
@@ -62,7 +62,7 @@ make install
 
 ### Normal ab-like testing with only 1 step
 
-```
+```bash
 wb -t 10 live.com/home.html
 ```
 
@@ -70,27 +70,27 @@ Benchmark "live.com/home.html" for 10 seconds just like ab.
 
 ### WAF performance testing
 
-```
+```bash
 wb -t 10 -c 20 10.0.1.131:18081
 ```
 
-The three options are:    
+The three options are:
 
-* duration of testing (-t 10, 10 seconds) 
-* connection number (-c 20) 
+* duration of testing (-t 10, 10 seconds)
+* connection number (-c 20)
 * destination server/URL (10.0.1.131:18081). Note that, unlike ab, wb does not require "/" at the end of URL.
 
 ### Examples
 
 There are several examples in `../example/` to help understanding usage.
 
-- `WB-GET.sh` uses `wb` to conduct GET test.
-- `WB-POST.sh` uses `wb` to conduct POST test.
-- `WB-SEND-PACKET.sh` uses `wb` to send HTTP packets directly.
+* `WB-GET.sh` uses `wb` to conduct GET test.
+* `WB-POST.sh` uses `wb` to conduct POST test.
+* `WB-SEND-PACKET.sh` uses `wb` to send HTTP packets directly.
 
 ## Synopsis
 
-```
+```text
     wb [ -A auth-username:password ] [ -b windowsize ] [ -B local-address
     ] [ -c concurrency ] [ -C cookie-name=value ] [ -d ] [ -e csv-file ]
     [ -f protocol ] [ -F pkt_file ] [ -g gnuplot-file ] [ -G max_size ]
@@ -108,7 +108,7 @@ There are several examples in `../example/` to help understanding usage.
 
 ## Classical ApacheBench's Options
 
-```
+```text
     -A auth-username:password
         Supply BASIC Authentication credentials to the server. The
         username and password are separated by a single : and sent on
@@ -248,9 +248,9 @@ There are several examples in `../example/` to help understanding usage.
         Specify SSL/TLS cipher suite (See openssl ciphers)
 ```
 
-## WAF-Bench's New Options
+## wb's New Options
 
-```
+```text
     -F pkt_file     File of packet seperated by \0 or a leading size
                     note: "-n" now is the total times to be sent for pkt_file
     -G max_size     Maximum output file size (in MB, default=0:unlimited)
@@ -285,7 +285,7 @@ For example, we have two requests: A and B.
 
 A's content is:
 
-```
+```text
 GET / HTTP/1.1
 Host: example.com
 Connection: keep-alive
@@ -303,7 +303,7 @@ A's size in bytes is 476.
 
 B's content is:
 
-```
+```text
 GET /test HTTP/1.1
 Host: example.com
 Connection: keep-alive
@@ -346,7 +346,7 @@ Accept-Language: en-US,en;q=0.9
 
 If you use the `\0` way, the packect file will be:
 
-```
+```text
 GET / HTTP/1.1
 Host: example.com
 Connection: keep-alive

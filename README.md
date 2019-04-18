@@ -1,13 +1,13 @@
-```
- __     __     ______     ______      ______     ______     __   __     ______     __  __    
-/\ \  _ \ \   /\  __ \   /\  ___\    /\  == \   /\  ___\   /\ "-.\ \   /\  ___\   /\ \_\ \   
-\ \ \/ ".\ \  \ \  __ \  \ \  __\    \ \  __<   \ \  __\   \ \ \-.  \  \ \ \____  \ \  __ \  
- \ \__/".~\_\  \ \_\ \_\  \ \_\       \ \_____\  \ \_____\  \ \_\\"\_\  \ \_____\  \ \_\ \_\ 
-  \/_/   \/_/   \/_/\/_/   \/_/        \/_____/   \/_____/   \/_/ \/_/   \/_____/   \/_/\/_/ 
-                                                                                             
-```
-
 # WAF Bench (WB) Tool Suits
+
+```text
+
+/\ \  _ \ \   /\  __ \   /\  ___\    /\  == \   /\  ___\   /\ "-.\ \   /\  ___\   /\ \_\ \
+\ \ \/ ".\ \  \ \  __ \  \ \  __\    \ \  __<   \ \  __\   \ \ \-.  \  \ \ \____  \ \  __ \  
+ \ \__/".~\_\  \ \_\ \_\  \ \_\       \ \_____\  \ \_____\  \ \_\\"\_\  \ \_____\  \ \_\ \_\
+  \/_/   \/_/   \/_/\/_/   \/_/        \/_____/   \/_____/   \/_/ \/_/   \/_____/   \/_/\/_/
+
+```
 
 WAF (Web Application Firewall) Bench tool suits is designed to verify the correctness and measure the performance of WAF.
 
@@ -15,28 +15,31 @@ WAF (Web Application Firewall) Bench tool suits is designed to verify the correc
 
 ### Real Traffic Performance Testing
 
-The WAF's performance fluctuates greatly as the input traffic varies. The existing tool, i.e. `ab`, can test the perfromance under only one kind of customized request, which can not reproduce the real traffic scenario. In addition, `ab` can only customize some fields of the request, which is inconvenient for testing. 
+The WAF's performance fluctuates greatly as the input traffic varies. The existing tool, i.e. `ab`, can test the performance under only one kind of customized request, which can not reproduce the real traffic scenario. In addition, `ab` can only customize some fields of the request, which is inconvenient for testing.
 
-In order to get the performance experienced by the real custumer and further improve WAF's efficiency, we build `wb`, an ab-like tool, which could send multiple and fully-customized packets in one invoking. Besides, WAF Bench tool suits accepts YAML-based input, which can customize your packet and reproduce multiple different packets easily. 
+In order to get the performance experienced by the real customer and further improve WAF's efficiency, we build `wb`, an ab-like tool, which could send multiple and fully-customized packets in one invoking. Besides, WAF Bench tool suits accepts YAML-based input, which can customize your packet and reproduce multiple different packets easily.
 
 ### Automatic WAF Correctness Testing
 
-Automatic WAF correctness testing can relieve developers from the heavy and tedious verifying works. There are two important factors for conducting a WAF correctness testing: the testing framework and testcases.
+Automatic WAF correctness testing can relieve developers from the heavy and tedious verifying works. There are two important factors for conducting a WAF correctness testing: the testing framework and test cases.
 
 For the testing framework, we provide a `FTW-Compatible Tool` which leverages `wb` as its underlying tool. Its performance is better than FTW.
 
 For test cases, we provide several generators for different purposes:
 
 - Generate YAML files from the real traffic logs.
-- Generate YAML files from the WAF ruleset.
+- Generate YAML files from the WAF rule set.
 
 Currently, they are still in development.
 
 ## Feature
 
 ![Feature](./Architecture.png)
+
 ### WAF Bench
+
 WAF Bench (wb) is the ab-like tool for conducting performance testing.
+
 * M0 - Send/Receive HTTP&HTTPS requests/responses
 * M0 - Report performance statistics
 * M0 - Set the limit of testing time or total request number in testing
@@ -46,12 +49,13 @@ WAF Bench (wb) is the ab-like tool for conducting performance testing.
 * M0 - Support request rate limit
 
 ### Python-based WAF Bench
+
 Python WAF Bench (pywb) is an enhanced tools of wb.
+
 * M1 - Compatible with wb
 * M1 - Send multiple file and directories in once executing.
 * M1 - Infer Content-Type from the file extension automatically
 * M2 - Support pip install
-
 
 ### FTW-compatible Tool
 
@@ -61,8 +65,8 @@ Python WAF Bench (pywb) is an enhanced tools of wb.
 * M2 - Can search the compare result by test title and give out very detailed results (raw YAML, raw request, raw response, compare result)
 
 ### Auto-Test Generator
-* M3 - Automatically generate requests by ModSecurity rule set for testing the coverage of WAF
 
+* M3 - Automatically generate requests by ModSecurity rule set for testing the coverage of WAF
 
 ## Usage
 
@@ -100,7 +104,7 @@ Before installing dependencies using yum in CentOS, we recommend you to enable t
 
 However you can find these packages in your own source using 'yum search ...'
 
-```
+```bash
 sudo yum install gcc gcc-c++ make                # Install build-essential
 sudo yum install libev-devel.x86_64              # Install development headers for libev
 sudo yum install cmake                           # Install CMake
@@ -115,22 +119,24 @@ sudo yum install openssl-devel                   # Install openssl
 
 or just type
 
-```
+```bash
 sudo yum install gcc gcc-c++ make libev-devel.x86_64 cmake boost-devel.x86_64 python2 python2-pip.noarch wget.x86_64 expat-devel openssl-devel
 sudo pip install ftw
 ```
 
-#### Download WB tools suits 
+#### Download WB tools suits
 
 Just clone this repo to your machines.
-```
+
+```bash
 git clone git@github.com:Microsoft/WAFBench.git
 ```
 
 #### Install wb
 
 Please refer to [wb Readme](./wb/README.md)
-```
+
+```bash
 cd wb
 make
 make install
@@ -140,19 +146,18 @@ make install
 
 Assuming that the server is at 10.0.1.1:18081 running we can:
 
-```
+```bash
 ./pywb/main.py -t 10 -c 20  10.0.1.1:18081
 ```
 
 Or send requests from a file such as *requests.dat*:
 
-```
+```bash
 ./pywb/main.py -t 10 -c 25 -F ./example/packets/test-2-packets.yaml 10.0.1.1:18081
 ```
 
 * More information about **[pywb](./pywb/)**, please refer to [pywb Readme](./pywb/README.md)
 * About the format of request file, please refer to [wb Readme](./wb/README.md)
-
 
 ### Advance Usage
 
@@ -165,7 +170,7 @@ Since the components are independent to each other, the detailed build, install 
 
 WB uses the following libraries.
 
-```
+```text
 Framework for Testing WAFs (FTW!)
 
 https://github.com/fastly/ftw
