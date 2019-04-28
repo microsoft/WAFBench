@@ -311,3 +311,4 @@ if __name__ == "__main__":
         broker.TOPICS.SQL_COMMAND,
         testdata.TEST_SHOW_DATABASE,
         callback=testdata.PrintQueryResult)
+
