@@ -1,0 +1,176 @@
+meta:
+  author: msra
+  description: None
+  enabled: true
+  name: 931110.yaml
+tests:
+- stages:
+  - stage:
+      input:
+        data: Foo_key=%3BGALLERY_BASEDIR%3Dfile%3A//%3F
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Length: 41
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 931110-1-auto
+- stages:
+  - stage:
+      input:
+        data: Foo_key=Ppath%5Bdocroot%5D%3Dftps%3A//%23
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Length: 41
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 931110-2-auto
+- stages:
+  - stage:
+      input:
+        data: Foo_key=gappserv_root%3Dhttps%3A//%27
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Length: 37
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 931110-3-auto
+- stages:
+  - stage:
+      input:
+        data: Foo_key=BGALLERY_BASEDIR%3Dhttp%3A//K
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Length: 37
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 931110-4-auto
+- stages:
+  - stage:
+      input:
+        data: Foo_key=7GALLERY_BASEDIR%3Dhttp%3A//o
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Length: 37
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 931110-5-auto
+- stages:
+  - stage:
+      input:
+        data: Foo_key=BmosConfig_absolute_path%3Dfile%3A//6
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Length: 45
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 931110-6-auto
+- stages:
+  - stage:
+      input:
+        data: Foo_key=%24_SERVER%5BDOCUMENT_ROOT%5D%3Dftp%3A//p
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Length: 49
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 931110-7-auto
+- stages:
+  - stage:
+      input:
+        data: Foo_key=%0D%08include%28E%3Dftps%3A//d
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Length: 38
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 931110-8-auto
+- stages:
+  - stage:
+      input:
+        data: Foo_key=%2C_CONF%5Bpath%5D%3Dhttp%3A//a
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Length: 39
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 931110-9-auto
+- stages:
+  - stage:
+      input:
+        data: Foo_key=Uappserv_root%3Dfile%3A//z
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Length: 34
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 931110-10-auto

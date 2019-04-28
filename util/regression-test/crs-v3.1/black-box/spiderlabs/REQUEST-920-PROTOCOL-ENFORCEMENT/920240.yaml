@@ -1,0 +1,97 @@
+meta:
+  author: csanders-git
+  description: Description
+  enabled: true
+  name: 920240.yaml
+tests:
+- stages:
+  - stage:
+      input:
+        data: x=new %w20$
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Length: 11
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        stop_magic: true
+      output:
+        status:
+        - 403
+  test_title: 920240-1
+- stages:
+  - stage:
+      input:
+        data:
+        - <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+          xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+        - ' <SOAP-ENV:Body>'
+        - '      <xkms:StatusRequest xmlns:xkms="http://www.w3.org/2002/03/xkms#"
+          Id="_6ee48478-fdd6-4d7d-b1bf-e7b4c3254659" ResponseId="_c1c36b3f-f962-4aea-bfbd-07ed58468c9b"
+          Service="http://www.soapclient.com/xml/xkms2">'
+        - '      <xkms:ResponseMechanism>http://www.w3.org/2002/03/xkms#Pending</xkms:ResponseMechanism>'
+        - '      <xkms:RespondWith>%1Gwww.attack.org</xkms:RespondWith>'
+        - '      </xkms:StatusRequest>'
+        - '  </SOAP-ENV:Body>'
+        - </SOAP-ENV:Envelope>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: text/xml
+          Host: localhost
+          Keep-Alive: '300'
+          Proxy-Connection: keep-alive
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+      output:
+        status:
+        - 403
+  test_title: 920240-2
+- stages:
+  - stage:
+      input:
+        data: param=%1G
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Language: en-us,en;q=0.5
+          Content-Length: '9'
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+          Keep-Alive: '300'
+          Proxy-Connection: keep-alive
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        stop_magic: true
+      output:
+        status:
+        - 403
+  test_title: 920240-3
+- stages:
+  - stage:
+      input:
+        data: param=%7%6F%6D%65%74%65%78%74%5F%31%32%33%
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+          Keep-Alive: '300'
+          Proxy-Connection: keep-alive
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+      output:
+        status:
+        - 403
+  test_title: 920240-4

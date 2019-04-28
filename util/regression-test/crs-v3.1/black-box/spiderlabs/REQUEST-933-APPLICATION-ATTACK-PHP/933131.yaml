@@ -1,0 +1,20 @@
+meta:
+  author: csanders-git
+  description: Tests functionality of stricter sibiling 933131
+  enabled: true
+  name: 933131.yaml
+tests:
+- desc: SERVER index listed with obfuscated SERVER
+  stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        port: 80
+        uri: /?x=$_%53%20ERVER['REQUEST_URI'];
+      output:
+        status:
+        - 403
+  test_title: 933131-1

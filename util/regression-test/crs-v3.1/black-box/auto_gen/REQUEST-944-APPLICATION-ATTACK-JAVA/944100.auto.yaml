@@ -1,0 +1,858 @@
+meta:
+  author: msra
+  description: None
+  enabled: true
+  name: 944100.yaml
+tests:
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: kvi8F_y_IY=FJaVa.LANG.RUNTimE4
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944100-1-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: 1NCK_Z1Uv=9javA.LaNG.rUntimEL
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944100-2-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: voyGa6EHcAFtJ=KJava.lANG.PRocEsSBuILDerl
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944100-3-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: hw1zFY7WwzABStnmOC=0JAvA.LANg.RUNtimEI
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944100-4-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: zpIJYJ2k=4JaVA.lAng.runtIme/
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944100-5-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: 4HC3hT6vpnB3iFi=9JaVa.laNg.runtImEV
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944100-6-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: qdkRBIw=.JAVa.LANg.runtIMem
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944100-7-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: wfj317gumhWVU=DjAva.lANg.RuNtIME`
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944100-8-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: 9=~JAVa.laNG.PRocESsBuILDeR#
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944100-9-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: aeisFwUb6oG5b4I=WJAVa.LanG.proCESsBUildeRv
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944100-10-auto
+- stages:
+  - stage:
+      input:
+        data: Foo_key=tjaVA.lANG.pROCesSbUILdERB
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Length: 34
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944100-11-auto
+- stages:
+  - stage:
+      input:
+        data: Foo_key=_jaVA.LanG.PROcESsBuiLdErK
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Length: 34
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944100-12-auto
+- stages:
+  - stage:
+      input:
+        data: Foo_key=fJava.LaNG.pROcESSBUILderk
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Length: 34
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944100-13-auto
+- stages:
+  - stage:
+      input:
+        data: Foo_key=JJAVA.LaNG.ProCEssbuiLDEr8
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Length: 34
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944100-14-auto
+- stages:
+  - stage:
+      input:
+        data: Foo_key=KJAvA.lAnG.ruNtimE9
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Length: 27
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944100-15-auto
+- stages:
+  - stage:
+      input:
+        data: Foo_key=8JAvA.LaNG.prOCESsbUildeR+
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Length: 34
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944100-16-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: '|JAVA.LAng.PrOceSsBUIldER|=piL0k3_Tg'
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944100-17-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: RJava.LAnG.pROCEssBUIlDer\=tUS
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944100-18-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: EjavA.laNg.PRoceSsBUIlDERa=g_sz9i
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944100-19-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: Ijava.LaNg.procEsSBuildERT=1MfQ3
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944100-20-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: EJAva.lanG.runTIMeJ=f
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944100-21-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: 9JaVA.lANg.rUntIMEL=HT
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944100-22-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: 8javA.lAnG.rUNtImeo=I
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944100-23-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: 9JAVA.LANG.RunTIMeg=PPFNpFQ
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944100-24-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: "\vJAva.LanG.PROcEsSBUIldert=sFAmr"
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944100-25-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: SjAVa.lanG.RUNtimE/=NmG4UHedo
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944100-26-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?kpcIlwK5XV=%2AJAvA.Lang.pROCeSsBUiLDeRQ
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944100-27-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?wnX=AjAvA.LaNG.ProcEsSBUIlDeR%2A
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944100-28-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?3ut=QJAvA.lAnG.PrOceSSBuILDeRy
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944100-29-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?jUT2bEt9Y=cJAva.LAng.RUNtiMEM
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944100-30-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?ol=YjaVA.LaNg.RuNTIme%28
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944100-31-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?dDnfysQ=-jAVa.laNg.PROCEsSBUildeRF
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944100-32-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?29=5JAVA.lANG.rUNTiMEq
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944100-33-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?hNmtvCpMCb=%2BjAva.LAnG.PrOceSsBuIlder-
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944100-34-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?Khuf54=%2AjaVA.LanG.RunTiMER
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944100-35-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?5NnG=%7DJAVa.Lang.PrOCEsSbuILdeRR
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944100-36-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?%2BjAVA.LaNG.processBuILDeR%23=GaMiSJ
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944100-37-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?%5Djava.lang.RunTImEP=rD06
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944100-38-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?BJava.laNG.ProCESSBuILDeRS=6KY
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944100-39-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?jjAVA.laNg.RuNTIME/=PyyWe0Vw
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944100-40-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?.JavA.laNg.rUNtImE%2C=rBKtenCuC
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944100-41-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?%0DJAVA.laNg.pROCesSbuILDEr%7E=wH
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944100-42-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?%3DjAVA.LaNG.proceSSbUIldErP=8HcSnlR54f
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944100-43-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?7jaVA.lANg.rUnTIMe%3B=z_CS70Wfci
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944100-44-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?NJaVa.LANG.pROceSsbuIlDER8=5PMpQr9
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944100-45-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?Ljava.lanG.RUNTImEz=20_Djv
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944100-46-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          vjsJG: :JAva.lanG.RuntIMeh
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944100-47-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          GMw: WjaVa.LaNG.pROCeSSbuIldeRG
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944100-48-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          8Xn4rAT1: ;javA.lANG.rUntImEZ
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944100-49-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          IPVvNXdWQ: <JAVA.Lang.proCeSsbUilDerL
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944100-50-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          5BaDJJ: RJaVA.Lang.RUntime#
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944100-51-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          ay3L: 9JAVA.lanG.PROCEssbUILdER<
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944100-52-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          U: "$jAVA.lANG.PRoCESsBUilDer\f"
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944100-53-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          DCzL: 2jaVA.LANg.PROCEsSBuiLdEr5
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944100-54-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          7167APhwV2: gJavA.laNG.ruNTImeO
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944100-55-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          QA9gWC: ijaVA.lang.RuNtiME)
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944100-56-auto

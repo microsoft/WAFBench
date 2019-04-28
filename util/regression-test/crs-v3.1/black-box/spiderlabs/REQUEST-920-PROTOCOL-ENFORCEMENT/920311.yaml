@@ -1,0 +1,18 @@
+meta:
+  author: csanders-git
+  description: Description
+  enabled: true
+  name: 920311.yaml
+tests:
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: ''
+          Host: localhost
+        port: 80
+      output:
+        status:
+        - 200
+  test_title: 920311-1

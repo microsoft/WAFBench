@@ -1,0 +1,52 @@
+meta:
+  author: zmallen
+  description: 'Tests to trigger, or not trigger 941210. This checks for abuses of
+    javascript: with different encodings/html etc'
+  enabled: true
+  name: 941210.yaml
+tests:
+- desc: Obsfucated javascript tag in GET data, ARGS
+  stages:
+  - stage:
+      input:
+        data: 941210-1=ja%26tab%3Bvascript%3A%20
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: GET
+        port: 80
+        uri: /foo
+      output:
+        log_contains: id "941210"
+  test_title: 941210-1
+- desc: Obfuscated javascript tag in ARGS_NAMES, with tab
+  stages:
+  - stage:
+      input:
+        data: ja%26tab%3Bvascript%3A%09=941210-2
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: GET
+        port: 80
+        uri: /bar
+      output:
+        log_contains: id "941210"
+  test_title: 941210-2
+- desc: Microsoft vmlframe xss, REQUEST_COOKIE_NAMES
+  stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: ja%26newline%3Bvascript%3A%20=941210-3
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: GET
+        port: 80
+        uri: /baz
+      output:
+        log_contains: id "941210"
+  test_title: 941210-3

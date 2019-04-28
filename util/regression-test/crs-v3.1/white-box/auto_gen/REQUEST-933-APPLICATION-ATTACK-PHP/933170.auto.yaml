@@ -1,0 +1,706 @@
+meta:
+  author: msra
+  description: None
+  enabled: true
+  name: 933170.yaml
+tests:
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: noA=1o:3:"d":5:{l}#
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933170"
+  test_title: 933170-1-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: H8=FO:1:"0":2:{}1
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933170"
+  test_title: 933170-2-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: 0UBAbYAVP2rfAO=xc:9:"P":8:{}V
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933170"
+  test_title: 933170-3-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: Km9dKwYrAe==O:0:"^":8:{G}V
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933170"
+  test_title: 933170-4-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: OL=Oc:3:"@":1:{p}'
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933170"
+  test_title: 933170-5-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: gi_9Pa=Ho:6:"~":2:{}%
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933170"
+  test_title: 933170-6-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: 6aHazPQSvUJ=YO:6:"U":7:{}C
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933170"
+  test_title: 933170-7-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: z5j0nnn6cHzVI8nX9=GO:0:"f":8:{}F
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933170"
+  test_title: 933170-8-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: "yBFN4W1MfX_T=Po:7:\"\f\":1:{m}X"
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933170"
+  test_title: 933170-9-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: aMqy=tC:2:"7":6:{6}o
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933170"
+  test_title: 933170-10-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: EC:4:"g":9:{}z=pPVMdhBLBk
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933170"
+  test_title: 933170-11-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: "ic:2:\"K\":1:{\t}B=YyL6t"
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933170"
+  test_title: 933170-12-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: "\fo:7:\"w\":0:{%}==i"
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933170"
+  test_title: 933170-13-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: Go:4:"'":0:{@}y=frNI5
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933170"
+  test_title: 933170-14-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: +O:7:"P":7:{}Y=0c
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933170"
+  test_title: 933170-15-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: 6c:3:":":1:{}-=eecGA
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933170"
+  test_title: 933170-16-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: +c:5:"~":0:{t}G=HOmyQ
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933170"
+  test_title: 933170-17-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: Ec:3:"Z":1:{3}C=yET
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933170"
+  test_title: 933170-18-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: xC:9:"E":3:{}W=IeI3qL4a
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933170"
+  test_title: 933170-19-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: '*C:8:"@":2:{y}i=ZBK5xI'
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933170"
+  test_title: 933170-20-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?hQf=io%3A6%3A%22-%22%3A1%3A%7Bt%7DB
+        version: HTTP/1.1
+      output:
+        log_contains: id "933170"
+  test_title: 933170-21-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?elLA2=bC%3A4%3A%22_%22%3A7%3A%7B%7Dt
+        version: HTTP/1.1
+      output:
+        log_contains: id "933170"
+  test_title: 933170-22-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?YumFbo=ko%3A1%3A%22J%22%3A1%3A%7B4%7D%2A
+        version: HTTP/1.1
+      output:
+        log_contains: id "933170"
+  test_title: 933170-23-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?5atzF4s4=%09o%3A2%3A%22%0C%22%3A2%3A%7B%7DE
+        version: HTTP/1.1
+      output:
+        log_contains: id "933170"
+  test_title: 933170-24-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?hJFFzXo=9C%3A7%3A%22-%22%3A1%3A%7B%7D%2C
+        version: HTTP/1.1
+      output:
+        log_contains: id "933170"
+  test_title: 933170-25-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?8IXdwQwRwg=7o%3A3%3A%22%22%22%3A3%3A%7B%7D.
+        version: HTTP/1.1
+      output:
+        log_contains: id "933170"
+  test_title: 933170-26-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?Pt6dlt=KC%3A4%3A%22w%22%3A9%3A%7B%25%7D%7B
+        version: HTTP/1.1
+      output:
+        log_contains: id "933170"
+  test_title: 933170-27-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?rY43Q=%26c%3A4%3A%22%2A%22%3A4%3A%7B%7D%09
+        version: HTTP/1.1
+      output:
+        log_contains: id "933170"
+  test_title: 933170-28-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?PubhK5H3=%7DC%3A4%3A%22U%22%3A7%3A%7BF%7DK
+        version: HTTP/1.1
+      output:
+        log_contains: id "933170"
+  test_title: 933170-29-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?XnuXzn=%7Eo%3A3%3A%22e%22%3A5%3A%7B.%7D%0D
+        version: HTTP/1.1
+      output:
+        log_contains: id "933170"
+  test_title: 933170-30-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?Oc%3A1%3A%22O%22%3A5%3A%7B%7DA=XE1CJM7rb
+        version: HTTP/1.1
+      output:
+        log_contains: id "933170"
+  test_title: 933170-31-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?%5EC%3A4%3A%22%3D%22%3A5%3A%7B%7Dw=D4lIB
+        version: HTTP/1.1
+      output:
+        log_contains: id "933170"
+  test_title: 933170-32-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?GC%3A1%3A%22E%22%3A7%3A%7BA%7DK=TFKAf
+        version: HTTP/1.1
+      output:
+        log_contains: id "933170"
+  test_title: 933170-33-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?Vc%3A7%3A%22%3B%22%3A4%3A%7B%7DS=s3
+        version: HTTP/1.1
+      output:
+        log_contains: id "933170"
+  test_title: 933170-34-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?sc%3A9%3A%22%25%22%3A1%3A%7BN%7D%3F=oo1wTMr
+        version: HTTP/1.1
+      output:
+        log_contains: id "933170"
+  test_title: 933170-35-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?UO%3A3%3A%22b%22%3A6%3A%7B%7D%2B=q7KwS0K
+        version: HTTP/1.1
+      output:
+        log_contains: id "933170"
+  test_title: 933170-36-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?UC%3A7%3A%22P%22%3A6%3A%7B%7DU=D
+        version: HTTP/1.1
+      output:
+        log_contains: id "933170"
+  test_title: 933170-37-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?%60o%3A7%3A%22V%22%3A0%3A%7B%7Dl=pUXm
+        version: HTTP/1.1
+      output:
+        log_contains: id "933170"
+  test_title: 933170-38-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?oC%3A8%3A%22%7B%22%3A8%3A%7BM%7D1=WJLszbeK0Z
+        version: HTTP/1.1
+      output:
+        log_contains: id "933170"
+  test_title: 933170-39-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?OC%3A5%3A%22%0D%22%3A9%3A%7B%7DU=Ute4Q_xA
+        version: HTTP/1.1
+      output:
+        log_contains: id "933170"
+  test_title: 933170-40-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          8DluPyR9l: xO:6:"^":2:{}`
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933170"
+  test_title: 933170-41-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          EIyog: '&c:5:"{":2:{}D'
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933170"
+  test_title: 933170-42-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          O0v: hO:7:"D":7:{}}N
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933170"
+  test_title: 933170-43-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          E5mMvaFZ: 2o:1:"E":1:{}}
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933170"
+  test_title: 933170-44-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          mawloR: XO:4:"H":5:{}x
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933170"
+  test_title: 933170-45-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          UOe: eo:3:"<":8:{}]
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933170"
+  test_title: 933170-46-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          aDdrTCY7B: ']o:8:"K":7:{]}t'
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933170"
+  test_title: 933170-47-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          M2D: lO:5:"9":1:{-}y
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933170"
+  test_title: 933170-48-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          Zl: SO:9:"J":4:{}l
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933170"
+  test_title: 933170-49-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          jDRU9N: 8C:4:"T":6:{V}3
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933170"
+  test_title: 933170-50-auto

@@ -1,0 +1,21 @@
+meta:
+  author: Christian S.J. Peron
+  description: Tests for protocol based attacks
+  enabled: true
+  name: 921150.yaml
+tests:
+- desc: HTTP Header Injection Attack via payload
+  stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-agent: user agent
+        method: GET
+        port: 80
+        uri: /script.jsp?variableX=bar&variable2=Y&%0d%0restofdata
+      output:
+        status:
+        - 403
+  test_title: 921150-1
