@@ -1,0 +1,21 @@
+meta:
+  author: Christian S.J. Peron
+  description: None
+  enabled: true
+  name: 942431.yaml
+tests:
+- desc: 'Restricted SQL Character Anomaly Detection (args): # of special characters
+    exceeded (6)'
+  stages:
+  - stage:
+      input:
+        data: var=-------------------&var2=whatever
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "942431"
+  test_title: 942431-1

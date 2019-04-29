@@ -1,0 +1,156 @@
+meta:
+  author: msra
+  description: None
+  enabled: true
+  name: 931120.yaml
+tests:
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?B9NZSTbGJp=http%3F
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 931120-1-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?P4s=Ftpsc%3F
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 931120-2-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?96aPn=HttP%3E%3F
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 931120-3-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?9W=htTP%20%3F
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 931120-4-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?H044E=FTP%3F
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 931120-5-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?j=FiLEP%3F
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 931120-6-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?NJl=hTtpSJ%3F
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 931120-7-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?l3TP88=fTP-%3F
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 931120-8-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?lLmn=HttPS7%3F
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 931120-9-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?PA9jBVaz=httpS%3F
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 931120-10-auto

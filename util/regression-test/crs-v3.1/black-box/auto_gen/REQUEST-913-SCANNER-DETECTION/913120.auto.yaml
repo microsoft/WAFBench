@@ -1,0 +1,306 @@
+meta:
+  author: msra
+  description: None
+  enabled: true
+  name: 913120.yaml
+tests:
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?3aPCMfcU=/RFiInC.TxT
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 913120-1-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?42avKBmk=/cyBercOP
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 913120-2-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?1C=/.ADsENsEpOSTNoTTHeRENoNOBoOK
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 913120-3-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?0K=/.aDseNSEPOStnOTthErenonoBook
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 913120-4-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?r2PPUmg=/cYbeRCOP
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 913120-5-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?4G8hBQGgmK=/aCuNEtIX-wVS-TEst-FOr-soMe-InEXIsTENT-file
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 913120-6-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?s5QLvY2=/RfIiNc.TXt
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 913120-7-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?ZaOn9fQV=/AcUneTix-wvS-tesT-for-SOme-iNEXIsTenT-File
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 913120-8-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?KpX2tOTt=/ActseNsEPOsTnOtThERenONotiVE
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 913120-9-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?TqXytSs0=/.AdsensepoStnoTTHereNoNObooK
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 913120-10-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: //ACuNeTiX-WVS-teSt-FOr-SOMe-INExistenT-File
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 913120-11-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: //aPpscan_FiNGERpRiNT/mac_AdDReSS
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 913120-12-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: //Rfiinc.txT
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 913120-13-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: //AcTSEnsepOStNotTHErEnOnOTive
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 913120-14-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: //.ADSenSepOStnOtThErEnoNOBoOK
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 913120-15-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: //nESSUS_IS_pROBINg_YOU_
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 913120-16-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: //NEssUS_is_PROBINg_yoU_
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 913120-17-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /aPPScan_fIngeRPRinT
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 913120-18-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: //w3AF/ReMotEfileinCLUdE.hTML
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 913120-19-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: //%3CinVaLid%3EHeLLO.htMl
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 913120-20-auto
