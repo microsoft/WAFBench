@@ -73,7 +73,7 @@ exit
 
 ### Black-box Test
 
-Black-box test is to test the target server that cannot get the ModSecurity log. FTW-Compatible Tool will compare the HTTP status code returned by target server with the expected HTTP status code set in test cases.
+Black-box test is to test the target server that cannot get the ModSecurity log. FTW-compatible tools will compare the HTTP status code returned by target server with the expected HTTP status code set in test cases.
 
 Black-box test does not require modifying ModSecurity configuration or importing any log file. It's recommended to run black-box test in batch mode:
 
