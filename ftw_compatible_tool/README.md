@@ -6,7 +6,7 @@ FTW-Compatible Tool is a component of the [WAFBench](../README.md), which suppor
 
 ### Dependencies
 
-* **Python2** to run those script
+* **Python2** to run scripts
 * **FTW** python module to interpret YAML file
 
 Python2 installation is as follows:
