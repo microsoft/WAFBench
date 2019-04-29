@@ -1,6 +1,6 @@
 # FTW-Compatible Tool
 
-FTW-Compatible Tool is a component of the [WAFBench](../README.md)'s, which supports [FTW](https://github.com/fastly/ftw)(Framework for Testing WAFs) format YAML for WAF correctness testing. As FTW, it uses the OWASP Core Ruleset V3 as a baseline.
+FTW-Compatible Tool is a component of the [WAFBench](../README.md), which supports [FTW](https://github.com/fastly/ftw)(Framework for Testing WAFs) format YAML for WAF correctness testing. As FTW, it uses the OWASP Core Ruleset V3 as a baseline.
 
 ## Installation
 
