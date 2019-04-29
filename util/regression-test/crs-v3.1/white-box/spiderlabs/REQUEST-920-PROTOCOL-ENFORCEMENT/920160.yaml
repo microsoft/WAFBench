@@ -1,0 +1,105 @@
+meta:
+  author: csanders-git
+  description: Tests to trigger rule 920160
+  enabled: true
+  name: 920160.yaml
+tests:
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Length: NotDigits
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: GET
+        port: 80
+        protocol: http
+        uri: /
+      output:
+        status: 400
+  test_title: 920160-1
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Length: NotDigits
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        protocol: http
+        uri: /
+      output:
+        status: 400
+  test_title: 920160-2
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Length: 123x
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        protocol: http
+        uri: /
+      output:
+        status: 400
+  test_title: 920160-3
+- desc: Content-Length HTTP header is not numeric (920160)  from old modsec regressions
+  stages:
+  - stage:
+      input:
+        data: abc
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Language: en-us,en;q=0.5
+          Content-Length: '3'
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+          Keep-Alive: '300'
+          Proxy-Connection: keep-alive
+          User-Agent: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        no_log_contains: id "920160"
+        status:
+        - 200
+        - 405
+  test_title: 920160-4
+- desc: Content-Length HTTP header is not numeric (920160)  from old modsec regressions
+  stages:
+  - stage:
+      input:
+        data: abc
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Language: en-us,en;q=0.5
+          Content-Length: 3;
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+          Keep-Alive: '300'
+          Proxy-Connection: keep-alive
+          User-Agent: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 200
+        - 403
+        - 400
+  test_title: 920160-5

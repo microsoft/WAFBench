@@ -1,0 +1,20 @@
+meta:
+  author: Christian S.J. Peron
+  description: Application attack LFI
+  enabled: true
+  name: 930100.yaml
+tests:
+- desc: Path Traversal Attack (/../) encoded
+  stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          FoobarHeader: 0x5c0x2e.%00/
+          Host: localhost
+        method: GET
+        port: 80
+        uri: /
+      output:
+        log_contains: id "930100"
+  test_title: 930100-1

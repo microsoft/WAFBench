@@ -1,0 +1,35 @@
+meta:
+  author: Christian S.J. Peron
+  description: Tests for protocol based attacks
+  enabled: true
+  name: 921140.yaml
+tests:
+- desc: HTTP Header Injection Attack via headers
+  stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          SomeHeader: "Headerdata\rInjectedHeader: response_splitting_code"
+        method: GET
+        port: 80
+        uri: /
+      output:
+        no_log_contains: id:921140
+        status: 400
+  test_title: 921140-1
+- desc: HTTP Header Injection Attack via headers
+  stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          SomeHeader: 'Headerdata%0dInjectedHeader: response_splitting_code'
+        method: GET
+        port: 80
+        uri: /
+      output:
+        no_log_contains: id:921140
+  test_title: 921140-2

@@ -1,0 +1,741 @@
+meta:
+  author: msra
+  description: None
+  enabled: true
+  name: 941130.yaml
+tests:
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: useq31WRufQq65TpangH=%26%23x5c%3B1%26%23x33%3B40%5C600%5Cx%26%23x33%3B0%5Cx35e%5C00%5C13%5C134%26%2348%3B%5C60006%5C62%5C134%5Cx3000%5C60%5C66%5Cx31%00s%26%23101%3B%5Cx364%5C10v
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 941130-1-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: mONpkZ5p8OM0v4un=%5C143%5Cx00%0C%40%5Cx5%26%23x63%3B%5Cx3%26%23x30%3B00%26%2348%3B69m%5Cx5c00%5C%26%2354%3B0%5Cx30%5Cx3%26%2355%3B0%5C157%26%23x5c%3B162%5C164%5C10%5C134%5C600%26%23x30%3B%5Cx305%5C143
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 941130-2-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: 14NSuPdr7Gd=6%5Cx5c%26%23x30%3B00%5Cx304%5Cx37%5C13400%26%23x30%3B062%5C13%26%23x34%3B0%26%2392%3Bx300%5Cx306%5C61%00%5Cx73%5C1340%5C600%5Cx%26%23x33%3B06%5Cx356%5C134000%5Cx3034%08%5C1340000%5C60%5Cx30%5C134%5C%26%2354%3B0%5Cx3000%5Cx360
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 941130-3-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: gvvhaAfWY=%5C76%26%23x5c%3B134%5C600%5Cx30%5C604b%5Cx5c000%5Cx30%26%23x37%3B%5C70%5C134%5C%26%23x36%3B0%5Cx30006%26%23x63%3B%5C00%5C13400%5C60%5Cx306%5Cx39%5Cx6e%26%230%3B%5Cx5c0%5C6%26%23x30%3B%5C600%5C66%5C142%5Cx5c%5C6000%5Cx30%5C63a%5C%26%23120%3B%26%2353%3B%26%2399%3B00%5C60%5C606%5C70r%5Cx5c%26%2392%3B600%5C60%5Cx3%26%23x30%3B65%5C134%26%23x5c%3B6%26%23x30%3B%5C60%5Cx300%5C66%5Cx36%5C134%5Cx300%5Cx3%26%2348%3B0%5C60%5Cx38%5Cx5c0%5C600%5C60%5Cx36%5C6%26%23x37%3B
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 941130-4-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: dg1iIMxLpuSOYv=n%5Cx5c00%5C60%5Cx30%26%23x30%3Bc%5C1%26%2351%3B4%5Cx30%5Cx30%5Cx3000%5C60f%5C134%5C60%5Cx30%5C6006f%26%23x5c%3Bx5%26%2399%3B0%5Cx3%26%2348%3B0%5C60%5C60%5C60%5C13400%5C600%5C672%5C13%26%2352%3B0%5C60%5C60%5Cx306%5Cx64%5Cx5c%5C6%26%2348%3B00000a%5Cx5c000%5Cx30%5C663%00%5Cx74%5Cx69on%08%5C134%5Cx30%26%23x30%3B%26%23x30%3B0%26%23x35%3B%5C61
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 941130-5-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: Ha=%5C46%5C13400%5Cx30%5Cx30%5C6%26%23x30%3Bcx%5C13400%5Cx300%26%2392%3B66%26%2392%3Bx38%5C134%5Cx30%5C6000%5C674%26%23x5c%3Bx5c000%26%23x5c%3Bx306%5C144l%5Cx08O
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 941130-6-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: LzDm=%5Cx00%5C%26%23120%3B%26%23x33%3B8%5Cx5c%5C%26%23120%3B30%5C60%5Cx30%5Cx30%5C60cd%5C0%26%2348%3Ba%5C%26%23120%3B74%26%2392%3B1340000%5Cx3%26%2354%3B1%3A%26%23x74%3Be%5C170%5Cx5c%5C60%5C6000%26%2355%3B%5Cx34%5C1%26%23x33%3B4%5Cx30%5C60%26%2348%3B02f%5Cx5c0%26%2392%3B%26%2354%3B0%5C60%5C606%5Cx38%5C134000%5Cx300%5Cx%26%2351%3B%26%23x30%3B%26%2392%3Bx7%26%2352%3B%5C134%5C60%5Cx3%26%23x30%3B0%5C60%5C600%5C1340%5Cx30%5Cx300%5Cx36%5C144%5Cx%26%23x30%3B0%5C1340%5C60%5Cx30%5C%26%2354%3B0%5C%26%23x78%3B36c%5Cx5c0%5Cx300%5Cx30%5C60%5C70%26%230%3B%0C
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 941130-7-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: fFtpuYnlUKO=O%28%5C134%5Cx30%26%23x5c%3B%26%23x78%3B300%26%23x30%3B%26%2354%3B%5Cx34%00%5C141%5C164%5C134%5Cx30%5C60%5C60%5C6%26%2348%3B6%5C%26%23120%3B31%5Cx5c%5C%26%23x36%3B0%5Cx300%5C603a%5Cx5c%5C60%26%2392%3Bx30%5Cx30%5Cx30%5C67%5C64%5Cx%26%23x35%3Bc%5C%26%23120%3B30%5Cx3%26%23x30%3B%5C60%5C60%26%23x5c%3B%26%23120%3B365%5C%26%23x31%3B3400%5C6007%5Cx38%5C134000%5C6%26%2348%3B%26%23x5c%3B%26%2354%3B7%5C%26%2354%3B%26%2352%3B/ht%00m%00%5Cx5c000%26%2348%3B6%5Cx63%5C1%26%2348%3B%5C1%26%23x33%3B4%5C60%5C6000%5Cx35%5Cx65
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 941130-8-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: 0Ci=%5C%26%2348%3B0k%5C1340%5C60%5C60%26%2392%3Bx302c%5Cx5c%26%2348%3B%5Cx30%26%23x5c%3B60%5Cx3066%5C1340000%5Cx36%5C146%5Cx%26%23x37%3B2%5C1340%5C600%5Cx30%5Cx%26%23x33%3B00%5Cx%26%23x36%3Bd%5Cx00%5C1%26%2351%3B4%5C600%26%23x5c%3B600%5C661%5C%26%23x31%3B340%26%2392%3B60%26%23x5c%3B60063%26%23x5c%3B134%5Cx3%26%23x30%3B00%5Cx30%5Cx374%26%2392%3B134%26%23x30%3B0%5Cx30%5Cx306%5Cx39%5C157%5Cx5c%26%23x30%3B%26%23x5c%3Bx300%5C%26%23120%3B306%5Cx65%00%5C13%26%2352%3B00%5C6%26%2348%3B%5C6008%26lt%3B
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 941130-9-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: z2fwkRPUHf=%5Cx5c%5Cx30%5Cx300%5Cx30%5C%26%23x78%3B30b%5Cx00%5C134%5C60%26%23x30%3B%5C6002%26%2348%3B%5C00%5C%26%2349%3B44%5Cx61%5Cx5c%5Cx30%5C6000%5Cx37%5Cx34%26%2392%3Bx61%5C72%5C164%5C145%00x%00t%5Cx5c0%5C6000%5Cx32f%5Cx5c0%5Cx30%5Cx30%5C606%5C%26%2355%3B0%5Cx74%26%2392%3B1340%5C60%5C60%5C%26%23120%3B306%5C144%5Cx5c0%26%2348%3B006c%08%5Cx%26%23x35%3Bc%5Cx300%5Cx30%5Cx303%26%2392%3B146
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 941130-10-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: '%5C%26%23x78%3B5c%5C%26%23120%3B30%26%2348%3B00%5C6%26%2353%3B%5C145%5Cx5c0%5C%26%23x78%3B3%26%23x30%3B0%5Cx30%5C63%5Cx34%5C134%26%2348%3B%5C600%26%23x5c%3B607%5Cx38h%26%2392%3B1340000%5Cx37%5Cx%26%2351%3B%26%2352%3B%5Cx5c%5C60%5C6%26%2348%3B00%5Cx36%26%23x64%3B%5Cx%26%23x35%3Bc0%5Cx300%5C606%5C1%26%2352%3B3%5Cx5c%26%2392%3Bx300%26%23x5c%3Bx30%26%2348%3B0%5C70%5C1340%5Cx30%26%2348%3B%5C60%5Cx33%5C%26%23x78%3B36=5w'
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 941130-11-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: '%26%23x5c%3B%26%23120%3B5b%5Cx0c%5Cx5c0%5Cx300%5Cx3062%5C13%26%2352%3B%5Cx300%5C60%5Cx3061%5C%26%2349%3B34000%5C60%5C67%26%23x5c%3Bx33e%26%2392%3B13400%5Cx30%5Cx30%5C%26%23x78%3B33%26%23x36%3B%5C%26%23x78%3B5c%5Cx300%5C60%5Cx30%5C634%5C134%5C60%5Cx300%5Cx30%5C600%5C134%5C60%5C600%5Cx30%5C%26%23120%3B30%5C70%5C134%26%2392%3Bx300%5C600%5Cx33%5C65=sb'
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 941130-12-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: '%5C76%5C134%5C60000%5C62%5C60%5C134%5C6000%5Cx3%26%23x30%3B00%5C1340%5C60%5Cx30%5Cx30%5C%26%23x36%3B66or%5C134%26%23x5c%3Bx3000%5C60%5C60%26%23x5c%3Bx%26%2351%3B0%5Cx5c%5Cx30%5C600%5C60%26%23x36%3B%5C144%5Cx5c0%5C60%5C60%5Cx3061%5C134%5Cx300%5Cx300%5C%26%23x78%3B300%5C134%26%23x5c%3B60%5C%26%2354%3B0%5C60%5C%26%23120%3B30%5Cx36%5Cx33%5C1%26%2351%3B4%5Cx30%26%23x5c%3B%26%23120%3B30%5Cx300%5Cx37%5Cx34%5C134%5Cx30%5C600%5C6069%00o%5C%26%2349%3B%26%23x33%3B4%26%23x30%3B%5C%26%23x78%3B30%5Cx3006e%5Cx5c0%5C60%5C60%5Cx3008%3D=5jjX'
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 941130-13-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: '%00%5C%26%23x31%3B2%26%2350%3B%5C14%5C134%5C60%26%23x30%3B006%5C66%5Cx5c00%5Cx300%26%2392%3Bx30%5Cx30%5C%26%2349%3B57r%00%5Cx6d%5Cx5c%5C600%5Cx300%5C66%5C6%26%2349%3B%5C143%5C13%26%23x34%3B%5C%26%23x36%3B000074%00io%5C%26%23x78%3B6e%08%5Cx5c%5C6000%5Cx300%5Cx30%5C134%26%23x5c%3B%26%23x78%3B30%26%23x5c%3B600%5Cx30%5C%26%23x78%3B35%5C145=Mxjo61'
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 941130-14-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: '%5C%26%2349%3B34%5Cx30000%5C%26%23120%3B300%5Cx5%26%23x63%3B%5Cx300003%26%2392%3Bx38%29%5Cx6%26%2350%3B%5Cx5c0%5Cx30%5Cx30%5Cx3%26%23x30%3B61%5Cx73%5C145%26%2392%3Bx%26%2351%3B6%5Cx00%5C64%26%2392%3B13400%5C600%5C608%5C%26%2349%3B%26%2351%3B400%5C600%5C66%5Cx31=wj_Xjy4zC'
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 941130-15-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: '%5Cx5%26%2399%3B0%5Cx300%5Cx306%5C14%26%2354%3B%5C1340%5Cx300%5C6049%5C%26%2349%3B34%5C%26%23120%3B%26%2351%3B000%5Cx30%5C678%5Cx68t%5C1340%5Cx30%5C600%5Cx36%26%2392%3B144%5C154%5C134%5C60%5Cx300%5Cx30%5C%26%2354%3B08T=nXgwLPyeGU'
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 941130-16-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: '%26%2392%3B6%26%23x33%3B%3C%5C%26%23x31%3B3%26%23x34%3B0%5Cx3000%5Cx300%5Cx21%5C13%26%2352%3B%5Cx30%5C60%26%2348%3B04%5C65%5Cx5c%5Cx30%5C60%5C6004eT%5Cx49%5C%26%2349%3B34%26%23x5c%3B60%5Cx30%5C60%5C6%26%23x30%3B%5C65%5C6%26%2352%3BY%5C1%26%23x33%3B400%26%2392%3B60%26%23x30%3B%5C65%5C62%5Cx53%5Cx5c%5Cx%26%23x33%3B%26%23x30%3B%26%2348%3B%26%23x30%3B00%5C60%5Cx59%5Cx53T%5Cx5%26%2399%3B0%5Cx30%5C600%5C645%5Cx5c%5C6000%5C604d%5Cx5c0%5C60%5C600%5C608%26%2392%3Bx5c000%5C60%5Cx37b=_1pVgL'
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 941130-17-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: '%5C%26%23x78%3B6d5%5Cx5c0%5Cx30%5C600%5C662%5Cx5c%5C600%5C%26%23x36%3B0061%5C1%26%2351%3B4%5Cx30%26%23x5c%3B600%5C%26%23x36%3B073%5C134000%26%2392%3B%26%23x36%3B000%5C1%26%2351%3B40%5Cx30%26%23x30%3B%5C60%5C66%5Cx35%26%2392%3Bx5c%5Cx300%26%2348%3B0%26%23x33%3B6%5C1340%5C6%26%2348%3B0034%08%5Cx5c0%5C6000%5Cx%26%2351%3B78=OJsdPzGF'
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 941130-18-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: 6%5C13400%5Cx3%26%2348%3B0%26%2392%3Bx3%26%23x30%3B%5Cx6%26%2351%3Bxm%5Cx5c%5Cx3%26%2348%3B0%5Cx30%26%23x5c%3B6%26%2348%3B6cn%26%230%3B%5C134000%5C60%26%2392%3B6%26%2355%3B%5Cx33%08%26%2392%3B00%5Cx5c%5C%26%23x36%3B0%5Cx30%5C60%5C607%5C%26%23120%3B30=HNUS2EcDjb
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 941130-19-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?gX=%255C%2526%2523120%253B%2526%252354%253Ba7%255Cx5c000%255C6%2526%2523x30%253B62a%255Cx5c00%255Cx300%255Cx37%255Cx33%2526%2523x5c%253B00%255C134%255Cx3000%255C6%2526%252348%253B%255C66%255C%2526%2523x78%253B%2526%2523x33%253B5%255Cx3%2526%2523x36%253B4%255Cx5c%255C6%2526%252348%253B00%255C%2526%252354%253B%2526%252348%253B0%255Cx3%2526%2523x38%253B%2527
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 941130-20-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?hgk=4%255E%255Cx5c%255Cx30%255C60%2526%2523x30%253B%255Cx%2526%252351%253B0%255Cx362%255Cx%2526%252353%253Bc00006%255C61%2500%255C1%2526%2523x33%253B4%2526%2523x30%253B%255C600%2526%252392%253B60%255Cx37%255Cx33e%255C134%2526%252392%253B60%255C60%255C60%255Cx300%255Cx30%255C134%2526%252348%253B%255Cx30%2526%252348%253B%2526%252348%253B36%255Cx5c%2526%2523x30%253B%255C60%255Cx30%255Cx3034%2508%255C00%255B
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 941130-21-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?ndpWYmOqH8=%255Cx5c0%255Cx30%2526%252348%253B02%255Cx%2526%2523x33%253B%2526%252357%253B%2500%255C134%255C6%2526%252348%253B%255C60%255C6000%2526%2523x5c%253B143xl%255Cx5c00%2526%252348%253B0%255Cx%2526%2523x33%253B69n%255Cx%2526%252354%253Bb%255C134%255C60%255Cx300%2526%252348%253B%255C63%255C%2526%2523x31%253B41%255C00h%255C134%255Cx%2526%2523x33%253B0%255C%2526%252354%253B000%255Cx37%255Cx32%255Cx65%255C146%255Cx08%2526%2523x44%253B
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 941130-22-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?8rwGT8mc=%255C134000%255C6%2526%252348%253B33%2526quot%253B%255Cx62%255C141%255Cx5c0%255C600%255Cx307%255Cx3%2526%252351%253B%255Cx5c%255Cx30%255Cx300%255Cx30%255C665%255Cx364%2500%255C%2526%2523120%253B08R
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 941130-23-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?y=%255C%2526%2523x31%253B44%255Cx5c%255Cx%2526%2523x33%253B%2526%2523x30%253B0%255Cx30%255C600c%255Cx%2526%252353%253Bc00%255C600%2526%2523x5c%253B%2526%2523x36%253B6%255C64%2526%2523x5c%253B134%255C60%255C60%255C6006%255Cx%2526%252351%253B1%255Cx5c00%255Cx30%255Cx3074%255C141%2500%253A%255C134%255C60%255C60%255C6000%255Cx30%255Cx7%2526%252352%253Be%255C%2526%252349%253B34%255Cx%2526%2523x33%253B000%255Cx307%255Cx38t%255Cx%2526%252350%253Bf%255C13%2526%2523x34%253B%255Cx30%255C60%255Cx300%255C600ht%255Cx5%2526%2523x63%253B%255Cx3000%2526%252392%253Bx30%255Cx300%255C13400%255C60%2526%252392%253B%2526%252354%253B0%255C66d%255Cx6%2526%252399%253B%255Cx08%255Cx5c0%255Cx30%255C600%255C6%2526%2523x32%253B9
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 941130-24-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?DQV687=%255Cx5c%255C600%255Cx30%255C600%2526%2523x5c%253B60%2526%2523x5c%253B115%255Cx5%2526%2523x63%253B%255C600000b%255C134%255C%2526%252354%253B000%255C606%255Cx32%255Cx5c%255Cx300%2526%252348%253B%255C%2526%2523x36%253B%2526%252348%253B%255Cx36%2526%2523x5c%253B%2526%2523120%253B31s%255C1%2526%252351%253B4%2526%252392%253Bx30%255Cx30%255C%2526%2523x36%253B0%255C60%255C600e%255C1340%255Cx30%255C600%255Cx3%2526%252351%253B%255C66%255C134%255C600003%255C64%255C%2526%2523120%253B08%255Cx5c%255Cx3%2526%2523x30%253B%255C60%255Cx3%2526%2523x30%253B0%255C67%255C65
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 941130-25-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?AnfA39aUDn=%257C%2526%252392%253Bx0%2526%252348%253B%255Cx2d%255Cx5c0%255C600%255Cx%2526%252351%253B0%255C%2526%252354%253B78%255Cx5c%255Cx30%255C%2526%2523x78%253B30%255C%2526%252354%253B0%2526%252392%253B60%255Cx36%255C143i%255C1%2526%2523x33%253B400%255C60%255C606e%255C%2526%252349%253B34%255Cx30%2526%252348%253B%255C60%255Cx306b%255Cx5c0000%2526%2523x33%253B%255C141h%2500r%255C145%2526%2523102%253B%255C134%255Cx3000%255C6%2526%252348%253B%2526%2523x30%253B8%255Cx5c%255Cx300%255C60%255C%2526%2523x78%253B30%2526%252351%253B%255C62
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 941130-26-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?lOSEQYJH=%255Cx5c0%2526%252348%253B000%255C60%2526%252392%253B1340%255C60003d%255Cx5c%255C60000%255C65%255Cx62%255Cx5c0000%2526%2523x5c%253Bx362%255C%2526%252349%253B3400%255C%2526%2523x36%253B0%255C6%2526%252348%253B0%255C60%255Cx61s%255C14%2526%252353%253B%2526%2523x5c%253B134%255C%2526%252354%253B0%2526%2523x5c%253Bx3000%2526%2523x30%253B0%255C66%2526%252392%253Bx34%255Cx5c%255Cx300%255C600%2526%2523x30%253B%255C70%2522
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 941130-27-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?wWX45=2%255C%2526%2523x31%253B340%255C60%2526%252348%253B%255C60%255C60c%255Cx6%2526%252350%253B%255C%2526%2523x31%253B%2526%252351%253B%2526%252352%253B0%255C%2526%2523x36%253B00%255C60%2526%2523x30%253B%255C6%2526%2523x30%253B%255Cx61%255C1%2526%2523x33%253B4%255C60%255C600%255Cx30%255Cx373%255C%2526%2523x78%253B5c00%255C%2526%252354%253B006%255Cx35%255Cx5c000%255C%2526%2523x78%253B3036%2500%255Cx34%255C1%2526%252351%253B400%255Cx30%255Cx30%2526%2523x30%253B%255C70%255Cx5c%255C600%255Cx300%255C6%2526%252352%253Bb
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 941130-28-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?Sr=I%255C13%2526%252352%253B%255C60%255C%2526%2523x78%253B30%255Cx30%255C6%2526%2523x30%253B%255Cx30c%255Cx00%255C134%255C60%255C6000%2526%252392%253Bx3%2526%252350%253B%255Cx31%255C13400%255C%2526%2523x36%253B00%255Cx%2526%2523x33%253B%2526%2523x34%253B5%255C13400%255C6000%255C6%2526%252348%253B%255C134%255Cx30%255C60004e%255Cx00%2526%252392%253Bx54%255Cx5c0%255Cx30%2526%2523x30%253B%255C60%2526%252352%253B%255C71%255C1340%255Cx30%255C60%255Cx3054%2526%2523x5c%253B134%255C%2526%2523x78%253B30%255Cx30%255C60%255C%2526%252354%253B0%255Cx359%255Cx5c00%255Cx30077%255C1%2526%252351%253B%2526%2523x34%253B%255Cx30%255Cx300%255C60%255C%2526%252354%253B5%255C6%2526%2523x33%253B%255C134%255C600%255C60%255Cx305%255Cx3%2526%2523x39%253B%255Cx%2526%2523x35%253Bc%255C600005%255Cx33%255C134000%255C60%255Cx354%255C1340%255C60%2526%2523x5c%253B60000%255C%2526%2523x78%253B45%255C%2526%252349%253B%2526%252349%253B5%255C10%255Cx%2526%252353%253Bc0000%255C63%2526%252392%253Bx%2526%252351%253B9
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 941130-29-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?%255Cx0%2526%252348%253B%255C13%2526%2523x5c%253B14ba%255C134%255Cx300%255Cx3%2526%2523x30%253B%255Cx3000s%255C%2526%252349%253B34%255C60%255C6000%255Cx365%255C13%2526%2523x34%253B%255Cx3000%255Cx303%255C66%255C64%255Cx5c0%255C60%255C60%255Cx3%2526%2523x30%253B0%255Cx30%255C13400%2526%2523x30%253B%255Cx300%255Cx38%2526%2523x5c%253B134%255C%2526%2523x36%253B0%255Cx30%255Cx30%255Cx30%2526%2523x5c%253Bx35%255Cx%2526%252351%253B4=ZZXtApzW
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 941130-30-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?%257B%255C134%255C6000%255Cx3%2526%2523x30%253B%255C644%255C1340000%255Cx300%255Cx5c%255Cx300%2526%2523x30%253B0%255C640%2526%2523x0%253B%255C1340%2526%252392%253Bx3000%255Cx%2526%252351%253B6%2526%2523x5c%253B71mp%255Cx%2526%252353%253Bc%255Cx30%255Cx30%255C60%2526%2523x30%253B%255C6%2526%252354%253B%255Cx66%255Cx5c%255C60000%255C672%255Cx74%255C00%255Cx%2526%2523x35%253Bc0%255Cx300%255C6%2526%2523x30%253B%255Cx30%255C70%2526%25230%253B%257D=Nm06
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 941130-31-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?%2500%255Cx%2526%2523x33%253B4%255Cx5c0%2526%252392%253B%2526%2523x36%253B%2526%2523x30%253B%255C60%255C6%2526%252348%253B%255C%2526%2523x36%253B0c%255C10%2526%252348%253B%2526%2523x5c%253Bx%2526%252354%253B9%255C134%255Cx300%255C60%255Cx3%2526%2523x30%253B6d%255C%2526%2523120%253B%2526%2523x35%253Bc%255C%2526%2523x78%253B30%255C60007%255Cx3%2526%252348%253Bo%255C134%255C60%255Cx%2526%252351%253B00%2526%2523x30%253B%255C672%2500t%255Cx08%255C122=Ualvzuk146
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 941130-32-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?%255C60%2526%252392%253Bx5%2526%252356%253B%255Cx78l%255Cx69%255Cx%2526%252353%253Bc0%255Cx300%255Cx%2526%252351%253B0%2526%252354%253Bek%255C72%2500%255Cx5c00%255Cx30%2526%252392%253Bx%2526%2523x33%253B0%255Cx36%255C70r%255C145%255C%2526%252349%253B4%2526%252354%253B%255C00%255C10%255C%2526%252349%253B7%2526%252351%253B=q
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 941130-33-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?e%255C00%255Cx%2526%252353%253Bc0%2526%252348%253B%255Cx300%255Cx3%2526%252348%253Bc%2540%255C134%255C6%2526%252348%253B%255C600%2526%2523x30%253B00%255C134%255Cx30%255Cx300%255C606%255Cx39%255Cx5c%255C%2526%2523120%253B3%2526%2523x30%253B%255C%2526%2523120%253B30006d%255C134%2526%252392%253Bx3%2526%252348%253B0%2526%252348%253B0%255Cx37%255Cx30%255C134%2526%252348%253B00%255C60%2526%252348%253B%2526%252392%253Bx30%2526%2523x6f%253Br%255C1%2526%252351%253B4%255Cx3%2526%252348%253B%255C%2526%252354%253B00%255Cx%2526%252351%253B000t%255Cx5c%255Cx30%255Cx30%2526%252348%253B%255C600%255Cx38%255Cx6e=yWXn
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 941130-34-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?%257D%255Cx00%255C%2526%2523x78%253B5c000%255C6020%255Cx00%255C13400%255C60%255C%2526%252354%253B0%255Cx362%255Cx5c%255C600%255C600%255C66%255Cx3%2526%2523x31%253B%255C1340%255Cx30%255Cx300%2526%252392%253B67%255C%2526%2523x78%253B33%255Cx5%2526%2523x63%253B00%255Cx30%2526%2523x5c%253Bx30%255C%2526%2523x36%253B65%255Cx36%255Cx5c0%255C6000%255Cx33%255Cx3%2526%2523x34%253B%255Cx00%2508%255Cx5c0%2526%2523x30%253B0066=JXs
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 941130-35-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?%2526%252383%253B%2526%252392%253B14%255Cx62%2500%255C134%255C6%2526%252348%253B%255Cx300%255C60%255Cx36%2526%2523x31%253B%2500%255Cx%2526%2523x37%253B3%255C0%2526%252348%253B%255C134%255C60%2526%2523x5c%253B60%255C600%255C%2526%252354%253B65%255Cx5c%255Cx300%255Cx30%2526%252348%253B%255Cx30064%255Cx5c0%255C%2526%2523x78%253B%2526%252351%253B0%255C6000%255C70%2500%2526%2523x5c%253B134%255Cx30%255Cx30%2526%252392%253B6006%255Cx34=X28B8Hj
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 941130-36-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?%255Cx5c%255C%2526%2523x78%253B300%255Cx3000%255C143%255Cx5c%255Cx30%255Cx%2526%252351%253B0%255Cx30050%255C134000%255Cx%2526%2523x33%253B040%255C13%2526%2523x34%253B%255Cx300%255C60%255Cx30%255C66%255Cx39%255C134%255Cx30%2526%2523x30%253B0%255C606d%255C16%2526%252348%253Bo%2500%255C%2526%2523x78%253B72t%255C1340%255Cx%2526%252351%253B0%255C60%2526%252392%253Bx30%255Cx%2526%252351%253B%2526%252348%253B%2526%2523x5c%253Bx3%2526%2523x30%253B%255Cx5c%255C6%2526%2523x30%253B0%255C6000%255C70%255Cx4e=qKEBQF
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 941130-37-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?%2500%255C1340%255Cx%2526%252351%253B00031%2523%255C100%255Cx%2526%252354%253B9%255C13400006%255Cx64%255Cx5c00%255C60%2526%252392%253Bx30%255C600%255C1340%255Cx30%255Cx30%255C6070%255C1%2526%252351%253B4%2526%2523x30%253B0%255Cx30%255C6000%255C13%2526%252352%253B%255C60%255C%2526%2523x78%253B3%2526%252348%253B0%255Cx30%255Cx36%2526%252392%253Bx66%2526%2523x5c%253Bx5c%2526%2523x5c%253B60%255Cx300072%255C134%255Cx30%255C60%2526%2523x30%253B%255C60%255Cx%2526%2523x33%253B0%255Cx%2526%252351%253B%2526%2523x30%253B%255Cx5c%255Cx300%255C60074%2526%252392%253Bx%2526%252353%253Bc%255Cx300%2526%2523x30%253B%255C60%255Cx30%255C70%255Cx5c%255C60000%255C60%255C60%255C134%255Cx30%2526%2523x5c%253B%2526%2523120%253B3000%2526%2523x5c%253Bx%2526%252351%253B6%2526%2523x5c%253B61=P6lQhBa
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 941130-38-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?%255Cx%2526%2523x37%253Be%255C%2526%252349%253B34%255C%2526%2523x78%253B300002%255Cx30%255C134%2526%252392%253B600%2526%252348%253B%255Cx%2526%252351%253B0%2526%252392%253B%2526%252354%253B78%255C155%255C13%2526%2523x34%253B0%255C60006%255C%2526%2523x78%253B63n%255C134%255Cx30%255C%2526%2523x36%253B0%255Cx30000%255C134%255C600%2526%252392%253Bx300%255C67%255C6%2526%2523x33%253B%2508P=7e
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 941130-39-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: '%26%23x5c%3B56%5Cx5c%5Cx%26%23x33%3B%26%23x30%3B0%26%2392%3Bx3002%5C60%40%5Cx5c%26%23x30%3B%5Cx30%5C60%5C60%5C600%5C%26%23120%3B69%26%23109%3B%5Cx70%26%2392%3Bx5c0%5Cx300%26%2348%3B0%26%2348%3Bo%5C%26%23x31%3B62%5C00%5C%26%23120%3B5c0%5C60%5C60%5C60%5Cx37%5C64%5Cx5c%5C%26%2354%3B0%5Cx300%5C6008%00%5C%26%23120%3B5%26%23x63%3B%5C%26%23x36%3B%26%2348%3B%5C60%5C%26%23120%3B30%5C60%5C6%26%2354%3B%5Cx63'
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 941130-40-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: '%5C52%26%2312%3B%5Cx5c%5Cx3%26%23x30%3B%5Cx30%26%2348%3B%5C6%26%23x30%3B78l%5Cx69nk%5Cx3a%5Cx68%5Cx5c%5C60%5C6%26%23x30%3B0%5Cx3072%5Cx5%26%23x63%3B000%5Cx3000%5Cx5c%5Cx%26%2351%3B0%26%2348%3B%5C60%5C%26%2354%3B065%26%2392%3B%26%23x78%3B0%26%23x30%3B%5Cx5c000066%26%2392%3B1340%5Cx30%26%23x30%3B%26%2348%3B0%5C%26%23x37%3B%26%23x30%3B%5Cx5c%5Cx30%5C60%5C%26%23x36%3B0%5Cx304f'
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 941130-41-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: '%5C147%5Cx5c00%5C60%5C%26%23120%3B%26%2351%3B051b%5Cx5c0%5C600000%26%23x5c%3B1%26%2352%3B1%5Cx5c000%5Cx30%26%23x37%3B3%26%23101%3B%5Cx5c%5Cx30000%26%2351%3B%5Cx36%26%23x5c%3Bx5c%26%2392%3Bx30%5C6000%5C6%26%23x30%3B%5Cx30%5C%26%23120%3B5c%5C%26%23120%3B300%5Cx30%5C60%5Cx3%26%2351%3B4%5C1340%5C6000%5Cx3%26%2348%3B%5C60%5C134%5C6%26%2348%3B0%5Cx30%5C600%5C70%5Cx5c00%5Cx30%5C606%26%23x34%3B'
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 941130-42-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: '%5C134%5C6%26%2348%3B0%5C60%5C605bD%21%5Cx5c0%5Cx30%5C%26%2354%3B0%5Cx304%5C65%5C134%5Cx30%5C60000%26%23x30%3B%5Cx5%26%2399%3B%5Cx300%5C600%26%2392%3Bx%26%23x33%3B4e%5C%26%23x78%3B5c0000%26%2353%3B4%5C1340%26%2348%3B0%5Cx3049%5Cx5c000%5C60%26%2392%3Bx%26%23x33%3B54%5C13%26%23x31%3B%5Cx%26%2353%3B%26%2399%3B%5Cx30%5Cx30%5Cx%26%2351%3B0%5C%26%23x78%3B30%5Cx35%5C63%5C13400%5C60%5C605%5Cx39%5C1340%5C60%5C600%5C6%26%23x35%3B%26%23x5c%3Bx3%26%2351%3B%5C1340%5Cx3%26%23x30%3B%5C6005%5C64%26%23x45%3B%5Cx%26%2353%3Bc%5C%26%23x78%3B300%5C60%5C%26%23x36%3B0%5Cx34%5C144%5Cx5c%5C60%5Cx300%5C60%5C608%5C55'
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 941130-43-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: '%26%23x6e%3B%26%2392%3Bx5c0%5Cx3%26%2348%3B%5C60%26%2348%3B%5C65a%26%2392%3B%26%2349%3B46%5Cx5c%5C6%26%2348%3B%5C60%5Cx300%26%2354%3B%26%2392%3Bx66rm%5Cx5c0%5Cx30%5C%26%23x78%3B30%26%2392%3Bx%26%2351%3B00%5Cx30%5Cx5c000%5C6061%5C1%26%23x34%3B%26%2351%3B%5C00%5Cx74%5Cx5c0%5C60%5C60%5Cx30%5Cx369%5Cx6fn%5Cx5c%5C60%26%23x5c%3B6%26%2348%3B0%5C60%5C60%26%23x30%3B%5Cx08%5Cx0c'
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 941130-44-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: '%5Cx4e%5C134%5Cx300002%5Cx33%5Cx00%5Cx5c%5C60000%26%2354%3B%5C62%5Cx61%5Cx5c%5Cx300%5C60%5Cx30%5C%26%23x78%3B37%5Cx33e%5C134%5Cx300%5C60%5C60%5Cx33%26%23x5c%3B66%5Cx5%26%23x63%3B%5C60%5C60%5C60%5Cx3%26%23x30%3B%5C634%5Cx5c%5Cx30%5C600%5C600%5Cx3%26%2348%3B%26%2392%3Bx5c%5C6%26%23x30%3B0%5C%26%23x36%3B0%5Cx%26%23x33%3B0%5C608%5Cx5c%5Cx30%5C%26%23120%3B30%26%2392%3B%26%2354%3B0%5C60%5Cx34%5C71'
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 941130-45-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: '%5C55%5C00%5Cx0c%5C134%5Cx300%5C60040i%26%23x5c%3B%26%23x31%3B340%5C6000%5C600%26%2392%3Bx5c%5C%26%2354%3B00%5Cx30%5Cx30%5C66d%5Cx70o%5Cx72%5Cx5c%5Cx3000074%5C1340%5C6000%5C60%5Cx38%5C1%26%2351%3B4%5C600%5C6002c'
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 941130-46-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: '%5Cx5c0%5Cx300%5Cx30%26%2392%3B%26%23x36%3B00%5B%26%2392%3B%26%23120%3B5c%5Cx3000%5C%26%2354%3B00%5C143%5Cx%26%2352%3B%26%2348%3B%5Cx5c%5Cx300%5C60%5Cx3000i%26%23x5c%3Bx6d%5C1340%5Cx30%5Cx30000%5C%26%23x31%3B34%5Cx3%26%2348%3B0%5Cx30070%5Cx5c%26%2392%3Bx300%5C60%5C60%5C66%26%23x66%3Br%5Cx5c0000%5C674%08%5C13%26%2352%3B0%5Cx30%5Cx3000%5C60%5C1340%5Cx300%5C%26%23x78%3B30%5Cx366'
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 941130-47-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: '%2C%0C%5Cx40%26%23x69%3B%5Cx6d%5C160o%5Cx5c%5C%26%23120%3B3%26%23x30%3B00000%26%23114%3B%5C1340%5Cx30%5Cx%26%2351%3B%26%2348%3B%5C607%5Cx%26%23x33%3B4%5Cx5c%5Cx3%26%2348%3B0%26%2392%3Bx%26%2351%3B0%26%2392%3B60%5Cx30%5Cx38%007'
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 941130-48-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: R%00%5C1340%5C6%26%23x30%3B%5C60%26%2392%3Bx300%5Cx63%5Cx5c0%5C%26%23120%3B30006%5C64%5Cx5c00006%5C61t%5Cx61%5Cx3%26%23x61%3B%5C1%26%23x33%3B4000%5C%26%23120%3B307%5C6%26%2352%3B%5Cx5%26%23x63%3B0%5Cx30%26%2348%3B06%5Cx35%26%2392%3Bx5c00%26%23x5c%3B60000x%5Cx5c%26%23x5c%3B%26%23x36%3B0%5C%26%2354%3B00000%5C134%5Cx3000%5Cx%26%2351%3B%26%23x30%3B%5Cx37%5C64%5Cx2%26%23x66%3Bh%5Cx5c%5Cx300%5Cx30%5Cx3%26%2348%3B74%5Cx5c%5Cx300%5Cx30%5Cx30%5C66%5C%26%23x31%3B4%26%2352%3B%5Cx6c%5C1%26%2351%3B4%5Cx30%26%23x5c%3B60%26%2392%3B6000%5Cx38%5C00%5C1%26%2352%3B
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 941130-49-auto

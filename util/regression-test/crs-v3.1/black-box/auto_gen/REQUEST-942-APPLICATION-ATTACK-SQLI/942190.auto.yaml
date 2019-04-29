@@ -1,0 +1,606 @@
+meta:
+  author: msra
+  description: None
+  enabled: true
+  name: 942190.yaml
+tests:
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?%250BINTo%250DDUMpFiLe%2560a=UPUFOZnY
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 942190-1-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?%2521InTo%2509OUtFIlE%2522%253B=LCv
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 942190-2-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?Uuser%2528j=1qQcVsYI
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 942190-3-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?%255E4IIf%2528y=FnVY3w
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 942190-4-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?%253CiNTo%252BduMPFIlE%2560%255C=KzyolUM
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 942190-5-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?lUseR%2509%2528%253B%2524=z
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 942190-6-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?%2529cONneCtION_id%250C%2528%250D=5E0xs9jX
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 942190-7-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?N%2560%2509%2521%250C%2522%2528=lA9LtRZwSj
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 942190-8-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?HIiiF%250B%2528%253D=QHA_Uzo0z
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 942190-9-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?y%250BEXeCuTe%2524%2526xp_cmDsHELlz=J
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 942190-10-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?ZcPf8DJA=%2529%2509eXEc%2522Xp_cmdShEllw
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 942190-11-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?DL58Tr=xUSeR%250B%2528p%250C
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 942190-12-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?WIO=%2528exEc%2520MASter.3
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 942190-13-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?wRB=/UsER%2528%2528
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 942190-14-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?f3M19=zfrOm%253FiNforMAtioN_ScHeMa%2523%2522
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 942190-15-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?=/%2522%2521%250C%2527u
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 942190-16-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?gOddJtL=TiNTO%250BOuTfiLe%2520%2522P
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 942190-17-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?9fvhNA=5vIif%2528b
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 942190-18-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?LSfCD=%252AWIif%2528c
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 942190-19-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?UwMogZyfh=EfroM%2560InfoRMATION_SCheMA%250Dt
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 942190-20-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: IpJs4ju=nscHEma%09%28Yp
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 942190-21-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: G4AX6ZaA=N%27%0C%21%0B%60p
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 942190-22-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: it7Ph0=G%0AeXECutE%7BXP_CMDshElLU
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 942190-23-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: UF=lcOnNecTiOn_Id%0C%28s%25
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 942190-24-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: nlx=%5CSchEmA%0D%28%7D
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 942190-25-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: inPpdsKPP5ke0RYduy=0Execute%20MAsTER.y
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 942190-26-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: Qu4Ot33DDzT=%2ASCHEmA%20%28l
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 942190-27-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: aXo5DJR0S=LEXEc%0Dxp_cmdSHelL%7E
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 942190-28-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: dF4Qa31w06oYs=jxiIf%28%26
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 942190-29-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: rtHfRWaumR=%2CexecUTe%0DmasTEr.g
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 942190-30-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: HINto%0BDUMPfile%0C%27_=Ry
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 942190-31-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: eAiIF%20%28%5B=yDD6fr
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 942190-32-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: OschEMA%20%28%0B=eQ4H
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 942190-33-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: pExeCn%0AXp_cMDshelLv=t5QeA6Po7m
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 942190-34-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: AUniON%20SELect%20%40%3A=mna3
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 942190-35-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: nuSEr%28%0D%0D=2_KwK
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 942190-36-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: m%27%0BHAvInG%08%60%3F=Uwa_i4
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 942190-37-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: rFROM/infOrMATioN_ScHEma%7D/=fVw5rDa
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 942190-38-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: '%7C%22%0BUNion%08e%0C=t0r8dL'
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 942190-39-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: '%7C%22SELeCT%086%28=enfQ'
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 942190-40-auto

@@ -1,0 +1,476 @@
+meta:
+  author: msra
+  description: None
+  enabled: true
+  name: 920273.yaml
+tests:
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?incbuPmh1H=%257F%2507%250A%25C3%2590%25C3%2591%25C3%25A9%25C2%2583%2516%25C3%25BC%2506%25C3%25B8
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920273-1-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?kvzy2JZV=%25C3%2597%251A%251A%25C3%25B5%25C3%25A6%25C2%258E%25C3%25B5%25C2%259E%25C3%2589%25C2%2594%25C2%25A5
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920273-2-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?UVCLPxS=%25C2%25A4%25C3%259C%25C3%25A4%25C3%259B%25C3%2595%25C3%258D%25C3%25AA%25C2%2596%2528%2500%25C3%25A0
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920273-3-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?dnE=%2506%25C3%25AC%251E%25C3%258D%253E%25C2%25A5%25C2%2585%25C2%25BD%253B%251D%251F
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920273-4-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?JMg7=%25C3%25B8%25C2%25A2%253E%251D%2509%25C3%259E%25C3%258E%250D%25C2%25A0%25C3%25BE%2510
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920273-5-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?Zp=%25C2%2594%25C3%259F%25C2%2599%25C3%25AB%2516%2524%25C2%2586%250B%25C3%25B2%25C2%25A2%25C3%25B5
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920273-6-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?m3h6BE=%2506%255D%25C2%25B0%25C3%259E%25C3%25A0%25C3%25A7%25C3%25A8%25C3%2595%25C3%2599%25C3%25B1%25C3%258D
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920273-7-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?gE79Gb=%25C2%2595%2523%252B%25C2%258F%25C2%2583%25C3%2587%2517%25C3%2584%255E%25C2%259D%25C2%2591
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920273-8-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?eKU3NDax=%2509%25C2%25A2%25C3%2590%2521%2527%25C2%25BD%25C3%25A6%25C2%25B5%252A%25C2%25A2%25C3%2585
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920273-9-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?43OnL=%257E%25C3%25AB%25C2%25BA%25C3%2591%2514%25C3%2597%25C3%25BC%25C2%25BA%25C2%259D%25C2%25AB%251F
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920273-10-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?%2503%2504%255D%2502%25C2%25BE%25C2%25BD%25C2%25B7%25C3%25AE%25C2%2588%25C3%25B6%252B=r
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920273-11-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?%25C3%258E%255D%25C2%2583%25C2%25A7%25C3%25BF%25C2%25B1%25C2%2592%25C2%25B4%25C3%25AE%2503%25C2%2598=onJ46
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920273-12-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?%25C2%2596%2560%25C3%25B5%25C2%25AD%25C2%25B9%251D%25C2%2585%25C3%25B4%250F%25C2%25B2%25C2%2599=_O8uqi
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920273-13-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?%25C2%25A9%25C2%2588%25C3%2598%257E%25C2%25B8%25C2%2598%25C2%25AB%25C3%2580%25C2%25BD%25C3%2595%25C3%25AE=h1I
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920273-14-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?%2515%2516%2512%25C3%25A7%25C3%25B2%2522%25C3%2589%25C3%25B1%25C3%259F%25C2%25B7%25C2%25B8=EAqj123W2
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920273-15-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?%25C2%2590%255C%25C3%258C%25C3%25B4%250F%25C3%2596%25C2%258B%25C3%258D%255D%25C3%2599%25C3%259A=ZWRDACHYH
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920273-16-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?%25C3%25A8%25C2%2598%2527%25C2%25B2%2560%25C2%2587%25C3%2596%25C2%259B%252A%25C3%25B8%25C2%258D=K5Q1Mr5XM
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920273-17-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?%2518%25C3%25B4%25C3%2585%25C3%2599%25C3%2593%25C3%25A1%25C2%259B%25C3%25AD%25C2%25A3%25C3%25BD%2509=zkQ
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920273-18-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?%25C2%258A%25C2%25BA%25C3%25AE%25C2%258F%25C3%258E%25C3%25A8%25C3%25BE%25C3%25A5%2527%251B%2504=PCrHYSWFP
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920273-19-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?%25C2%25B8%25C3%25AF%25C2%25B5%257D%2523%25C3%25A5%25C3%2583%25C2%259F%25C2%25B7%25C2%25A0%25C2%25AA=qpJ
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920273-20-auto
+- stages:
+  - stage:
+      input:
+        data: Foo_key=%C3%90%40%C2%A9%1A%C2%88%C3%93%40%25/%C2%A6%08
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Length: 54
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920273-21-auto
+- stages:
+  - stage:
+      input:
+        data: Foo_key=%C2%A3%C2%A7%C2%86%C2%9F%C3%A2%2B%C3%A7%07%0C%00%C2%A5
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Length: 62
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920273-22-auto
+- stages:
+  - stage:
+      input:
+        data: Foo_key=%3F%C3%BF%16%C3%84%C3%A9%0D%C2%88%C2%AA%1A%0E%C3%AE
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Length: 59
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920273-23-auto
+- stages:
+  - stage:
+      input:
+        data: Foo_key=%1C%13%11%11%C2%A3%C3%B3%C2%B6%C2%A1%07%C3%9E%C2%9F
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Length: 59
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920273-24-auto
+- stages:
+  - stage:
+      input:
+        data: Foo_key=%C3%91%40%C2%AA%C2%B3%C2%9D%C2%B7%C2%BA%C3%88%C2%A1%C3%B3%C2%A9
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Length: 71
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920273-25-auto
+- stages:
+  - stage:
+      input:
+        data: Foo_key=%C2%9F%0D%C3%B1%C3%91%C2%8E%C3%8A%C3%9D%C2%AD%C3%8E%13%C3%A9
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Length: 68
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920273-26-auto
+- stages:
+  - stage:
+      input:
+        data: Foo_key=%C3%B0%C3%BE%C3%A2%C3%B3%C2%BC%C2%B3%07%C3%9A%1F%C3%BC%3C
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Length: 65
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920273-27-auto
+- stages:
+  - stage:
+      input:
+        data: Foo_key=%C2%AD%C3%A7%10%C3%BC%2B%C2%B9%C2%92%C3%8D%C3%A8%C2%B6%C3%BE
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Length: 68
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920273-28-auto
+- stages:
+  - stage:
+      input:
+        data: Foo_key=%C2%B5%C2%A7%3F%C2%8F%C2%9D%C3%BF%C3%93%C2%87%03%C2%99%C3%9E
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Length: 68
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920273-29-auto
+- stages:
+  - stage:
+      input:
+        data: Foo_key=%C2%8A%28%C2%BB%C2%8A%C2%B4%C2%98%C2%A8%C2%98%C3%B2%C3%B1%C3%99
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Length: 71
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920273-30-auto
