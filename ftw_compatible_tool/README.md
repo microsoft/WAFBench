@@ -27,7 +27,7 @@ the specific rule is matched in its ModSecurity error log.
 
 1  Modify ModSecurity configuration
 
-Add this rule into the head of modsecurity_init.conf, and  restart the Web server.
+Add this rule into the head of `modsecurity_init.conf`, and  restart the Web server.
 
 ```
 SecRule REQUEST_HEADERS:Host "magic-(\w*)" \
