@@ -1,0 +1,132 @@
+meta:
+  author: msra
+  description: None
+  enabled: true
+  name: 930120.yaml
+tests:
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?PrOc/SElF%255Cfd/5=kqAr1u
+        version: HTTP/1.1
+      output:
+        log_contains: id "930120"
+  test_title: 930120-1-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?VAr/Log/FtP-PRoXy=YmQEzLl0
+        version: HTTP/1.1
+      output:
+        log_contains: id "930120"
+  test_title: 930120-2-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: Pci=uSr/locaL//APACHe//LOGs/eRroR_lOg
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "930120"
+  test_title: 930120-3-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?vAR//loG/ngINx/AccESS_log=wS
+        version: HTTP/1.1
+      output:
+        log_contains: id "930120"
+  test_title: 930120-4-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?Etc%255CsAmBA/smbuseRS=VLdA
+        version: HTTP/1.1
+      output:
+        log_contains: id "930120"
+  test_title: 930120-5-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?NlDKywP=vAr/log%255CNgiNX%255CacCess_LOG
+        version: HTTP/1.1
+      output:
+        log_contains: id "930120"
+  test_title: 930120-6-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: winNt/sysTEM32//loGfILEs//sMTpsVC2=krjLa8u
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "930120"
+  test_title: 930120-7-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?VzKfL=VAr//AdM/WTMPx
+        version: HTTP/1.1
+      output:
+        log_contains: id "930120"
+  test_title: 930120-8-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: wIndoWS/SYStEm32/LoGfILES/MsfTPsvC=upp
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "930120"
+  test_title: 930120-9-auto
