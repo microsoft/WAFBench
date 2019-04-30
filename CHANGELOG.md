@@ -19,6 +19,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) a
     - Fixbug: program will exit if the connect timeout
 - [pywb](./pywb) add support for binary package
 
+
 ## [1.3.0] - 2018-08-24
 ### Added
 - [pywb](./pywb) an enhanced tool to wb.
