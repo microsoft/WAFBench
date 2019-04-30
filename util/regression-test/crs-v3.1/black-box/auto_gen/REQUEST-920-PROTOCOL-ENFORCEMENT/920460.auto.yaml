@@ -1,0 +1,606 @@
+meta:
+  author: msra
+  description: None
+  enabled: true
+  name: 920460.yaml
+tests:
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?%2521%255CzV=TmLvpmH
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920460-1-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?q%255C1l=R5
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920460-2-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?%2526%252351%253B%255CK%253F=10PAsPe
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920460-3-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?E%255C1%2526%252385%253B=8
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920460-4-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?%257B%255CGa=Wb
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920460-5-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?4%255Cgy=l9Wxx_PRIL
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920460-6-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?%250D%255C4%2526amp%253B=J5
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920460-7-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?%2528%255CX6=zk
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920460-8-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?%2526%252366%253B%255CI%2526%2523xb%253B=vI6o
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920460-9-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?w%255C8V=ZjxgWhFr
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920460-10-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          ZqAT: Q%5CCX
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920460-11-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          CFowMN1: '%60%5C9%3F'
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920460-12-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          IUxx4c: V%5C5%26quot%3B
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920460-13-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          z: '%7C%5C9U'
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920460-14-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          HHA2h: '%29%5CM%20'
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920460-15-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          iSjqWKE: D%5CQ%5C
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920460-16-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          80fqmrh: M%5CD%26quot%3B
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920460-17-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          '0': J%5CJ%29
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920460-18-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          fFmrg: '%26%2375%3B%5CD_'
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920460-19-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          aV: B%5C9T
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920460-20-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?7yvJGQrG3H=8%255Cx%250D
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920460-21-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?bR=x%255C1%250C
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920460-22-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?6pomn6xBA=%2529%255Ce%257D
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920460-23-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?U=%257B%255C1%2526%2523114%253B
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920460-24-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?9kQ09KFZX5=K%255CDS
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920460-25-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?c5=W%255CG%253D
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920460-26-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?tU=_%255Cw%252A
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920460-27-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?QJaJcJFlP=%2526amp%253B%2526%2523x5c%253Bw%2526%2523x41%253B
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920460-28-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?RNt=_%255Cl%255D
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920460-29-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?vDV=%253F%255C%2526%252356%253Bv
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920460-30-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /%2509%255CjP
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920460-31-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /E%255ChV
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920460-32-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /l%2526%252392%253B%2526%2523x34%253B_
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920460-33-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /%2526%2523x57%253B%255C6T
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920460-34-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /R%255C60
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920460-35-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /5%255CZJ
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920460-36-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /%2526%2523x38%253B%255CxT
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920460-37-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /%2526%2523x5d%253B%2526%2523x5c%253B8/
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920460-38-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /T%255CM-
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920460-39-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /l%255Cj%2526amp%253B
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 920460-40-auto

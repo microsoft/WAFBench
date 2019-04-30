@@ -8,6 +8,18 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) a
 - FTW-compatible Tool
 - Auto-Test Generator
 
+## [1.4.0] - 2019-04-30
+### Added
+- [ftw_compatible_tool](./ftw_compatible_tool) a test framework of WAF
+- [regression-test](./util/regression-test) Test cases can be used by ][ftw_compatible_tool](./ftw_compatible_tool) or [pywb](./pywb)
+
+### Changed
+- [wb](./wb/wb.c) 
+    - Fixbug: to send/receive packages that contain binary data will fail
+    - Fixbug: program will exit if the connect timeout
+- [pywb](./pywb) add support for binary package
+
+
 ## [1.3.0] - 2018-08-24
 ### Added
 - [pywb](./pywb) an enhanced tool to wb.

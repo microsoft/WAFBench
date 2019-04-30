@@ -1,0 +1,3041 @@
+meta:
+  author: spartantri
+  description: Positive tests for rule 944120
+  enabled: true
+  name: 944120.yaml
+tests:
+- desc: Argument test includes keyword ProcessBuilder.evil.clonetransformer
+  stages:
+  - stage:
+      input:
+        data: test=ProcessBuilder.evil.clonetransformer
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-1
+- desc: Argument name includes keyword ProcessBuilder.evil.clonetransformer
+  stages:
+  - stage:
+      input:
+        data: ProcessBuilder.evil.clonetransformer=test
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-2
+- desc: Content-Type text/plain includes keyword ProcessBuilder.evil.clonetransformer
+  stages:
+  - stage:
+      input:
+        data: test=ProcessBuilder.evil.clonetransformer
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: text/plain
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-3
+- desc: Content-Type multipart/form-data XML element value includes keyword ProcessBuilder.evil.prototypeclonefactory
+  stages:
+  - stage:
+      input:
+        data: '-----------------------------thisissparta
+
+          Content-Disposition: form-data; name="payload"
+
+          Content-Type: application/xml
+
+
+          <?xml version="1.0"?><xml><element attribute_name="attribute_value">ProcessBuilder.evil.prototypeclonefactory</element></xml>
+
+          -----------------------------thisissparta--'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: multipart/form-data; boundary=---------------------------thisissparta
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-4
+- desc: Content-Type multipart/form-data XML element value includes keyword ProcessBuilder.evil.prototypeclonefactory
+  stages:
+  - stage:
+      input:
+        data: '-----------------------------thisissparta
+
+          Content-Disposition: form-data; name="payload"
+
+          Content-Type: application/xml
+
+
+          <?xml version="1.0"?><xml><element attribute_name="attribute_value">ProcessBuilder.evil.prototypeclonefactory</element></xml>
+
+          -----------------------------thisissparta--'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: multipart/form-data; boundary=---------------------------thisissparta
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-5
+- desc: Argument test includes keyword ProcessBuilder.evil.prototypeserializationfactory
+  stages:
+  - stage:
+      input:
+        data: test=ProcessBuilder.evil.prototypeserializationfactory
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-6
+- desc: Argument name includes keyword ProcessBuilder.evil.prototypeserializationfactory
+  stages:
+  - stage:
+      input:
+        data: ProcessBuilder.evil.prototypeserializationfactory=test
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-7
+- desc: Cookie test includes keyword ProcessBuilder.evil.prototypeserializationfactory
+  stages:
+  - stage:
+      input:
+        data: test=value
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Cookie: test=ProcessBuilder.evil.prototypeserializationfactory
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-8
+- desc: Cookie name includes keyword ProcessBuilder.evil.prototypeserializationfactory
+  stages:
+  - stage:
+      input:
+        data: test=value
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Cookie: ProcessBuilder.evil.prototypeserializationfactory=test
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-9
+- desc: Request header test includes keyword ProcessBuilder.evil.prototypeserializationfactory
+  stages:
+  - stage:
+      input:
+        data: test=value
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+          test: ProcessBuilder.evil.prototypeserializationfactory
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-10
+- desc: XML element includes keyword ProcessBuilder.evil.prototypeserializationfactory
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><ProcessBuilder.evil.prototypeserializationfactory
+          attribute_name="attribute_value">value</ProcessBuilder.evil.prototypeserializationfactory></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-11
+- desc: XML attribute name includes keyword ProcessBuilder.evil.prototypeserializationfactory
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><element ProcessBuilder.evil.prototypeserializationfactory="attribute_value">element_value</element></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-12
+- desc: XML attribute value includes keyword ProcessBuilder.evil.prototypeserializationfactory
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><element attribute_name="ProcessBuilder.evil.prototypeserializationfactory">element_value</element></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-13
+- desc: Content-Type application/json arg value includes keyword ProcessBuilder.evil.clonetransformer
+  stages:
+  - stage:
+      input:
+        data: '{"test": "ProcessBuilder.evil.clonetransformer"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/json
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-14
+- desc: XML element value includes keyword ProcessBuilder.evil.prototypeserializationfactory
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><element attribute_name="attribute_value">ProcessBuilder.evil.prototypeserializationfactory</element></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-15
+- desc: Nested XML element value includes keyword ProcessBuilder.evil.prototypeserializationfactory
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><l1><l2><l3><element attribute_name="attribute_value">ProcessBuilder.evil.prototypeserializationfactory</element></l3></l2></l1></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-16
+- desc: Content-Type text/plain includes keyword ProcessBuilder.evil.prototypeserializationfactory
+  stages:
+  - stage:
+      input:
+        data: test=ProcessBuilder.evil.prototypeserializationfactory
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: text/plain
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-17
+- desc: Content-Type application/json arg value includes keyword ProcessBuilder.evil.prototypeserializationfactory
+  stages:
+  - stage:
+      input:
+        data: '{"test": "ProcessBuilder.evil.prototypeserializationfactory"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/json
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-18
+- desc: Content-Type application/json arg name includes keyword ProcessBuilder.evil.prototypeserializationfactory
+  stages:
+  - stage:
+      input:
+        data: '{"ProcessBuilder.evil.prototypeserializationfactory": "test"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/json
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-19
+- desc: Content-Type multipart/form-data json arg name includes keyword ProcessBuilder.evil.prototypeserializationfactory
+  stages:
+  - stage:
+      input:
+        data: '-----------------------------thisissparta
+
+          Content-Disposition: form-data; name="payload"
+
+          Content-Type: application/json
+
+
+          {"ProcessBuilder.evil.prototypeserializationfactory": "test"}
+
+          -----------------------------thisissparta--'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: multipart/form-data; boundary=---------------------------thisissparta
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-20
+- desc: Content-Type multipart/form-data json arg value includes keyword ProcessBuilder.evil.prototypeserializationfactory
+  stages:
+  - stage:
+      input:
+        data: '-----------------------------thisissparta
+
+          Content-Disposition: form-data; name="payload"
+
+          Content-Type: application/json
+
+
+          {"ProcessBuilder.evil.prototypeserializationfactory": "test"}
+
+          -----------------------------thisissparta--'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: multipart/form-data; boundary=---------------------------thisissparta
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-21
+- desc: Content-Type multipart/form-data XML element value includes keyword ProcessBuilder.evil.prototypeserializationfactory
+  stages:
+  - stage:
+      input:
+        data: '-----------------------------thisissparta
+
+          Content-Disposition: form-data; name="payload"
+
+          Content-Type: application/xml
+
+
+          <?xml version="1.0"?><xml><element attribute_name="attribute_value">ProcessBuilder.evil.prototypeserializationfactory</element></xml>
+
+          -----------------------------thisissparta--'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: multipart/form-data; boundary=---------------------------thisissparta
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-22
+- desc: Content-Type multipart/form-data XML element value includes keyword ProcessBuilder.evil.prototypeserializationfactory
+  stages:
+  - stage:
+      input:
+        data: '-----------------------------thisissparta
+
+          Content-Disposition: form-data; name="payload"
+
+          Content-Type: application/xml
+
+
+          <?xml version="1.0"?><xml><element attribute_name="attribute_value">ProcessBuilder.evil.prototypeserializationfactory</element></xml>
+
+          -----------------------------thisissparta--'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: multipart/form-data; boundary=---------------------------thisissparta
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-23
+- desc: Argument test includes keyword ProcessBuilder.evil.whileclosure
+  stages:
+  - stage:
+      input:
+        data: test=ProcessBuilder.evil.whileclosure
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-24
+- desc: Content-Type application/json arg name includes keyword ProcessBuilder.evil.clonetransformer
+  stages:
+  - stage:
+      input:
+        data: '{"ProcessBuilder.evil.clonetransformer": "test"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/json
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-25
+- desc: Argument name includes keyword ProcessBuilder.evil.whileclosure
+  stages:
+  - stage:
+      input:
+        data: ProcessBuilder.evil.whileclosure=test
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-26
+- desc: Cookie test includes keyword ProcessBuilder.evil.whileclosure
+  stages:
+  - stage:
+      input:
+        data: test=value
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Cookie: test=ProcessBuilder.evil.whileclosure
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-27
+- desc: Cookie name includes keyword ProcessBuilder.evil.whileclosure
+  stages:
+  - stage:
+      input:
+        data: test=value
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Cookie: ProcessBuilder.evil.whileclosure=test
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-28
+- desc: Request header test includes keyword ProcessBuilder.evil.whileclosure
+  stages:
+  - stage:
+      input:
+        data: test=value
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+          test: ProcessBuilder.evil.whileclosure
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-29
+- desc: XML element includes keyword ProcessBuilder.evil.whileclosure
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><ProcessBuilder.evil.whileclosure attribute_name="attribute_value">value</ProcessBuilder.evil.whileclosure></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-30
+- desc: XML attribute name includes keyword ProcessBuilder.evil.whileclosure
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><element ProcessBuilder.evil.whileclosure="attribute_value">element_value</element></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-31
+- desc: XML attribute value includes keyword ProcessBuilder.evil.whileclosure
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><element attribute_name="ProcessBuilder.evil.whileclosure">element_value</element></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-32
+- desc: XML element value includes keyword ProcessBuilder.evil.whileclosure
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><element attribute_name="attribute_value">ProcessBuilder.evil.whileclosure</element></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-33
+- desc: Nested XML element value includes keyword ProcessBuilder.evil.whileclosure
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><l1><l2><l3><element attribute_name="attribute_value">ProcessBuilder.evil.whileclosure</element></l3></l2></l1></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-34
+- desc: Content-Type text/plain includes keyword ProcessBuilder.evil.whileclosure
+  stages:
+  - stage:
+      input:
+        data: test=ProcessBuilder.evil.whileclosure
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: text/plain
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-35
+- desc: Content-Type multipart/form-data json arg name includes keyword ProcessBuilder.evil.clonetransformer
+  stages:
+  - stage:
+      input:
+        data: '-----------------------------thisissparta
+
+          Content-Disposition: form-data; name="payload"
+
+          Content-Type: application/json
+
+
+          {"ProcessBuilder.evil.clonetransformer": "test"}
+
+          -----------------------------thisissparta--'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: multipart/form-data; boundary=---------------------------thisissparta
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-36
+- desc: Content-Type application/json arg value includes keyword ProcessBuilder.evil.whileclosure
+  stages:
+  - stage:
+      input:
+        data: '{"test": "ProcessBuilder.evil.whileclosure"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/json
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-37
+- desc: Content-Type application/json arg name includes keyword ProcessBuilder.evil.whileclosure
+  stages:
+  - stage:
+      input:
+        data: '{"ProcessBuilder.evil.whileclosure": "test"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/json
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-38
+- desc: Content-Type multipart/form-data json arg name includes keyword ProcessBuilder.evil.whileclosure
+  stages:
+  - stage:
+      input:
+        data: '-----------------------------thisissparta
+
+          Content-Disposition: form-data; name="payload"
+
+          Content-Type: application/json
+
+
+          {"ProcessBuilder.evil.whileclosure": "test"}
+
+          -----------------------------thisissparta--'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: multipart/form-data; boundary=---------------------------thisissparta
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-39
+- desc: Content-Type multipart/form-data json arg value includes keyword ProcessBuilder.evil.whileclosure
+  stages:
+  - stage:
+      input:
+        data: '-----------------------------thisissparta
+
+          Content-Disposition: form-data; name="payload"
+
+          Content-Type: application/json
+
+
+          {"ProcessBuilder.evil.whileclosure": "test"}
+
+          -----------------------------thisissparta--'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: multipart/form-data; boundary=---------------------------thisissparta
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-40
+- desc: Content-Type multipart/form-data XML element value includes keyword ProcessBuilder.evil.whileclosure
+  stages:
+  - stage:
+      input:
+        data: '-----------------------------thisissparta
+
+          Content-Disposition: form-data; name="payload"
+
+          Content-Type: application/xml
+
+
+          <?xml version="1.0"?><xml><element attribute_name="attribute_value">ProcessBuilder.evil.whileclosure</element></xml>
+
+          -----------------------------thisissparta--'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: multipart/form-data; boundary=---------------------------thisissparta
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-41
+- desc: Content-Type multipart/form-data XML element value includes keyword ProcessBuilder.evil.whileclosure
+  stages:
+  - stage:
+      input:
+        data: '-----------------------------thisissparta
+
+          Content-Disposition: form-data; name="payload"
+
+          Content-Type: application/xml
+
+
+          <?xml version="1.0"?><xml><element attribute_name="attribute_value">ProcessBuilder.evil.whileclosure</element></xml>
+
+          -----------------------------thisissparta--'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: multipart/form-data; boundary=---------------------------thisissparta
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-42
+- desc: Content-Type multipart/form-data json arg value includes keyword ProcessBuilder.evil.clonetransformer
+  stages:
+  - stage:
+      input:
+        data: '-----------------------------thisissparta
+
+          Content-Disposition: form-data; name="payload"
+
+          Content-Type: application/json
+
+
+          {"ProcessBuilder.evil.clonetransformer": "test"}
+
+          -----------------------------thisissparta--'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: multipart/form-data; boundary=---------------------------thisissparta
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-43
+- desc: Content-Type multipart/form-data XML element value includes keyword ProcessBuilder.evil.clonetransformer
+  stages:
+  - stage:
+      input:
+        data: '-----------------------------thisissparta
+
+          Content-Disposition: form-data; name="payload"
+
+          Content-Type: application/xml
+
+
+          <?xml version="1.0"?><xml><element attribute_name="attribute_value">ProcessBuilder.evil.clonetransformer</element></xml>
+
+          -----------------------------thisissparta--'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: multipart/form-data; boundary=---------------------------thisissparta
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-44
+- desc: Content-Type multipart/form-data XML element value includes keyword ProcessBuilder.evil.clonetransformer
+  stages:
+  - stage:
+      input:
+        data: '-----------------------------thisissparta
+
+          Content-Disposition: form-data; name="payload"
+
+          Content-Type: application/xml
+
+
+          <?xml version="1.0"?><xml><element attribute_name="attribute_value">ProcessBuilder.evil.clonetransformer</element></xml>
+
+          -----------------------------thisissparta--'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: multipart/form-data; boundary=---------------------------thisissparta
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-45
+- desc: Argument test includes keyword ProcessBuilder.evil.forclosure
+  stages:
+  - stage:
+      input:
+        data: test=ProcessBuilder.evil.forclosure
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-46
+- desc: Argument name includes keyword ProcessBuilder.evil.forclosure
+  stages:
+  - stage:
+      input:
+        data: ProcessBuilder.evil.forclosure=test
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-47
+- desc: Cookie test includes keyword ProcessBuilder.evil.forclosure
+  stages:
+  - stage:
+      input:
+        data: test=value
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Cookie: test=ProcessBuilder.evil.forclosure
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-48
+- desc: Cookie test includes keyword ProcessBuilder.evil.clonetransformer
+  stages:
+  - stage:
+      input:
+        data: test=value
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Cookie: test=ProcessBuilder.evil.clonetransformer
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-49
+- desc: Cookie name includes keyword ProcessBuilder.evil.forclosure
+  stages:
+  - stage:
+      input:
+        data: test=value
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Cookie: ProcessBuilder.evil.forclosure=test
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-50
+- desc: Request header test includes keyword ProcessBuilder.evil.forclosure
+  stages:
+  - stage:
+      input:
+        data: test=value
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+          test: ProcessBuilder.evil.forclosure
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-51
+- desc: XML element includes keyword ProcessBuilder.evil.forclosure
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><ProcessBuilder.evil.forclosure attribute_name="attribute_value">value</ProcessBuilder.evil.forclosure></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-52
+- desc: XML attribute name includes keyword ProcessBuilder.evil.forclosure
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><element ProcessBuilder.evil.forclosure="attribute_value">element_value</element></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-53
+- desc: XML attribute value includes keyword ProcessBuilder.evil.forclosure
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><element attribute_name="ProcessBuilder.evil.forclosure">element_value</element></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-54
+- desc: XML element value includes keyword ProcessBuilder.evil.forclosure
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><element attribute_name="attribute_value">ProcessBuilder.evil.forclosure</element></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-55
+- desc: Nested XML element value includes keyword ProcessBuilder.evil.forclosure
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><l1><l2><l3><element attribute_name="attribute_value">ProcessBuilder.evil.forclosure</element></l3></l2></l1></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-56
+- desc: Content-Type text/plain includes keyword ProcessBuilder.evil.forclosure
+  stages:
+  - stage:
+      input:
+        data: test=ProcessBuilder.evil.forclosure
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: text/plain
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-57
+- desc: Content-Type application/json arg value includes keyword ProcessBuilder.evil.forclosure
+  stages:
+  - stage:
+      input:
+        data: '{"test": "ProcessBuilder.evil.forclosure"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/json
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-58
+- desc: Content-Type application/json arg name includes keyword ProcessBuilder.evil.forclosure
+  stages:
+  - stage:
+      input:
+        data: '{"ProcessBuilder.evil.forclosure": "test"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/json
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-59
+- desc: Cookie name includes keyword ProcessBuilder.evil.clonetransformer
+  stages:
+  - stage:
+      input:
+        data: test=value
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Cookie: ProcessBuilder.evil.clonetransformer=test
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-60
+- desc: Content-Type multipart/form-data json arg name includes keyword ProcessBuilder.evil.forclosure
+  stages:
+  - stage:
+      input:
+        data: '-----------------------------thisissparta
+
+          Content-Disposition: form-data; name="payload"
+
+          Content-Type: application/json
+
+
+          {"ProcessBuilder.evil.forclosure": "test"}
+
+          -----------------------------thisissparta--'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: multipart/form-data; boundary=---------------------------thisissparta
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-61
+- desc: Content-Type multipart/form-data json arg value includes keyword ProcessBuilder.evil.forclosure
+  stages:
+  - stage:
+      input:
+        data: '-----------------------------thisissparta
+
+          Content-Disposition: form-data; name="payload"
+
+          Content-Type: application/json
+
+
+          {"ProcessBuilder.evil.forclosure": "test"}
+
+          -----------------------------thisissparta--'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: multipart/form-data; boundary=---------------------------thisissparta
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-62
+- desc: Content-Type multipart/form-data XML element value includes keyword ProcessBuilder.evil.forclosure
+  stages:
+  - stage:
+      input:
+        data: '-----------------------------thisissparta
+
+          Content-Disposition: form-data; name="payload"
+
+          Content-Type: application/xml
+
+
+          <?xml version="1.0"?><xml><element attribute_name="attribute_value">ProcessBuilder.evil.forclosure</element></xml>
+
+          -----------------------------thisissparta--'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: multipart/form-data; boundary=---------------------------thisissparta
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-63
+- desc: Content-Type multipart/form-data XML element value includes keyword ProcessBuilder.evil.forclosure
+  stages:
+  - stage:
+      input:
+        data: '-----------------------------thisissparta
+
+          Content-Disposition: form-data; name="payload"
+
+          Content-Type: application/xml
+
+
+          <?xml version="1.0"?><xml><element attribute_name="attribute_value">ProcessBuilder.evil.forclosure</element></xml>
+
+          -----------------------------thisissparta--'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: multipart/form-data; boundary=---------------------------thisissparta
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-64
+- desc: Argument test includes keyword ProcessBuilder.evil.instantiatefactory
+  stages:
+  - stage:
+      input:
+        data: test=ProcessBuilder.evil.instantiatefactory
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-65
+- desc: Argument name includes keyword ProcessBuilder.evil.instantiatefactory
+  stages:
+  - stage:
+      input:
+        data: ProcessBuilder.evil.instantiatefactory=test
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-66
+- desc: Cookie test includes keyword ProcessBuilder.evil.instantiatefactory
+  stages:
+  - stage:
+      input:
+        data: test=value
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Cookie: test=ProcessBuilder.evil.instantiatefactory
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-67
+- desc: Cookie name includes keyword ProcessBuilder.evil.instantiatefactory
+  stages:
+  - stage:
+      input:
+        data: test=value
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Cookie: ProcessBuilder.evil.instantiatefactory=test
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-68
+- desc: Request header test includes keyword ProcessBuilder.evil.instantiatefactory
+  stages:
+  - stage:
+      input:
+        data: test=value
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+          test: ProcessBuilder.evil.instantiatefactory
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-69
+- desc: XML element includes keyword ProcessBuilder.evil.instantiatefactory
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><ProcessBuilder.evil.instantiatefactory attribute_name="attribute_value">value</ProcessBuilder.evil.instantiatefactory></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-70
+- desc: Request header test includes keyword ProcessBuilder.evil.clonetransformer
+  stages:
+  - stage:
+      input:
+        data: test=value
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+          test: ProcessBuilder.evil.clonetransformer
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-71
+- desc: XML attribute name includes keyword ProcessBuilder.evil.instantiatefactory
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><element ProcessBuilder.evil.instantiatefactory="attribute_value">element_value</element></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-72
+- desc: XML attribute value includes keyword ProcessBuilder.evil.instantiatefactory
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><element attribute_name="ProcessBuilder.evil.instantiatefactory">element_value</element></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-73
+- desc: XML element value includes keyword ProcessBuilder.evil.instantiatefactory
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><element attribute_name="attribute_value">ProcessBuilder.evil.instantiatefactory</element></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-74
+- desc: Nested XML element value includes keyword ProcessBuilder.evil.instantiatefactory
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><l1><l2><l3><element attribute_name="attribute_value">ProcessBuilder.evil.instantiatefactory</element></l3></l2></l1></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-75
+- desc: Content-Type text/plain includes keyword ProcessBuilder.evil.instantiatefactory
+  stages:
+  - stage:
+      input:
+        data: test=ProcessBuilder.evil.instantiatefactory
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: text/plain
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-76
+- desc: Content-Type application/json arg value includes keyword ProcessBuilder.evil.instantiatefactory
+  stages:
+  - stage:
+      input:
+        data: '{"test": "ProcessBuilder.evil.instantiatefactory"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/json
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-77
+- desc: Content-Type application/json arg name includes keyword ProcessBuilder.evil.instantiatefactory
+  stages:
+  - stage:
+      input:
+        data: '{"ProcessBuilder.evil.instantiatefactory": "test"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/json
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-78
+- desc: Content-Type multipart/form-data json arg name includes keyword ProcessBuilder.evil.instantiatefactory
+  stages:
+  - stage:
+      input:
+        data: '-----------------------------thisissparta
+
+          Content-Disposition: form-data; name="payload"
+
+          Content-Type: application/json
+
+
+          {"ProcessBuilder.evil.instantiatefactory": "test"}
+
+          -----------------------------thisissparta--'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: multipart/form-data; boundary=---------------------------thisissparta
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-79
+- desc: Content-Type multipart/form-data json arg value includes keyword ProcessBuilder.evil.instantiatefactory
+  stages:
+  - stage:
+      input:
+        data: '-----------------------------thisissparta
+
+          Content-Disposition: form-data; name="payload"
+
+          Content-Type: application/json
+
+
+          {"ProcessBuilder.evil.instantiatefactory": "test"}
+
+          -----------------------------thisissparta--'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: multipart/form-data; boundary=---------------------------thisissparta
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-80
+- desc: Content-Type multipart/form-data XML element value includes keyword ProcessBuilder.evil.instantiatefactory
+  stages:
+  - stage:
+      input:
+        data: '-----------------------------thisissparta
+
+          Content-Disposition: form-data; name="payload"
+
+          Content-Type: application/xml
+
+
+          <?xml version="1.0"?><xml><element attribute_name="attribute_value">ProcessBuilder.evil.instantiatefactory</element></xml>
+
+          -----------------------------thisissparta--'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: multipart/form-data; boundary=---------------------------thisissparta
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-81
+- desc: XML element includes keyword ProcessBuilder.evil.clonetransformer
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><ProcessBuilder.evil.clonetransformer attribute_name="attribute_value">value</ProcessBuilder.evil.clonetransformer></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-82
+- desc: Content-Type multipart/form-data XML element value includes keyword ProcessBuilder.evil.instantiatefactory
+  stages:
+  - stage:
+      input:
+        data: '-----------------------------thisissparta
+
+          Content-Disposition: form-data; name="payload"
+
+          Content-Type: application/xml
+
+
+          <?xml version="1.0"?><xml><element attribute_name="attribute_value">ProcessBuilder.evil.instantiatefactory</element></xml>
+
+          -----------------------------thisissparta--'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: multipart/form-data; boundary=---------------------------thisissparta
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-83
+- desc: Argument test includes keyword ProcessBuilder.evil.instantiatetransformer
+  stages:
+  - stage:
+      input:
+        data: test=ProcessBuilder.evil.instantiatetransformer
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-84
+- desc: Argument name includes keyword ProcessBuilder.evil.instantiatetransformer
+  stages:
+  - stage:
+      input:
+        data: ProcessBuilder.evil.instantiatetransformer=test
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-85
+- desc: Cookie test includes keyword ProcessBuilder.evil.instantiatetransformer
+  stages:
+  - stage:
+      input:
+        data: test=value
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Cookie: test=ProcessBuilder.evil.instantiatetransformer
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-86
+- desc: Cookie name includes keyword ProcessBuilder.evil.instantiatetransformer
+  stages:
+  - stage:
+      input:
+        data: test=value
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Cookie: ProcessBuilder.evil.instantiatetransformer=test
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-87
+- desc: Request header test includes keyword ProcessBuilder.evil.instantiatetransformer
+  stages:
+  - stage:
+      input:
+        data: test=value
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+          test: ProcessBuilder.evil.instantiatetransformer
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-88
+- desc: XML element includes keyword ProcessBuilder.evil.instantiatetransformer
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><ProcessBuilder.evil.instantiatetransformer
+          attribute_name="attribute_value">value</ProcessBuilder.evil.instantiatetransformer></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-89
+- desc: XML attribute name includes keyword ProcessBuilder.evil.instantiatetransformer
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><element ProcessBuilder.evil.instantiatetransformer="attribute_value">element_value</element></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-90
+- desc: XML attribute value includes keyword ProcessBuilder.evil.instantiatetransformer
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><element attribute_name="ProcessBuilder.evil.instantiatetransformer">element_value</element></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-91
+- desc: XML element value includes keyword ProcessBuilder.evil.instantiatetransformer
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><element attribute_name="attribute_value">ProcessBuilder.evil.instantiatetransformer</element></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-92
+- desc: XML attribute name includes keyword ProcessBuilder.evil.clonetransformer
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><element ProcessBuilder.evil.clonetransformer="attribute_value">element_value</element></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-93
+- desc: Nested XML element value includes keyword ProcessBuilder.evil.instantiatetransformer
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><l1><l2><l3><element attribute_name="attribute_value">ProcessBuilder.evil.instantiatetransformer</element></l3></l2></l1></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-94
+- desc: Content-Type text/plain includes keyword ProcessBuilder.evil.instantiatetransformer
+  stages:
+  - stage:
+      input:
+        data: test=ProcessBuilder.evil.instantiatetransformer
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: text/plain
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-95
+- desc: Content-Type application/json arg value includes keyword ProcessBuilder.evil.instantiatetransformer
+  stages:
+  - stage:
+      input:
+        data: '{"test": "ProcessBuilder.evil.instantiatetransformer"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/json
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-96
+- desc: Content-Type application/json arg name includes keyword ProcessBuilder.evil.instantiatetransformer
+  stages:
+  - stage:
+      input:
+        data: '{"ProcessBuilder.evil.instantiatetransformer": "test"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/json
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-97
+- desc: Content-Type multipart/form-data json arg name includes keyword ProcessBuilder.evil.instantiatetransformer
+  stages:
+  - stage:
+      input:
+        data: '-----------------------------thisissparta
+
+          Content-Disposition: form-data; name="payload"
+
+          Content-Type: application/json
+
+
+          {"ProcessBuilder.evil.instantiatetransformer": "test"}
+
+          -----------------------------thisissparta--'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: multipart/form-data; boundary=---------------------------thisissparta
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-98
+- desc: Content-Type multipart/form-data json arg value includes keyword ProcessBuilder.evil.instantiatetransformer
+  stages:
+  - stage:
+      input:
+        data: '-----------------------------thisissparta
+
+          Content-Disposition: form-data; name="payload"
+
+          Content-Type: application/json
+
+
+          {"ProcessBuilder.evil.instantiatetransformer": "test"}
+
+          -----------------------------thisissparta--'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: multipart/form-data; boundary=---------------------------thisissparta
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-99
+- desc: Content-Type multipart/form-data XML element value includes keyword ProcessBuilder.evil.instantiatetransformer
+  stages:
+  - stage:
+      input:
+        data: '-----------------------------thisissparta
+
+          Content-Disposition: form-data; name="payload"
+
+          Content-Type: application/xml
+
+
+          <?xml version="1.0"?><xml><element attribute_name="attribute_value">ProcessBuilder.evil.instantiatetransformer</element></xml>
+
+          -----------------------------thisissparta--'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: multipart/form-data; boundary=---------------------------thisissparta
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-100
+- desc: Content-Type multipart/form-data XML element value includes keyword ProcessBuilder.evil.instantiatetransformer
+  stages:
+  - stage:
+      input:
+        data: '-----------------------------thisissparta
+
+          Content-Disposition: form-data; name="payload"
+
+          Content-Type: application/xml
+
+
+          <?xml version="1.0"?><xml><element attribute_name="attribute_value">ProcessBuilder.evil.instantiatetransformer</element></xml>
+
+          -----------------------------thisissparta--'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: multipart/form-data; boundary=---------------------------thisissparta
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-101
+- desc: Argument test includes keyword ProcessBuilder.evil.invokertransformer
+  stages:
+  - stage:
+      input:
+        data: test=ProcessBuilder.evil.invokertransformer
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-102
+- desc: Argument name includes keyword ProcessBuilder.evil.invokertransformer
+  stages:
+  - stage:
+      input:
+        data: ProcessBuilder.evil.invokertransformer=test
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-103
+- desc: XML attribute value includes keyword ProcessBuilder.evil.clonetransformer
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><element attribute_name="ProcessBuilder.evil.clonetransformer">element_value</element></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-104
+- desc: Cookie test includes keyword ProcessBuilder.evil.invokertransformer
+  stages:
+  - stage:
+      input:
+        data: test=value
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Cookie: test=ProcessBuilder.evil.invokertransformer
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-105
+- desc: Cookie name includes keyword ProcessBuilder.evil.invokertransformer
+  stages:
+  - stage:
+      input:
+        data: test=value
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Cookie: ProcessBuilder.evil.invokertransformer=test
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-106
+- desc: Request header test includes keyword ProcessBuilder.evil.invokertransformer
+  stages:
+  - stage:
+      input:
+        data: test=value
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+          test: ProcessBuilder.evil.invokertransformer
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-107
+- desc: XML element includes keyword ProcessBuilder.evil.invokertransformer
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><ProcessBuilder.evil.invokertransformer attribute_name="attribute_value">value</ProcessBuilder.evil.invokertransformer></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-108
+- desc: XML attribute name includes keyword ProcessBuilder.evil.invokertransformer
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><element ProcessBuilder.evil.invokertransformer="attribute_value">element_value</element></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-109
+- desc: XML attribute value includes keyword ProcessBuilder.evil.invokertransformer
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><element attribute_name="ProcessBuilder.evil.invokertransformer">element_value</element></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-110
+- desc: XML element value includes keyword ProcessBuilder.evil.invokertransformer
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><element attribute_name="attribute_value">ProcessBuilder.evil.invokertransformer</element></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-111
+- desc: Nested XML element value includes keyword ProcessBuilder.evil.invokertransformer
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><l1><l2><l3><element attribute_name="attribute_value">ProcessBuilder.evil.invokertransformer</element></l3></l2></l1></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-112
+- desc: Content-Type text/plain includes keyword ProcessBuilder.evil.invokertransformer
+  stages:
+  - stage:
+      input:
+        data: test=ProcessBuilder.evil.invokertransformer
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: text/plain
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-113
+- desc: Content-Type application/json arg value includes keyword ProcessBuilder.evil.invokertransformer
+  stages:
+  - stage:
+      input:
+        data: '{"test": "ProcessBuilder.evil.invokertransformer"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/json
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-114
+- desc: XML element value includes keyword ProcessBuilder.evil.clonetransformer
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><element attribute_name="attribute_value">ProcessBuilder.evil.clonetransformer</element></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-115
+- desc: Content-Type application/json arg name includes keyword ProcessBuilder.evil.invokertransformer
+  stages:
+  - stage:
+      input:
+        data: '{"ProcessBuilder.evil.invokertransformer": "test"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/json
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-116
+- desc: Content-Type multipart/form-data json arg name includes keyword ProcessBuilder.evil.invokertransformer
+  stages:
+  - stage:
+      input:
+        data: '-----------------------------thisissparta
+
+          Content-Disposition: form-data; name="payload"
+
+          Content-Type: application/json
+
+
+          {"ProcessBuilder.evil.invokertransformer": "test"}
+
+          -----------------------------thisissparta--'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: multipart/form-data; boundary=---------------------------thisissparta
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-117
+- desc: Content-Type multipart/form-data json arg value includes keyword ProcessBuilder.evil.invokertransformer
+  stages:
+  - stage:
+      input:
+        data: '-----------------------------thisissparta
+
+          Content-Disposition: form-data; name="payload"
+
+          Content-Type: application/json
+
+
+          {"ProcessBuilder.evil.invokertransformer": "test"}
+
+          -----------------------------thisissparta--'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: multipart/form-data; boundary=---------------------------thisissparta
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-118
+- desc: Content-Type multipart/form-data XML element value includes keyword ProcessBuilder.evil.invokertransformer
+  stages:
+  - stage:
+      input:
+        data: '-----------------------------thisissparta
+
+          Content-Disposition: form-data; name="payload"
+
+          Content-Type: application/xml
+
+
+          <?xml version="1.0"?><xml><element attribute_name="attribute_value">ProcessBuilder.evil.invokertransformer</element></xml>
+
+          -----------------------------thisissparta--'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: multipart/form-data; boundary=---------------------------thisissparta
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-119
+- desc: Content-Type multipart/form-data XML element value includes keyword ProcessBuilder.evil.invokertransformer
+  stages:
+  - stage:
+      input:
+        data: '-----------------------------thisissparta
+
+          Content-Disposition: form-data; name="payload"
+
+          Content-Type: application/xml
+
+
+          <?xml version="1.0"?><xml><element attribute_name="attribute_value">ProcessBuilder.evil.invokertransformer</element></xml>
+
+          -----------------------------thisissparta--'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: multipart/form-data; boundary=---------------------------thisissparta
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-120
+- desc: Argument test includes keyword ProcessBuilder.evil.prototypeclonefactory
+  stages:
+  - stage:
+      input:
+        data: test=ProcessBuilder.evil.prototypeclonefactory
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-121
+- desc: Argument name includes keyword ProcessBuilder.evil.prototypeclonefactory
+  stages:
+  - stage:
+      input:
+        data: ProcessBuilder.evil.prototypeclonefactory=test
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-122
+- desc: Cookie test includes keyword ProcessBuilder.evil.prototypeclonefactory
+  stages:
+  - stage:
+      input:
+        data: test=value
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Cookie: test=ProcessBuilder.evil.prototypeclonefactory
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-123
+- desc: Cookie name includes keyword ProcessBuilder.evil.prototypeclonefactory
+  stages:
+  - stage:
+      input:
+        data: test=value
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Cookie: ProcessBuilder.evil.prototypeclonefactory=test
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-124
+- desc: Request header test includes keyword ProcessBuilder.evil.prototypeclonefactory
+  stages:
+  - stage:
+      input:
+        data: test=value
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+          test: ProcessBuilder.evil.prototypeclonefactory
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-125
+- desc: Nested XML element value includes keyword ProcessBuilder.evil.clonetransformer
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><l1><l2><l3><element attribute_name="attribute_value">ProcessBuilder.evil.clonetransformer</element></l3></l2></l1></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-126
+- desc: XML element includes keyword ProcessBuilder.evil.prototypeclonefactory
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><ProcessBuilder.evil.prototypeclonefactory
+          attribute_name="attribute_value">value</ProcessBuilder.evil.prototypeclonefactory></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-127
+- desc: XML attribute name includes keyword ProcessBuilder.evil.prototypeclonefactory
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><element ProcessBuilder.evil.prototypeclonefactory="attribute_value">element_value</element></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-128
+- desc: XML attribute value includes keyword ProcessBuilder.evil.prototypeclonefactory
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><element attribute_name="ProcessBuilder.evil.prototypeclonefactory">element_value</element></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-129
+- desc: XML element value includes keyword ProcessBuilder.evil.prototypeclonefactory
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><element attribute_name="attribute_value">ProcessBuilder.evil.prototypeclonefactory</element></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-130
+- desc: Nested XML element value includes keyword ProcessBuilder.evil.prototypeclonefactory
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><l1><l2><l3><element attribute_name="attribute_value">ProcessBuilder.evil.prototypeclonefactory</element></l3></l2></l1></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-131
+- desc: Content-Type text/plain includes keyword ProcessBuilder.evil.prototypeclonefactory
+  stages:
+  - stage:
+      input:
+        data: test=ProcessBuilder.evil.prototypeclonefactory
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: text/plain
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-132
+- desc: Content-Type application/json arg value includes keyword ProcessBuilder.evil.prototypeclonefactory
+  stages:
+  - stage:
+      input:
+        data: '{"test": "ProcessBuilder.evil.prototypeclonefactory"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/json
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-133
+- desc: Content-Type application/json arg name includes keyword ProcessBuilder.evil.prototypeclonefactory
+  stages:
+  - stage:
+      input:
+        data: '{"ProcessBuilder.evil.prototypeclonefactory": "test"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/json
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-134
+- desc: Content-Type multipart/form-data json arg name includes keyword ProcessBuilder.evil.prototypeclonefactory
+  stages:
+  - stage:
+      input:
+        data: '-----------------------------thisissparta
+
+          Content-Disposition: form-data; name="payload"
+
+          Content-Type: application/json
+
+
+          {"ProcessBuilder.evil.prototypeclonefactory": "test"}
+
+          -----------------------------thisissparta--'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: multipart/form-data; boundary=---------------------------thisissparta
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-135
+- desc: Content-Type multipart/form-data json arg value includes keyword ProcessBuilder.evil.prototypeclonefactory
+  stages:
+  - stage:
+      input:
+        data: '-----------------------------thisissparta
+
+          Content-Disposition: form-data; name="payload"
+
+          Content-Type: application/json
+
+
+          {"ProcessBuilder.evil.prototypeclonefactory": "test"}
+
+          -----------------------------thisissparta--'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: multipart/form-data; boundary=---------------------------thisissparta
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        log_contains: id "944120"
+  test_title: 944120-136
