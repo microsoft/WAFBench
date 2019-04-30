@@ -83,7 +83,6 @@ def _load_packets_from_pkt_files(files):
                     else:
                         raise ValueError("Internal error, get buffer(%s)" % (buffer_, ))
 
-
 LOADERS = {
     ".yaml": _load_packets_from_yaml_files,
     ".pkt": _load_packets_from_pkt_files,

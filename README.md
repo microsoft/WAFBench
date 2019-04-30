@@ -127,6 +127,9 @@ sudo pip install ftw
 #### Download WB tools suits
 
 Just clone this repo to your machines.
+```
+git clone git@github.com:Microsoft/WAFBench.git
+```
 
 ```bash
 git clone git@github.com:Microsoft/WAFBench.git
