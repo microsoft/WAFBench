@@ -15,6 +15,7 @@ WAF (Web Application Firewall) Bench tool suits is designed to verify the correc
 
 ### Real Traffic Performance Testing
 
+
 The WAF's performance fluctuates greatly as the input traffic varies. The existing tool, i.e. `ab`, can test the performance under only one kind of customized request, which can not reproduce the real traffic scenario. In addition, `ab` can only customize some fields of the request, which is inconvenient for testing.
 
 In order to get the performance experienced by the real customer and further improve WAF's efficiency, we build `wb`, an ab-like tool, which could send multiple and fully-customized packets in one invoking. Besides, WAF Bench tool suits accepts YAML-based input, which can customize your packet and reproduce multiple different packets easily.
@@ -68,6 +69,7 @@ Python WAF Bench (pywb) is an enhanced tools of wb.
 
 * M3 - Automatically generate requests by ModSecurity rule set for testing the coverage of WAF
 
+
 ## Usage
 
 ### Prerequisites
@@ -105,6 +107,7 @@ Before installing dependencies using yum in CentOS, we recommend you to enable t
 However you can find these packages in your own source using 'yum search ...'
 
 ```bash
+
 sudo yum install gcc gcc-c++ make                # Install build-essential
 sudo yum install libev-devel.x86_64              # Install development headers for libev
 sudo yum install cmake                           # Install CMake
@@ -120,6 +123,7 @@ sudo yum install openssl-devel                   # Install openssl
 or just type
 
 ```bash
+
 sudo yum install gcc gcc-c++ make libev-devel.x86_64 cmake boost-devel.x86_64 python2 python2-pip.noarch wget.x86_64 expat-devel openssl-devel
 sudo pip install ftw
 ```
@@ -127,6 +131,10 @@ sudo pip install ftw
 #### Download WB tools suits
 
 Just clone this repo to your machines.
+```
+git clone git@github.com:Microsoft/WAFBench.git
+```
+
 
 ```bash
 git clone git@github.com:Microsoft/WAFBench.git
@@ -137,6 +145,7 @@ git clone git@github.com:Microsoft/WAFBench.git
 Please refer to [wb Readme](./wb/README.md)
 
 ```bash
+
 cd wb
 make
 make install
@@ -146,13 +155,17 @@ make install
 
 Assuming that the server is at 10.0.1.1:18081 running we can:
 
+
 ```bash
+
 ./pywb/main.py -t 10 -c 20  10.0.1.1:18081
 ```
 
 Or send requests from a file such as *requests.dat*:
 
+
 ```bash
+
 ./pywb/main.py -t 10 -c 25 -F ./example/packets/test-2-packets.yaml 10.0.1.1:18081
 ```
 
@@ -171,6 +184,7 @@ Since the components are independent to each other, the detailed build, install 
 WB uses the following libraries.
 
 ```text
+
 Framework for Testing WAFs (FTW!)
 
 https://github.com/fastly/ftw
