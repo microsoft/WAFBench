@@ -1,0 +1,22 @@
+meta:
+  author: msra
+  description: None
+  enabled: true
+  name: 941101.yaml
+tests:
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: a=1
+          Host: localhost
+          Referer: www.baidu.com<script><img><iframe>
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 941101-1-auto

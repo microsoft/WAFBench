@@ -1,0 +1,21 @@
+meta:
+  author: msra
+  description: None
+  enabled: true
+  name: 931130.yaml
+tests:
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: GET
+        port: 80
+        uri: /?key=file://10.150.144.185
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "931130"
+  test_title: 931130-1-auto
