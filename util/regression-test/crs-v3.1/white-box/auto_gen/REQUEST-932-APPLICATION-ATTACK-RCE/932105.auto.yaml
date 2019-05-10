@@ -340,3 +340,17 @@ tests:
       output:
         log_contains: id "932105"
   test_title: 932105-24-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?VcXcPaLWG=Z%0D%0Cmys%5Cq%5Cl%5Cshow%08t
+        version: HTTP/1.1
+      output:
+        log_contains: id "932105"
+  test_title: 932105-25-auto
