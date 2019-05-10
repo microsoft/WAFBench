@@ -2,7 +2,7 @@
 
 ## Test cases summary
 
-Total test cases: 11354  
+Total test cases: 11358  
 Coverage: 169 supported rules / 248 total rules in crs v3.1 (exclude paranoia_level 0)
 
 |rule_id|type|white-box_spiderlabs_count|white-box_autogen_count|black-box_spiderlabs_count|black-box_autogen_count|  
@@ -65,9 +65,9 @@ Coverage: 169 supported rules / 248 total rules in crs v3.1 (exclude paranoia_le
 |931120|APPLICATION-ATTACK-RFI|0|10|0|10|  
 |931130|APPLICATION-ATTACK-RFI|0|1|0|1|  
 |932100|APPLICATION-ATTACK-RCE|3|30|3|30|  
-|932105|APPLICATION-ATTACK-RCE|0|24|0|24|  
+|932105|APPLICATION-ATTACK-RCE|0|25|0|25|  
 |932106|APPLICATION-ATTACK-RCE|0|20|0|20|  
-|932110|APPLICATION-ATTACK-RCE|0|23|0|23|  
+|932110|APPLICATION-ATTACK-RCE|0|24|0|24|  
 |932115|APPLICATION-ATTACK-RCE|0|33|0|33|  
 |932120|APPLICATION-ATTACK-RCE|0|40|0|40|  
 |932130|APPLICATION-ATTACK-RCE|0|30|0|30|  
