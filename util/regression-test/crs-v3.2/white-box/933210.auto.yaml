@@ -1,0 +1,99 @@
+meta:
+  author: msra
+  description: None
+  enabled: true
+  name: 933210.auto.yaml
+tests:
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: a=1
+          Host: localhost
+        method: GET
+        uri: /?key=(system)('uname')
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933210"
+  test_title: 933210-1-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: a=1
+          Host: localhost
+        method: GET
+        uri: /?(system)('uname')=100
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933210"
+  test_title: 933210-2-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: a=1
+          Host: localhost
+        method: GET
+        uri: /(/**/system)(ls/**/);
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933210"
+  test_title: 933210-3-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: (system)('uname')=1
+          Host: localhost
+        method: GET
+        uri: /
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933210"
+  test_title: 933210-4-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: a=(system)('uname')
+          Host: localhost
+        method: GET
+        uri: /
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933210"
+  test_title: 933210-5-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><a>(system)('uname')</a>
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: a=1
+          Host: localhost
+          Content-Type: text/xml
+        method: POST
+        uri: /
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933210"
+  test_title: 933210-6-auto
+
