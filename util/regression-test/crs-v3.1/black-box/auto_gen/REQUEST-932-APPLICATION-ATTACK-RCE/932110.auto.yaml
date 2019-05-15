@@ -349,3 +349,18 @@ tests:
         status:
         - 403
   test_title: 932110-23-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?4kySxFml3=_%0D%097z%08F
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 932110-24-auto

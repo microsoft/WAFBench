@@ -1,0 +1,105 @@
+meta:
+  author: msra
+  description: None
+  enabled: true
+  name: 933210.auto.yaml
+tests:
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: a=1
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?key=(system)('uname')
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 933210-1-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: a=1
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?(system)('uname')=100
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 933210-2-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: a=1
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /(/**/system)(ls/**/);
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 933210-3-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: (system)('uname')=1
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 933210-4-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: a=(system)('uname')
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 933210-5-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><a>(system)('uname')</a>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Cookie: a=1
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        uri: /
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 933210-6-auto
+
