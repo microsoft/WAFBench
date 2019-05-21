@@ -1,4 +1,5 @@
-uthor: msra
+meta:
+  author: msra
   description: None
   enabled: true
   name: 941360.auto.yaml
