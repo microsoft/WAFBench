@@ -21,6 +21,7 @@ __all__ = [
 
 import copy
 import inspect
+import types
 
 # TOPICS
 
@@ -105,10 +106,9 @@ class Broker(object):
             raise ValueError("subscriber<%s> is not callable" % (subscriber))
         item = self._topic_items.setdefault(topic, Broker.TopicItem(topic))
         if type_limit:
-            if item.type_limit and item.type_limit != type_limit:
-                raise("type limit<%s> is not compatible with previous<%s>" %
-                    (type_limit, ))
-                return
+            if len(item.subscribers) > 0 and item.type_limit != type_limit:
+                raise ValueError("type limit<%s> is not compatible with previous<%s>" %
+                    (type_limit, item.type_limit))
             else:
                 item.type_limit = type_limit
         item.subscribers.add(subscriber)
@@ -143,18 +143,22 @@ class Broker(object):
             return
         type_limit = item.type_limit
         subscribers = item.subscribers
-        for subscriber in subscribers:
-            target_args = inspect.getargspec(subscriber).args
-            for i in range(min(len(args), len(target_args))):
-                if not isinstance(args[i], type_limit.get(target_args[i], type(args[i]))):
-                    raise ValueError(
-                        "type<%s> is not compatible with args<%s : (%s)>" %
-                        (type_limit, i, args[i]))
-            for k, v in kwargs.items():
-                if not isinstance(v, type_limit.get(k, type(v))):
-                    raise ValueError(
-                        "type<%s> is not compatible with args<%s : (%s)>" %
-                        (type_limit, k, v))
+        if type_limit:
+            for subscriber in subscribers:
+                if isinstance(subscriber, types.FunctionType):
+                    target_args = inspect.getargspec(subscriber).args
+                else:
+                    target_args = inspect.getargspec(subscriber.__call__).args
+                for i in range(min(len(args), len(target_args))):
+                    if not isinstance(args[i], type_limit.get(target_args[i], type(args[i]))):
+                        raise ValueError(
+                            "type<%s> is not compatible with args<%s : (%s)>" %
+                            (type_limit, i, args[i]))
+                for k, v in kwargs.items():
+                    if not isinstance(v, type_limit.get(k, type(v))):
+                        raise ValueError(
+                            "type<%s> is not compatible with args<%s : (%s)>" %
+                            (type_limit, k, v))
         tuple(map(lambda subscriber: subscriber(*args, **kwargs), subscribers))
 
 
