@@ -90,14 +90,3 @@ class LogCollector(collector.SwitchCollector):
             )
 
 
-if __name__ == "__main__":
-    import testdata
-
-    ctx = context.Context(
-        broker.Broker(),
-        delimiter=traffic.Delimiter("334787923864975794240893756898805143302"))
-    log_collector = LogCollector(ctx)
-    ctx.broker.subscribe(broker.TOPICS.SQL_COMMAND, testdata.PrintMessage)
-
-    for line in testdata.TEST_MODSECURITY_LOG.splitlines():
-        ctx.broker.publish(broker.TOPICS.RAW_LOG, line + "\n")
