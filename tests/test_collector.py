@@ -12,8 +12,7 @@ class SwitchCollectWrapper(collector.SwitchCollector):
         self._check_func(collected_buffer, start_result, end_result)
 
 
-def test_normal():
-    class Comparer(object):
+class Comparer(object):
         def __init__(self, expected):
             self.expected = expected
             self.hit_time = 0
@@ -21,6 +20,9 @@ def test_normal():
             assert(re.match(self.expected, collected_buffer) is not None)
             # print(collected_buffer, start_result.group(0), end_result.group(0))
             self.hit_time += 1
+
+
+def test_normal():
 
     c = Comparer("123")
     SwitchCollectWrapper(c, r"\D+", r"\D+")("abc123abc")
@@ -38,6 +40,8 @@ def test_normal():
     SwitchCollectWrapper(c, r"\d", r"\d")("abcd")
     assert(c.hit_time == 0)
     
+
+def test_multiline():
     # multiline
     text = '''
             123-456
