@@ -20,6 +20,7 @@ __all__ = [
 ]
 
 import copy
+import inspect
 
 # TOPICS
 
@@ -101,15 +102,11 @@ class Broker(object):
             - subscriber: A callable object, e.g. a function.
         """
         if not hasattr(subscriber, "__call__"):
-            self._ctx.broker.publish(
-                TOPICS.FATAL, "subscriber<%s> is not callable" % (subscriber))
-            return
+            raise ValueError("subscriber<%s> is not callable" % (subscriber))
         item = self._topic_items.setdefault(topic, Broker.TopicItem(topic))
         if type_limit:
             if item.type_limit and item.type_limit != type_limit:
-                self._ctx.broker.publish(
-                    TOPICS.FATAL,
-                    "type limit<%s> is not compatible with previous<%s>" %
+                raise("type limit<%s> is not compatible with previous<%s>" %
                     (type_limit, ))
                 return
             else:
@@ -141,25 +138,23 @@ class Broker(object):
             - args, kwargs: Arguments sent to subscribers.
                 Type check will be done on these.
         """
-        item = self._topic_items.get(topic, Broker.TopicItem(topic))
+        item = self._topic_items.get(topic)
+        if item is None:
+            return
         type_limit = item.type_limit
         subscribers = item.subscribers
-        if type_limit:
-            type_limit_list = list(type_limit.values())
-            for i in range(min(len(type_limit_list), len(args))):
-                if not isinstance(args[i], type_limit_list[i]):
-                    self._ctx.broker.publish(
-                        TOPICS.FATAL,
+        for subscriber in subscribers:
+            target_args = inspect.getargspec(subscriber).args
+            for i in range(min(len(args), len(target_args))):
+                if not isinstance(args[i], type_limit.get(target_args[i], type(args[i]))):
+                    raise ValueError(
                         "type<%s> is not compatible with args<%s : (%s)>" %
                         (type_limit, i, args[i]))
-                    return
             for k, v in kwargs.items():
                 if not isinstance(v, type_limit.get(k, type(v))):
-                    self._ctx.broker.publish(
-                        TOPICS.FATAL,
+                    raise ValueError(
                         "type<%s> is not compatible with args<%s : (%s)>" %
                         (type_limit, k, v))
-                    return
         tuple(map(lambda subscriber: subscriber(*args, **kwargs), subscribers))
 
 
@@ -190,40 +185,3 @@ class Subscriber(object):
         for i in self._subscribe_items:
             self._broker.unsubscribe(i[0], i[1])
 
-
-if __name__ == "__main__":
-
-    class PrintKV(Subscriber):
-        def __init__(self, broker):
-            super(PrintKV, self).__init__(broker, (("strict", self._print, {
-                "fmt": str
-            }), ("notstrict", self._print)))
-
-        def _print(self, fmt, key, value):
-            print(fmt % (key, value))
-
-    broker = Broker()
-
-    printer = PrintKV(broker)
-    printer.start()
-    broker.publish("strict", "%d : %s", 1, "tester")
-    broker.publish("strict", fmt="%d : %s", key=2, value="tester")
-
-    broker.publish("notstrict", "%d : %s", 3, "tester")
-    broker.publish("notstrict", fmt="%d : %s", key=4, value="tester")
-
-    try:
-        broker.subscribe("strict", broker)
-    except ValueError as e:
-        print(e)
-    try:
-        broker.publish("strict", {"fmt": "%d : %s"}, 5, "tester")
-    except ValueError as e:
-        print(e)
-
-    try:
-        broker.publish("notstrict", {"fmt": "%d : %s"}, 6, "tester")
-    except TypeError as e:
-        print(e)
-
-    printer.end()
