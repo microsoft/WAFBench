@@ -17,8 +17,8 @@ class Comparer(object):
             self.expected = expected
             self.hit_time = 0
         def __call__(self, collected_buffer, start_result, end_result):
+            print("<"+collected_buffer+">")
             assert(re.match(self.expected, collected_buffer) is not None)
-            # print(collected_buffer, start_result.group(0), end_result.group(0))
             self.hit_time += 1
 
 
@@ -50,12 +50,14 @@ def test_multiline():
     '''
     c = Comparer(r"^-{0,2}$")
     s = SwitchCollectWrapper(c, r"\d+", r"\d+")
-    for line in text.split():
+    for line in text.splitlines():
+        line = line.strip()
         s(line)
     assert(c.hit_time == 3)
 
     c = Comparer(r"^(\d+-{1,2}\d+)+$")
     s = SwitchCollectWrapper(c, r"\d+", r"\d+", save_entire_line = True)
-    for line in text.split():
+    for line in text.splitlines():
+        line = line.strip()
         s(line)
     assert(c.hit_time == 1)
