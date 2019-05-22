@@ -75,4 +75,13 @@ def test_sql():
     assert(data["raw_response"] == "raw_response")
     assert(data["raw_log"] == "raw_log")
 
+    # clean raw data
+    db.query(sql.SQL_CLEAN_RAW_DATA)
+    result = db.query(_SQL_GET_ALL_DATA)
+    data = collections.OrderedDict(zip(result.title(), next(iter(result))))
+    assert(data["raw_request"] == None)
+    assert(data["raw_response"] == None)
+    assert(data["raw_log"] == None)
+    assert(data["testing_result"] == None)
+
 
