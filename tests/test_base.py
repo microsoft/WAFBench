@@ -1,5 +1,6 @@
 import os
 import uuid
+import filecmp
 
 from ftw_compatible_tool import base
 from ftw_compatible_tool import context
@@ -57,7 +58,7 @@ def test_load_and_gen_packets():
     packets_pkt = conf.pkt_path
     expect_pkt = os.path.join(
         os.path.dirname(__file__), "data", "packets.pkt")
-    assert(open(packets_pkt, "r").read() == open(expect_pkt, "r").read())
+    filecmp.cmp(packets_pkt, expect_pkt)
     uuid.uuid1 = old_uuid1
 
 
