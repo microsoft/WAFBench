@@ -58,6 +58,8 @@ def test_load_and_gen_packets():
     packets_pkt = conf.pkt_path
     expect_pkt = os.path.join(
         os.path.dirname(__file__), "data", "packets.pkt")
+    print(open(packets_pkt, "r").read())
+    print(open(expect_pkt, "r").read())
     assert(filecmp.cmp(packets_pkt, expect_pkt))
     uuid.uuid1 = old_uuid1
 
