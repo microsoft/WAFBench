@@ -182,7 +182,6 @@ class Base(object):
                         delimiter_packet = pywb.ftwhelper.get(
                             delimiter_packet, pywb.ftwhelper.FTW_TYPE.PACKETS)
                         dumper.dump(delimiter_packet)
-
         self._ctx.broker.publish(
             broker.TOPICS.SQL_COMMAND,
             request_sql_script
@@ -258,9 +257,9 @@ class Base(object):
                 # this test not be sent
                 if row["raw_request"] is None:
                     continue
-                row["output"] = ast.literal_eval(row["output"])
+                check_result = {}
                 try:
-                    check_result = {}
+                    row["output"] = ast.literal_eval(row["output"])
                     for k, v in row["output"].items():
                         if k not in check_items:
                             continue
@@ -275,7 +274,9 @@ class Base(object):
                         )
                     self._ctx.broker.publish(broker.TOPICS.CHECK_RESULT, row,
                                              check_result)
-                except re.error as e:
+                except (re.error, SyntaxError) as e:
+                    self._ctx.broker.publish(broker.TOPICS.CHECK_RESULT, row,
+                                             check_result)
                     self._ctx.broker.publish(broker.TOPICS.WARNING, str(e))
 
         self._ctx.broker.publish(
@@ -284,30 +285,3 @@ class Base(object):
             callback=report_experiment)
 
 
-if __name__ == "__main__":
-    import log
-    import testdata
-
-    ctx = context.Context(
-        broker.Broker(),
-        delimiter=traffic.Delimiter("334787923864975794240893756898805143302"))
-
-    logger = log.LogCollector(ctx)
-
-    database.Sqlite3DB(ctx)
-
-    conf = BaseConf()
-    Base(ctx, conf)
-
-    ctx.broker.publish(broker.TOPICS.COMMAND, "load",
-                       "FTW-compatible-tool/testspace/test-2-packets.yaml")
-    ctx.broker.publish(broker.TOPICS.COMMAND, "gen")
-    ctx.broker.publish(broker.TOPICS.COMMAND, "start", "localhost:18080")
-    ctx.broker.publish(broker.TOPICS.COMMAND, "import",
-                       testdata.TEST_MODSECURITY_LOG)
-    ctx.broker.publish(broker.TOPICS.COMMAND, "report")
-
-    ctx.broker.publish(
-        broker.TOPICS.SQL_COMMAND,
-        testdata.TEST_SHOW_DATABASE,
-        callback=testdata.PrintQueryResult)

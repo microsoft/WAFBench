@@ -23,17 +23,17 @@ _TEST_MODSECURITY_LOG = '''
 '''
 
 
-
 def test_log_extract():
-    log_count = [0]
+    counter = {
+        "log" : 0,
+    }
     def get_log(*args):
-        print(args)
-        log_count[0] += 1
+        counter["log"] += 1
     ctx = context.Context(broker.Broker(), traffic.Delimiter("magic"))
     ctx.broker.subscribe(broker.TOPICS.SQL_COMMAND, get_log)
     collector = log.LogCollector(ctx)
     for line in _TEST_MODSECURITY_LOG.splitlines():
         ctx.broker.publish(broker.TOPICS.RAW_LOG, line + "\n")
-    assert(log_count[0] == 2)
+    assert(counter["log"] == 2)
 
 

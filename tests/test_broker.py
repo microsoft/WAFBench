@@ -52,7 +52,6 @@ def test_publish():
         assert(False)
     except ValueError:
         assert(True)
-
    
 
 def test_multiple_subscribe():
