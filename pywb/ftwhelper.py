@@ -22,6 +22,10 @@ import ftw
 
 import pywbutil
 
+
+yaml.warnings({'YAMLLoadWarning': False})
+
+
 __all__ = [
     "FTW_TYPE",
     "FtwDict",
