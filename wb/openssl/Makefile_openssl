@@ -1,7 +1,0 @@
-all:libopenssl
-
-libopenssl:
-	PWD=`pwd`
-	./config --prefix=$(PWD)/openssl/build/
-	make -j
-	make install
