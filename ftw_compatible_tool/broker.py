@@ -139,8 +139,8 @@ class Broker(object):
                 Type check will be done on these.
         """
         item = self._topic_items.get(topic)
-        if item is None:
-            return
+        if item is None or len(item.subscribers) == 0:
+            return False
         type_limit = item.type_limit
         subscribers = item.subscribers
         if type_limit:
@@ -160,6 +160,7 @@ class Broker(object):
                             "type<%s> is not compatible with args<%s : (%s)>" %
                             (type_limit, k, v))
         tuple(map(lambda subscriber: subscriber(*args, **kwargs), subscribers))
+        return True
 
 
 class Subscriber(object):

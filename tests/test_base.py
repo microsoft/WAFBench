@@ -1,6 +1,9 @@
 import os
 import uuid
 import filecmp
+import BaseHTTPServer
+import threading
+import functools
 
 from ftw_compatible_tool import base
 from ftw_compatible_tool import context
@@ -8,6 +11,7 @@ from ftw_compatible_tool import broker
 from ftw_compatible_tool import database
 from ftw_compatible_tool import traffic
 
+import common
 
 def warning_as_error(*args):
     raise ValueError(*args)
@@ -62,6 +66,35 @@ def test_load_and_gen_packets():
     uuid.uuid1 = old_uuid1
 
 
+def test_start_experiment():
+    counter = {
+        "request" : 0,
+    }
+    def check_result(row, result):
+        assert(functools.reduce(lambda x, y: x and y, result.values()))
+        counter["request"] += 1
+    with common.HTTPServerInstance():
+        ctx = context.Context(broker.Broker(), traffic.Delimiter("magic"))
+        ctx.broker.subscribe(broker.TOPICS.WARNING, warning_as_error)
+        conf = base.BaseConf()
+        bs = base.Base(ctx, conf)
+
+        ctx.broker.subscribe(broker.TOPICS.CHECK_RESULT, check_result)
+
+        traffic.RawRequestCollector(ctx)
+        traffic.RawResponseCollector(ctx)
+        traffic.RealTrafficCollector(ctx)
+        database.Sqlite3DB(ctx)
+
+        packets_yaml = os.path.join(
+            os.path.dirname(__file__), "data", "packets.yaml")
+        bs._load_yaml_tests(packets_yaml)
+        bs._gen_requests()
+        assert(bs._start_experiment("localhost:" + str(common._PORT)) == 0)
+        bs._report_experiment()
+        assert(counter["request"] == 2)
+
+    
 def test_import_log():
     class LogCheck(object):
         def __init__(self, expected_log):
