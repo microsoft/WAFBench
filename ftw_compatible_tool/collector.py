@@ -154,16 +154,3 @@ class SwitchCollector(Collector):
         self._start_result = None
         self._end_result = None
 
-
-if __name__ == "__main__":
-
-    class PrintNumber(SwitchCollector):
-        def _execute(self, collected_buffer, start_result, end_result):
-            print(start_result.group(0))
-            print("<%d>" % (int(collected_buffer), ))
-            print(end_result.group(0))
-
-    printer = PrintNumber(r"\D+", r"\D+")
-    printer("0abc1")
-    printer("23")
-    printer("456ef7gh8")

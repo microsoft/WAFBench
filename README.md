@@ -1,5 +1,5 @@
 # WAF Bench (WB) Tool Suits
-
+[![Build Status](https://travis-ci.org/microsoft/WAFBench.svg?branch=master)](https://travis-ci.org/Microsoft/WAFBench)
 ```text
 
 /\ \  _ \ \   /\  __ \   /\  ___\    /\  == \   /\  ___\   /\ "-.\ \   /\  ___\   /\ \_\ \

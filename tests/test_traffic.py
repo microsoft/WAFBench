@@ -1,14 +1,10 @@
-#!/usr/bin/python
-# -*- coding: utf-8 -*-
+from ftw_compatible_tool import traffic
+from ftw_compatible_tool import broker
+from ftw_compatible_tool import context
+import re
 
-# Copyright (c) Microsoft Corporation. All rights reserved.
-# Licensed under the MIT License.
-""" testdata, created for ftw_compatible_tool's test.
 
-If you are using ftw_compatible_tool, you must have no need to use this module.
-"""
-
-TEST_PYWB_OUTPUT = '''
+_TEST_PYWB_OUTPUT = '''
 WAF-Bench(wb) Version 1.2.1(Build: Aug 31 2018 14:26:32).
   By Networking Research Group of Microsoft Research, 2018.
 wb is based on ApacheBench, Version 2.3 <1818629>
@@ -28,7 +24,7 @@ Accept: */*
  read 6 packets from file with total length(745).
 
 writing request(161 bytes)=>[GET / HTTP/1.1\r
-Host: 334787923864975794240893756898805143302-<334787923944203956755158094492349093638>\r
+Host: magic-334787923944203956755158094492349093638\r
 Accept: */*\r
 User-Agent: WAFBench\r
 Connection: Close\r
@@ -167,7 +163,7 @@ the <a href="http://nginx.org/r/error_log">error log</a> for details.</p>
 
 WARNING: Response code not 2xx (502)
 writing request(161 bytes)=>[GET / HTTP/1.1\r
-Host: 334787923864975794240893756898805143302-<334787923944203956755158094492349093638>\r
+Host: magic-334787923944203956755158094492349093638\r
 Accept: */*\r
 User-Agent: WAFBench\r
 Connection: Close\r
@@ -237,7 +233,7 @@ the <a href="http://nginx.org/r/error_log">error log</a> for details.</p>
 
 WARNING: Response code not 2xx (502)
 writing request(161 bytes)=>[GET / HTTP/1.1\r
-Host: 334787923864975794240893756898805143302-<334787924023432119269422432085893043974>\r
+Host: magic-334787924023432119269422432085893043974\r
 Accept: */*\r
 User-Agent: WAFBench\r
 Connection: Close\r
@@ -376,7 +372,7 @@ the <a href="http://nginx.org/r/error_log">error log</a> for details.</p>
 
 WARNING: Response code not 2xx (502)
 writing request(161 bytes)=>[GET / HTTP/1.1\r
-Host: 334787923864975794240893756898805143302-<334787924023432119269422432085893043974>\r
+Host: magic-334787924023432119269422432085893043974\r
 Accept: */*\r
 User-Agent: WAFBench\r
 Connection: Close\r
@@ -485,32 +481,35 @@ Percentage of the requests served within a certain time (us)
  100%    589 (longest request)
     '''
 
-TEST_MODSECURITY_LOG = '''
-2018/10/22 17:41:36 [error] 3439#3439: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:28080/", host: "334787923864975794240893756898805143302-<245154438456484133445805079042224150278>"
-2018/10/22 17:41:36 [error] 3439#3439: [client 127.0.0.1] ModSecurity: Warning. Pattern match "334787923864975794240893756898805143302-<(\\w*)>" at REQUEST_HEADERS:Host. [file "/home/ganze/testbed/default-nginx-1.11.5-ModSecurity-original/conf/my_modsecurity_conf/default.conf"] [line "31"] [id "010203"] [msg "334787923864975794240893756898805143302-<245154438456484133445805079042224150278>"] [hostname ""] [uri "/"] [unique_id "AcPcAcAcA0APAcAcAcAcAcAc"]
-2018/10/22 17:41:36 [error] 3439#3439: *3 connect() failed (111: Connection refused) while connecting to upstream, client: 127.0.0.1, server: localhost, request: "GET /index.html HTTP/1.1", upstream: "http://127.0.0.1:28080/index.html",
-host: "localhost"
-2018/10/22 17:41:36 [error] 3439#3439: *5 connect() failed (111: Connection refused) while connecting to upstream, client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:28080/", host: "334787923864975794240893756898805143302-<245154438456484133445805079042224150278>"
-2018/10/22 17:41:36 [error] 3439#3439: [client 127.0.0.1] ModSecurity: Warning. Pattern match "334787923864975794240893756898805143302-<(\\w*)>" at REQUEST_HEADERS:Host. [file "/home/ganze/testbed/default-nginx-1.11.5-ModSecurity-original/conf/my_modsecurity_conf/default.conf"] [line "31"] [id "010203"] [msg "334787923864975794240893756898805143302-<245154438456484133445805079042224150278>"] [hostname ""] [uri "/"] [unique_id "A5AcAcAcAVAlttqcAcAcAcAc"]
-2018/10/22 17:41:36 [error] 3439#3439: *7 connect() failed (111: Connection refused) while connecting to upstream, client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:28080/", host: "334787923864975794240893756898805143302-<245154438535712295960069416635768100614>"
-2018/10/22 17:41:36 [error] 3439#3439: [client 127.0.0.1] ModSecurity: Warning. Pattern match "334787923864975794240893756898805143302-<(\\w*)>" at REQUEST_HEADERS:Host. [file "/home/ganze/testbed/default-nginx-1.11.5-ModSecurity-original/conf/my_modsecurity_conf/default.conf"] [line "31"] [id "010203"] [msg "334787923864975794240893756898805143302-<245154438535712295960069416635768100614>"] [hostname ""] [uri "/"] [unique_id "AcAcAcAcAcwbAnucAcAcAcAc"]
-2018/10/22 17:41:36 [error] 3439#3439: *9 connect() failed (111: Connection refused) while connecting to upstream, client: 127.0.0.1, server: localhost, request: "GET /index.html HTTP/1.1", upstream: "http://127.0.0.1:28080/index.html",
-host: "localhost"
-2018/10/22 17:41:36 [error] 3439#3439: *11 connect() failed (111: Connection refused) while connecting to upstream, client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:28080/", host: "334787923864975794240893756898805143302-<245154438535712295960069416635768100614>"
-2018/10/22 17:41:36 [error] 3439#3439: [client 127.0.0.1] ModSecurity: Warning. Pattern match "334787923864975794240893756898805143302-<(\\w*)>" at REQUEST_HEADERS:Host. [file "/home/ganze/testbed/default-nginx-1.11.5-ModSecurity-original/conf/my_modsecurity_conf/default.conf"] [line "31"] [id "010203"] [msg "334787923864975794240893756898805143302-<245154438535712295960069416635768100614>"] [hostname ""] [uri "/"] [unique_id "AcAcecAZAcqcAcAcXdAFlcAG"]
-'''
+def test_traffic_extract():
+    request_buffer = []
+    response_buffer = []
+    traffic_buffer = []
+    def get_request(request):
+        request_buffer.append(request)
+    def get_response(response):
+        response_buffer.append(response)
+    def get_traffic(sql, request, response, duration, id):
+        assert(re.search(r"^GET", request) is not None)
+        assert(re.search(r"^HTTP", response) is not None)
+        assert(re.search(r"^\d+.\d+$", str(duration)) is not None)
+        assert(re.search(r"^\d+$", id) is not None)
+        traffic_buffer.append((request, response))
 
-TEST_SHOW_DATABASE = '''
-SELECT * FROM Traffic;
-'''
+    ctx = context.Context(broker.Broker(), traffic.Delimiter("magic"))
+    ctx.broker.subscribe(broker.TOPICS.RAW_REQUEST, get_request)
+    ctx.broker.subscribe(broker.TOPICS.RAW_RESPONSE, get_response)
+    ctx.broker.subscribe(broker.TOPICS.SQL_COMMAND, get_traffic)
 
+    traffic.RawRequestCollector(ctx)
+    traffic.RawResponseCollector(ctx)
+    traffic.RealTrafficCollector(ctx)
 
-def PrintQueryResult(result):
-    print(result.title())
-    for row in result:
-        print(row)
+    for line in _TEST_PYWB_OUTPUT.splitlines():
+        ctx.broker.publish(broker.TOPICS.PYWB_OUTPUT, line + "\n")
 
-
-def PrintMessage(*args, **kwargs):
-    print(repr(args))
-    print(repr(kwargs))
+    assert(len(request_buffer) == 6)
+    assert(len(response_buffer) == 6)
+    assert(len(traffic_buffer) == 2)
+    for t in traffic_buffer:
+        assert(t[0] in request_buffer and t[1] in response_buffer)

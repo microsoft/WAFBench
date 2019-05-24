@@ -22,6 +22,10 @@ import ftw
 
 import pywbutil
 
+
+yaml.warnings({'YAMLLoadWarning': False})
+
+
 __all__ = [
     "FTW_TYPE",
     "FtwDict",
@@ -88,7 +92,7 @@ class FtwStr(str):
 @pywbutil.expand_nest_generator
 def _load_ftw_rules_from_strings(strings):
     for string_ in strings:
-        ftw_rule = ftw.ruleset.Ruleset(yaml.load(string_))
+        ftw_rule = ftw.ruleset.Ruleset(yaml.load(string_, Loader=yaml.FullLoader))
         rule = FtwDict(
             FTW_TYPE.RULE,
             None,
