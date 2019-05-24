@@ -7,5 +7,6 @@ python:
 cache: pip
 install:
   - pip install -r requirements.txt
+  - cd wb/ && make
 script:
   - py.test -vv tests
