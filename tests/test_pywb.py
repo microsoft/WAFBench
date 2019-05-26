@@ -17,11 +17,21 @@ def test_send_packet_specified_number():
         def do_GET(self):
             self.send_response(200)
             counter["request"] += 1
+        def do_POST(self):
+            self.send_response(200)
+            counter["request"] += 1
     with common.HTTPServerInstance(HTTPHandler):
         expect_request_count = 3
         main.execute(["-v", "4", "-n", str(expect_request_count),
                     "localhost:" + str(common._PORT)])
         assert(counter["request"] == expect_request_count)
+
+        counter["request"] = 0
+        packet_file = os.path.join(os.path.dirname(
+            __file__), "data", "big_packet.pkt")
+        main.execute(["-v", "4", "-n", "1", "-F",  packet_file,
+                      "localhost:" + str(common._PORT)])
+        assert(counter["request"] == 1)
 
 
 def test_send_packet_specified_timelimit():
