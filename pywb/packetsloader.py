@@ -72,6 +72,7 @@ def _load_packets_from_pkt_files(files):
                         else:
                             packet_len = buffer_.find('\0')
                             if packet_len == -1:
+                                packet_len = 0
                                 break
                     if packet_len >= 0:
                         if len(buffer_) >= packet_len:
