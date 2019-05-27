@@ -12,11 +12,10 @@ class HTTPServerInstance(object):
         self._httpd = BaseHTTPServer.HTTPServer(
             ("127.0.0.1", _PORT), 
             self._request_handle)
-        thread = threading.Thread(target = self._httpd.serve_forever)
-        thread.daemon = True
-        thread.start()
+        self._thread = threading.Thread(target = self._httpd.serve_forever)
+        self._thread.start()
     def __exit__(self, exc_type, exc_val, exc_tb):
         self._httpd.shutdown()
         self._httpd.server_close()
-
+        self._thread.join()
 
