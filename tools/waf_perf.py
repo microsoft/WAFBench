@@ -43,21 +43,26 @@ def extract_latency(stdout):
     return latency
 
 def test(path, server, time_limit, connection, output):
+    src_packet_files = []
     packet_files = []
     if os.path.isdir(path):
-        hostname = re.search(r"^(?:https?://)?([^?/]+)", server).group(1)
         for file in glob.glob(os.path.join(path, "*.txt")):
-            _file = "".join(os.path.splitext(file)[:-1]) + ".pkt"
-            with open(file, "rb") as src_fd:
-                with open(_file, "wb") as dst_fd:
-                    content = src_fd.read().decode("utf-8")
-                    content = re.sub(r"Host: (\S+)", "Host: " +
-                                     hostname, content, count=1, flags=re.I)
-                    content = str(len(content.encode("utf-8"))) + "\n" + content
-                    dst_fd.write(content.encode("utf-8"))
-            packet_files.append(_file)
+            src_packet_files.append(_file)
     elif os.path.isfile(path):
-        packet_files = [path]
+        src_packet_files = [path]
+
+    hostname = re.search(r"^(?:https?://)?([^?/]+)", server).group(1)
+    for file in src_packet_files:
+        _file = "".join(os.path.splitext(file)[:-1]) + ".pkt"
+        with open(file, "rb") as src_fd:
+            with open(_file, "wb") as dst_fd:
+                content = src_fd.read().decode("utf-8")
+                content = re.sub(r"Host: (\S+)", "Host: " +
+                                    hostname, content, count=1, flags=re.I)
+                content = str(len(content.encode("utf-8"))) + "\n" + content
+                dst_fd.write(content.encode("utf-8"))
+        packet_files.append(_file)
+    
     packet_files = sorted(packet_files)
     process_count = 0
     with open(output, "w") as fd:

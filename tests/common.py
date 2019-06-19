@@ -1,5 +1,6 @@
 import BaseHTTPServer
 import threading
+import os
 
 
 _PORT = 8080
@@ -18,4 +19,8 @@ class HTTPServerInstance(object):
         self._httpd.shutdown()
         self._httpd.server_close()
         self._thread.join()
+
+
+_HOME_DIR = os.path.join(os.path.dirname(__file__), os.path.pardir)
+_DATA_DIR = os.path.join(os.path.dirname(__file__), "data")
 
