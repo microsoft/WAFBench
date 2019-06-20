@@ -13,6 +13,8 @@ WAF (Web Application Firewall) Bench tool suits is designed to verify the correc
 
 ## Motivation
 
+---
+
 ### Real Traffic Performance Testing
 
 The WAF's performance fluctuates greatly as the input traffic varies. The existing tool, i.e. `ab`, can test the performance under only one kind of customized request, which can not reproduce the real traffic scenario. In addition, `ab` can only customize some fields of the request, which is inconvenient for testing.
@@ -34,6 +36,8 @@ Currently, they are still in development.
 
 ## Feature
 
+---
+
 ![Feature](./Architecture.png)
 
 ### WAF Bench
@@ -47,6 +51,7 @@ WAF Bench (wb) is the ab-like tool for conducting performance testing.
 * M0 - Provide debug mode with 4 level
 * M0 - Support automatically adding sequence number in URL
 * M0 - Support request rate limit
+* M2 - Support docker app
 
 ### Python-based WAF Bench
 
@@ -55,7 +60,8 @@ Python WAF Bench (pywb) is an enhanced tools of wb.
 * M1 - Compatible with wb
 * M1 - Send multiple file and directories in once executing.
 * M1 - Infer Content-Type from the file extension automatically
-* M2 - Support pip install
+* M2 - ~~Support pip install~~
+* M2 - Support docker app
 
 ### FTW-compatible Tool
 
@@ -63,6 +69,7 @@ Python WAF Bench (pywb) is an enhanced tools of wb.
 * M2 - Generate comparison condition file from YAML files
 * M2 - Support *status*, *log_contains*, *no_log_contains*, *expect_error* directives as FTW framework
 * M2 - Can search the compare result by test title and give out very detailed results (raw YAML, raw request, raw response, compare result)
+* M2 - Support docker app
 
 ### Auto-Test Generator
 
@@ -70,7 +77,36 @@ Python WAF Bench (pywb) is an enhanced tools of wb.
 
 ## Usage
 
-### Prerequisites
+---
+
+### **Install by Dockerfile (*Recommended*)**
+
+Using WAFBench at Docker environment is the easiest and recommended method.
+- **Docker** is necessary for build and usage.
+
+``` bash
+# Install Docker
+curl -fsSL get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
+# Build WAFBench
+docker build -t wafbench .
+```
+
+#### Commands
+
+If you install WAFBench by Dockerfile, [wb](wb), [pywb](pywb), [ftw_compatible_tool](ftw_compatible_tool) has been install in image wafbench. You can use them just as a local application by below commands:
+
+``` bash
+docker run -ti --rm wafbench wb
+docker run -ti --rm wafbench pywb
+docker run -ti --rm wafbench ftw_compatible_tool
+```
+
+The detail usage can be found at their corresponding sections.
+
+### **Install at native machine**
+
+#### Prerequisites
 
 Some software or libraries may be necessary for further build / usage. All of them are listed below:
 
@@ -92,7 +128,7 @@ The WB tool suites are developed and tested under CentOS 7 (Linux version 3.10, 
 
 **Note**: If you don't aim to conduct complex WAF testing tasks there is a *cheat sheet* below summarizing common testing instructions ranging from install to usage, by which you can focus on your goal; The *Advance Usage* section just gives you more detailed information of WB if considering it as a black box cannot satisfy your demand.
 
-### Cheat Sheet
+#### Cheat Sheet
 
 This tutorial is based on CentOS 7 (Linux version 3.10, AMD 64 architecture). WB also can work on other Linux distribution since there is no dependencies on CentOS.
 
@@ -165,8 +201,11 @@ Since the components are independent to each other, the detailed build, install 
 
 * [wb](./wb/README.md)
 * [pywb](./pywb/README.md)
+* [ftw_compatible_tool](./ftw_compatible_tool/README.md)
 
 ## Attributions
+
+---
 
 WB uses the following libraries.
 
