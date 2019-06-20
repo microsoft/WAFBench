@@ -1,17 +1,8 @@
-language: python
-dist: xenial
-branches:
-  only:
-  - /.*/
-python:
-  - "2.7"
-cache: pip
-before_install:
-  - sudo apt-get install libssl-dev libexpat-dev -y
+services:
+  - docker
 
 install:
-  - pip install -r requirements.txt
-  - make -C wb
-  - sudo make -C wb install
+  - docker build -t wafbench .
+
 script:
-  - py.test -vv tests
+  - docker run -ti wafbench py.test -v tests

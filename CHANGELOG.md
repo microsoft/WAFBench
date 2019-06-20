@@ -7,6 +7,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) a
 ## [Unreleased]
 - Auto-Test Generator
 
+## [1.5.0] - 2019-06-20
+### Added
+- [Dockerfile](Dockerfile) Add Dockerfile 
+- Support docker app, wb, pywb, ftw_compatible_tool
+
 ## [1.4.1] - 2019-05-24
 ### Added
 - [Travis](https://travis-ci.org/microsoft/WAFbench) Add continuous integration travis
