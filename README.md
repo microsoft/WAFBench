@@ -13,8 +13,6 @@ WAF (Web Application Firewall) Bench tool suits is designed to verify the correc
 
 ## Motivation
 
----
-
 ### Real Traffic Performance Testing
 
 The WAF's performance fluctuates greatly as the input traffic varies. The existing tool, i.e. `ab`, can test the performance under only one kind of customized request, which can not reproduce the real traffic scenario. In addition, `ab` can only customize some fields of the request, which is inconvenient for testing.
@@ -35,8 +33,6 @@ For test cases, we provide several generators for different purposes:
 Currently, they are still in development.
 
 ## Feature
-
----
 
 ![Feature](./Architecture.png)
 
@@ -76,8 +72,6 @@ Python WAF Bench (pywb) is an enhanced tools of wb.
 * M3 - Automatically generate requests by ModSecurity rule set for testing the coverage of WAF
 
 ## Usage
-
----
 
 ### **Install by Dockerfile (*Recommended*)**
 
@@ -204,8 +198,6 @@ Since the components are independent to each other, the detailed build, install 
 * [ftw_compatible_tool](./ftw_compatible_tool/README.md)
 
 ## Attributions
-
----
 
 WB uses the following libraries.
 
