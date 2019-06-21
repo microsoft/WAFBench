@@ -3,6 +3,8 @@ import threading
 import time
 import os
 import base64
+import random
+import re
 
 from pywb import main
 
@@ -127,4 +129,27 @@ def test_header_check():
                     "localhost:" + str(common._PORT)])
         assert(counter["request"] == 8)
 
+
+def test_response_codes_log():
+    candidated_codes = (200, 400, 500)
+    response_codes = dict(zip(candidated_codes, [0] * len(candidated_codes)))
+    counter = {
+        "request" : 0,
+    }
+    class HTTPHandler(BaseHTTPServer.BaseHTTPRequestHandler):
+        def do_GET(self):
+            code = random.choice(candidated_codes)
+            response_codes[code] += 1
+            counter["request"] += 1
+            self.send_response(code)
+    def response_codes_log_collect(line):
+        response_code = re.search(r"(\d{3}) response: (\d+)", line)
+        if response_code:
+            assert(int(response_code.group(2)) == response_codes[int(response_code.group(1))])
+    with common.HTTPServerInstance(HTTPHandler):
+        main.execute(["-k", "-n", "100",
+                      "localhost:" + str(common._PORT)],
+                      customized_filters=[response_codes_log_collect])
+        counter["request"] = 100;
+            
 
