@@ -408,7 +408,7 @@ const char *tdstring;
 
 apr_size_t doclen = 0;     /* the length the document should be */
 apr_int64_t totalread = 0;    /* total number of bytes read */
-apr_int64_t totalbread = 0;   /* totoal amount of entity body read */
+apr_int64_t totalbread = 0;   /* total amount of entity body read */
 apr_int64_t totalposted = 0;  /* total number of bytes posted, inc. headers */
 int started = 0;           /* number of requests started, so no excess */
 int done = 0;              /* number of requests we have done */
@@ -420,6 +420,7 @@ int err_conn = 0;          /* requests failed due to connection drop */
 int err_recv = 0;          /* requests failed due to broken read */
 int err_except = 0;        /* requests failed due to exception */
 int err_response = 0;      /* requests with invalid or non-200 response */
+int respcodes[600] = { 0 };  /* the amounts of each kind of response code */
 
 #ifdef USE_SSL
 int is_ssl;
@@ -1899,8 +1900,14 @@ static void output_results(int sig)
             err_conn, err_recv, err_length, err_except);
     if (epipe)
         printf("Write errors:           %d\n", epipe);
-    if (err_response)
+    if (err_response) {
         printf("Non-2xx responses:      %d\n", err_response);
+        for (unsigned int i = 0; i < sizeof(respcodes) / sizeof(respcodes[0]); i++) {
+            if (respcodes[i] > 0) {
+                printf("%d responses: %d\n", i, respcodes[i]);
+            }
+        }
+    }
 #ifdef _WAF_BENCH_ // return to no-color
     //if (bad > 0) 
         printf("\033[0m"); // no color
@@ -2750,6 +2757,7 @@ read_more:
             else if (verbosity >= 3) {
                 printf("LOG: Response code = %s\n", respcode);
             }
+            respcodes[atoi(respcode)] ++ ;
 
             c->gotheader = 1;
             *s = 0;     /* terminate at end of header */
