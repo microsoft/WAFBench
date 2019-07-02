@@ -1546,7 +1546,7 @@ static void write_request(struct connection * c)
                 req_id_string_len = strlen(req_id_string);
 
                 g_new_header_len = 0;
-                g_new_header[0] = '\0';
+                // g_new_header[0] = '\0';
                 g_request_end = NULL;
 
                 char *request_pos; // use this as processing position of request
@@ -1575,6 +1575,7 @@ static void write_request(struct connection * c)
                     if (*request_pos != '/')
                         strcat(g_new_header,"/");
                     
+                    g_new_header_len = strlen(g_new_header);
                 } // end of URL prefix
 
                 // duplicate the whole request header
@@ -1599,7 +1600,6 @@ static void write_request(struct connection * c)
 
                 // prepare the new header buffer
                 int new_estimated_len;
-                g_new_header_len = strlen(g_new_header);
                 // assume each sub_string appears no than 10 times with less than 10-digits seq
                 new_estimated_len = g_new_header_len + (g_request_end - request_pos) + reqlen + g_sub_string_num * 10 * 10 + 1;
                 if (new_estimated_len > g_header_len_MAX) {
@@ -1706,8 +1706,8 @@ static void write_request(struct connection * c)
                     g_new_header_len += conn_str_len;
                     //reqlen += g_new_header_len - (g_request_end - request);
                     reqlen = g_new_header_len;
-               }
-
+                }
+                request = g_new_header;
             } // end of all prefix adding
 #endif // _WAF_BENCH_ , "-F" a packet file to be sent, 
 
@@ -1730,7 +1730,7 @@ static void write_request(struct connection * c)
 //         // or it's time to send body from postdata with postlen
 //         // if c->rwrote <= reqlen, meaning it's header (request)
 //         // Otherwise, it's in body, so send postdata
-//         char *sendbuf; // point to the buffer to be sent
+         char *sendbuf = request + c->rwrote; // point to the buffer to be sent
 // 
 //         if (c->rwrote < g_new_header_len) { // send prefix only
 //             sendbuf = g_new_header + c->rwrote;
@@ -1748,11 +1748,11 @@ static void write_request(struct connection * c)
 //                 l = reqlen - c->rwrote; 
 //         } else  // send postdata, reqlen is already sent
 //             sendbuf = postdata + c->rwrote - reqlen;
-//         if (verbosity >= 2) {
-//             printf("writing request(%zu bytes)=>[",l);
-//             fwrite(sendbuf, l, 1, stdout);
-//             printf("]\n");
-//         }
+         if (verbosity >= 2) {
+             printf("writing request(%zu bytes)=>[",l);
+             fwrite(sendbuf, l, 1, stdout);
+             printf("]\n");
+         }
 // #endif // _WAF_BENCH_ // avoid copying post data to request
 
 #ifdef USE_SSL
