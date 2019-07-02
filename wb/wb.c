@@ -2499,7 +2499,7 @@ static void start_connect(struct connection * c)
 
 static void close_connection(struct connection * c)
 {
-    if (c->read == 0 && c->keepalive) {
+    if ((c->read == 0 && c->keepalive) || (c->rwrote == 0)) {
         /*
          * server has legitimately shut down an idle keep alive request
          */
