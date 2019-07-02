@@ -1725,43 +1725,43 @@ static void write_request(struct connection * c)
             return;
         }
 
-#ifdef _WAF_BENCH_ // avoid copying post data to request
-        // check whether it's time to send header from request
-        // or it's time to send body from postdata with postlen
-        // if c->rwrote <= reqlen, meaning it's header (request)
-        // Otherwise, it's in body, so send postdata
-        char *sendbuf; // point to the buffer to be sent
-
-        if (c->rwrote < g_new_header_len) { // send prefix only
-            sendbuf = g_new_header + c->rwrote;
-            if (l > g_new_header_len - c->rwrote) 
-                l = g_new_header_len - c->rwrote; 
-        } else if (c->rwrote < reqlen) { // send request header
-            // c->rwrote is the sent bytes, so start from there
-            if (g_new_header_len && g_request_end)
-                sendbuf = g_request_end + c->rwrote - g_new_header_len; 
-            else
-                sendbuf = request + c->rwrote;
-            // and make sure it's not exceeding request buffer
-            // because the remaining bytes are in body part
-            if (l > reqlen - c->rwrote) 
-                l = reqlen - c->rwrote; 
-        } else  // send postdata, reqlen is already sent
-            sendbuf = postdata + c->rwrote - reqlen;
-        if (verbosity >= 2) {
-            printf("writing request(%zu bytes)=>[",l);
-            fwrite(sendbuf, l, 1, stdout);
-            printf("]\n");
-        }
-#endif // _WAF_BENCH_ // avoid copying post data to request
+// #ifdef _WAF_BENCH_ // avoid copying post data to request
+//         // check whether it's time to send header from request
+//         // or it's time to send body from postdata with postlen
+//         // if c->rwrote <= reqlen, meaning it's header (request)
+//         // Otherwise, it's in body, so send postdata
+//         char *sendbuf; // point to the buffer to be sent
+// 
+//         if (c->rwrote < g_new_header_len) { // send prefix only
+//             sendbuf = g_new_header + c->rwrote;
+//             if (l > g_new_header_len - c->rwrote) 
+//                 l = g_new_header_len - c->rwrote; 
+//         } else if (c->rwrote < reqlen) { // send request header
+//             // c->rwrote is the sent bytes, so start from there
+//             if (g_new_header_len && g_request_end)
+//                 sendbuf = g_request_end + c->rwrote - g_new_header_len; 
+//             else
+//                 sendbuf = request + c->rwrote;
+//             // and make sure it's not exceeding request buffer
+//             // because the remaining bytes are in body part
+//             if (l > reqlen - c->rwrote) 
+//                 l = reqlen - c->rwrote; 
+//         } else  // send postdata, reqlen is already sent
+//             sendbuf = postdata + c->rwrote - reqlen;
+//         if (verbosity >= 2) {
+//             printf("writing request(%zu bytes)=>[",l);
+//             fwrite(sendbuf, l, 1, stdout);
+//             printf("]\n");
+//         }
+// #endif // _WAF_BENCH_ // avoid copying post data to request
 
 #ifdef USE_SSL
         if (c->ssl) {
-#ifdef _WAF_BENCH_ // avoid copying post data to request
-            e = SSL_write(c->ssl, sendbuf, l);
-#else
+// #ifdef _WAF_BENCH_ // avoid copying post data to request
+//             e = SSL_write(c->ssl, sendbuf, l);
+// #else
             e = SSL_write(c->ssl, request + c->rwrote, l);
-#endif // _WAF_BENCH_ // avoid copying post data to request
+// #endif // _WAF_BENCH_ // avoid copying post data to request
             if (e <= 0) {
                 switch (SSL_get_error(c->ssl, e)) {
                 case SSL_ERROR_WANT_READ:
@@ -1783,11 +1783,11 @@ static void write_request(struct connection * c)
         else
 #endif
         {
-#ifdef _WAF_BENCH_ // avoid copying post data to request
-            e = apr_socket_send(c->aprsock, sendbuf, &l);
-#else
+// #ifdef _WAF_BENCH_ // avoid copying post data to request
+//             e = apr_socket_send(c->aprsock, sendbuf, &l);
+// #else
             e = apr_socket_send(c->aprsock, request + c->rwrote, &l);
-#endif // _WAF_BENCH_ // avoid copying post data to request
+// #endif // _WAF_BENCH_ // avoid copying post data to request
             if (e != APR_SUCCESS && !l) {
                 if (!APR_STATUS_IS_EAGAIN(e)) {
                     epipe++;
@@ -2992,20 +2992,20 @@ static void test(void)
      * Combine headers and (optional) post file into one continuous buffer
      */
 
-#ifdef _WAF_BENCH_ // avoid copying post data to request
-// previous system allocates one single buffer holding header and body
-// wb uses seperate buffers to hold them, and send them seperately
-    if (g_pkt_length > 0)
-        fprintf(stderr, "\n read %zu packets from file with total length(%zu).\n", 
-            g_MAX_PKT_COUNT, g_pkt_length);
-#else // original code goes here
+// #ifdef _WAF_BENCH_ // avoid copying post data to request
+// // previous system allocates one single buffer holding header and body
+// // wb uses seperate buffers to hold them, and send them seperately
+//     if (g_pkt_length > 0)
+//         fprintf(stderr, "\n read %zu packets from file with total length(%zu).\n", 
+//             g_MAX_PKT_COUNT, g_pkt_length);
+// #else // original code goes here
     if (send_body) {
         char *buff = xmalloc(postlen + reqlen + 1);
         strcpy(buff, request);
         memcpy(buff + reqlen, postdata, postlen);
         request = buff;
     }
-#endif // _WAF_BENCH_ // avoid copying post data to request
+// #endif // _WAF_BENCH_ // avoid copying post data to request
 
 #ifdef NOT_ASCII
     inbytes_left = outbytes_left = reqlen;
