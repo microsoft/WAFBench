@@ -1730,7 +1730,14 @@ static void write_request(struct connection * c)
 //         // or it's time to send body from postdata with postlen
 //         // if c->rwrote <= reqlen, meaning it's header (request)
 //         // Otherwise, it's in body, so send postdata
-         char *sendbuf = request + c->rwrote; // point to the buffer to be sent
+         char *sendbuf = NULL; // point to the buffer to be sent
+         if (c->rwrote < reqlen) {
+             l = reqlen - c->rwrote;
+             sendbuf = request + c->rwrote;
+         } else if (send_body) {
+             l = reqlen + postlen - c->rwrote;
+             sendbuf = postdata + c->rwrote - reqlen;
+         }
 // 
 //         if (c->rwrote < g_new_header_len) { // send prefix only
 //             sendbuf = g_new_header + c->rwrote;
@@ -1760,7 +1767,7 @@ static void write_request(struct connection * c)
 // #ifdef _WAF_BENCH_ // avoid copying post data to request
 //             e = SSL_write(c->ssl, sendbuf, l);
 // #else
-            e = SSL_write(c->ssl, request + c->rwrote, l);
+            e = SSL_write(c->ssl, sendbuf, l);
 // #endif // _WAF_BENCH_ // avoid copying post data to request
             if (e <= 0) {
                 switch (SSL_get_error(c->ssl, e)) {
@@ -1786,7 +1793,7 @@ static void write_request(struct connection * c)
 // #ifdef _WAF_BENCH_ // avoid copying post data to request
 //             e = apr_socket_send(c->aprsock, sendbuf, &l);
 // #else
-            e = apr_socket_send(c->aprsock, request + c->rwrote, &l);
+            e = apr_socket_send(c->aprsock, sendbuf, &l);
 // #endif // _WAF_BENCH_ // avoid copying post data to request
             if (e != APR_SUCCESS && !l) {
                 if (!APR_STATUS_IS_EAGAIN(e)) {
