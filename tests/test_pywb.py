@@ -50,13 +50,14 @@ def test_post_file():
         "request" : 0,
     }
     expect_content_type = ""
+    target_file = os.path.join(os.path.dirname(
+        __file__), "data", "requestbody2kb.json")
     class HTTPHandler(BaseHTTPServer.BaseHTTPRequestHandler):
         def do_POST(self):
             self.send_response(200)
             assert(self.headers.get("Content-Type") == expect_content_type)
+            assert(self.rfile.read(int(self.headers.get("Content-Length"))) == open(target_file, "r").read())
             counter["request"] += 1
-    target_file = os.path.join(os.path.dirname(
-        __file__), "data", "requestbody2kb.json")
     with common.HTTPServerInstance(HTTPHandler):
         expect_content_type = "wafbench-test"
         main.execute(["-v", "4", "-p", target_file,  "-n", "1", "-T", expect_content_type,
