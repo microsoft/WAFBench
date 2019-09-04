@@ -1,0 +1,282 @@
+meta: {author: msra, description: None, enabled: true, name: 920121.yaml}
+tests:
+- stages:
+  - stage:
+      input:
+        data: ['------abc', 'Content-Disposition: form-data; name="files[]"; filename=".%22%5D"',
+          'Content-Type: text/plain', '', 'Content ', '', '------abc--']
+        dest_addr: 127.0.0.1
+        headers: {Cache-Control: no-cache, Content-Type: multipart/form-data; boundary=----abc,
+          Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '920121'}
+  test_title: 920121-1-auto
+- stages:
+  - stage:
+      input:
+        data: ['------abc', 'Content-Disposition: form-data; name="files[]"; filename=".%3B4"',
+          'Content-Type: text/plain', '', 'Content ', '', '------abc--']
+        dest_addr: 127.0.0.1
+        headers: {Cache-Control: no-cache, Content-Type: multipart/form-data; boundary=----abc,
+          Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '920121'}
+  test_title: 920121-2-auto
+- stages:
+  - stage:
+      input:
+        data: ['------abc', 'Content-Disposition: form-data; name="files[]"; filename="_%3DP"',
+          'Content-Type: text/plain', '', 'Content ', '', '------abc--']
+        dest_addr: 127.0.0.1
+        headers: {Cache-Control: no-cache, Content-Type: multipart/form-data; boundary=----abc,
+          Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '920121'}
+  test_title: 920121-3-auto
+- stages:
+  - stage:
+      input:
+        data: ['------abc', 'Content-Disposition: form-data; name="files[]"; filename="s%3Bo"',
+          'Content-Type: text/plain', '', 'Content ', '', '------abc--']
+        dest_addr: 127.0.0.1
+        headers: {Cache-Control: no-cache, Content-Type: multipart/form-data; boundary=----abc,
+          Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '920121'}
+  test_title: 920121-4-auto
+- stages:
+  - stage:
+      input:
+        data: ['------abc', 'Content-Disposition: form-data; name="files[]"; filename="P%3Dw"',
+          'Content-Type: text/plain', '', 'Content ', '', '------abc--']
+        dest_addr: 127.0.0.1
+        headers: {Cache-Control: no-cache, Content-Type: multipart/form-data; boundary=----abc,
+          Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '920121'}
+  test_title: 920121-5-auto
+- stages:
+  - stage:
+      input:
+        data: ['------abc', 'Content-Disposition: form-data; name="files[]"; filename="%40%27%3D"',
+          'Content-Type: text/plain', '', 'Content ', '', '------abc--']
+        dest_addr: 127.0.0.1
+        headers: {Cache-Control: no-cache, Content-Type: multipart/form-data; boundary=----abc,
+          Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '920121'}
+  test_title: 920121-6-auto
+- stages:
+  - stage:
+      input:
+        data: ['------abc', 'Content-Disposition: form-data; name="files[]"; filename="c%3B3"',
+          'Content-Type: text/plain', '', 'Content ', '', '------abc--']
+        dest_addr: 127.0.0.1
+        headers: {Cache-Control: no-cache, Content-Type: multipart/form-data; boundary=----abc,
+          Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '920121'}
+  test_title: 920121-7-auto
+- stages:
+  - stage:
+      input:
+        data: ['------abc', 'Content-Disposition: form-data; name="files[]"; filename="R%3BL"',
+          'Content-Type: text/plain', '', 'Content ', '', '------abc--']
+        dest_addr: 127.0.0.1
+        headers: {Cache-Control: no-cache, Content-Type: multipart/form-data; boundary=----abc,
+          Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '920121'}
+  test_title: 920121-8-auto
+- stages:
+  - stage:
+      input:
+        data: ['------abc', 'Content-Disposition: form-data; name="files[]"; filename="x%3D/"',
+          'Content-Type: text/plain', '', 'Content ', '', '------abc--']
+        dest_addr: 127.0.0.1
+        headers: {Cache-Control: no-cache, Content-Type: multipart/form-data; boundary=----abc,
+          Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '920121'}
+  test_title: 920121-9-auto
+- stages:
+  - stage:
+      input:
+        data: ['------abc', 'Content-Disposition: form-data; name="files[]"; filename="H%27m"',
+          'Content-Type: text/plain', '', 'Content ', '', '------abc--']
+        dest_addr: 127.0.0.1
+        headers: {Cache-Control: no-cache, Content-Type: multipart/form-data; boundary=----abc,
+          Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '920121'}
+  test_title: 920121-10-auto
+- stages:
+  - stage:
+      input:
+        data: ['------abc', 'Content-Disposition: form-data; name="L%229"; filename="1"',
+          'Content-Type: text/plain', '', 'Content ', '', '------abc--']
+        dest_addr: 127.0.0.1
+        headers: {Cache-Control: no-cache, Content-Type: multipart/form-data; boundary=----abc,
+          Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '920121'}
+  test_title: 920121-11-auto
+- stages:
+  - stage:
+      input:
+        data: ['------abc', 'Content-Disposition: form-data; name="%7E%27I"; filename="1"',
+          'Content-Type: text/plain', '', 'Content ', '', '------abc--']
+        dest_addr: 127.0.0.1
+        headers: {Cache-Control: no-cache, Content-Type: multipart/form-data; boundary=----abc,
+          Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '920121'}
+  test_title: 920121-12-auto
+- stages:
+  - stage:
+      input:
+        data: ['------abc', 'Content-Disposition: form-data; name="N%22f"; filename="1"',
+          'Content-Type: text/plain', '', 'Content ', '', '------abc--']
+        dest_addr: 127.0.0.1
+        headers: {Cache-Control: no-cache, Content-Type: multipart/form-data; boundary=----abc,
+          Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '920121'}
+  test_title: 920121-13-auto
+- stages:
+  - stage:
+      input:
+        data: ['------abc', 'Content-Disposition: form-data; name="%29%3D5"; filename="1"',
+          'Content-Type: text/plain', '', 'Content ', '', '------abc--']
+        dest_addr: 127.0.0.1
+        headers: {Cache-Control: no-cache, Content-Type: multipart/form-data; boundary=----abc,
+          Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '920121'}
+  test_title: 920121-14-auto
+- stages:
+  - stage:
+      input:
+        data: ['------abc', 'Content-Disposition: form-data; name="%0C%3BB"; filename="1"',
+          'Content-Type: text/plain', '', 'Content ', '', '------abc--']
+        dest_addr: 127.0.0.1
+        headers: {Cache-Control: no-cache, Content-Type: multipart/form-data; boundary=----abc,
+          Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '920121'}
+  test_title: 920121-15-auto
+- stages:
+  - stage:
+      input:
+        data: ['------abc', 'Content-Disposition: form-data; name="P%27M"; filename="1"',
+          'Content-Type: text/plain', '', 'Content ', '', '------abc--']
+        dest_addr: 127.0.0.1
+        headers: {Cache-Control: no-cache, Content-Type: multipart/form-data; boundary=----abc,
+          Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '920121'}
+  test_title: 920121-16-auto
+- stages:
+  - stage:
+      input:
+        data: ['------abc', 'Content-Disposition: form-data; name="A%3B%0C"; filename="1"',
+          'Content-Type: text/plain', '', 'Content ', '', '------abc--']
+        dest_addr: 127.0.0.1
+        headers: {Cache-Control: no-cache, Content-Type: multipart/form-data; boundary=----abc,
+          Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '920121'}
+  test_title: 920121-17-auto
+- stages:
+  - stage:
+      input:
+        data: ['------abc', 'Content-Disposition: form-data; name="%5C%27F"; filename="1"',
+          'Content-Type: text/plain', '', 'Content ', '', '------abc--']
+        dest_addr: 127.0.0.1
+        headers: {Cache-Control: no-cache, Content-Type: multipart/form-data; boundary=----abc,
+          Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '920121'}
+  test_title: 920121-18-auto
+- stages:
+  - stage:
+      input:
+        data: ['------abc', 'Content-Disposition: form-data; name="r%3Bs"; filename="1"',
+          'Content-Type: text/plain', '', 'Content ', '', '------abc--']
+        dest_addr: 127.0.0.1
+        headers: {Cache-Control: no-cache, Content-Type: multipart/form-data; boundary=----abc,
+          Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '920121'}
+  test_title: 920121-19-auto
+- stages:
+  - stage:
+      input:
+        data: ['------abc', 'Content-Disposition: form-data; name="p%22L"; filename="1"',
+          'Content-Type: text/plain', '', 'Content ', '', '------abc--']
+        dest_addr: 127.0.0.1
+        headers: {Cache-Control: no-cache, Content-Type: multipart/form-data; boundary=----abc,
+          Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '920121'}
+  test_title: 920121-20-auto

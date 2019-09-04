@@ -1,0 +1,121 @@
+meta: {author: msra, description: None, enabled: true, name: 930110.yaml}
+tests:
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost, yZ9OsTOsAN7: '%00%5E.%22./'}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '930110'}
+  test_title: 930110-1-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost, jn1L5lxNj: .%27./}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '930110'}
+  test_title: 930110-2-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {2eck: ../, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '930110'}
+  test_title: 930110-3-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost, YEB9ITKV45: ../}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '930110'}
+  test_title: 930110-4-auto
+- stages:
+  - stage:
+      input:
+        data: Foo_key=%5E..%00/
+        dest_addr: 127.0.0.1
+        headers: {Content-Length: 17, Content-Type: application/x-www-form-urlencoded,
+          Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '930110'}
+  test_title: 930110-5-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /%255C..%255C/
+        version: HTTP/1.1
+      output: {response_contains: '930110'}
+  test_title: 930110-6-auto
+- stages:
+  - stage:
+      input:
+        data: Foo_key=%22..%00/
+        dest_addr: 127.0.0.1
+        headers: {Content-Length: 17, Content-Type: application/x-www-form-urlencoded,
+          Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '930110'}
+  test_title: 930110-7-auto
+- stages:
+  - stage:
+      input:
+        data: Foo_key=..%22/
+        dest_addr: 127.0.0.1
+        headers: {Content-Length: 14, Content-Type: application/x-www-form-urlencoded,
+          Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '930110'}
+  test_title: 930110-8-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /..%2522%2500/
+        version: HTTP/1.1
+      output: {response_contains: '930110'}
+  test_title: 930110-9-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /.%2500./
+        version: HTTP/1.1
+      output: {response_contains: '930110'}
+  test_title: 930110-10-auto

@@ -1,0 +1,462 @@
+meta: {author: msra, description: None, enabled: true, name: 943100.yaml}
+tests:
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?%2527%2508HttP-eQuIV%255BSET-cOokIe%2508k=EV
+        version: HTTP/1.1
+      output: {response_contains: '943100'}
+  test_title: 943100-1-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?c.coOkiE%2508z%253B%255DExPIREs%253Dx=Q
+        version: HTTP/1.1
+      output: {response_contains: '943100'}
+  test_title: 943100-2-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?%253E.cOoKIE%2508%2540%253B%2527exPIRes%253DH=v
+        version: HTTP/1.1
+      output: {response_contains: '943100'}
+  test_title: 943100-3-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?%253F.coOKIe%2508%2540%253B%257EdoMain%253D%257B=VrHcO
+        version: HTTP/1.1
+      output: {response_contains: '943100'}
+  test_title: 943100-4-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?v%2508htTP-eqUiv%2540sET-COokIE%2508A=5rob
+        version: HTTP/1.1
+      output: {response_contains: '943100'}
+  test_title: 943100-5-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?w.cOOkIe%2508%253BDOmAiN%2527%253D0=DBa
+        version: HTTP/1.1
+      output: {response_contains: '943100'}
+  test_title: 943100-6-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?%255E.cOoKie%2508%253B%253CDOMaIn%253C%253D%250B=uvwfki
+        version: HTTP/1.1
+      output: {response_contains: '943100'}
+  test_title: 943100-7-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?w%2508hTTp-EQuiV%253DSEt-coOkiE%2508%255E=hDe_k4gx
+        version: HTTP/1.1
+      output: {response_contains: '943100'}
+  test_title: 943100-8-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?%2523%2508HTTP-EquIv%2528seT-cookie%2508y=9bh
+        version: HTTP/1.1
+      output: {response_contains: '943100'}
+  test_title: 943100-9-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?R%2508hTTp-EqUiv%2529SeT-CoOKIe%2508O=E_3
+        version: HTTP/1.1
+      output: {response_contains: '943100'}
+  test_title: 943100-10-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?R=O%2508Http-equiv%253ASet-COOkIe%2508r
+        version: HTTP/1.1
+      output: {response_contains: '943100'}
+  test_title: 943100-11-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?rwJ4BJ9Abi=v.cOOKIe%2508T%253BDoMAIN%250D%253Dc
+        version: HTTP/1.1
+      output: {response_contains: '943100'}
+  test_title: 943100-12-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?E6jsrz2WS=%253D.CoOKIE%2508%2521%253BdOMAin%2560%253D%253F
+        version: HTTP/1.1
+      output: {response_contains: '943100'}
+  test_title: 943100-13-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?roE9b5=I.cOokiE%2508m%253B%2524EXPirES%253D%2523
+        version: HTTP/1.1
+      output: {response_contains: '943100'}
+  test_title: 943100-14-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?SblL9h1=L%2508HTtp-eQUiv%255Bset-COOkIE%2508r
+        version: HTTP/1.1
+      output: {response_contains: '943100'}
+  test_title: 943100-15-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?sxrg=%257C%2508HttP-EquIv%253ESeT-cOoKiE%2508U
+        version: HTTP/1.1
+      output: {response_contains: '943100'}
+  test_title: 943100-16-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?39WePNzN=2.CoOKIE%2508%253BDOmaIN%2525%253Df
+        version: HTTP/1.1
+      output: {response_contains: '943100'}
+  test_title: 943100-17-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?bW1pa=N%2508HTtP-eQUiv/SEt-coOkie%2508%2527
+        version: HTTP/1.1
+      output: {response_contains: '943100'}
+  test_title: 943100-18-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?cDPJQ3ZXo=%257B%2508hTTP-eQuIv%253Eset-CoOKie%2508b
+        version: HTTP/1.1
+      output: {response_contains: '943100'}
+  test_title: 943100-19-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?IyRI5=%257C%2508HTTp-eqUIV%2525SeT-COoKiE%2508D
+        version: HTTP/1.1
+      output: {response_contains: '943100'}
+  test_title: 943100-20-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: tkECwe8WBKe9dByMgn=A.COokIE%08%3BexpIreS%3D%2A, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '943100'}
+  test_title: 943100-21-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: D1s2Rk8VS_BqLI=%3F.CookIe%08W%3BexpIREs%3D%3D-, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '943100'}
+  test_title: 943100-22-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: 4lLXq=6%08HttP-EqUIV%7DSET-cOokie%08%3D, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '943100'}
+  test_title: 943100-23-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: R=p.COOKIe%08%3B%3EeXpires%5C%3Dd, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '943100'}
+  test_title: 943100-24-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: Yyxy6HS4=T.cOOKiE%082%3B%27ExpireS%3F%3Dt, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '943100'}
+  test_title: 943100-25-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: 1s2nzOQgaA7BOVVBzjgF=J.cookie%08%5C%3BexpIreS%3D7, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '943100'}
+  test_title: 943100-26-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: nTEZrf5zlYKl26t=Y.CoOKiE%08%3B%3B%7DexpIres%3Di, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '943100'}
+  test_title: 943100-27-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: 5TQhX2=i.CookIE%08K%3B%2CeXpIReS%40%3D., Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '943100'}
+  test_title: 943100-28-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: 3oSHxnPFa4vzVyOq=V%08HtTp-EqUiv%0BseT-CoOkIE%08%3B, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '943100'}
+  test_title: 943100-29-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: eDFgCczj2OHXDlMk9ee=d%08hTTp-equIv%09seT-COOkIE%08e, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '943100'}
+  test_title: 943100-30-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: G%08htTp-equiv%2AseT-cOoKIE%08-=fRrOQom_kg, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '943100'}
+  test_title: 943100-31-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: '%25%08http-eQUiV%29seT-coOKIe%08n=7ss9t', Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '943100'}
+  test_title: 943100-32-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: _%08htTp-eQuIV%20set-COokie%08%7D=TSzhlI, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '943100'}
+  test_title: 943100-33-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: '%22.cOokie%08u%3B%3CEXpIRes%3D2=SDbaauthd', Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '943100'}
+  test_title: 943100-34-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: '%26.cooKIe%08%3B%5EeXPIreS%3D0=a5xNCE3hZH', Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '943100'}
+  test_title: 943100-35-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: '%5E%08HttP-eQUiv%25sEt-CoOKIe%08%3E=YERmcl', Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '943100'}
+  test_title: 943100-36-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: _.CoOkIe%08%3D%3B%28ExpIres%3D%7E=zx, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '943100'}
+  test_title: 943100-37-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: 1.COOkie%08.%3B%22expIRES%27%3D%09=eTjKuupqP, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '943100'}
+  test_title: 943100-38-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: 6.coOKiE%08F%3B%3CexPiRes%3Di=49ELG, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '943100'}
+  test_title: 943100-39-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: '%60.cOokie%080%3B%5EexPiRES%2A%3DK=XT', Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '943100'}
+  test_title: 943100-40-auto

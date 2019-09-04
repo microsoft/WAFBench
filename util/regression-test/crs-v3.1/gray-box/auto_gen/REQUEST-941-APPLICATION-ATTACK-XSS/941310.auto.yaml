@@ -1,0 +1,479 @@
+meta: {author: msra, description: None, enabled: true, name: 941310.yaml}
+tests:
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?r%25255C302%25255Cx%252526%252523X62%25253BC%2525C2%25255CXBE%25255Cx4E=0xa3uF
+        version: HTTP/1.1
+      output: {response_contains: '941310'}
+  test_title: 941310-1-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?%252526%25252392%25253B75%2525C2%252526%25252392%25253B274%252526%252523X63%25253B%25255C302%252526%252523188%25253BX=lmTc
+        version: HTTP/1.1
+      output: {response_contains: '941310'}
+  test_title: 941310-2-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?%252525%25255C%252526%252523x33%25253B02%25255C%252526%252523x32%25253B74%252526gT%25253BN=V0
+        version: HTTP/1.1
+      output: {response_contains: '941310'}
+  test_title: 941310-3-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?%25255C135%25255C%252526%252523X78%25253BC2%2525BC%2525C2%2525BE%25255C55=iHBv
+        version: HTTP/1.1
+      output: {response_contains: '941310'}
+  test_title: 941310-4-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?H%2525C2%2525BEG%25255CXC2%25255C%252526%252523120%25253B%252526%25252398%25253BeI=QX
+        version: HTTP/1.1
+      output: {response_contains: '941310'}
+  test_title: 941310-5-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?%25255CX0%252526%25252398%25253B%2525C2%25255C274%25255C302%25255C276%252526%252523X5C%25253BX3C=Rzzfmyr5D
+        version: HTTP/1.1
+      output: {response_contains: '941310'}
+  test_title: 941310-6-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?%25252B%2525C2%2525BC%2525C2%25255C2%252526%252523x37%25253B6%252526%25252392%25253B%252526%252523X35%25253B5=0i4N
+        version: HTTP/1.1
+      output: {response_contains: '941310'}
+  test_title: 941310-7-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?U%2525C2%25255C274%2525C2%25255CXbe%25255C14%252526%252523x33%25253B=l
+        version: HTTP/1.1
+      output: {response_contains: '941310'}
+  test_title: 941310-8-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?%25255Cx36%25255C302%25255Cxbe%25255C120%25255CXC2%2525BE%252526%25252370%25253B=zL
+        version: HTTP/1.1
+      output: {response_contains: '941310'}
+  test_title: 941310-9-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?%25255Cx56%25255C3%252526%25252348%25253B%252526%25252350%25253B%2525BE%25255C%252526%252523x78%25253B%252526%25252354%25253BF%25255C%252526%252523120%25253B%252526%25252399%25253B2%25255C%252526%25252350%25253B76%252526%252523x3D%25253B=Ut
+        version: HTTP/1.1
+      output: {response_contains: '941310'}
+  test_title: 941310-10-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?UMcMtHh=%25255C%252526%252523x78%25253B7A%25253C%252526%252523X46%25253B%25255C302%2525BC%25255CX24
+        version: HTTP/1.1
+      output: {response_contains: '941310'}
+  test_title: 941310-11-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?yq241=%25255Cx37%25255C3%252526%25252348%25253B2%25255C276%25255Cx60%25255CXC2%2525BE%25255C%252526%252523x37%25253B3
+        version: HTTP/1.1
+      output: {response_contains: '941310'}
+  test_title: 941310-12-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?39=%25253B%2525C2%2525BCT%25253E-
+        version: HTTP/1.1
+      output: {response_contains: '941310'}
+  test_title: 941310-13-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?rF4v9nZmnY=%25252B%25255CXc2%25255CxBE%252523%2525C2%2525BC%25255CX43
+        version: HTTP/1.1
+      output: {response_contains: '941310'}
+  test_title: 941310-14-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?Hl=O%2525C2%2525BEP%2525C2%25255Cxbc%25255C1%252526%252523X35%25253B6
+        version: HTTP/1.1
+      output: {response_contains: '941310'}
+  test_title: 941310-15-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?bWso1qYK=E%2525C2%2525BE%25255C302%252526%252523190%25253BJ
+        version: HTTP/1.1
+      output: {response_contains: '941310'}
+  test_title: 941310-16-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?jhbdvNe=%25255Cx76%25255C302%25255C276%2525C2%25255C274%25255Cx%252526%252523X35%25253Bb
+        version: HTTP/1.1
+      output: {response_contains: '941310'}
+  test_title: 941310-17-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?jw6y84I=%252526%252523x34%25253B%2525C2%2525BEX%252526%252523xc2%25253B%2525BC%252528
+        version: HTTP/1.1
+      output: {response_contains: '941310'}
+  test_title: 941310-18-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?eiIE=%252526%252523x30%25253B%2525C2%25255C274Y%2525C2%25255C276%25255CX26
+        version: HTTP/1.1
+      output: {response_contains: '941310'}
+  test_title: 941310-19-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?gMn=%25255CX37%25255CxC2%2525BE%25255C%252526%252523X78%25253B0B%2525C2%2525BE%25255CX77
+        version: HTTP/1.1
+      output: {response_contains: '941310'}
+  test_title: 941310-20-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: MWtSY=%2560%25C2%255C%2526%2523x78%253BbC-%255C%2526%2523120%253BC2%25BE0,
+          Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '941310'}
+  test_title: 941310-21-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: dT1jb2VWJbDWGZrOxA=%255Cx76%25C2%25BE%25C2%25BC%255C114,
+          Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '941310'}
+  test_title: 941310-22-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: zxNVHaSF84=%2526QUot%253B%2526%252392%253B302%25BE%255C45%255C76%255CX09,
+          Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '941310'}
+  test_title: 941310-23-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: EK9t_rHt1=%255Cx4%2526%2523x63%253B%25C2%2526%252392%253BXBEV%255C76%255C130,
+          Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '941310'}
+  test_title: 941310-24-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: jDR4eEUjr6_=%2526%252352%253B%255CXC2%255CxBC%255CX%2526%2523x34%253B1%25C2%2526%2523188%253Bp,
+          Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '941310'}
+  test_title: 941310-25-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: FEr=B%25C2%2526%2523XBC%253B%25C2%25BE%2522, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '941310'}
+  test_title: 941310-26-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: r2KROrvyYkN=%255C144%25C2%255C276%25C2%255CxBe%255Cx44,
+          Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '941310'}
+  test_title: 941310-27-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: z5sjYXCuJiNFbQSco=%2526%2523X5C%253BX4c%255C302%255Cxbe%25C2%25BCB,
+          Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '941310'}
+  test_title: 941310-28-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: rcm0nIag39n=%255E%255C302%25BES%2526%2523Xc2%253B%255C276%2526%252392%253BX2C,
+          Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '941310'}
+  test_title: 941310-29-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: qPZ=%255CX53%255C74G%25C2%25BC%255C%2526%2523X31%253B67,
+          Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '941310'}
+  test_title: 941310-30-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: '%255Cx72%255CXC2%25BE%255Cx2%2526%2523X38%253B%2526%2523XC2%253B%2526%2523188%253BD=HYB40Cf',
+          Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '941310'}
+  test_title: 941310-31-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: O%25C2%255C%2526%252350%253B76O%25C2%255Cxb%2526%2523X63%253B%255C%2526%252349%253B05=ABypCDstu,
+          Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '941310'}
+  test_title: 941310-32-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: K%255C302%255C274%255CX2D%25C2%255C%2526%2523120%253BbEs=0ST_dfx,
+          Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '941310'}
+  test_title: 941310-33-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: '%255B%25C2%2526%2523xBC%253B%255C43%253E%255Cx5e=Ah2In',
+          Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '941310'}
+  test_title: 941310-34-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: g%25C2%25BCF%2526GT%253B%257B=uWSAY, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '941310'}
+  test_title: 941310-35-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: '%255Cx%2526%2523x35%253B8%25C2%25BEZ%25C2%25BE%255CX42=l',
+          Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '941310'}
+  test_title: 941310-36-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: 2%255CxC2%25BEA%255C76S=LdEe, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '941310'}
+  test_title: 941310-37-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: '%255Cx68%2526Lt%253B%255C115%255Cxc2%2526%2523190%253B9=BBZxliVll',
+          Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '941310'}
+  test_title: 941310-38-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: '%255C17%2526%252349%253B%25C2%2526%2523190%253BJ%25C2%25BE-=43EAY3S4b',
+          Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '941310'}
+  test_title: 941310-39-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: '%2526%252392%253Bx7%2526%2523X65%253B%25C2%255CxbEY%25C2%25BE%255C%2526%2523x78%253B%2526%252353%253B4=Vll7B',
+          Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '941310'}
+  test_title: 941310-40-auto

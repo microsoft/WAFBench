@@ -5,7 +5,7 @@
 Total test cases: 11358  
 Coverage: 169 supported rules / 248 total rules in crs v3.1 (exclude paranoia_level 0)
 
-|rule_id|type|white-box_spiderlabs_count|white-box_autogen_count|black-box_spiderlabs_count|black-box_autogen_count|  
+|rule_id|type|(white/gray)-box_spiderlabs_count|(white/gray)-box_autogen_count|black-box_spiderlabs_count|black-box_autogen_count|  
 |-------|----|------|------|------|------|  
 |911100|METHOD-ENFORCEMENT|8|0|4|0|  
 |913100|SCANNER-DETECTION|4|10|4|10|  

@@ -1,0 +1,14 @@
+meta: {author: Christian S.J. Peron, description: None, enabled: true, name: 941260.yaml}
+tests:
+- desc: IE XSS Filters
+  stages:
+  - stage:
+      input:
+        data: var=<meta charset="UTF-8">&var2=whatever
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output: {response_contains: '941260'}
+  test_title: 941260-1

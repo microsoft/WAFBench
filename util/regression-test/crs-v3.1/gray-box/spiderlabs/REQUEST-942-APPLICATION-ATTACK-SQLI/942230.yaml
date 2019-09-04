@@ -1,0 +1,14 @@
+meta: {author: Christian S.J. Peron, description: None, enabled: true, name: 942230.yaml}
+tests:
+- desc: conditional SQL injection attempts
+  stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        uri: /?var=%29%20like%20%28
+        version: HTTP/1.0
+      output: {response_contains: '942230'}
+  test_title: 942230-1

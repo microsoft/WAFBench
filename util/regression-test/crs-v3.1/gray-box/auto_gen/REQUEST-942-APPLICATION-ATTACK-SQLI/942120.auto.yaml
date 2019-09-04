@@ -1,0 +1,242 @@
+meta: {author: msra, description: None, enabled: true, name: 942120.yaml}
+tests:
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?DWkxrHIb=B%253E%253Ex
+        version: HTTP/1.1
+      output: {response_contains: '942120'}
+  test_title: 942120-1-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?p=zliKE%2520nULlv
+        version: HTTP/1.1
+      output: {response_contains: '942120'}
+  test_title: 942120-2-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?Pi3VdDP0=F%2508RLIKe%2508%250C
+        version: HTTP/1.1
+      output: {response_contains: '942120'}
+  test_title: 942120-3-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?QSkax=jrliKE%250CBInaRYK
+        version: HTTP/1.1
+      output: {response_contains: '942120'}
+  test_title: 942120-4-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?B=N%253E%253EB
+        version: HTTP/1.1
+      output: {response_contains: '942120'}
+  test_title: 942120-5-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?05=mIS%250ANulL%2526
+        version: HTTP/1.1
+      output: {response_contains: '942120'}
+  test_title: 942120-6-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?5psG7PE=0%2526%2526i
+        version: HTTP/1.1
+      output: {response_contains: '942120'}
+  test_title: 942120-7-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?DQ=/In%252B%25281%253E%2529%253B
+        version: HTTP/1.1
+      output: {response_contains: '942120'}
+  test_title: 942120-8-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?TGq=%253B%257C%257C%253A
+        version: HTTP/1.1
+      output: {response_contains: '942120'}
+  test_title: 942120-9-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?56GO4m0mh=%250B%253E%253Dc
+        version: HTTP/1.1
+      output: {response_contains: '942120'}
+  test_title: 942120-10-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?%257EiN%2528%2522U%2529%2526=QF
+        version: HTTP/1.1
+      output: {response_contains: '942120'}
+  test_title: 942120-11-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?%253E%253E%253DX=6dRw
+        version: HTTP/1.1
+      output: {response_contains: '942120'}
+  test_title: 942120-12-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?w%2521%253DL=yrN
+        version: HTTP/1.1
+      output: {response_contains: '942120'}
+  test_title: 942120-13-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?b%257C%257CK=Lo9l7iDBz
+        version: HTTP/1.1
+      output: {response_contains: '942120'}
+  test_title: 942120-14-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?J%2526%2526%257C=d0d
+        version: HTTP/1.1
+      output: {response_contains: '942120'}
+  test_title: 942120-15-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?%2523%253C%253E%2520bINARY%2523=CZ7
+        version: HTTP/1.1
+      output: {response_contains: '942120'}
+  test_title: 942120-16-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?K%2526%25266=gJO2
+        version: HTTP/1.1
+      output: {response_contains: '942120'}
+  test_title: 942120-17-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?W%253C%253DP=Y
+        version: HTTP/1.1
+      output: {response_contains: '942120'}
+  test_title: 942120-18-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?H%2521%253D%257B=KDL
+        version: HTTP/1.1
+      output: {response_contains: '942120'}
+  test_title: 942120-19-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?8LIKE%250DNUlLu=cnSbUWe
+        version: HTTP/1.1
+      output: {response_contains: '942120'}
+  test_title: 942120-20-auto

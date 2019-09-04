@@ -1,0 +1,14 @@
+meta: {author: Christoph Hansen, description: None, enabled: true, name: 942490.yaml}
+tests:
+- desc: classic SQL injection probings 3/3
+  stages:
+  - stage:
+      input:
+        data: var=%22%60%20%2A%20123
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output: {response_contains: '942490'}
+  test_title: 942490-1

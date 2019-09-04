@@ -1,0 +1,582 @@
+meta: {author: msra, description: None, enabled: true, name: 933150.yaml}
+tests:
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: oglY8xNOK_w8mX7tLP9_=Wp_sAFe_remoTe_poST, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '933150'}
+  test_title: 933150-1-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: zFYOTscXYY18mxgTP=rEFLeCTIOnFUnCTiON, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '933150'}
+  test_title: 933150-2-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: AVqGi=SHELl_EXeC, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '933150'}
+  test_title: 933150-3-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: N=Wp_safe_ReMOtE_RequEST, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '933150'}
+  test_title: 933150-4-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: DNN9A=PCntl_fOrk, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '933150'}
+  test_title: 933150-5-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: B_bBR4=wp_remOTe_GEt, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '933150'}
+  test_title: 933150-6-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: FF=__HaLt_CompIlEr, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '933150'}
+  test_title: 933150-7-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: oxgdcE4=Zlib_deCODE, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '933150'}
+  test_title: 933150-8-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: zJX3tP1I=POSIx_getuiD, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '933150'}
+  test_title: 933150-9-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: tDmsa4_=__HaLT_COMPILeR, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '933150'}
+  test_title: 933150-10-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: WP_sAFe_remOtE_POst=_IpN, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '933150'}
+  test_title: 933150-11-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: FiLe_pUt_conteNTS=ImSLnxm5, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '933150'}
+  test_title: 933150-12-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: sHelL_EXEC=OOuV7, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '933150'}
+  test_title: 933150-13-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: Wp_remote_GeT=8S04jaHFtp, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '933150'}
+  test_title: 933150-14-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: wp_reMote_gEt=_KoK8Sj, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '933150'}
+  test_title: 933150-15-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: gzUNcoMpReSS=ZOaDhJJekQ, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '933150'}
+  test_title: 933150-16-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: pcntL_exEC=B, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '933150'}
+  test_title: 933150-17-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: cALL_usEr_mETHoD_ARray=XB4th, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '933150'}
+  test_title: 933150-18-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: PoSIX_UnAme=Ogj2wjwV, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '933150'}
+  test_title: 933150-19-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: sys_GET_teMP_DIR=f, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '933150'}
+  test_title: 933150-20-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?t6=SyS_geT_temP_DiR
+        version: HTTP/1.1
+      output: {response_contains: '933150'}
+  test_title: 933150-21-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?mR59=SyS_get_temp_DIr
+        version: HTTP/1.1
+      output: {response_contains: '933150'}
+  test_title: 933150-22-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?OkTmb=call_uSer_MethOD
+        version: HTTP/1.1
+      output: {response_contains: '933150'}
+  test_title: 933150-23-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?NFmJh=filE_gET_cOntentS
+        version: HTTP/1.1
+      output: {response_contains: '933150'}
+  test_title: 933150-24-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?BfTGfy5eOg=cOnVErt_uUdecOdE
+        version: HTTP/1.1
+      output: {response_contains: '933150'}
+  test_title: 933150-25-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?pX=posIx_getcWd
+        version: HTTP/1.1
+      output: {response_contains: '933150'}
+  test_title: 933150-26-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?k=POSIX_Uname
+        version: HTTP/1.1
+      output: {response_contains: '933150'}
+  test_title: 933150-27-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?I0nFqih=stR_rOt13
+        version: HTTP/1.1
+      output: {response_contains: '933150'}
+  test_title: 933150-28-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?Bs4AuG=wP_SAfE_REMOtE_geT
+        version: HTTP/1.1
+      output: {response_contains: '933150'}
+  test_title: 933150-29-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?TrJ=fILE_PUt_CoNtENts
+        version: HTTP/1.1
+      output: {response_contains: '933150'}
+  test_title: 933150-30-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?stR_Rot13=tR3
+        version: HTTP/1.1
+      output: {response_contains: '933150'}
+  test_title: 933150-31-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?Wp_rEMOTe_HEAD=URp
+        version: HTTP/1.1
+      output: {response_contains: '933150'}
+  test_title: 933150-32-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?Wp_SAFE_REMOTE_reqUESt=A
+        version: HTTP/1.1
+      output: {response_contains: '933150'}
+  test_title: 933150-33-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?ReFlecTioNFUNctIon=lmAl
+        version: HTTP/1.1
+      output: {response_contains: '933150'}
+  test_title: 933150-34-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?wP_REmOTE_FOPen=uzC
+        version: HTTP/1.1
+      output: {response_contains: '933150'}
+  test_title: 933150-35-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?fSockopEn=VVYqYeEmg0
+        version: HTTP/1.1
+      output: {response_contains: '933150'}
+  test_title: 933150-36-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?rEquire_OncE=Xul2GnV
+        version: HTTP/1.1
+      output: {response_contains: '933150'}
+  test_title: 933150-37-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?reFLeCTiOnfuNctioN=_Lh
+        version: HTTP/1.1
+      output: {response_contains: '933150'}
+  test_title: 933150-38-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?POsix_GetpWuID=qe
+        version: HTTP/1.1
+      output: {response_contains: '933150'}
+  test_title: 933150-39-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?wp_REMoTE_gET=f1AYFk
+        version: HTTP/1.1
+      output: {response_contains: '933150'}
+  test_title: 933150-40-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /wP_reMOte_HEAd
+        version: HTTP/1.1
+      output: {response_contains: '933150'}
+  test_title: 933150-41-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /pFsOCKoPEN
+        version: HTTP/1.1
+      output: {response_contains: '933150'}
+  test_title: 933150-42-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /CALL_useR_fUnC_aRrAy
+        version: HTTP/1.1
+      output: {response_contains: '933150'}
+  test_title: 933150-43-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /wp_SaFE_rEMOTe_rEQUEsT
+        version: HTTP/1.1
+      output: {response_contains: '933150'}
+  test_title: 933150-44-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /pOSix_geTPWUid
+        version: HTTP/1.1
+      output: {response_contains: '933150'}
+  test_title: 933150-45-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /zLIB_decODe
+        version: HTTP/1.1
+      output: {response_contains: '933150'}
+  test_title: 933150-46-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /WP_reMote_rEQuEst
+        version: HTTP/1.1
+      output: {response_contains: '933150'}
+  test_title: 933150-47-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /pCNtl_exEc
+        version: HTTP/1.1
+      output: {response_contains: '933150'}
+  test_title: 933150-48-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /pFSOCkOPen
+        version: HTTP/1.1
+      output: {response_contains: '933150'}
+  test_title: 933150-49-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /wp_SAfe_REMoTE_pOsT
+        version: HTTP/1.1
+      output: {response_contains: '933150'}
+  test_title: 933150-50-auto

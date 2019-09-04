@@ -1,0 +1,14 @@
+meta: {author: Christian S.J. Peron, description: None, enabled: true, name: 942370.yaml}
+tests:
+- desc: classic SQL injection probings 2/3
+  stages:
+  - stage:
+      input:
+        data: var="` * 12344
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output: {response_contains: '942370'}
+  test_title: 942370-1

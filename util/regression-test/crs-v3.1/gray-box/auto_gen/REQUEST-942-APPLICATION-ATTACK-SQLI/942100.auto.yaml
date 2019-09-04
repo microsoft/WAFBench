@@ -1,0 +1,85 @@
+meta: {author: msra, description: None, enabled: true, name: 942100.yaml}
+tests:
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: a=1, Host: localhost, Referer: SELECT * FROM Articles WHERE
+            id = '1''';}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '942100'}
+  test_title: 942100-1-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: SELECT * FROM Articles WHERE id = '1''';=1, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '942100'}
+  test_title: 942100-2-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: a=SELECT * FROM Articles WHERE id = '1''';, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '942100'}
+  test_title: 942100-3-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: a=1, Host: localhost, User-Agent: SELECT * FROM Articles
+            WHERE id = '1''';}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '942100'}
+  test_title: 942100-4-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: a=1, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?key=SELECT * FROM Articles WHERE id = '1''';
+        version: HTTP/1.1
+      output: {response_contains: '942100'}
+  test_title: 942100-5-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: a=1, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?SELECT * FROM Articles WHERE id = '1''';=100
+        version: HTTP/1.1
+      output: {response_contains: '942100'}
+  test_title: 942100-6-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><a>SELECT * FROM Articles WHERE id = '1'''</a>
+        dest_addr: 127.0.0.1
+        headers: {Content-Type: text/xml, Cookie: a=1, Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        uri: /sqli.xml
+        version: HTTP/1.1
+      output: {response_contains: '942100'}
+  test_title: 942100-7-auto

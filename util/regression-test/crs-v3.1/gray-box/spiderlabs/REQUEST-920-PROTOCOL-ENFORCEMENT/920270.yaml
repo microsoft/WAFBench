@@ -1,0 +1,88 @@
+meta: {author: csanders-git, description: Description, enabled: true, name: 920270.yaml}
+tests:
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost, User-Agent: ModSecurity CRS 3 Tests}
+        port: 80
+        uri: /?test%00=test1
+      output: {response_contains: '920270'}
+  test_title: 920270-1
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost, User-Agent: ModSecurity CRS 3 Tests}
+        port: 80
+        uri: /?test=test1%00
+      output: {response_contains: '920270'}
+  test_title: 920270-2
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost, User-Agent: ModSecurity CRS 3 Tests}
+        port: 80
+        uri: /?test%00=test1
+      output: {response_contains: '920270'}
+  test_title: 920270-3
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost%00, User-Agent: ModSecurity CRS 3 Tests}
+        port: 80
+        uri: /?test=test1
+      output:
+        status: [403, 400]
+  test_title: 920270-4
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost, Referer: anything%00, User-Agent: ModSecurity CRS
+            3 Tests}
+        port: 80
+        uri: /?test=test1
+      output: {response_contains: '920270'}
+  test_title: 920270-5
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost, User-Agent: ModSecurity CRS 3 Tests}
+        port: 80
+        uri: /?test%40=test1
+      output: {no_response_contains: '920270'}
+  test_title: 920270-6
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost, User-Agent: ModSecurity CRS 3 Tests}
+        port: 80
+        uri: /?test%FD=test1
+      output: {no_response_contains: '920270'}
+  test_title: 920270-7
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost, User-Agent: ModSecurity CRS 3 Tests}
+        port: 80
+        uri: /?test%FD=test1
+      output: {no_response_contains: '920270'}
+  test_title: 920270-8
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Accept: 'text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5',
+          Accept-Charset: 'ISO-8859-1,utf-8;q=0.7,*;q=0.7', Accept-Language: 'en-us,en;q=0.5',
+          Host: localhost, Keep-Alive: '300', Proxy-Connection: keep-alive, User-Agent: ModSecurity
+            CRS 3 Tests}
+        port: 80
+        uri: /?param=foo%00
+      output: {response_contains: '920270'}
+  test_title: 920270-9

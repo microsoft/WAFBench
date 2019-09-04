@@ -1,0 +1,14 @@
+meta: {author: Christian S.J. Peron, description: None, enabled: true, name: 942340.yaml}
+tests:
+- desc: basic SQL authentication bypass attempts 3/3
+  stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        uri: /?var=in%20%28%20select%20%2a%20from
+        version: HTTP/1.0
+      output: {response_contains: '942340'}
+  test_title: 942340-1

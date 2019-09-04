@@ -1,0 +1,11 @@
+meta: {author: csanders-git, description: Description, enabled: true, name: 920290.yaml}
+tests:
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: '', User-Agent: ModSecurity CRS 3 Tests}
+        port: 80
+      output:
+        status: [403, 400]
+  test_title: 920290-1

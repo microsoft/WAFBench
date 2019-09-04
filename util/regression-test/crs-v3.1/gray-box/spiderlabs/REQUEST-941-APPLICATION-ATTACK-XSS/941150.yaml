@@ -1,0 +1,15 @@
+meta: {author: zmallen, description: 'Tests to trigger, or not trigger 941150', enabled: true,
+  name: 941150.yaml}
+tests:
+- desc: Disallowed HTML entities, ARGS
+  stages:
+  - stage:
+      input:
+        data: 941150-1%3D%3Ca%20href%3D%22test%22
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost, User-Agent: ModSecurity CRS 3 Tests}
+        method: GET
+        port: 80
+        uri: /foo
+      output: {response_contains: '941150'}
+  test_title: 941150-1

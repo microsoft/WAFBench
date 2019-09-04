@@ -1,0 +1,274 @@
+meta: {author: spartantri, description: Description, enabled: true, name: 944110.yaml}
+tests:
+- desc: Argument test includes keywords java. and Runtime
+  stages:
+  - stage:
+      input:
+        data: test=java.Runtime
+        dest_addr: 127.0.0.1
+        headers: {Accept: 'text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5',
+          Accept-Charset: 'ISO-8859-1,utf-8;q=0.7,*;q=0.7', Accept-Encoding: 'gzip,deflate',
+          Accept-Language: 'en-us,en;q=0.5', Content-Type: application/x-www-form-urlencoded,
+          Host: localhost, User-Agent: ModSecurity CRS 3 Tests}
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output: {response_contains: '944110'}
+  test_title: 944110-1
+- desc: Request header test includes keywords java. and ProcessBuilder
+  stages:
+  - stage:
+      input:
+        data: test=value
+        dest_addr: 127.0.0.1
+        headers: {Accept: 'text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5',
+          Accept-Charset: 'ISO-8859-1,utf-8;q=0.7,*;q=0.7', Accept-Encoding: 'gzip,deflate',
+          Accept-Language: 'en-us,en;q=0.5', Content-Type: text/plain, Host: localhost,
+          User-Agent: ModSecurity CRS 3 Tests, test: java.ProcessBuilder}
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output: {response_contains: '944110'}
+  test_title: 944110-2
+- desc: XML element includes keywords java. and Runtime
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><java.Runtime attribute_name="attribute_value">value</java.Runtime></xml>
+        dest_addr: 127.0.0.1
+        headers: {Accept: 'text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5',
+          Accept-Charset: 'ISO-8859-1,utf-8;q=0.7,*;q=0.7', Accept-Encoding: 'gzip,deflate',
+          Accept-Language: 'en-us,en;q=0.5', Content-Type: application/xml, Host: localhost,
+          User-Agent: ModSecurity CRS 3 Tests}
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output: {response_contains: '944110'}
+  test_title: 944110-3
+- desc: XML attribute name includes keywords java. and Runtime
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><element java.Runtime="attribute_value">element_value</element></xml>
+        dest_addr: 127.0.0.1
+        headers: {Accept: 'text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5',
+          Accept-Charset: 'ISO-8859-1,utf-8;q=0.7,*;q=0.7', Accept-Encoding: 'gzip,deflate',
+          Accept-Language: 'en-us,en;q=0.5', Content-Type: application/xml, Host: localhost,
+          User-Agent: ModSecurity CRS 3 Tests}
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output: {response_contains: '944110'}
+  test_title: 944110-4
+- desc: XML attribute value includes keywords java. and Runtime
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><element attribute_name="java.lang.string"
+          attribute2_name="Runtime">element_value</element></xml>
+        dest_addr: 127.0.0.1
+        headers: {Accept: 'text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5',
+          Accept-Charset: 'ISO-8859-1,utf-8;q=0.7,*;q=0.7', Accept-Encoding: 'gzip,deflate',
+          Accept-Language: 'en-us,en;q=0.5', Content-Type: application/xml, Host: localhost,
+          User-Agent: ModSecurity CRS 3 Tests}
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output: {response_contains: '944110'}
+  test_title: 944110-5
+- desc: XML element value includes keywords java. and Runtime
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><element attribute_name="attribute_value">java.Runtime</element></xml>
+        dest_addr: 127.0.0.1
+        headers: {Accept: 'text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5',
+          Accept-Charset: 'ISO-8859-1,utf-8;q=0.7,*;q=0.7', Accept-Encoding: 'gzip,deflate',
+          Accept-Language: 'en-us,en;q=0.5', Content-Type: application/xml, Host: localhost,
+          User-Agent: ModSecurity CRS 3 Tests}
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output: {response_contains: '944110'}
+  test_title: 944110-6
+- desc: XML element includes keywords java. and ProcessBuilder
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><java.ProcessBuilder attribute_name="attribute_value">value</java.ProcessBuilder></xml>
+        dest_addr: 127.0.0.1
+        headers: {Accept: 'text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5',
+          Accept-Charset: 'ISO-8859-1,utf-8;q=0.7,*;q=0.7', Accept-Encoding: 'gzip,deflate',
+          Accept-Language: 'en-us,en;q=0.5', Content-Type: application/xml, Host: localhost,
+          User-Agent: ModSecurity CRS 3 Tests}
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output: {response_contains: '944110'}
+  test_title: 944110-7
+- desc: XML attribute name includes keyworda java. and ProcessBuilder
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><element java.ProcessBuilder="attribute_value">element_value</element></xml>
+        dest_addr: 127.0.0.1
+        headers: {Accept: 'text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5',
+          Accept-Charset: 'ISO-8859-1,utf-8;q=0.7,*;q=0.7', Accept-Encoding: 'gzip,deflate',
+          Accept-Language: 'en-us,en;q=0.5', Content-Type: application/xml, Host: localhost,
+          User-Agent: ModSecurity CRS 3 Tests}
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output: {response_contains: '944110'}
+  test_title: 944110-8
+- desc: XML attribute value includes keywords java. and ProcessBuilder
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><element attribute_name="java.lang.string"
+          attribute_name2="ProcessBuilder">element_value</element></xml>
+        dest_addr: 127.0.0.1
+        headers: {Accept: 'text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5',
+          Accept-Charset: 'ISO-8859-1,utf-8;q=0.7,*;q=0.7', Accept-Encoding: 'gzip,deflate',
+          Accept-Language: 'en-us,en;q=0.5', Content-Type: application/xml, Host: localhost,
+          User-Agent: ModSecurity CRS 3 Tests}
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output: {response_contains: '944110'}
+  test_title: 944110-9
+- desc: XML element value includes keywords java. and ProcessBuilder
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><element attribute_name="attribute_value">java.ProcessBuilder</element></xml>
+        dest_addr: 127.0.0.1
+        headers: {Accept: 'text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5',
+          Accept-Charset: 'ISO-8859-1,utf-8;q=0.7,*;q=0.7', Accept-Encoding: 'gzip,deflate',
+          Accept-Language: 'en-us,en;q=0.5', Content-Type: application/xml, Host: localhost,
+          User-Agent: ModSecurity CRS 3 Tests}
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output: {response_contains: '944110'}
+  test_title: 944110-10
+- desc: Argument test includes keywords java. and ProcessBuilder
+  stages:
+  - stage:
+      input:
+        data: test=java.ProcessBuilder
+        dest_addr: 127.0.0.1
+        headers: {Accept: 'text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5',
+          Accept-Charset: 'ISO-8859-1,utf-8;q=0.7,*;q=0.7', Accept-Encoding: 'gzip,deflate',
+          Accept-Language: 'en-us,en;q=0.5', Content-Type: text/plain, Host: localhost,
+          User-Agent: ModSecurity CRS 3 Tests}
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output: {response_contains: '944110'}
+  test_title: 944110-11
+- desc: Argument name includes keywords java. and Runtime
+  stages:
+  - stage:
+      input:
+        data: java.Runtime=test
+        dest_addr: 127.0.0.1
+        headers: {Accept: 'text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5',
+          Accept-Charset: 'ISO-8859-1,utf-8;q=0.7,*;q=0.7', Accept-Encoding: 'gzip,deflate',
+          Accept-Language: 'en-us,en;q=0.5', Content-Type: text/plain, Host: localhost,
+          User-Agent: ModSecurity CRS 3 Tests}
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output: {response_contains: '944110'}
+  test_title: 944110-12
+- desc: Argument name includes keywords java. and ProcessBuilder
+  stages:
+  - stage:
+      input:
+        data: java.ProcessBuilder=test
+        dest_addr: 127.0.0.1
+        headers: {Accept: 'text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5',
+          Accept-Charset: 'ISO-8859-1,utf-8;q=0.7,*;q=0.7', Accept-Encoding: 'gzip,deflate',
+          Accept-Language: 'en-us,en;q=0.5', Content-Type: text/plain, Host: localhost,
+          User-Agent: ModSecurity CRS 3 Tests}
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output: {response_contains: '944110'}
+  test_title: 944110-13
+- desc: Cookie test includes keywords java. and Runtime
+  stages:
+  - stage:
+      input:
+        data: test=value
+        dest_addr: 127.0.0.1
+        headers: {Accept: 'text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5',
+          Accept-Charset: 'ISO-8859-1,utf-8;q=0.7,*;q=0.7', Accept-Encoding: 'gzip,deflate',
+          Accept-Language: 'en-us,en;q=0.5', Content-Type: text/plain, Cookie: test=java.Runtime,
+          Host: localhost, User-Agent: ModSecurity CRS 3 Tests}
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output: {response_contains: '944110'}
+  test_title: 944110-14
+- desc: Cookie test includes keywords java. and ProcessBuilder
+  stages:
+  - stage:
+      input:
+        data: test=value
+        dest_addr: 127.0.0.1
+        headers: {Accept: 'text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5',
+          Accept-Charset: 'ISO-8859-1,utf-8;q=0.7,*;q=0.7', Accept-Encoding: 'gzip,deflate',
+          Accept-Language: 'en-us,en;q=0.5', Content-Type: text/plain, Cookie: test=java.ProcessBuilder,
+          Host: localhost, User-Agent: ModSecurity CRS 3 Tests}
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output: {response_contains: '944110'}
+  test_title: 944110-15
+- desc: Cookie name includes keywords java. and Runtime
+  stages:
+  - stage:
+      input:
+        data: test=value
+        dest_addr: 127.0.0.1
+        headers: {Accept: 'text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5',
+          Accept-Charset: 'ISO-8859-1,utf-8;q=0.7,*;q=0.7', Accept-Encoding: 'gzip,deflate',
+          Accept-Language: 'en-us,en;q=0.5', Content-Type: text/plain, Cookie: java.Runtime=test,
+          Host: localhost, User-Agent: ModSecurity CRS 3 Tests}
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output: {response_contains: '944110'}
+  test_title: 944110-16
+- desc: Cookie name includes keywords java. and ProcessBuilder
+  stages:
+  - stage:
+      input:
+        data: test=value
+        dest_addr: 127.0.0.1
+        headers: {Accept: 'text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5',
+          Accept-Charset: 'ISO-8859-1,utf-8;q=0.7,*;q=0.7', Accept-Encoding: 'gzip,deflate',
+          Accept-Language: 'en-us,en;q=0.5', Content-Type: text/plain, Cookie: java.ProcessBuilder=test,
+          Host: localhost, User-Agent: ModSecurity CRS 3 Tests}
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output: {response_contains: '944110'}
+  test_title: 944110-17
+- desc: Request header test includes keywords java. and Runtime
+  stages:
+  - stage:
+      input:
+        data: test=value
+        dest_addr: 127.0.0.1
+        headers: {Accept: 'text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5',
+          Accept-Charset: 'ISO-8859-1,utf-8;q=0.7,*;q=0.7', Accept-Encoding: 'gzip,deflate',
+          Accept-Language: 'en-us,en;q=0.5', Content-Type: text/plain, Host: localhost,
+          User-Agent: ModSecurity CRS 3 Tests, test: java.Runtime}
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output: {response_contains: '944110'}
+  test_title: 944110-18

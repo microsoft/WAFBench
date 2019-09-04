@@ -1,0 +1,14 @@
+meta: {author: Christian S.J. Peron, description: None, enabled: true, name: 942120.yaml}
+tests:
+- desc: Injection of a SQL operator
+  stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        uri: /?var=blahblah&var2=LIKE%20NULL
+        version: HTTP/1.0
+      output: {response_contains: '942120'}
+  test_title: 942120-1

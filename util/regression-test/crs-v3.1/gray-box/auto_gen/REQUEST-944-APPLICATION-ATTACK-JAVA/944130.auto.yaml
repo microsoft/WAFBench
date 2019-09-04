@@ -1,0 +1,702 @@
+meta: {author: msra, description: None, enabled: true, name: 944130.yaml}
+tests:
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: twFeRdJY=JAVa.Io.PrIntsTrEaM, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '944130'}
+  test_title: 944130-1-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: oIAwCLq0g3c36=JavA.lAnG.prOceSs, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '944130'}
+  test_title: 944130-2-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: kM=Com.SUn.Org.aPAcHe, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '944130'}
+  test_title: 944130-3-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: AJTzOik7112zUrEbHq8=Java.Io.FilTERReAder, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '944130'}
+  test_title: 944130-4-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: yCXaHkv=jAVA.iO.FILE, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '944130'}
+  test_title: 944130-5-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: qd5Yxe2adQltxSlAqem=JaVA.lANg.NUMbeR, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '944130'}
+  test_title: 944130-6-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: O893sy1LfHyJKbDDCg=jAVA.iO.filEoutpUTsTReaM, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '944130'}
+  test_title: 944130-7-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: 6nlRjXXFd=jAva.iO.InpUTstreAmrEAder, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '944130'}
+  test_title: 944130-8-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: fc_pE=jAvA.iO.iNpUtsTream, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '944130'}
+  test_title: 944130-9-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: C3quKJb=JAva.LANG.oBJeCT, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '944130'}
+  test_title: 944130-10-auto
+- stages:
+  - stage:
+      input:
+        data: Foo_key=jaVa.lang.sTRiNg
+        dest_addr: 127.0.0.1
+        headers: {Content-Length: 24, Content-Type: application/x-www-form-urlencoded,
+          Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '944130'}
+  test_title: 944130-11-auto
+- stages:
+  - stage:
+      input:
+        data: Foo_key=java.LANG.RefleCT
+        dest_addr: 127.0.0.1
+        headers: {Content-Length: 25, Content-Type: application/x-www-form-urlencoded,
+          Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '944130'}
+  test_title: 944130-12-auto
+- stages:
+  - stage:
+      input:
+        data: Foo_key=JaVA.io.OuTpUTsTream
+        dest_addr: 127.0.0.1
+        headers: {Content-Length: 28, Content-Type: application/x-www-form-urlencoded,
+          Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '944130'}
+  test_title: 944130-13-auto
+- stages:
+  - stage:
+      input:
+        data: Foo_key=JAvA.IO.bUFFeRedrEaDer
+        dest_addr: 127.0.0.1
+        headers: {Content-Length: 30, Content-Type: application/x-www-form-urlencoded,
+          Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '944130'}
+  test_title: 944130-14-auto
+- stages:
+  - stage:
+      input:
+        data: Foo_key=JaVA.lANg.INTEgeR
+        dest_addr: 127.0.0.1
+        headers: {Content-Length: 25, Content-Type: application/x-www-form-urlencoded,
+          Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '944130'}
+  test_title: 944130-15-auto
+- stages:
+  - stage:
+      input:
+        data: Foo_key=JAVa.laNG.ClaSs
+        dest_addr: 127.0.0.1
+        headers: {Content-Length: 23, Content-Type: application/x-www-form-urlencoded,
+          Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '944130'}
+  test_title: 944130-16-auto
+- stages:
+  - stage:
+      input:
+        data: Foo_key=JAVa.io.FiLeOuTPUTSTREAM
+        dest_addr: 127.0.0.1
+        headers: {Content-Length: 32, Content-Type: application/x-www-form-urlencoded,
+          Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '944130'}
+  test_title: 944130-17-auto
+- stages:
+  - stage:
+      input:
+        data: Foo_key=jAVa.lang.STRIng
+        dest_addr: 127.0.0.1
+        headers: {Content-Length: 24, Content-Type: application/x-www-form-urlencoded,
+          Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '944130'}
+  test_title: 944130-18-auto
+- stages:
+  - stage:
+      input:
+        data: Foo_key=java.io.PiPEDReader
+        dest_addr: 127.0.0.1
+        headers: {Content-Length: 27, Content-Type: application/x-www-form-urlencoded,
+          Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '944130'}
+  test_title: 944130-19-auto
+- stages:
+  - stage:
+      input:
+        data: Foo_key=Com.SUn.OrG.apaCHE
+        dest_addr: 127.0.0.1
+        headers: {Content-Length: 26, Content-Type: application/x-www-form-urlencoded,
+          Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '944130'}
+  test_title: 944130-20-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: COM.oPEnsYmPhoNY.XWOrk2=DQ9U7K, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '944130'}
+  test_title: 944130-21-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: jAVA.LANg.sYSTEm=e9Fs2jqDF3, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '944130'}
+  test_title: 944130-22-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: jAVA.IO.BufferedINpUtstrEaM=HM0KI, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '944130'}
+  test_title: 944130-23-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: Org.omG.COrBa=5Z6AHV, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '944130'}
+  test_title: 944130-24-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: jAvA.IO.stRiNGReaDeR=m8z, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '944130'}
+  test_title: 944130-25-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: JAVa.IO.PIpeDoUtPUTsTrEAM=rNTBazk4ND, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '944130'}
+  test_title: 944130-26-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: JaVa.iO.bYtEaRRAyoutputSTREaM=3KbKnzvSL, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '944130'}
+  test_title: 944130-27-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: coM.SUN.OrG.aPache=vTsLjTJ, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '944130'}
+  test_title: 944130-28-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: JaVA.Io.sTrIngReadER=0Sx5, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '944130'}
+  test_title: 944130-29-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: Com.oPENsymPHOny.XWOrK2=ckf2LBLHx, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '944130'}
+  test_title: 944130-30-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?z=JavA.Io.reaDeR
+        version: HTTP/1.1
+      output: {response_contains: '944130'}
+  test_title: 944130-31-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?G2R9ci=jaVA.iO.bUfFERedreaDer
+        version: HTTP/1.1
+      output: {response_contains: '944130'}
+  test_title: 944130-32-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?Sf=JaVa.IO.PIPedOutpUtSTREam
+        version: HTTP/1.1
+      output: {response_contains: '944130'}
+  test_title: 944130-33-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?XXt20D0q=jAVaX.ScrIpt.sCRIpTENGInemanageR
+        version: HTTP/1.1
+      output: {response_contains: '944130'}
+  test_title: 944130-34-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?Fofag=jaVaX.ScRIPt.ScRiPtEngInEmANager
+        version: HTTP/1.1
+      output: {response_contains: '944130'}
+  test_title: 944130-35-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?0YpAB0fTZ=cOm.oPEnSYMPhOnY.XwoRK2
+        version: HTTP/1.1
+      output: {response_contains: '944130'}
+  test_title: 944130-36-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?VfGmf2qGz=jAVa.IO.StrINgreADEr
+        version: HTTP/1.1
+      output: {response_contains: '944130'}
+  test_title: 944130-37-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?5lD2sI8Z=JAVA.LanG.nUMbEr
+        version: HTTP/1.1
+      output: {response_contains: '944130'}
+  test_title: 944130-38-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?7=COm.OPEnSYmPhonY.xworK2
+        version: HTTP/1.1
+      output: {response_contains: '944130'}
+  test_title: 944130-39-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?18BcahZR=JaVa.io.piPeDOuTpuTSTReam
+        version: HTTP/1.1
+      output: {response_contains: '944130'}
+  test_title: 944130-40-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?JaVa.IO.buFFEREDInPUtSTReAM=KKai
+        version: HTTP/1.1
+      output: {response_contains: '944130'}
+  test_title: 944130-41-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?jaVA.IO.DATaiNpUTSTReAM=9bt
+        version: HTTP/1.1
+      output: {response_contains: '944130'}
+  test_title: 944130-42-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?Java.io.ChARarrayREADeR=cQpo
+        version: HTTP/1.1
+      output: {response_contains: '944130'}
+  test_title: 944130-43-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?jAVa.laNG.nUmbeR=wl
+        version: HTTP/1.1
+      output: {response_contains: '944130'}
+  test_title: 944130-44-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?JavA.io.PRINTstrEaM=eFsMi6_
+        version: HTTP/1.1
+      output: {response_contains: '944130'}
+  test_title: 944130-45-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?jaVa.IO.fIle=aUuE0J
+        version: HTTP/1.1
+      output: {response_contains: '944130'}
+  test_title: 944130-46-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?java.LaNg.sySTeM=kcJiR
+        version: HTTP/1.1
+      output: {response_contains: '944130'}
+  test_title: 944130-47-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?jaVA.IO.INpUTstrEaMReADEr=FFdix
+        version: HTTP/1.1
+      output: {response_contains: '944130'}
+  test_title: 944130-48-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?javA.IO.fiLEoUTputstream=9q_w
+        version: HTTP/1.1
+      output: {response_contains: '944130'}
+  test_title: 944130-49-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?jAVa.LANG.SYStem=Nu3x
+        version: HTTP/1.1
+      output: {response_contains: '944130'}
+  test_title: 944130-50-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost, cY4PpEpN: jaVA.lang.strIng}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '944130'}
+  test_title: 944130-51-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost, bDZS5Zf: JaVA.LANg.procESsbUILdER}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '944130'}
+  test_title: 944130-52-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost, o: jAVA.LANG.rUntIMe}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '944130'}
+  test_title: 944130-53-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {HjVEUuyC: JaVa.LAnG.proCEsSbuildEr, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '944130'}
+  test_title: 944130-54-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost, X: jAVa.IO.FilTeRInPUTsTREam}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '944130'}
+  test_title: 944130-55-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost, mnrCKnk69: jAva.IO.dAtAiNPUTStReam}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '944130'}
+  test_title: 944130-56-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost, iVunc: JAVa.IO.bYtEaRraYOuTpUTstream}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '944130'}
+  test_title: 944130-57-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost, Pu: jAva.Io.INPUtStReam}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '944130'}
+  test_title: 944130-58-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {GBYu: java.iO.pusHBaCKiNPuTstReaM, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '944130'}
+  test_title: 944130-59-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost, yQ: oRg.APachE.cOmmONs}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '944130'}
+  test_title: 944130-60-auto

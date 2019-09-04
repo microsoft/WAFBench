@@ -245,6 +245,7 @@ class Base(object):
             "log_contains": ("raw_log", regex_match),
             "no_log_contains": ("raw_log", regex_not_match),
             "response_contains": ("raw_response", regex_match),
+            "no_response_contains": ("raw_response", regex_not_match),
             "html_contains": ("raw_response", regex_match),
             "expect_error":
             ("raw_response",

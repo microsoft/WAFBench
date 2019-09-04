@@ -1,0 +1,382 @@
+meta: {author: msra, description: None, enabled: true, name: 932171.yaml}
+tests:
+- stages:
+  - stage:
+      input:
+        data: ['------abc', 'Content-Disposition: form-data; name="%2528%2529%2509%257B%257E";
+            filename="1"', 'Content-Type: text/plain', '', 'Content ', '', '------abc--']
+        dest_addr: 127.0.0.1
+        headers: {Cache-Control: no-cache, Content-Type: multipart/form-data; boundary=----abc,
+          Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '932171'}
+  test_title: 932171-1-auto
+- stages:
+  - stage:
+      input:
+        data: ['------abc', 'Content-Disposition: form-data; name="%2528%2529%250B%257B%252C";
+            filename="1"', 'Content-Type: text/plain', '', 'Content ', '', '------abc--']
+        dest_addr: 127.0.0.1
+        headers: {Cache-Control: no-cache, Content-Type: multipart/form-data; boundary=----abc,
+          Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '932171'}
+  test_title: 932171-2-auto
+- stages:
+  - stage:
+      input:
+        data: ['------abc', 'Content-Disposition: form-data; name="%2528%250B%2529%250D%257Bo";
+            filename="1"', 'Content-Type: text/plain', '', 'Content ', '', '------abc--']
+        dest_addr: 127.0.0.1
+        headers: {Cache-Control: no-cache, Content-Type: multipart/form-data; boundary=----abc,
+          Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '932171'}
+  test_title: 932171-3-auto
+- stages:
+  - stage:
+      input:
+        data: ['------abc', 'Content-Disposition: form-data; name="%2528%250B%2529%250A%257Bc";
+            filename="1"', 'Content-Type: text/plain', '', 'Content ', '', '------abc--']
+        dest_addr: 127.0.0.1
+        headers: {Cache-Control: no-cache, Content-Type: multipart/form-data; boundary=----abc,
+          Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '932171'}
+  test_title: 932171-4-auto
+- stages:
+  - stage:
+      input:
+        data: ['------abc', 'Content-Disposition: form-data; name="%2528%2529%2509%257B%257B";
+            filename="1"', 'Content-Type: text/plain', '', 'Content ', '', '------abc--']
+        dest_addr: 127.0.0.1
+        headers: {Cache-Control: no-cache, Content-Type: multipart/form-data; boundary=----abc,
+          Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '932171'}
+  test_title: 932171-5-auto
+- stages:
+  - stage:
+      input:
+        data: ['------abc', 'Content-Disposition: form-data; name="%2528%2529%250B%257B-";
+            filename="1"', 'Content-Type: text/plain', '', 'Content ', '', '------abc--']
+        dest_addr: 127.0.0.1
+        headers: {Cache-Control: no-cache, Content-Type: multipart/form-data; boundary=----abc,
+          Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '932171'}
+  test_title: 932171-6-auto
+- stages:
+  - stage:
+      input:
+        data: ['------abc', 'Content-Disposition: form-data; name="%2528%2520%2529%250A%257Bz";
+            filename="1"', 'Content-Type: text/plain', '', 'Content ', '', '------abc--']
+        dest_addr: 127.0.0.1
+        headers: {Cache-Control: no-cache, Content-Type: multipart/form-data; boundary=----abc,
+          Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '932171'}
+  test_title: 932171-7-auto
+- stages:
+  - stage:
+      input:
+        data: ['------abc', 'Content-Disposition: form-data; name="%2528%250D%2529%2509%257BG";
+            filename="1"', 'Content-Type: text/plain', '', 'Content ', '', '------abc--']
+        dest_addr: 127.0.0.1
+        headers: {Cache-Control: no-cache, Content-Type: multipart/form-data; boundary=----abc,
+          Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '932171'}
+  test_title: 932171-8-auto
+- stages:
+  - stage:
+      input:
+        data: ['------abc', 'Content-Disposition: form-data; name="%2528%2509%2529%250C%257B5";
+            filename="1"', 'Content-Type: text/plain', '', 'Content ', '', '------abc--']
+        dest_addr: 127.0.0.1
+        headers: {Cache-Control: no-cache, Content-Type: multipart/form-data; boundary=----abc,
+          Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '932171'}
+  test_title: 932171-9-auto
+- stages:
+  - stage:
+      input:
+        data: ['------abc', 'Content-Disposition: form-data; name="%2528%2529%250C%257BO";
+            filename="1"', 'Content-Type: text/plain', '', 'Content ', '', '------abc--']
+        dest_addr: 127.0.0.1
+        headers: {Cache-Control: no-cache, Content-Type: multipart/form-data; boundary=----abc,
+          Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output: {response_contains: '932171'}
+  test_title: 932171-10-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?hcru=%252528%25250C%252529%25250C%25257Bi
+        version: HTTP/1.1
+      output: {response_contains: '932171'}
+  test_title: 932171-11-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?cFsQTeY=%252528%252529%25250D%25257B-
+        version: HTTP/1.1
+      output: {response_contains: '932171'}
+  test_title: 932171-12-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?D65mMjTQSn=%252528%252509%252529%252520%25257BP
+        version: HTTP/1.1
+      output: {response_contains: '932171'}
+  test_title: 932171-13-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?M=%252528%252529%25250D%25257B%252522
+        version: HTTP/1.1
+      output: {response_contains: '932171'}
+  test_title: 932171-14-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?uh40N7O=%252528%252509%252529%25250C%25257B6
+        version: HTTP/1.1
+      output: {response_contains: '932171'}
+  test_title: 932171-15-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?Opyrd=%252528%252529%25250D%25257BQ
+        version: HTTP/1.1
+      output: {response_contains: '932171'}
+  test_title: 932171-16-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?YcYd=%252528%252529%25250C%25257BK
+        version: HTTP/1.1
+      output: {response_contains: '932171'}
+  test_title: 932171-17-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?M=%252528%25250C%252529%252509%25257Bc
+        version: HTTP/1.1
+      output: {response_contains: '932171'}
+  test_title: 932171-18-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?DZm6S=%252528%252529%25250C%25257B%25253A
+        version: HTTP/1.1
+      output: {response_contains: '932171'}
+  test_title: 932171-19-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?E6=%252528%252509%252529%252509%25257B%252560
+        version: HTTP/1.1
+      output: {response_contains: '932171'}
+  test_title: 932171-20-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?%252528%252509%252529%252509%25257BQ=rCbhnQk8Ub
+        version: HTTP/1.1
+      output: {response_contains: '932171'}
+  test_title: 932171-21-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?%252528%252520%252529%25250A%25257Bn=iZoEi
+        version: HTTP/1.1
+      output: {response_contains: '932171'}
+  test_title: 932171-22-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?%252528%252509%252529%252509%25257BO=nOB6v
+        version: HTTP/1.1
+      output: {response_contains: '932171'}
+  test_title: 932171-23-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?%252528%252509%252529%25250C%25257B%252524=hEPFq
+        version: HTTP/1.1
+      output: {response_contains: '932171'}
+  test_title: 932171-24-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?%252528%252529%25250B%25257Bp=a4
+        version: HTTP/1.1
+      output: {response_contains: '932171'}
+  test_title: 932171-25-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?%252528%252529%252509%25257B_=v6XnOO7D4F
+        version: HTTP/1.1
+      output: {response_contains: '932171'}
+  test_title: 932171-26-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?%252528%25250B%252529%25250C%25257Br=0V8qt_xy
+        version: HTTP/1.1
+      output: {response_contains: '932171'}
+  test_title: 932171-27-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?%252528%252529%252520%25257BK=SXJb_M
+        version: HTTP/1.1
+      output: {response_contains: '932171'}
+  test_title: 932171-28-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?%252528%252529%25250D%25257BX=BUvvmdP
+        version: HTTP/1.1
+      output: {response_contains: '932171'}
+  test_title: 932171-29-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?%252528%252529%25250C%25257Bo=3HI
+        version: HTTP/1.1
+      output: {response_contains: '932171'}
+  test_title: 932171-30-auto

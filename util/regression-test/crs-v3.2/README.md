@@ -5,7 +5,7 @@
 Total test cases: 86  
 Coverage: 3 supported rules 
 
-|rule_id|type|white-box count|black-box count|  
+|rule_id|type|(white/gray)-box count|black-box count|  
 |-------|----|------|------|  
 |933200|METHOD-ENFORCEMENT|40|40|  
 |933210|SCANNER-DETECTION|6|6|  

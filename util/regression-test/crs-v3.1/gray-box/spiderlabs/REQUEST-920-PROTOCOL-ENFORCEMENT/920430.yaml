@@ -1,0 +1,70 @@
+meta: {author: csanders-git, description: Description, enabled: true, name: 920430.yaml}
+tests:
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost, User-Agent: ModSecurity CRS 3 Tests}
+        port: 80
+        version: HTTP/1.1
+      output: {no_response_contains: '920430'}
+  test_title: 920430-1
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost, User-Agent: ModSecurity CRS 3 Tests}
+        port: 80
+        version: HTTP/1.0
+      output: {no_response_contains: '920430'}
+  test_title: 920430-2
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost, User-Agent: ModSecurity CRS 3 Tests}
+        port: 80
+        version: HTTP/0.9
+      output:
+        status: [403, 400]
+  test_title: 920430-3
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost, User-Agent: ModSecurity CRS 3 Tests}
+        port: 80
+        version: HTTP/2
+      output: {no_response_contains: '920430'}
+  test_title: 920430-4
+- desc: HTTP protocol version is not allowed by policy (920430) from old modsec regressions
+  stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Accept: 'text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5',
+          Accept-Charset: 'ISO-8859-1,utf-8;q=0.7,*;q=0.7', Accept-Encoding: 'gzip,deflate',
+          Accept-Language: 'en-us,en;q=0.5', Host: localhost, Keep-Alive: '300', Proxy-Connection: keep-alive,
+          User-Agent: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv}
+        method: GET
+        port: 80
+        uri: /
+        version: HTTP/3.0
+      output: {status: 505}
+  test_title: 920430-5
+- desc: HTTP protocol version is not allowed by policy (920430) from old modsec regressions
+  stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Accept: 'text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5',
+          Accept-Charset: 'ISO-8859-1,utf-8;q=0.7,*;q=0.7', Accept-Encoding: 'gzip,deflate',
+          Accept-Language: 'en-us,en;q=0.5', Host: localhost, Keep-Alive: '300', Proxy-Connection: keep-alive,
+          User-Agent: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv}
+        method: GET
+        port: 80
+        uri: /
+        version: HTTP/0.8
+      output:
+        status: [403, 400]
+  test_title: 920430-6

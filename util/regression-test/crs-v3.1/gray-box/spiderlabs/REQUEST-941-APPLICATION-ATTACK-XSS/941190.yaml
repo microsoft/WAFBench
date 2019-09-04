@@ -1,0 +1,39 @@
+meta: {author: csanders-git, description: 'Tests to trigger, or not trigger 941190',
+  enabled: true, name: 941190.yaml}
+tests:
+- desc: Node-validator blacklist keywords, ARGS
+  stages:
+  - stage:
+      input:
+        data: 941190-1=<STYLE>@import'http://xss.rocks/xss.css';</STYLE>
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost, User-Agent: ModSecurity CRS 3 Tests}
+        method: GET
+        port: 80
+        uri: /foo
+      output: {response_contains: '941190'}
+  test_title: 941190-1
+- desc: Node-validator blacklist keywords, ARGS_NAMES
+  stages:
+  - stage:
+      input:
+        data: "x=<STYLE>@im\\port'\\ja\vasc\\ript:alert('XSS')';</STYLE>"
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost, User-Agent: ModSecurity CRS 3 Tests}
+        method: GET
+        port: 80
+        uri: /bar
+      output: {response_contains: '941190'}
+  test_title: 941190-2
+- desc: Node-validator blacklist keywords, COOKIES_NAMES
+  stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: '<STYLE>BODY{-moz-binding:url("http://xss.rocks/xssmoz.xml#xss")}</STYLE>',
+          Host: localhost, User-Agent: ModSecurity CRS 3 Tests}
+        method: GET
+        port: 80
+        uri: /baz
+      output: {response_contains: '941190'}
+  test_title: 941190-3
