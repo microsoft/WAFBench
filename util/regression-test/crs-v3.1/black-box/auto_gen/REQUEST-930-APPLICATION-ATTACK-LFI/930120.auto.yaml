@@ -139,3 +139,291 @@ tests:
         status:
         - 403
   test_title: 930120-9-auto
+- stages:
+  - stage:
+      input:
+        data: '{"gs":"ETC/seCUrItY%5CPasswD"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 930120-10-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>vaR%5ClOG/XFERLOG</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 930120-11-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>Var//Lp%5CLogs//rEQUeStS</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 930120-12-auto
+- stages:
+  - stage:
+      input:
+        data: '{"ETC//INIt%5C":"afOc0"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 930120-13-auto
+- stages:
+  - stage:
+      input:
+        data: '{"7xJk3":"eTC/saMBa/NeTlOgOn"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 930120-14-auto
+- stages:
+  - stage:
+      input:
+        data: '{"VAR%5CLOg/FtploG":"4CbbjVDhu"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 930120-15-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>usR%5CLOCAL/apACHE2//lOgs//acCeSs_LOg</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 930120-16-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>EtC/dEBian_veRsioN</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 930120-17-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>VAR%5CLP//LOgS/lPScHed</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 930120-18-auto
+- stages:
+  - stage:
+      input:
+        data: '{"fRsz":"USR/locAl/pGSql/Data%5CPASSWd"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 930120-19-auto
+- stages:
+  - stage:
+      input:
+        data: '{"xO":"uSR/lOcAl//aPaCHE/LOGS/eRrOR_lOG"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 930120-20-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>Usr%5ClOCaL/aPaChE2//lOgs/ERRoR_log</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 930120-21-auto
+- stages:
+  - stage:
+      input:
+        data: '{"Var/Log//xFerLOg":"ud4sS"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 930120-22-auto
+- stages:
+  - stage:
+      input:
+        data: '{"BcsobMeT09":"PROc/selF%5CcmdLiNE"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 930120-23-auto
+- stages:
+  - stage:
+      input:
+        data: '{"WINDoWs//SyStem32%5ClogFiLEs/smTPsVC":"H9B"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 930120-24-auto
+- stages:
+  - stage:
+      input:
+        data: '{"3PexRIHXK":"opT/LAMPp/lOgs//ERRoR_LoG"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 930120-25-auto
+- stages:
+  - stage:
+      input:
+        data: '{"uSr//SPoOl//MqUEUe/sYSLOg":"BygIHq8Qa"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 930120-26-auto
+- stages:
+  - stage:
+      input:
+        data: '{"eTc%5CpROfiLe":"xg"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 930120-27-auto

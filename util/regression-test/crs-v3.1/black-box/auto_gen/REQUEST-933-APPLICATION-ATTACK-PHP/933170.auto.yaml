@@ -754,3 +754,70 @@ tests:
         status:
         - 403
   test_title: 933170-50-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>PLQo:5117714:"QWU":7416906:{AS3tv%}]</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 933170-51-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>)I\"%g?\r {o:07:\"Y'@VPF=oIH\":6:{v}\t\
+          ]rwQ=6d}>!hBm</Foo_key>"
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 933170-52-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>)Wxdp|Qc:4475:\"!\ttd\":4442:{s//:5M9axt}cU!\
+          \ </Foo_key>"
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 933170-53-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>a;\"b8O!pc:774746754:\"x$8O+{\tv\"\
+          :4935:{n#aO\t/D%V}zAcHQ(Lzr</Foo_key>"
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 933170-54-auto

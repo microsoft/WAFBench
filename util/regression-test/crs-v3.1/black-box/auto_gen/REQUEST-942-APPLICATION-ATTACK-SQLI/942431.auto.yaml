@@ -304,3 +304,291 @@ tests:
         status:
         - 403
   test_title: 942431-20-auto
+- stages:
+  - stage:
+      input:
+        data: '{"mO1dMCkh":"%24%229%7E%25%0D%2BO-3%22zokE9%2BYgXs%2AGx%2Blp%99h%21ik%09ltG"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 942431-21-auto
+- stages:
+  - stage:
+      input:
+        data: '{".%3E%5Bz%25%3B4Z%3A%2BPPg%5C67%3B%7ClC%5C%0CUWZ%0CP%3DYT6h0X%E2DzBlsp6q":"sTmIhVF3DX"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 942431-22-auto
+- stages:
+  - stage:
+      input:
+        data: '{"%2CIE%7D8_%24a/%22P%7EQlr%25rLxrQQyZ%7CD%0Cyd2Fro_V%7BRk-NVK%3F9%3C":"tTaA7gfcpn"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 942431-23-auto
+- stages:
+  - stage:
+      input:
+        data: '{"c%20%5C%0COUE%23U9%2B%092wU%0BI4%0A%5Dv1bqWwd%0D2%3AMTJ%09V5Mq%2A%3D%406do%3Fnz.R38cf%60-B%09":"RuRt3"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 942431-24-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>gOZuNnp%27_j3Xf7FVjx%E2ZXVk8z%99Uypq%2CzSM%7CJD9Ix%0B1%3CBeopf%80g%0DsYh_Hy-</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 942431-25-auto
+- stages:
+  - stage:
+      input:
+        data: '{"h1RSn96z":"I9%0Bnx0j%5E%E2rg85a%26_RA%60oTosyP%98JFNQ9_%29Crvvdw%27aGqlR"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 942431-26-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>8%7Cfq6x%3A%3F%5C/ypv/%0ARy%B4%2Aduaii%0ASBHb%23ck%09UG%3FAJH0%60b8J_JAs0%23</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 942431-27-auto
+- stages:
+  - stage:
+      input:
+        data: '{"LuTEYmU":"%3Bh%285N%3C%5E%2B%5DY%27%98GhBb%20e%0AGH%60GdgoES%0B%3D%2C%80zv-%21"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 942431-28-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>N%26%2A_9%20cKQX%5BkL%24vVuMB%22EtwM%20uzU0P%27%0B9%0AOQe%3DPn%5B.y%2CoNg-</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 942431-29-auto
+- stages:
+  - stage:
+      input:
+        data: '{"whjGh4":"R0%7B%407Wn%7B%09%99xj%2C%0BhWDf%E2D%23%2Ch.51CKJ2%0C%B4BBJ%C21rP46keASO%B4Tps12l.9%09%5DWWr%2B5%27W%25"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 942431-30-auto
+- stages:
+  - stage:
+      input:
+        data: '{"Yi%3EOCHKox%7CGKl%5B0h31%0D0Dx/%5E71%09%40%80UH_G%3FeZq":"A4mu"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 942431-31-auto
+- stages:
+  - stage:
+      input:
+        data: '{"c%E2EptBLK5%7EOa2xLQoNS%27%40TAthI%2B1l%5DN0g%0B0z%5Cj7%09%21s%7Do0%27%5B%2Ax6":"ieKX1E"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 942431-32-auto
+- stages:
+  - stage:
+      input:
+        data: '{"s":"%2A3%297%3F%0CzdyV%7D%80A%0BYgR%2As%0B%0CO%20%21%3Ah%2CKvc%40_%7Br%23%0D"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 942431-33-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>%0D%25Z%0B6wfe%25k6wnH%403tWOW7a.%29XWV1%09e%26./%0B%2CfEk-%3FKxP7</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 942431-34-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>nn%5B8U%7EF3%26/cOYC%0B%3BkV%0Bh%5Cf%3DpiA%5CzoU%3Dx8t6L2y9%0C%2BFL7.Q%7CSY%3D%3B%3DO</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 942431-35-auto
+- stages:
+  - stage:
+      input:
+        data: '{"J%3At%0D%0D/I/u%226%20TDN3Xm%3EY0%80K6S%20fEo%3BnP%0D%2CqYa%40P%21O%3F%25M%7DRu":"w86NKySMkA"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 942431-36-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>p%23O%23ET%3BIlL%60W%7B%3E2%3F%0CiV%20C%09l%0B%28/eddVGN%B4CKM4_.%5C%5Et%2A7MLI</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 942431-37-auto
+- stages:
+  - stage:
+      input:
+        data: '{"BwMy1sCU":"M%3D%0D%98HduW81%0D%0AT%0C%3ELl%268wR%5EGY%2C4hz%3FKc%7C%5C1Z%7CTa%3E"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 942431-38-auto

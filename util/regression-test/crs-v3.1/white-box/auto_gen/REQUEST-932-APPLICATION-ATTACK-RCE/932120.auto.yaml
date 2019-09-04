@@ -564,3 +564,273 @@ tests:
       output:
         log_contains: id "932120"
   test_title: 932120-40-auto
+- stages:
+  - stage:
+      input:
+        data: '{"CO%5CMPaRE-%5CO%22bJECT":"5p"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "932120"
+  test_title: 932120-41-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>%5CJoiN-P%22aTh</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "932120"
+  test_title: 932120-42-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>GET-J%5COB</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "932120"
+  test_title: 932120-43-auto
+- stages:
+  - stage:
+      input:
+        data: '{"zu4b":"geT-PSBReAKPOINT"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "932120"
+  test_title: 932120-44-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>gET-iTEM</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "932120"
+  test_title: 932120-45-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>GET-p%27sPRoViDEr</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "932120"
+  test_title: 932120-46-auto
+- stages:
+  - stage:
+      input:
+        data: '{"inVoKE-HISto%27rY":"2xv_GBt"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "932120"
+  test_title: 932120-47-auto
+- stages:
+  - stage:
+      input:
+        data: '{"SE%27T-EXECUTIoNPOLicY":"kG"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "932120"
+  test_title: 932120-48-auto
+- stages:
+  - stage:
+      input:
+        data: '{"rLCAKK7PYA":"TeST-pATH"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "932120"
+  test_title: 932120-49-auto
+- stages:
+  - stage:
+      input:
+        data: '{"2qgdKhox":"NEW%5E-PSDR%27IVe"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "932120"
+  test_title: 932120-50-auto
+- stages:
+  - stage:
+      input:
+        data: '{"vu5XlHo":"%27ExpOrT-M%27ODULEMeMBEr"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "932120"
+  test_title: 932120-51-auto
+- stages:
+  - stage:
+      input:
+        data: '{"aDd%27-%22PsSNApIn":"mXV08"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "932120"
+  test_title: 932120-52-auto
+- stages:
+  - stage:
+      input:
+        data: '{"s":"TEST%5E-COMP%5EUTERseCUR%5CecHannEl"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "932120"
+  test_title: 932120-53-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>RegiSteR-PSseSs%27ionCONF%5EIgURATiON</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "932120"
+  test_title: 932120-54-auto
+- stages:
+  - stage:
+      input:
+        data: '{"%5CrEmO%5CVe-ITEm":"_1qDLYBYtD"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "932120"
+  test_title: 932120-55-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>%22tRACE-CoMMAN%22D</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "932120"
+  test_title: 932120-56-auto
+- stages:
+  - stage:
+      input:
+        data: '{"Z":"Se%22T-AUT%27HENTicODeSiGNA%5CTuRE"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "932120"
+  test_title: 932120-57-auto
+- stages:
+  - stage:
+      input:
+        data: '{"oUT-sTRING":"Ek"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "932120"
+  test_title: 932120-58-auto

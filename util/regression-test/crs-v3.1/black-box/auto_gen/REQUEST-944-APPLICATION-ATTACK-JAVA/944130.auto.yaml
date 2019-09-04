@@ -924,3 +924,387 @@ tests:
         status:
         - 403
   test_title: 944130-60-auto
+- stages:
+  - stage:
+      input:
+        data: '{"jAVa.LAnG.clASs":"ASSMrTwCY3"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944130-61-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>JAVA.io.OUtPUtSTREaM</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944130-62-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>jAVA.laNG.stRinG</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944130-63-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>javAx.ScRipt.sCRiPtENgiNEmAnAgER</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944130-64-auto
+- stages:
+  - stage:
+      input:
+        data: '{"jaVaX.ScrIPt.ScriPteNGiNEMANager":"LV"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944130-65-auto
+- stages:
+  - stage:
+      input:
+        data: '{"HV":"JAvA.LANg.cLasS"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944130-66-auto
+- stages:
+  - stage:
+      input:
+        data: '{"l":"JAvA.Io.PuSHBaCKiNpUtstREaM"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944130-67-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>jaVA.Io.STrIngReadER</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944130-68-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>javA.Io.FILTerReaDeR</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944130-69-auto
+- stages:
+  - stage:
+      input:
+        data: '{"sGJ0EOUFDI":"java.Io.ObJeCToUtPutsTrEAm"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944130-70-auto
+- stages:
+  - stage:
+      input:
+        data: '{"MMLjjNy9":"jAvax.sCriPt.scrIPTEnGiNEManaGER"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944130-71-auto
+- stages:
+  - stage:
+      input:
+        data: '{"javA.io.INpuTSTreaM":"kDI"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944130-72-auto
+- stages:
+  - stage:
+      input:
+        data: '{"jAVA.Lang.ReFLeCT":"Ctc2x606"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944130-73-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>jAVaX.scRipt.ScRiptENgINeMAnagER</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944130-74-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>JAVA.IO.oUtPUtSTreAM</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944130-75-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>JAVA.io.filTERoUtPUtsTREaM</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944130-76-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>JAvA.IO.FilTerINPUTsTReAM</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944130-77-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>JaVA.Io.LiNenuMBERREaDer</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944130-78-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>JAVa.Io.InPuTstreAMReaDeR</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944130-79-auto
+- stages:
+  - stage:
+      input:
+        data: '{"Java.Io.sTRInGREader":"qxMOukXNTU"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944130-80-auto
+- stages:
+  - stage:
+      input:
+        data: '{"6UfvM":"JaVa.Io.InPUTstreamrEadEr"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944130-81-auto
+- stages:
+  - stage:
+      input:
+        data: '{"Ydc6ycgdU":"JaVA.iO.FilTEROUtputsTREAM"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944130-82-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>jAVA.IO.FIltEROuTPuTStREam</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944130-83-auto
+- stages:
+  - stage:
+      input:
+        data: '{"JavA.IO.sTRInGReaDER":"6"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944130-84-auto

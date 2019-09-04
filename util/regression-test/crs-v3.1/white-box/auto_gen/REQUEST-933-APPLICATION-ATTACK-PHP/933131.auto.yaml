@@ -564,3 +564,273 @@ tests:
       output:
         log_contains: id "933131"
   test_title: 933131-40-auto
+- stages:
+  - stage:
+      input:
+        data: '{"%29%5DD%0D%21%206%7EPATH_TRANSLATEDSN1":"nft9dRjG3L"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933131"
+  test_title: 933131-41-auto
+- stages:
+  - stage:
+      input:
+        data: '{"JrgHi":"GYOPATH_INFOO%27%22"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933131"
+  test_title: 933131-42-auto
+- stages:
+  - stage:
+      input:
+        data: '{"%299DbK8PATH_TRANSLATED%3B%27eoX847J":"GR"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933131"
+  test_title: 933131-43-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>%3CL%24%3A%26e0%3DgQUERY_STRING%27sJ2%21wy//</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933131"
+  test_title: 933131-44-auto
+- stages:
+  - stage:
+      input:
+        data: '{"eeD":"%2AgJ%26%5EwzHTTP_CONNECTIONjs%5DI%28%3C%5DC"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933131"
+  test_title: 933131-45-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>bC7GYORIG_PATH_INFO%5Crp8%3D</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933131"
+  test_title: 933131-46-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>%7EAUTH_TYPEm</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933131"
+  test_title: 933131-47-auto
+- stages:
+  - stage:
+      input:
+        data: '{"znRGViINi":"%3BwKQut%2C9%7E%27QUERY_STRINGz%5E%7E1%60R09%28"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933131"
+  test_title: 933131-48-auto
+- stages:
+  - stage:
+      input:
+        data: '{"tKwdj%21u6%7DPATH_TRANSLATED7%28%5C":"GqibWcnv7T"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933131"
+  test_title: 933131-49-auto
+- stages:
+  - stage:
+      input:
+        data: '{"hZb0HFe":"VPATH_TRANSLATEDS5p4CnI%0C3z"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933131"
+  test_title: 933131-50-auto
+- stages:
+  - stage:
+      input:
+        data: '{"4kS%3BAUTH_TYPEFW%3C":"Kyo8"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933131"
+  test_title: 933131-51-auto
+- stages:
+  - stage:
+      input:
+        data: '{"%7CREQUEST_URIXl%7DQ2%40%5B":"uB"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933131"
+  test_title: 933131-52-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>%7CYp%7D%28%23ab%0DAUTH_TYPED8oQ</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933131"
+  test_title: 933131-53-auto
+- stages:
+  - stage:
+      input:
+        data: '{"wM":"j%20VSG%7C%7Dv%27OQUERY_STRINGt%23I%0DSw%24_%7D"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933131"
+  test_title: 933131-54-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>%3Btd%26QUERY_STRINGnA7PZ%2B%5B</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933131"
+  test_title: 933131-55-auto
+- stages:
+  - stage:
+      input:
+        data: '{"DpWAbVC":"L%5D%3A%27%2BoR%22QUERY_STRINGUb%27%2A%09p"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933131"
+  test_title: 933131-56-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>1%27HTTP_USER_AGENTwDz%5ER9j</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933131"
+  test_title: 933131-57-auto
+- stages:
+  - stage:
+      input:
+        data: '{"%7CIgZD%60T4AUTH_TYPEUEr":"2oOEwOf4"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933131"
+  test_title: 933131-58-auto

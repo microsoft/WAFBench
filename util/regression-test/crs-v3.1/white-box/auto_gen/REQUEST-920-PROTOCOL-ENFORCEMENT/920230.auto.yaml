@@ -144,3 +144,48 @@ tests:
       output:
         log_contains: id "920230"
   test_title: 920230-10-auto
+- stages:
+  - stage:
+      input:
+        data: '{"FgA8uK":"inIg9y4n%5d|({1~DQ8F?"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "920230"
+  test_title: 920230-11-auto
+- stages:
+  - stage:
+      input:
+        data: '{"g8f":"S-%B0f''.h!_O{"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "920230"
+  test_title: 920230-12-auto
+- stages:
+  - stage:
+      input:
+        data: '{"rALdin2nhr":"k^ y%0edC"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "920230"
+  test_title: 920230-13-auto

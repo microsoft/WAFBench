@@ -604,3 +604,291 @@ tests:
         status:
         - 403
   test_title: 921130-40-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>1u%26%23x8%3BhTtp%26%23x2f%3B1.1G4%5B%26%23x4f%3B</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 921130-41-auto
+- stages:
+  - stage:
+      input:
+        data: '{"WTS%26%23x69%3B%2BP%26lt%3BME%26%23x74%3B%26%23x61%3B%08%3A%60":"Jb05l1"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 921130-42-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>M%7Eq%7C%26%23x8%3BhtTp/%26%23x31%3B.0W%3D</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 921130-43-auto
+- stages:
+  - stage:
+      input:
+        data: '{"aXluzu6m":"%5D%7E%40%3B%21%2A%26lt%3Bh%26%23x54%3Bm%26%2376%3B%08%26%239%3B%287%3Dz%3D"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 921130-44-auto
+- stages:
+  - stage:
+      input:
+        data: '{"XH%26%23x42%3B%3B-%26%23x61%3B%40%26%23x45%3B%08Http/0.9%24W":"K"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 921130-45-auto
+- stages:
+  - stage:
+      input:
+        data: '{"K%5CD%08%26%23x68%3BtTp/0.995":"Mdr4m"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 921130-46-auto
+- stages:
+  - stage:
+      input:
+        data: '{"B%3DB%5B%26%2355%3Be%40I%26%23x36%3B%26%238%3BHTTP/0.9P81PQ%3B%22%26%2335%3BUH":"dikMwo3_f"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 921130-47-auto
+- stages:
+  - stage:
+      input:
+        data: '{"AT":"%26%2340%3Bj%09h%08%26%2372%3BTtP/%26%23x31%3B.1%26%2395%3BSR%26%2370%3Br-R4"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 921130-48-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>%5D%26%2374%3B%7EHXLWAR%3CHtMl%08%21x</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 921130-49-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>%26%23106%3B%26%2358%3Bc%3Fj%3A%40%7C%26lt%3BHtML%08MQKDYH%3C</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 921130-50-auto
+- stages:
+  - stage:
+      input:
+        data: '{"aZ":"Z%26%23x5c%3BR%26%2366%3B%3Cme%26%23116%3BA%08%26%23x60%3BFz"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 921130-51-auto
+- stages:
+  - stage:
+      input:
+        data: '{"4qrf":"Jp%08Htt%26%2380%3B%26%2347%3B0.9%5EI%294"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 921130-52-auto
+- stages:
+  - stage:
+      input:
+        data: '{"EZ%60nwE%08htTP/0.98%28%3C%21%5C%26%2389%3B":"SB9ZwlKpg"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 921130-53-auto
+- stages:
+  - stage:
+      input:
+        data: '{"a":"K%08hTtp/%26%23x31%3B.0%26%2333%3BLI"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 921130-54-auto
+- stages:
+  - stage:
+      input:
+        data: '{"5kKWaqYE":"G%2C%26%2364%3B2EP%5C%08HtT%26%2380%3B/0.9LS9INN2"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 921130-55-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>PQS%26%23x43%3B%08h%26%23116%3Btp/1.0%7C</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 921130-56-auto
+- stages:
+  - stage:
+      input:
+        data: '{"%26%23x74%3BS%3CmeTa%26%238%3BjN":"MnWG8WM"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 921130-57-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>1%08hTtp/0.9eX%5D%0Df%29C%5E1</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 921130-58-auto

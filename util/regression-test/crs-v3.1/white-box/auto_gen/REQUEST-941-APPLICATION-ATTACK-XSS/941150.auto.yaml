@@ -704,3 +704,273 @@ tests:
       output:
         log_contains: id "941150"
   test_title: 941150-50-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>%5Cx5%26%23x63%3B0000%5C67%5Cx34m%00%5C1340%5Cx300%5C%26%23x78%3B3%26%2348%3B%5C60%5C70%5Cx%26%2353%3Bc%5C%26%23120%3B300%26%23x30%3B0%26%2392%3Bx368%5C1%26%2354%3B2%5Cx5c00000%5C60%26%23101%3B%5Cx5c%26%23x30%3B%26%23x30%3B%5C60%26%2392%3B6066%00%08%5Cx0c%26%23x5c%3Bx0c%5Cx5c0%5Cx30%26%23x5c%3B60%26%23x5c%3Bx30%5C%26%23120%3B320%5C122%5C%26%23x30%3B0%26%23x3d%3B%5C00%5C1340%5Cx30%5C%26%23120%3B30%5C6049%5Cx%26%2353%3Bc0%5Cx30%5C60%5C6000%26%23x5c%3B%26%2354%3B6%26%23x5c%3Bx5c00%5C60%5Cx%26%23x33%3B0%26%23x33%3B7%26%23x5c%3B134%5C60%5C60%5C6003%5Cx65%26%23x5c%3Bx5c%5Cx3%26%2348%3B0%5C600002%5C1%26%2351%3B40%5C6%26%23x30%3B%26%2348%3B%5Cx30%5C%26%23x78%3B327%5Cx5c00%5C600%5Cx30%26%23x5c%3Bx30%5C47%5Cx73%26%2392%3Bx5c%5C600%26%23x30%3B%5C607c</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "941150"
+  test_title: 941150-51-auto
+- stages:
+  - stage:
+      input:
+        data: '{"%5C134%5Cx300%5C60%5Cx3%26%23x30%3B%5Cx336%26%2392%3B%26%2349%3B34%5C600007e%5C13%26%23x34%3B%5C600000%5C60%5C%26%23x78%3B5%26%23x63%3B%5Cx30%26%23x5c%3B%26%2354%3B000%5C%26%23x36%3B6%5Cx33%26amp%3B%26%23x5c%3B134%5C60%5Cx30%5C60%5C600%26%2356%3B%00%5Cx5c00%5Cx30068%5Cx5c%5Cx30%5Cx3%26%2348%3B%5Cx30%5Cx30%5C67%5C62%5C%26%23120%3B%26%23x35%3Bc0000%5C665%00f%5Cx5c0%5C6000%26%23x5c%3B608%5C1%26%23x33%3B40%5C60%5C6005%5Cx3%26%2348%3B%5C50%5C14%5Cx5%26%2399%3B0000%5C63%5Cx%26%2354%3B4%5Cx5c00006%5C67%5C13400%5Cx30%5Cx30%5Cx%26%23x33%3B%26%23x33%3Bd%5C13400%5Cx30078%5C00%5Cx5c%5C60%5C60%5Cx3%26%23x30%3B%5C%26%23x78%3B30%5C%26%2354%3B6%5Cx34%5Cx5c%5C600%5C%26%23x36%3B0%26%2348%3B%5Cx30%5Cx%26%23x33%3B0%3B%5C134%5Cx300%5C60000%5Cx6a%5Cx5c0%5Cx3000%5C651%22%5C%26%23x78%3B5c0%5Cx%26%23x33%3B00076p":"9SU"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "941150"
+  test_title: 941150-52-auto
+- stages:
+  - stage:
+      input:
+        data: '{"%5Cx5c0%5C%26%23120%3B3000%26%23x5c%3Bx32a%5C137%5Cx5c000008h%5Cx72%5C13%26%23x34%3B%5Cx30%5C60%5Cx300%5Cx3%26%23x36%3B5%5C146%26%23x5c%3B%26%23x78%3B5c%26%2348%3B%5C60%5Cx300%5C60%5C70%00%26%23x5c%3B14%0C%5C134%5C60%5C60000c%5C1340%5Cx30%5C6006%26%2392%3Bx62Y%5Cx5c%5C600%5C60%5C60%5Cx33%5Cx38%5Cx5c000%5C607c%00%26%2392%3Bx5c000%5Cx30%5C60c%26%2392%3B75%26%230%3B%5C134%5C60%5Cx30%5Cx30%5C60%5Cx30%5Cx63%5C146":"Jff63h"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "941150"
+  test_title: 941150-53-auto
+- stages:
+  - stage:
+      input:
+        data: '{"PScPRJsT":"%5C134%5Cx3000%5C%26%23120%3B30%5C67%5Cx30AU-%5C1340%5Cx30%5Cx%26%23x33%3B00%26%2348%3B%5C142%5Cx5c%5C%26%2354%3B0%5C%26%23120%3B30%5Cx30%5C606%5C60%00.%26%23x6f%3B%00%7C%5C1340%26%2392%3Bx30%5C600%26%23x5c%3B67%5C71%5Cx5c%5C60000%5Cx30%26%2392%3B70%5C163ty%5C134%5C6%26%23x30%3B0%5Cx30%5C60%5Cx300%5Cx6c%5Cx5c00%26%23x5c%3B%26%23120%3B30%5Cx30%5C66%5C%26%23x36%3B5%08%5Cx0%26%23x30%3B%0C%00%5C134%5Cx%26%23x33%3B0%5Cx300%5C%26%23x36%3B0%5Cx33%5C142%5Cx5c00%5Cx30%5Cx30%5C662%5C134%5Cx3000%5Cx30%5Cx330%5Cx5c00%5Cx30025f%5C134%5C60%26%23x30%3B0%5C60%5C60%5C142%5C%26%2349%3B34%5Cx30%5C6%26%2348%3B00%5Cx3%26%23x34%3B%26%2398%3B%5C47%5C%26%2349%3B3400%5Cx30%5Cx%26%23x33%3B00%26%2392%3Bx63%3Du%26%2392%3B17%26%23x35%3B%5C13%26%2352%3B%5C6%26%23x30%3B0%5C60%5C60%5C%26%23x36%3B6%5C71"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "941150"
+  test_title: 941150-54-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>%5C%26%23120%3B5c0%26%2348%3B%26%23x5c%3Bx30%5C60%5Cx32%5C603%5Cx%26%23x35%3Bc0%5Cx300042%26%23x5c%3B134%5C60%5C%26%23x78%3B30%5Cx30%26%2392%3Bx30%5C66%5C63%5C134%5Cx300%5C6004%26%2392%3Bx30%26%23x5c%3B134%5Cx30%5C6000%5Cx359%5Cx5c%26%2392%3B60%5C60%5Cx30000%5Cx5c0%5C60%5C6%26%2348%3B%5Cx305%26%2355%3B%5C0%26%23x30%3B%5Cx5b%08%5Cx5c%5Cx3000%5Cx30%5Cx3%26%2355%3B%5C63%5C13400000%5Cx30%5C134%26%23x5c%3B60000%5Cx374%5Cx5c%26%2348%3B%5C600%5Cx307%5Cx39%00%26%2392%3B%26%2349%3B340%5C600%5Cx306%5Cx6%26%2351%3B%5Cx65%08P%5C00%5C13%26%2352%3B%5C%26%2354%3B00%5C60%5C6%26%23x30%3B2%5C66%26lt%3B%5Cx5c%5Cx300%5C60%5C%26%23x36%3B0%5C6%26%2350%3B%5C60%5C13400002%5C60%7B%5C134000%5C6%26%2348%3B%5C65e%5C%26%23x37%3B5%26%2392%3Bx53%3D%26%23x5c%3B134%26%23x5c%3Bx30%26%23x30%3B%5C60%5Cx30%26%2350%3B%5C60</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "941150"
+  test_title: 941150-55-auto
+- stages:
+  - stage:
+      input:
+        data: '{"%5C134%5C60%5Cx3%26%2348%3B%5C%26%23x78%3B3%26%23x30%3B%5C60%5Cx30%5Cx30%5C%26%23120%3B5%26%2399%3B000079%5C1340%5C600%26%2392%3B%26%23120%3B30%5Cx%26%23x33%3B33f%5C1%26%2351%3B4%5Cx3000%26%23x5c%3B603f%5C150%5Cx2a5%5C%26%2348%3B0%5Cx%26%2354%3B5%5Cx%26%23x30%3B8hr%5C%26%23x78%3B5c%26%2348%3B%5Cx30006%5Cx%26%2351%3B5%5Cx66%5Cx08%5C1%26%23x33%3B%26amp%3B%26%2392%3B1340%5Cx300%5Cx30%26%23x5c%3B60%5Cx30%5C13%26%23x34%3B0%5C%26%23x78%3B3%26%2348%3B002%26%23x37%3B%3D%5Cx65%26%23x5c%3B1340%5Cx30%5Cx30%5C60%26%23x30%3B0%5Cx74%5Cx%26%2353%3Bc0%26%23x5c%3B60%5Cx300%5C653":"GfFpuHW9_L"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "941150"
+  test_title: 941150-56-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>%5Cx42h%5Cx%26%2348%3B0%5C134%5C60%5Cx30%26%2392%3Bx3005%5C635%5C67%5Cx5c0000%5C%26%2354%3B0%5C%26%23x78%3B38h%26%23x5c%3Bx5c%5C600%5Cx3007%26%2350%3B%00%26%2392%3B145%5C13%26%2352%3B%5C600%5Cx30%5C60%5C6%26%23x30%3B%5Cx%26%2351%3B0%5C134%5C%26%23x78%3B3%26%2348%3B%5C600066%26%23x8%3B%5Cx5%26%2399%3B00002%5C60%26%23x5e%3B%26amp%3B%5C75T%5C1%26%2351%3B4000000%5Cx5%26%2399%3B0%5C60%5Cx3004%5Cx37%5C143%26%2312%3B%00%5C110%3F-%5Cx5c00%5Cx30%5Cx30%5Cx30%5Cx30%26%2392%3Bx5c00%5C60%5C6%26%2348%3B6%26%2392%3Bx6%26%2352%3B</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "941150"
+  test_title: 941150-57-auto
+- stages:
+  - stage:
+      input:
+        data: '{"YFn":"%5C%26%23120%3B%26%23x35%3Bc%5Cx30%5C60%5C%26%2354%3B00%5Cx358%5C134%5C6000%26%23x5c%3Bx3056%5C1340%5C60%5C%26%23x36%3B0%5C6043%00%5C13400%5C60%26%2348%3B%5Cx32%5Cx61%5C%26%2349%3B34%5Cx300%5Cx30%26%2392%3B6008%5C1%26%2353%3B0%5C1340%5C6%26%23x30%3B%5Cx300%26%2355%3B2%00e%5Cx66%5C10%0C%0C%26%2392%3B134%5Cx3%26%2348%3B0%5Cx30020%5Cx5c%5Cx%26%23x33%3B000%5C60%5Cx3%26%23x33%3Bd%26%230%3B%5Cx5c00%5Cx3003%5Cx%26%23x33%3B2"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "941150"
+  test_title: 941150-58-auto
+- stages:
+  - stage:
+      input:
+        data: '{"%5Cx5c%5C60%5Cx30005%5Cx64%5Cx7b%5C%26%23x31%3B0%26%23x36%3B%00%5C1063%00%5C%26%23120%3B2b%00%5C170%5Cx00Q%5Cx%26%23x35%3Bc00%5C60%5Cx30%5C600O%5Cx5c%5C600%5C60%5C60%26%2348%3B8%5C134%5C60%5C60%5C60%5C60%5C%26%2354%3B6%5Cx38%5C00r%5Cx5c%26%2392%3B6000%5Cx30%26%23x5c%3B%26%23x78%3B3%26%2354%3B5%5C146%5Cx5c0%5C60000%26%2356%3B%5C%26%2348%3B%26%2348%3B%26%2392%3Bx5c0000%26%2392%3Bx30b%5C125%00%5C167%5C134%5Cx300000c%5Cx3d%5Cx%26%23x30%3Bc":"6JnsDe"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "941150"
+  test_title: 941150-59-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>%5Cx5c%5C60%5Cx30%5Cx30%26%23x5c%3Bx30%5C60%5Cx62%00%5Cx5%26%2399%3B0%5C60%5Cx30%5C60%5Cx331%5Cx%26%23x35%3Bc0%5Cx3%26%2348%3B00%5C66%5C71%5Cx5c00%5C%26%23x78%3B300%26%2392%3Bx362%26%23x4d%3B%5Cx5c0%5C6000%5C60%5C60%5Cx5c0%5C60%5C600%5Cx371%5C134%26%23x5c%3Bx300%5C60%5C605cc%5C134%26%2392%3B%26%2354%3B0%5C6%26%2348%3B%5C60%26%2348%3B%26%23x5c%3Bx308%5C163%5C1340%5C6%26%2348%3B%5C600%5C672c%5C10%26%23x5c%3B134%5C%26%2354%3B00%5C60000%5C74%5C1340%5Cx30%26%2392%3Bx30%5Cx30%5Cx30%5Cx%26%23x36%3B2%5C%26%23120%3B5%26%2399%3B%5C600%26%2348%3B0%5Cx33d%26%2392%3Bx5c00%5C60%5C%26%23x78%3B30%5Cx343%5Cx5c0%5C6%26%2348%3B%5Cx3%26%2348%3B%5Cx3%26%2348%3B%26%2392%3Bx321%00%5C1340%5Cx3%26%2348%3B00%5Cx%26%23x33%3B2%5Cx66%5Cx39%26%2392%3B00%5Cx5%26%2399%3B%5C6%26%2348%3B%5Cx30006%26%23x5c%3B144%26%23x5c%3B134%5C60%5Cx30%5C%26%23x36%3B00%5C60%5Cx%26%23x33%3B0%5C%26%23x31%3B34%5C600%5Cx30%5Cx30%5Cx37%5Cx38s%5C13400%5C600%26%2348%3B%5C60%5C%26%23120%3B42%5C134%5C600%26%23x5c%3B600%5C600%5Cx47%26%2390%3B</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "941150"
+  test_title: 941150-60-auto
+- stages:
+  - stage:
+      input:
+        data: '{"%5C1%26%2351%3B400%5C6%26%2348%3B000%5C110%5Cx5c%5C600%5Cx300%5C600%5C134%5C60%5C6%26%23x30%3B%5C%26%23120%3B3000%5Cx3%26%23x38%3Bh%5Cx5c000%5Cx300%5Cx%26%2351%3B0%5C16%26%2350%3B%5C1340%5C60%5C60%5C60%26%23x5c%3Bx%26%23x33%3B00e%5Cx5c%5C60000%26%2392%3Bx300%5C1%26%23x34%3B6%5Cx5c00%26%23x5c%3Bx300%26%23x5c%3B%26%2354%3B0%5C70%26%23x5c%3Bx0%26%2348%3B%5C%26%2349%3B%26%23x33%3B40%5Cx30%5C60%5C600c%5C126%0C%5C13%26%23x34%3B00%26%23x30%3B%26%23x5c%3Bx30%5Cx32%26%23x5c%3Bx30%5Cx7e%5C75%26%23x5c%3B134%26%2392%3Bx30%26%2348%3B%26%2348%3B%5Cx3061W%5C14%5Cx5c%26%2392%3Bx300%26%23x5c%3B60%5C60%5C672%5Cx5%26%23x63%3B%5C6000%5C6%26%2348%3B%5C62%5Cx33%00%0C%5Cx5c0%26%23x5c%3B60%26%23x5c%3B60000%5Cx5c%26%23x30%3B%26%2348%3B0%5C%26%2354%3B05%5C143%5Cx5c%5Cx300%5Cx300%5Cx30%5C143%26%23x5c%3B1340%5C6%26%23x30%3B%5Cx30%5Cx306f%26%23x21%3B":"Y"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "941150"
+  test_title: 941150-61-auto
+- stages:
+  - stage:
+      input:
+        data: '{"%5Cx00%5C14%2A%5C%26%23x78%3B5c%5C6000%5Cx3040%5Cx58%5C134%5C60%5Cx300068%5Cx761%5Cx5c00%26%2392%3Bx30%5Cx300%5Cx38%5Cx68%5Cx72%26%2392%3Bx5c%26%23x5c%3Bx30%5C%26%23x78%3B3%26%23x30%3B%5C60%5Cx3065%5Cx5c0%5C%26%2354%3B00%5Cx3%26%23x30%3B6%5C66%5C%26%23120%3B5c%26%23x30%3B0%5Cx3000%5C70%5C63%5C14%5C112%5C1%26%2351%3B4%5Cx30%5Cx30%5C6005%5C145%26%2361%3Bz%5Cx5c0%5C60%5Cx300%5Cx%26%2351%3B27%5C134%5C60%5C%26%23x36%3B000%5Cx%26%23x33%3B47%5Cx5c%26%23x30%3B%5C6000%5Cx3%26%23x35%3B%5C%26%23x78%3B35q":"AJTpL"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "941150"
+  test_title: 941150-62-auto
+- stages:
+  - stage:
+      input:
+        data: '{"wk1XP":"%5Cx5c%5Cx3000%5C%26%2354%3B02b%5C47%26%23x5c%3B13400%5Cx3%26%2348%3B%5Cx303%5Cx33%5C1340000%5C63%5Cx37%5C54%5Cx5c%5Cx30%5Cx300%5Cx3000%5C13%26%2352%3B%26%23x5c%3B6%26%2348%3B%5C600%5Cx%26%2351%3B0%5C62c%5Cx5c%5Cx30%5C%26%23x36%3B0%5C60008%5Cx5c%5C60%5C%26%2354%3B0%5C60%5Cx30%5Cx37%5C63%26%2392%3B16%26%2350%3B%5C134%5C600%26%2392%3B60063%5C10%5C%26%23x31%3B34%5Cx30%5C%26%23x78%3B30%26%23x30%3B%26%2392%3B6%26%2348%3B20%5Cx0c%5Cx5c%5Cx30000%5Cx30%26%23x63%3B%00%5Cx5c%5C60%5C60%5C60%5C606d%5C76%5Cx5c000%5Cx302%5C60%00%5C1%26%2351%3B4000%5Cx30%5Cx33%5C145%5C%26%2348%3B0%5C1340%5Cx300%5C600c%5C13400%5C6002%5Cx36%5C75%5C134%26%2392%3B60%26%23x30%3B0%5Cx3%26%2348%3B%5Cx365%5C76%5C1%26%23x33%3B4%5C%26%2354%3B0000%5Cx36%5Cx63%5C%26%23x78%3B5c%5Cx30%5C%26%2354%3B0%5Cx30%5C60%5C%26%23x78%3B32bk%5C134%5Cx3%26%23x30%3B0%5C60%26%2348%3B4%5C6%26%2350%3B%5Cx5c%5C6000%5C605%26%23x5c%3B60"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "941150"
+  test_title: 941150-63-auto
+- stages:
+  - stage:
+      input:
+        data: '{"MvC2vxW":"%5C123%2B%5C134%5Cx3%26%23x30%3B%5C%26%2354%3B0%5C%26%23x78%3B300%5C60%26%2348%3B%5Cx35%5C134000%5Cx30%5Cx33%5C%26%2354%3B2%5Cx2e%5Cx08%26%2392%3Bx5c0%5C60%26%23x30%3B06%5C70%5C134%5Cx3000%5C6072%5Cx65%5C1%26%23x33%3B40%5C%26%23x78%3B30%5Cx3%26%23x30%3B%5Cx%26%2351%3B0%5C60%5C60f%5Cx%26%2348%3B8%5Cx5c%5Cx3%26%23x30%3B%5C%26%2354%3B0%5C%26%2354%3B0%5C600c%26%2392%3Bx5c%5C60%5C600%5Cx30%26%23x5c%3Bx33d%5Cx5%26%2399%3B00%5Cx300%5C65%5C142%5C00%26%23x5c%3Bx5c%5C60%5C%26%23x36%3B0%5C%26%23x78%3B30%5Cx304%26%2392%3Bx66"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "941150"
+  test_title: 941150-64-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>%5Cx6bWs%5C%26%23120%3B00%5C1%26%23x33%3B%26%2352%3B%5Cx300%5Cx30%5Cx30%5Cx34e%5C1340%5Cx300%5C60%5C%26%23x36%3B25%5C134%5C6%26%2348%3B%26%23x30%3B%5Cx30%5C60%5Cx%26%2351%3B0%5C60%5Cx5c0%5C600%5Cx305%5Cx62k%26%23x61%3B%5C00%5Cx%26%2353%3B%26%23x63%3B%5C60%5C6%26%2348%3B00%5C%26%2354%3B53%5Cx5b%26%23x5c%3B00%5C134%5C600%26%23x5c%3Bx300%5C60%5Cx38%5C1%26%23x33%3B4000%5C606%26%2356%3B%5Cx5c%5Cx30000%5C672%5Cx5c%26%2392%3B60%5C60%5Cx%26%23x33%3B0065%5C146%08%5Cx5c00%5Cx30%5C60%5C62%5C60%5B%26%23x5c%3Bx5c%26%2348%3B%26%23x5c%3B60%26%2348%3B%5C60%5C60%5Cx63%5C134%5C%26%23x78%3B300003%5C144%5Cx40%5C51%5Cx5c%5Cx300%5C60%5C6%26%2348%3B0b%5Cx5c%26%23x5c%3B6%26%23x30%3B0%26%2348%3B0%5Cx3%26%23x30%3B0%5C%26%2349%3B35r%5C%26%2349%3B340000%5C666%00%5C134%5C60%5C600%5Cx30%5Cx344%00%5Cx%26%2353%3Bc0%26%2392%3B%26%23x36%3B0%26%23x5c%3Bx300%5C64%5C66%40</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "941150"
+  test_title: 941150-65-auto
+- stages:
+  - stage:
+      input:
+        data: '{"w6enF77":"%5Cx5c0%5Cx30000%5Cx30%5C1%26%23x33%3B4%5Cx30%5Cx30%26%23x30%3B%26%2392%3Bx30%5Cx32e%5C00k%5Cx%26%23x35%3Bc0%26%23x5c%3B%26%2354%3B00%5C60%5Cx35%5Cx%26%23x33%3B1%26lt%3B%5C134%5C6000%5Cx30%26%23x36%3B7%5Cx5c%5C%26%2354%3B00%5Cx300%5C608%26%2392%3Bx5c%5Cx30000%5C600%5Cx5c%5Cx30%5Cx30%5C60%5C%26%2354%3B06%5C70%5Cx72%5Cx65%5C13%26%2352%3B0%5C600%5C60%5C66%5Cx36%26%23x5c%3Bx5c%26%23x5c%3B60%5C60%5C%26%23120%3B300%5C60%5Cx30%5C134%5C600%26%23x30%3B%5Cx300%5Cx3%26%2356%3B%3D%5C143%26%23x5f%3B%26%23x5c%3Bx5c%5Cx300%5C60%5Cx%26%2351%3B0%5C65%5C60%2C%3B%5Cx00%5Cx5c%5C6%26%2348%3B%5Cx30%5Cx300%5Cx%26%23x33%3B51"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "941150"
+  test_title: 941150-66-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>%5Cx7bW%5Cx5c%5C600%5C60%5Cx30%5Cx34%5C71%5C74%5C134%5C%26%23x78%3B3%26%23x30%3B0%5Cx3000%5C70%5Cx68r%5C13%26%2352%3B%5C60%5C6%26%23x30%3B%5Cx300%5C60%5C6%26%2348%3B%5C134000%5C6%26%23x30%3B%5C66%5C6%26%23x35%3B%5C13%26%23x34%3B%5C%26%2354%3B0%26%23x5c%3B60006%5C66%5C134%5Cx30%5C%26%23x36%3B0%5C60%5C60%5C608%00%5C1340%5C6%26%2348%3B005dd%5Cx5c%26%2392%3Bx300%5Cx3000%26%2348%3B%5Cx5c00%5C6002e%26%2392%3B13%26%23x34%3B%5C6%26%23x30%3B%5C%26%23x36%3B00%5C6030%5Cx5c00%5Cx3%26%2348%3B0%5C60%5Cx30%5Cx7a%5C134%5C60%26%2392%3B6%26%23x30%3B00%5C63d%5Cx5c%26%23x5c%3Bx30%5C60%5Cx30%26%2348%3B%5C60%5C60%5C1340%5C6%26%2348%3B%5C60%5C6%26%2348%3B%5C6%26%2353%3Bc%5C%26%23120%3B5c0%5Cx30%5C60%5C60%5Cx300Q%5C136%5Cx5c%5C%26%23x36%3B000%26%2392%3B60%5C66%5C63%5C%26%23x78%3B5c%26%2392%3Bx%26%23x33%3B0%5Cx30004%5C141%26%2392%3B115%5Cx37%5C134%5C600%26%2348%3B%5C6%26%23x30%3B6b%5C114%26gt%3B</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "941150"
+  test_title: 941150-67-auto
+- stages:
+  - stage:
+      input:
+        data: '{"V8nCQ":"%5C%26%2349%3B4%08%5C134%5C%26%23x78%3B3000%5C%26%23x36%3B0%5C67%5Cx3%26%2351%3Bt%5Cx79l%26%23x65%3B%5Cx5c%5Cx30%26%2392%3Bx300%5Cx3008%00%3D%5C%26%2349%3B%26%2351%3B4%5Cx30%5C%26%23120%3B30%26%23x30%3B05d%5C1340%5C60%26%2392%3B60%26%23x30%3B%5Cx36f%00.%5C%26%23x78%3B5c%5C600%26%23x30%3B%5Cx%26%23x33%3B076%5Cx6%26%2353%3B%26%230%3B%5C%26%23x31%3B34000%5C604a%5C50"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "941150"
+  test_title: 941150-68-auto

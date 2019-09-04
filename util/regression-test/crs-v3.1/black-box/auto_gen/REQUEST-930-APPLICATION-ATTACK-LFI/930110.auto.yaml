@@ -160,3 +160,83 @@ tests:
         status:
         - 403
   test_title: 930110-10-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>../%7E%00Y%40%00%2AH%00%2B%00%5CY%00S</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 930110-11-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>.%00./v%23N%00u%00%22_</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 930110-12-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>..%27%00/S%00%5C%7EFF</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 930110-13-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>..%5E/%20%28%00zD%5CR%00R%3A%00IDL</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 930110-14-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>%7CLWPJCA1%00%24%5B/%27../%00%22vYY</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 930110-15-auto
