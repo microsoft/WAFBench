@@ -22,7 +22,7 @@ tests:
         method: GET
         port: 80
         uri: /index.pdf
-      output: {no_response_contains: '920200'}
+      output: {response_contains: '^((?!920200).)*$'}
   test_title: 920200-2
 - desc: This should FAIL with rule 920201 (PL2)
   stages:
@@ -71,7 +71,7 @@ tests:
         headers: {Host: localhost, Range: 'bytes=1-10,   11-20, 21-30,   31-40, 41-50',
           User-Agent: ModSecurity CRS 3 Tests}
         port: 80
-      output: {no_response_contains: '920200'}
+      output: {response_contains: '^((?!920200).)*$'}
   test_title: 920200-6
 - stages:
   - stage:
@@ -117,7 +117,7 @@ tests:
         method: GET
         port: 80
         uri: /index.html
-      output: {no_response_contains: '920200'}
+      output: {response_contains: '^((?!920200).)*$'}
   test_title: 920200-10
 - desc: This should FAIL with rule 920200 (PL2)
   stages:
@@ -141,5 +141,5 @@ tests:
         method: GET
         port: 80
         uri: /index.pdf
-      output: {no_response_contains: '920200'}
+      output: {response_contains: '^((?!920200).)*$'}
   test_title: 920200-12

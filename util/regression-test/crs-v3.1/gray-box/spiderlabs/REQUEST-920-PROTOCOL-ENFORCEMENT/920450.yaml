@@ -47,7 +47,7 @@ tests:
         port: 80
         uri: /
         version: HTTP/1.1
-      output: {no_response_contains: '920450'}
+      output: {response_contains: '^((?!920450).)*$'}
   test_title: 920450-5
 - desc: HTTP header is restricted by policy (920450) from old modsec regressions
   stages:
@@ -87,5 +87,5 @@ tests:
         dest_addr: 127.0.0.1
         headers: {Host: localhost, Range: test, User-Agent: ModSecurity CRS 3 Tests}
         port: 80
-      output: {no_response_contains: '920450'}
+      output: {response_contains: '^((?!920450).)*$'}
   test_title: 920450-8

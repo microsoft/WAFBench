@@ -54,7 +54,7 @@ tests:
         headers: {Host: localhost, User-Agent: ModSecurity CRS 3 Tests}
         port: 80
         uri: /?test%40=test1
-      output: {no_response_contains: '920270'}
+      output: {response_contains: '^((?!920270).)*$'}
   test_title: 920270-6
 - stages:
   - stage:
@@ -63,7 +63,7 @@ tests:
         headers: {Host: localhost, User-Agent: ModSecurity CRS 3 Tests}
         port: 80
         uri: /?test%FD=test1
-      output: {no_response_contains: '920270'}
+      output: {response_contains: '^((?!920270).)*$'}
   test_title: 920270-7
 - stages:
   - stage:
@@ -72,7 +72,7 @@ tests:
         headers: {Host: localhost, User-Agent: ModSecurity CRS 3 Tests}
         port: 80
         uri: /?test%FD=test1
-      output: {no_response_contains: '920270'}
+      output: {response_contains: '^((?!920270).)*$'}
   test_title: 920270-8
 - stages:
   - stage:

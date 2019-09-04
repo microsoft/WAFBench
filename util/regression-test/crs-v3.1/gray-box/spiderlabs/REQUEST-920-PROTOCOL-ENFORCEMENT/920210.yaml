@@ -8,7 +8,7 @@ tests:
         headers: {Connection: keep-alive, Host: localhost, User-Agent: ModSecurity
             CRS 3 Tests}
         port: 80
-      output: {no_response_contains: '920210'}
+      output: {response_contains: '^((?!920210).)*$'}
   test_title: 920210-1
 - stages:
   - stage:
@@ -44,7 +44,7 @@ tests:
         headers: {Connection: User-Agent, Host: localhost, User-Agent: ModSecurity
             CRS 3 Tests}
         port: 80
-      output: {no_response_contains: '920210'}
+      output: {response_contains: '^((?!920210).)*$'}
   test_title: 920210-5
 - desc: Multiple/Conflicting Connection Header Data Found (920210)  from old modsec
     regressions

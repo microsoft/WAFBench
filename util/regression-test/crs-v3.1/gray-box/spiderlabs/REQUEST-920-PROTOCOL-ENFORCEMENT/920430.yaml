@@ -7,7 +7,7 @@ tests:
         headers: {Host: localhost, User-Agent: ModSecurity CRS 3 Tests}
         port: 80
         version: HTTP/1.1
-      output: {no_response_contains: '920430'}
+      output: {response_contains: '^((?!920430).)*$'}
   test_title: 920430-1
 - stages:
   - stage:
@@ -16,7 +16,7 @@ tests:
         headers: {Host: localhost, User-Agent: ModSecurity CRS 3 Tests}
         port: 80
         version: HTTP/1.0
-      output: {no_response_contains: '920430'}
+      output: {response_contains: '^((?!920430).)*$'}
   test_title: 920430-2
 - stages:
   - stage:
@@ -35,7 +35,7 @@ tests:
         headers: {Host: localhost, User-Agent: ModSecurity CRS 3 Tests}
         port: 80
         version: HTTP/2
-      output: {no_response_contains: '920430'}
+      output: {response_contains: '^((?!920430).)*$'}
   test_title: 920430-4
 - desc: HTTP protocol version is not allowed by policy (920430) from old modsec regressions
   stages:

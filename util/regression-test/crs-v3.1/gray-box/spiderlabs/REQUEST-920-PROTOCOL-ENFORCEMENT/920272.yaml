@@ -34,7 +34,7 @@ tests:
         headers: {Host: localhost, User-Agent: ModSecurity CRS 3 Tests}
         port: 80
         uri: /?test=test1%35
-      output: {no_response_contains: '920272'}
+      output: {response_contains: '^((?!920272).)*$'}
   test_title: 920272-4
 - stages:
   - stage:

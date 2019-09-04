@@ -9,7 +9,7 @@ tests:
           Host: localhost, User-Agent: ModSecurity CRS 3 Tests}
         method: POST
         port: 80
-      output: {no_response_contains: '920480'}
+      output: {response_contains: '^((?!920480).)*$'}
   test_title: 920480-1
 - stages:
   - stage:
@@ -31,7 +31,7 @@ tests:
           User-Agent: ModSecurity CRS 3 Tests}
         method: POST
         port: 80
-      output: {no_response_contains: '920480'}
+      output: {response_contains: '^((?!920480).)*$'}
   test_title: 920480-3
 - stages:
   - stage:
@@ -42,7 +42,7 @@ tests:
           Host: localhost, User-Agent: ModSecurity CRS 3 Tests}
         method: POST
         port: 80
-      output: {no_response_contains: '920480'}
+      output: {response_contains: '^((?!920480).)*$'}
   test_title: 920480-4
 - stages:
   - stage:
@@ -53,7 +53,7 @@ tests:
           Host: localhost, User-Agent: ModSecurity CRS 3 Tests}
         method: POST
         port: 80
-      output: {no_response_contains: '920480'}
+      output: {response_contains: '^((?!920480).)*$'}
   test_title: 920480-5
 - stages:
   - stage:
@@ -64,7 +64,7 @@ tests:
           Host: localhost, User-Agent: ModSecurity CRS 3 Tests}
         method: POST
         port: 80
-      output: {no_response_contains: '920480'}
+      output: {response_contains: '^((?!920480).)*$'}
   test_title: 920480-6
 - stages:
   - stage:

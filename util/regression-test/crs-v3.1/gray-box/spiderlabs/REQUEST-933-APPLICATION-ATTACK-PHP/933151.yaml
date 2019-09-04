@@ -34,7 +34,7 @@ tests:
         method: POST
         port: 80
         uri: /?foo=filemtime%28%24foo%29
-      output: {no_response_contains: '933151'}
+      output: {response_contains: '^((?!933151).)*$'}
   test_title: 933151-3
 - desc: pmf + chain; must run test in PL2!
   stages:
@@ -57,5 +57,5 @@ tests:
         method: POST
         port: 80
         uri: /?foo=array_diff
-      output: {no_response_contains: '933151'}
+      output: {response_contains: '^((?!933151).)*$'}
   test_title: 933151-5

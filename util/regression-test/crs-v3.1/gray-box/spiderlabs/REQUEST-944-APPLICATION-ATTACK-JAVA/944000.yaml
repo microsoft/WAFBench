@@ -13,5 +13,5 @@ tests:
         method: POST
         port: 80
         version: HTTP/1.0
-      output: {no_response_contains: '944000'}
+      output: {response_contains: '^((?!944000).)*$'}
   test_title: 944000-1

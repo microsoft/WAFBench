@@ -14,5 +14,5 @@ tests:
         dest_addr: 127.0.0.1
         headers: {Host: localhost, User-Agent: ModSecurity CRS 3 Tests Enterprise}
         port: 80
-      output: {no_response_contains: '920320'}
+      output: {response_contains: '^((?!920320).)*$'}
   test_title: 920320-2

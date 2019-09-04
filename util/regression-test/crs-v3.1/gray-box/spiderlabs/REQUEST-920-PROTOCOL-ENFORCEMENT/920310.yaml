@@ -15,7 +15,7 @@ tests:
         headers: {Accept: '', Host: localhost, User-Agent: ModSecurity CRS 3 Tests}
         method: OPTIONS
         port: 80
-      output: {no_response_contains: '920310'}
+      output: {response_contains: '^((?!920310).)*$'}
   test_title: 920310-2
 - stages:
   - stage:
@@ -24,7 +24,7 @@ tests:
         headers: {Accept: '', Host: localhost, User-Agent: ModSecurity CRS 3 Tests
             Enterprise}
         port: 80
-      output: {no_response_contains: '920310'}
+      output: {response_contains: '^((?!920310).)*$'}
   test_title: 920310-3
 - stages:
   - stage:
@@ -41,7 +41,7 @@ tests:
         headers: {Accept: '', Host: localhost, User-Agent: Business/6.6.1.2 CFNetwork/758.5.3
             Darwin/15.6.0}
         port: 80
-      output: {no_response_contains: '920310'}
+      output: {response_contains: '^((?!920310).)*$'}
   test_title: 920310-5
 - stages:
   - stage:
@@ -50,5 +50,5 @@ tests:
         headers: {Accept: '', Host: localhost, User-Agent: Entreprise/6.5.0.177 CFNetwork/758.4.3
             Darwin/15.5.0}
         port: 80
-      output: {no_response_contains: '920310'}
+      output: {response_contains: '^((?!920310).)*$'}
   test_title: 920310-6

@@ -8,7 +8,7 @@ tests:
         headers: {Host: localhost, User-Agent: ModSecurity CRS 3 Tests}
         port: 80
         uri: /
-      output: {no_response_contains: '933110'}
+      output: {response_contains: '^((?!933110).)*$'}
   test_title: 933110-1
 - desc: PHP script uploads
   stages:
@@ -28,7 +28,7 @@ tests:
         headers: {Host: localhost, User-Agent: ModSecurity CRS 3 Tests}
         port: 80
         uri: /
-      output: {no_response_contains: '933110'}
+      output: {response_contains: '^((?!933110).)*$'}
   test_title: 933110-3
 - desc: PHP script uploads
   stages:
@@ -88,7 +88,7 @@ tests:
         headers: {Host: localhost, User-Agent: ModSecurity CRS 3 Tests, X_Filename: fthi/sfewfda.phtml987...}
         port: 80
         uri: /
-      output: {no_response_contains: '933110'}
+      output: {response_contains: '^((?!933110).)*$'}
   test_title: 933110-9
 - desc: PHP script uploads
   stages:

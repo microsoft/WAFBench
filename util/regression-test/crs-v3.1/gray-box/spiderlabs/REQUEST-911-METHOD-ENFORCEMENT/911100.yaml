@@ -6,7 +6,7 @@ tests:
         dest_addr: 127.0.0.1
         headers: {Host: localhost, User-Agent: ModSecurity CRS 3 Tests}
         port: 80
-      output: {no_response_contains: '911100'}
+      output: {response_contains: '^((?!911100).)*$'}
   test_title: 911100-1
 - stages:
   - stage:
@@ -15,7 +15,7 @@ tests:
         headers: {Host: localhost, User-Agent: ModSecurity CRS 3 Tests}
         method: OPTIONS
         port: 80
-      output: {no_response_contains: '911100'}
+      output: {response_contains: '^((?!911100).)*$'}
   test_title: 911100-2
 - stages:
   - stage:
@@ -24,7 +24,7 @@ tests:
         headers: {Host: localhost, User-Agent: ModSecurity CRS 3 Tests}
         method: HEAD
         port: 80
-      output: {no_response_contains: '911100'}
+      output: {response_contains: '^((?!911100).)*$'}
   test_title: 911100-3
 - stages:
   - stage:
@@ -35,7 +35,7 @@ tests:
           User-Agent: ModSecurity CRS 3 Tests}
         method: POST
         port: 80
-      output: {no_response_contains: '911100'}
+      output: {response_contains: '^((?!911100).)*$'}
   test_title: 911100-4
 - stages:
   - stage:

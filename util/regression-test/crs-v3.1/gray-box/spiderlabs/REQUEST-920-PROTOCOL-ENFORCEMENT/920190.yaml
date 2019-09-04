@@ -9,7 +9,7 @@ tests:
         port: 80
         protocol: http
         uri: /
-      output: {no_response_contains: '920190'}
+      output: {response_contains: '^((?!920190).)*$'}
   test_title: 920190-1
 - desc: 'Range: Invalid Last Byte Value (920190) from old modsec regressions'
   stages:

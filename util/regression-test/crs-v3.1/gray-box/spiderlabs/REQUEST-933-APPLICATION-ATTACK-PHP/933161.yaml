@@ -58,5 +58,5 @@ tests:
         method: POST
         port: 80
         uri: /?foo=xucfirst%28%29
-      output: {no_response_contains: '933161'}
+      output: {response_contains: '^((?!933161).)*$'}
   test_title: 933161-5

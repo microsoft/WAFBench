@@ -53,7 +53,7 @@ tests:
         uri: /
         version: HTTP/1.0
       output:
-        no_response_contains: '920160'
+        response_contains: ^((?!920160).)*$
         status: [200, 405]
   test_title: 920160-4
 - desc: Content-Length HTTP header is not numeric (920160)  from old modsec regressions

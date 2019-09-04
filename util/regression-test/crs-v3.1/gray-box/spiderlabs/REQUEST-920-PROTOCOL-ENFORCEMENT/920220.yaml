@@ -17,7 +17,7 @@ tests:
         headers: {Host: localhost, User-Agent: ModSecurity CRS 3 Tests}
         port: 80
         uri: /?x=xyz%20%99
-      output: {no_response_contains: '920220'}
+      output: {response_contains: '^((?!920220).)*$'}
   test_title: 920220-2
 - stages:
   - stage:
@@ -26,7 +26,7 @@ tests:
         headers: {Host: localhost, User-Agent: ModSecurity CRS 3 Tests}
         port: 80
         uri: /?test=This+is+a+test
-      output: {no_response_contains: '920220'}
+      output: {response_contains: '^((?!920220).)*$'}
   test_title: 920220-3
 - stages:
   - stage:

@@ -23,7 +23,7 @@ tests:
         method: POST
         port: 80
         stop_magic: true
-      output: {no_response_contains: '920240'}
+      output: {response_contains: '^((?!920240).)*$'}
   test_title: 920240-2
 - stages:
   - stage:
@@ -34,7 +34,7 @@ tests:
           User-Agent: ModSecurity CRS 3 Tests}
         method: POST
         port: 80
-      output: {no_response_contains: '920240'}
+      output: {response_contains: '^((?!920240).)*$'}
   test_title: 920240-3
 - stages:
   - stage:

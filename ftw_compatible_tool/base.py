@@ -235,7 +235,7 @@ class Base(object):
                 return str(item) == http_code
 
         def regex_match(item, value):
-            return bool(value) and bool(re.search(unicode(item), value))
+            return bool(value) and bool(re.search(unicode(item), value, re.MULTILINE))
 
         def regex_not_match(item, value):
             return not bool(regex_match(item, value))
@@ -245,7 +245,6 @@ class Base(object):
             "log_contains": ("raw_log", regex_match),
             "no_log_contains": ("raw_log", regex_not_match),
             "response_contains": ("raw_response", regex_match),
-            "no_response_contains": ("raw_response", regex_not_match),
             "html_contains": ("raw_response", regex_match),
             "expect_error":
             ("raw_response",

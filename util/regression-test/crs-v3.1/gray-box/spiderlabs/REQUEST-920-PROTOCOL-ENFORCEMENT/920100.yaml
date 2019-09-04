@@ -11,7 +11,7 @@ tests:
         protocol: http
         uri: /
         version: HTTP/1.1
-      output: {no_response_contains: '920100'}
+      output: {response_contains: '^((?!920100).)*$'}
   test_title: 920100-1
 - stages:
   - stage:
@@ -115,7 +115,7 @@ tests:
         protocol: http
         uri: '*'
         version: HTTP/1.1
-      output: {no_response_contains: '920100'}
+      output: {response_contains: '^((?!920100).)*$'}
   test_title: 920100-9
 - stages:
   - stage:
@@ -164,7 +164,7 @@ tests:
         protocol: http
         uri: /index.html?I=Like&Apples=Today#tag
         version: HTTP/1.1
-      output: {no_response_contains: '920100'}
+      output: {response_contains: '^((?!920100).)*$'}
   test_title: 920100-13
 - stages:
   - stage:
@@ -189,5 +189,5 @@ tests:
         protocol: http
         uri: /
         version: HTTP/1.1
-      output: {no_response_contains: '920100'}
+      output: {response_contains: '^((?!920100).)*$'}
   test_title: 920100-15

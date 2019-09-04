@@ -11,7 +11,7 @@ tests:
         method: POST
         port: 80
         uri: /
-      output: {no_response_contains: '920170'}
+      output: {response_contains: '^((?!920170).)*$'}
   test_title: 920170-1
 - stages:
   - stage:
@@ -50,7 +50,7 @@ tests:
         protocol: http
         stop_magic: true
         uri: /
-      output: {no_response_contains: '920170'}
+      output: {response_contains: '^((?!920170).)*$'}
   test_title: 920170-4
 - stages:
   - stage:
@@ -63,7 +63,7 @@ tests:
         port: 80
         protocol: http
         uri: /
-      output: {no_response_contains: '920170'}
+      output: {response_contains: '^((?!920170).)*$'}
   test_title: 920170-5
 - desc: GET or HEAD Request with Body Content (920170)  from old modsec regressions
   stages:

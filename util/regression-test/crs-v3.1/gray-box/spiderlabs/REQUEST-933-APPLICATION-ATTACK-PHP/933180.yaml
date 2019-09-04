@@ -8,7 +8,7 @@ tests:
         headers: {Host: localhost, User-Agent: ModSecurity CRS 3 Tests}
         port: 80
         uri: /?x=
-      output: {no_response_contains: '933180'}
+      output: {response_contains: '^((?!933180).)*$'}
   test_title: 933180-1
 - desc: $d['o'](9)
   stages:
@@ -18,7 +18,7 @@ tests:
         headers: {Host: localhost, User-Agent: ModSecurity CRS 3 Tests}
         port: 80
         uri: /?x=
-      output: {no_response_contains: '933180'}
+      output: {response_contains: '^((?!933180).)*$'}
   test_title: 933180-2
 - desc: ${@a}(10)
   stages:
@@ -28,7 +28,7 @@ tests:
         headers: {Host: localhost, User-Agent: ModSecurity CRS 3 Tests}
         port: 80
         uri: /?x=
-      output: {no_response_contains: '933180'}
+      output: {response_contains: '^((?!933180).)*$'}
   test_title: 933180-3
 - desc: ${'a'}(11)
   stages:
@@ -38,7 +38,7 @@ tests:
         headers: {Host: localhost, User-Agent: ModSecurity CRS 3 Tests}
         port: 80
         uri: /?x=
-      output: {no_response_contains: '933180'}
+      output: {response_contains: '^((?!933180).)*$'}
   test_title: 933180-4
 - desc: ${@$b}(12)
   stages:
@@ -48,7 +48,7 @@ tests:
         headers: {Host: localhost, User-Agent: ModSecurity CRS 3 Tests}
         port: 80
         uri: /?x=
-      output: {no_response_contains: '933180'}
+      output: {response_contains: '^((?!933180).)*$'}
   test_title: 933180-5
 - desc: ${$s20}['q53b3a6'](13)
   stages:
@@ -58,7 +58,7 @@ tests:
         headers: {Host: localhost, User-Agent: ModSecurity CRS 3 Tests}
         port: 80
         uri: /?x=
-      output: {no_response_contains: '933180'}
+      output: {response_contains: '^((?!933180).)*$'}
   test_title: 933180-6
 - desc: $GLOBALS['cf908275'](14)
   stages:
@@ -68,7 +68,7 @@ tests:
         headers: {Host: localhost, User-Agent: ModSecurity CRS 3 Tests}
         port: 80
         uri: /?x=
-      output: {no_response_contains: '933180'}
+      output: {response_contains: '^((?!933180).)*$'}
   test_title: 933180-7
 - desc: $OOO000000{0}(15)
   stages:
@@ -78,7 +78,7 @@ tests:
         headers: {Host: localhost, User-Agent: ModSecurity CRS 3 Tests}
         port: 80
         uri: /?x=
-      output: {no_response_contains: '933180'}
+      output: {response_contains: '^((?!933180).)*$'}
   test_title: 933180-8
 - desc: $OOO0000O0 (16)
   stages:
@@ -88,7 +88,7 @@ tests:
         headers: {Host: localhost, User-Agent: ModSecurity CRS 3 Tests}
         port: 80
         uri: /?x=
-      output: {no_response_contains: '933180'}
+      output: {response_contains: '^((?!933180).)*$'}
   test_title: 933180-9
 - desc: $_aB_4c[5]['d'] /*lol*/ (17)
   stages:
@@ -98,7 +98,7 @@ tests:
         headers: {Host: localhost, User-Agent: ModSecurity CRS 3 Tests}
         port: 80
         uri: /?x=
-      output: {no_response_contains: '933180'}
+      output: {response_contains: '^((?!933180).)*$'}
   test_title: 933180-10
 - desc: $_aB_4c[@5]/*wat*/[@d] (18)
   stages:
@@ -108,7 +108,7 @@ tests:
         headers: {Host: localhost, User-Agent: ModSecurity CRS 3 Tests}
         port: 80
         uri: /?x=
-      output: {no_response_contains: '933180'}
+      output: {response_contains: '^((?!933180).)*$'}
   test_title: 933180-11
 - desc: $a(1)
   stages:
@@ -118,7 +118,7 @@ tests:
         headers: {Host: localhost, User-Agent: ModSecurity CRS 3 Tests}
         port: 80
         uri: /?x=
-      output: {no_response_contains: '933180'}
+      output: {response_contains: '^((?!933180).)*$'}
   test_title: 933180-12
 - desc: $_aB_4c/*foo*/[@5]/*bar*/[@d]/*baz*/(19)
   stages:
@@ -128,7 +128,7 @@ tests:
         headers: {Host: localhost, User-Agent: ModSecurity CRS 3 Tests}
         port: 80
         uri: /?x=
-      output: {no_response_contains: '933180'}
+      output: {response_contains: '^((?!933180).)*$'}
   test_title: 933180-13
 - desc: $___[@-_](20)
   stages:
@@ -138,7 +138,7 @@ tests:
         headers: {Host: localhost, User-Agent: ModSecurity CRS 3 Tests}
         port: 80
         uri: /?x=
-      output: {no_response_contains: '933180'}
+      output: {response_contains: '^((?!933180).)*$'}
   test_title: 933180-14
 - desc: '@$___[@!+_](21)'
   stages:
@@ -148,7 +148,7 @@ tests:
         headers: {Host: localhost, User-Agent: ModSecurity CRS 3 Tests}
         port: 80
         uri: /?x=
-      output: {no_response_contains: '933180'}
+      output: {response_contains: '^((?!933180).)*$'}
   test_title: 933180-15
 - desc: $b374k=@$s_func(22)
   stages:
@@ -158,7 +158,7 @@ tests:
         headers: {Host: localhost, User-Agent: ModSecurity CRS 3 Tests}
         port: 80
         uri: /?x=
-      output: {no_response_contains: '933180'}
+      output: {response_contains: '^((?!933180).)*$'}
   test_title: 933180-16
 - desc: $function\r\n (23)
   stages:
@@ -168,7 +168,7 @@ tests:
         headers: {Host: localhost, User-Agent: ModSecurity CRS 3 Tests}
         port: 80
         uri: /?x=
-      output: {no_response_contains: '933180'}
+      output: {response_contains: '^((?!933180).)*$'}
   test_title: 933180-17
 - desc: $__[_](24)
   stages:
@@ -178,7 +178,7 @@ tests:
         headers: {Host: localhost, User-Agent: ModSecurity CRS 3 Tests}
         port: 80
         uri: /?x=
-      output: {no_response_contains: '933180'}
+      output: {response_contains: '^((?!933180).)*$'}
   test_title: 933180-18
 - desc: $____[_]{_}[@_](25)
   stages:
@@ -188,7 +188,7 @@ tests:
         headers: {Host: localhost, User-Agent: ModSecurity CRS 3 Tests}
         port: 80
         uri: /?x=
-      output: {no_response_contains: '933180'}
+      output: {response_contains: '^((?!933180).)*$'}
   test_title: 933180-19
 - desc: $____[_]{_}[@_](25)
   stages:
@@ -228,7 +228,7 @@ tests:
         headers: {Host: localhost, User-Agent: ModSecurity CRS 3 Tests}
         port: 80
         uri: /?x=
-      output: {no_response_contains: '933180'}
+      output: {response_contains: '^((?!933180).)*$'}
   test_title: 933180-23
 - desc: $$$z(29)
   stages:
@@ -328,7 +328,7 @@ tests:
         headers: {Host: localhost, User-Agent: ModSecurity CRS 3 Tests}
         port: 80
         uri: /?x=
-      output: {no_response_contains: '933180'}
+      output: {response_contains: '^((?!933180).)*$'}
   test_title: 933180-33
 - desc: '@$__[o](4)'
   stages:
@@ -338,7 +338,7 @@ tests:
         headers: {Host: localhost, User-Agent: ModSecurity CRS 3 Tests}
         port: 80
         uri: /?x=
-      output: {no_response_contains: '933180'}
+      output: {response_contains: '^((?!933180).)*$'}
   test_title: 933180-34
 - desc: $__['o'](5)
   stages:
@@ -348,7 +348,7 @@ tests:
         headers: {Host: localhost, User-Agent: ModSecurity CRS 3 Tests}
         port: 80
         uri: /?x=
-      output: {no_response_contains: '933180'}
+      output: {response_contains: '^((?!933180).)*$'}
   test_title: 933180-35
 - desc: $__[@o](6)
   stages:
@@ -358,7 +358,7 @@ tests:
         headers: {Host: localhost, User-Agent: ModSecurity CRS 3 Tests}
         port: 80
         uri: /?x=
-      output: {no_response_contains: '933180'}
+      output: {response_contains: '^((?!933180).)*$'}
   test_title: 933180-36
 - desc: $__[$_[1]](7)
   stages:
@@ -368,7 +368,7 @@ tests:
         headers: {Host: localhost, User-Agent: ModSecurity CRS 3 Tests}
         port: 80
         uri: /?x=
-      output: {no_response_contains: '933180'}
+      output: {response_contains: '^((?!933180).)*$'}
   test_title: 933180-37
 - desc: $__[@$c](8)
   stages:
@@ -378,5 +378,5 @@ tests:
         headers: {Host: localhost, User-Agent: ModSecurity CRS 3 Tests}
         port: 80
         uri: /?x=
-      output: {no_response_contains: '933180'}
+      output: {response_contains: '^((?!933180).)*$'}
   test_title: 933180-38
