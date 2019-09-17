@@ -704,3 +704,303 @@ tests:
       output:
         log_contains: id "944250"
   test_title: 944250-50-auto
+- stages:
+  - stage:
+      input:
+        data: '{"SBBf018y5": "dRPJKfjaVA\b:BKx[5KU_proCessBUilderLSS"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "944250"
+  test_title: 944250-51-auto
+- stages:
+  - stage:
+      input:
+        data: '{"LD5qQYB6?jAVa\bD|2ruNtImey''": "vvMNI"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "944250"
+  test_title: 944250-52-auto
+- stages:
+  - stage:
+      input:
+        data: '{"Eh31qp": ">''i+RX!jaVa\boProcesSBUILDeR@44GQN&)7"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "944250"
+  test_title: 944250-53-auto
+- stages:
+  - stage:
+      input:
+        data: '{"SjmA)jAVA\bWruNTIMESd&;K": "aL6q"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "944250"
+  test_title: 944250-54-auto
+- stages:
+  - stage:
+      input:
+        data: '{"XOV}+FjavA\bt>9ruNTimeZ": "iCLg3fC4"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "944250"
+  test_title: 944250-55-auto
+- stages:
+  - stage:
+      input:
+        data: '{"#EjAva\bETgC,P{DgCrunTimEX": "O3eQ"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "944250"
+  test_title: 944250-56-auto
+- stages:
+  - stage:
+      input:
+        data: '{"CpM": "+6JAVa\b]TN),\r^pROcESSBUIldeR`T:"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "944250"
+  test_title: 944250-57-auto
+- stages:
+  - stage:
+      input:
+        data: '{" :hgv>jAVA\b0(IU\rBprocEssbUILdEr\r)`HMV}": "0Fwuip2"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "944250"
+  test_title: 944250-58-auto
+- stages:
+  - stage:
+      input:
+        data: '{"03JJavA\bK''(4yTh1lProcesSbUIlDEr+v": "n9Qt"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "944250"
+  test_title: 944250-59-auto
+- stages:
+  - stage:
+      input:
+        data: '{"JIi?-~Xue\rjaVa\b/7E{WK\"NpRoceSsbUIlDerr#7DZ+=": "1ral3Q"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "944250"
+  test_title: 944250-60-auto
+- stages:
+  - stage:
+      input:
+        data: '{"Z2GoMd": "zJAva\bVRuntiMEPEQhR}"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "944250"
+  test_title: 944250-61-auto
+- stages:
+  - stage:
+      input:
+        data: '{":*vWZjAvA\bE.?rUNTIMe5\\EAiW''": "oa0BC9gD"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "944250"
+  test_title: 944250-62-auto
+- stages:
+  - stage:
+      input:
+        data: '{">pzBKjAvA\bb~''MRUnTIME>YVL7A.": "fV4v"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "944250"
+  test_title: 944250-63-auto
+- stages:
+  - stage:
+      input:
+        data: '{"$\tmNWDiC[YjaVa\bq$Y8ILk%RunTiMe\fAi": "8oE3"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "944250"
+  test_title: 944250-64-auto
+- stages:
+  - stage:
+      input:
+        data: '{"F7ZnE3ZICL": "\\PL\f)jaVA\bKIrUNtime{7"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "944250"
+  test_title: 944250-65-auto
+- stages:
+  - stage:
+      input:
+        data: '{"bDtdQC8N": "{iNYjAVA\b`A\\AOgZprOceSsBuILdeRVLnNB0''^]"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "944250"
+  test_title: 944250-66-auto
+- stages:
+  - stage:
+      input:
+        data: '{"WeE": ".DYWuAjAVA\bdrUntIMeDq/"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "944250"
+  test_title: 944250-67-auto
+- stages:
+  - stage:
+      input:
+        data: '{"seHT5QBpv": "\t4\f&ACM2JjavA\bB5\fU?RUNTime3K* "}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "944250"
+  test_title: 944250-68-auto
+- stages:
+  - stage:
+      input:
+        data: '{"4ZeaaZkGv": "&8\"UAYQjaVa\b\rCC=)P.PProceSsBUILder\"a\u000bN"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "944250"
+  test_title: 944250-69-auto
+- stages:
+  - stage:
+      input:
+        data: '{"L": "+jaVA\b()W''ZprOCESSBUIlDern~)GLt?\""}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "944250"
+  test_title: 944250-70-auto
