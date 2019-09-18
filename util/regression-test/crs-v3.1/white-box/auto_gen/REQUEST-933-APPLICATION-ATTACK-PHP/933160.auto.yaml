@@ -648,3 +648,293 @@ tests:
       output:
         log_contains: id "933160"
   test_title: 933160-46-auto
+- stages:
+  - stage:
+      input:
+        data: '{"u": "T4=iqGYm7A\bescapeshellcmd//x1\"{!i/**///\\$///w/*$''j/}V*/(7~S>)v%M_%"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933160"
+  test_title: 933160-47-auto
+- stages:
+  - stage:
+      input:
+        data: '{"6CV/Qr0^Q\bcreate_function\f//(@c\" =&&4))}n\"uuW&": "NX9FeEXV"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933160"
+  test_title: 933160-48-auto
+- stages:
+  - stage:
+      input:
+        data: '{"6XmUFqy": ".U^\breadgzfile//,+>QFs//\tBG_TE&P=#z3xJ*@}d@_//E)''sA//8]oXPbf3\r/*#He*/(D:(+6k)t"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933160"
+  test_title: 933160-49-auto
+- stages:
+  - stage:
+      input:
+        data: '{"\u000b\bfopen//}2/*m\r*//*`*/\u000b(=2)}4< LX3": "ZQ1SCV3ec"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933160"
+  test_title: 933160-50-auto
+- stages:
+  - stage:
+      input:
+        data: '{"~@<(\bexec//sIZ///*D7*/#4<E`Z*1G8//7\f//*//%pgm1t/#()p;AV*''}}D":
+          "zDpmDU"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933160"
+  test_title: 933160-51-auto
+- stages:
+  - stage:
+      input:
+        data: '{"IuCEph": "V5)&\trwF|n\bopendir\t/*/~\t\rU\re#!~*/ (,u{7;:)ps>I"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933160"
+  test_title: 933160-52-auto
+- stages:
+  - stage:
+      input:
+        data: '{"\u000bew\bbson_decode\f(H!ri)kI": "AvFrYjL17u"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933160"
+  test_title: 933160-53-auto
+- stages:
+  - stage:
+      input:
+        data: '{"p\bdebug_backtrace//gd/*5w^BJ\\''_.*//*N$Pgh}L<;*//*?5*/\u000b#DxH//YPj3{\\y#Q||h]9S;[([(E&)KUM})6*<
+          ": "T"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933160"
+  test_title: 933160-54-auto
+- stages:
+  - stage:
+      input:
+        data: '{"1X": "p9`X%\fr#\bheader_register_callback//_D(\f}///op)>J\u000b//>
+          /*m/|sG&_ X=*///H7v//B*#;Sh3+6(8\u000b%)}tQ=GYV\u000b"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933160"
+  test_title: 933160-55-auto
+- stages:
+  - stage:
+      input:
+        data: '{"#%E}2hsL\bunpack//mBnT@|Xi2/*D<W*/\r\u000b(ndtg]5l3)R %EHfuWX": "O8"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933160"
+  test_title: 933160-56-auto
+- stages:
+  - stage:
+      input:
+        data: '{"aPLdB3G4V": "KZ#X_\bgetimagesize(64{&`f;8k8)/Hb~Eh\fw"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933160"
+  test_title: 933160-57-auto
+- stages:
+  - stage:
+      input:
+        data: '{"hCgc9\\};\bbson_decode//^#WiWL''mk/*Ug\t*/\t/*!1*#|a6*/(:.PdQ:|)U?/''":
+          "EBWEtJKWz"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933160"
+  test_title: 933160-58-auto
+- stages:
+  - stage:
+      input:
+        data: '{"?K\bbase64_encode#hAfAt/1\f//IvRHSg+z/**/ \\n\\n/*|2MDL*/\\n\t(|ezt_vx)o5<BQ":
+          "GjjaC"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933160"
+  test_title: 933160-59-auto
+- stages:
+  - stage:
+      input:
+        data: '{"1lDI8E8": ".2\bheader_register_callback#w//\r//;z#V?>y>#)>:MF \t/*\tIv{*///p$S6</*3*/(xva~lz!4q)(}`\r5)vV"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933160"
+  test_title: 933160-60-auto
+- stages:
+  - stage:
+      input:
+        data: '{"6T": "k\r(T\bmkdir/*\f*//*sDPP?\\o{O*/(\u000b!E`aL@>Q)3"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933160"
+  test_title: 933160-61-auto
+- stages:
+  - stage:
+      input:
+        data: '{"DRDFHXb": "DBOb\bglob(R1z-)4ri"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933160"
+  test_title: 933160-62-auto
+- stages:
+  - stage:
+      input:
+        data: '{"5": "^<\bmd5_file//s /*95*/(6G$$)\"78H6PmC|"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933160"
+  test_title: 933160-63-auto
+- stages:
+  - stage:
+      input:
+        data: '{"HKHB;%D\f~\bassert_options/*|\"m<*/\f(^nJK?]D6})\r0F,H": "ZdRmmv"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933160"
+  test_title: 933160-64-auto
+- stages:
+  - stage:
+      input:
+        data: '{"q|Y&.pGfM\biptcembed/*5{$''&cb*/(G@;9a.B)g9CEw:Y": "0z8_c01h04"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933160"
+  test_title: 933160-65-auto

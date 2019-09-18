@@ -32,3 +32,18 @@ tests:
       output:
         log_contains: id "932190"
   test_title: 932190-2-auto
+- stages:
+  - stage:
+      input:
+        data: '{"DLFovfVc": "%257B%257DS_HQL%2522%2540/%253F%253F%253F%252A%253F%253F/yJ%252B"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "932190"
+  test_title: 932190-3-auto

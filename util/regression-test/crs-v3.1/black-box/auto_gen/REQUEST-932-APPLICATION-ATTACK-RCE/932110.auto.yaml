@@ -364,3 +364,250 @@ tests:
         status:
         - 403
   test_title: 932110-24-auto
+- stages:
+  - stage:
+      input:
+        data: '{"U0icFGT": ";(D` \\n\t\u000b\t \f\t\u000b('',\"\",@^''''^\\\\^\\^o\"\"\":''{\r.f\\\"\"c^\"\"\"\"\"^\"l^^^\"\"e^^^^\"^a\"\"^^n^^\"^^\"m^\"g^\"\"^\"^^^^^r.\"^^^\"^R5oI\b9AQr~e"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 932110-25-auto
+- stages:
+  - stage:
+      input:
+        data: '{"e0uqfrv": "NA6@35&\r\r@(\"\"\"f^i\"\"\"^\"\"^n\"^\"^^^^^^d^^^\"^s^^t\"\"\"r\bf\fp@w@H|b"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 932110-26-auto
+- stages:
+  - stage:
+      input:
+        data: '{"]|\u000b\fn\"^\"^^\"\"^b\"\"^^^\"\"\"^^t\"\"\"^^^\"s^^\"\"^t^\"a\"^^\"^t.\"\"\"^\"\"\"\"\"Yq\bQfv":
+          "8EX80"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 932110-27-auto
+- stages:
+  - stage:
+      input:
+        data: '{"zPvzgwGpJ": "q<b,nh&\\n\u000b\u000b\f\r\\n\\n\t \\n''\"@\\n\\n\r''@\"\\.\\\"^e^\"n\"\"\"\"^\"^\"^d^\"\"^^\"^^\"l\"^\"^^^^^o\"^^\"c\"\"a^\"\"^\"l\b=WbU"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 932110-28-auto
+- stages:
+  - stage:
+      input:
+        data: '{"~lyyPIWk=}|\u000b(\f\u000b@''(@@''/''\"\"''/^^^\"\"^j\"^a\"\"\"v\"^\"\"a^^\"^\"\"^^>.CdQ\b[dR\tH/":
+          "BA7sl"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 932110-29-auto
+- stages:
+  - stage:
+      input:
+        data: '{"<&&\t\u000b''\t(\"@ ''/\\\"\\/\"H\"\\\"^^^^^^n^^^\"m^\"\"\"\"\"a^^^\"^^^\"p\b9:4i'';9K":
+          "H"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 932110-30-auto
+- stages:
+  - stage:
+      input:
+        data: '{"wy''}-`o&\\n\f\r \r\u000b\r\t\"''@''''\"\\\\''\\''G^\\\\:$uj=Y\\=n\\\"^c\"\"\"h\"d\"^^\"^^\"\"^\"i^^^\"\"\"r\";M6.\"^3\bQ|=":
+          "7jBvqA_Yd"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 932110-31-auto
+- stages:
+  - stage:
+      input:
+        data: '{"rqu": "`_p~X0||\f \f\t\f \t\"@@@'',\",\"^\"^\"mk^^^^\"^\"\"d^\"^^\"^^\"i^^\"r\"\"\".dz\u000b~Kb*gu5.^N3sJU\bq`1"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 932110-32-auto
+- stages:
+  - stage:
+      input:
+        data: '{"fOMpP": "fcP\r\f\r, .\".^\\H\"''\\\"^^\"^^^^e\"n^^d\"^^^\"\"\"\"^l\"^\"^o\"\"\"^\"\"\"\"^\"c^^\"^^^a\"^\"\"\"^l.^^^^^5BQ8\b22("}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 932110-33-auto
+- stages:
+  - stage:
+      input:
+        data: '{"FGe": "gEGp&\" @@^\"^^^\"^\"^g^\"^\"\"pr\"\"\"^^^^^\"e^sul\"^^^^t\b,w"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 932110-34-auto
+- stages:
+  - stage:
+      input:
+        data: '{"uHu": "}WH*\\|\u000b\\n \\n\u000b\f@\"''''\\''^z''\\:|\\^^^\"\"\"^\"\"i^n\"\"^^\"\"\"^e^^t\"^\"^^^\"^^cp^l\bG"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 932110-35-auto
+- stages:
+  - stage:
+      input:
+        data: '{"nFu72Zc": "\\&\r\r\u000b\t\u000b'''',(n^^^\"\":~yLKD)*>\\\"\"^m\"^\"^^^\"^\"\"bs^^\"\"\"^\"a^\"^^c^^^\"^\"^\"\"^l\"\"\"\"^\"^i.\"\"\"^\"6v\b.{SX*G\rDJ"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 932110-36-auto
+- stages:
+  - stage:
+      input:
+        data: '{"vO4|| \t\\n\f\\n\\n\f\f\r\f(\"@'''',\"^^^^^\"\"a^^^^\"s\"^\"^\"s\"\"^o^^^\"^\"^c.\"^^^\"^yEAUxDGj\bRaVejWK":
+          "1UepDL2DH"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 932110-37-auto
+- stages:
+  - stage:
+      input:
+        data: '{"^z}@.y;>/\r\r \u000b @\"\"^^\"^\"m^\"^^^\"y\"^^\"^\"s\"^^\"\"^\"qlh\"\"^o^\"t^c\"\"\"\"\"^^^\"^o\"^^^\"\"\"p\"\"\"^\"y.^\"^\"^^\"^^nR\b\tL":
+          "_"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 932110-38-auto
+- stages:
+  - stage:
+      input:
+        data: '{"Oz[u\\\fE#nk{ \r\u000b\r\f\u000b\r\\n\\n,(\"\u000b\"\"('',1\"_\"''''.''.''/g^^^^^^^^\"^p^^^r^\"\"e\"^\"\"\"^s^^u^l\"\"^^t.\"^^^P0y\bRc;4^Gl-<":
+          "_HbB4"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 932110-39-auto

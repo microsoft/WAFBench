@@ -304,3 +304,296 @@ tests:
         status:
         - 403
   test_title: 932106-20-auto
+- stages:
+  - stage:
+      input:
+        data: '{"5ymSF|\\n\\n\u000b\t \f\r\\n\\n\f{!\r\t\\n\u000b\\n!\t\f\\n\u000b
+          \t\r!\u000b\r\f\\n!!\t\\n\t\t\r\r\f\\n{ \r \u000b\t\"''++(a|\"/''\\\\\\\"p\\''\"\"''ac''''''\"\\m''''''a\\n\\\\\\''>\bUb**:]h4":
+          "PVe"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 932106-21-auto
+- stages:
+  - stage:
+      input:
+        data: '{"R~yM\r=;\t\r! \t\\nl1N=''@!''\\n\r\u000b\t\f\u000b\f$p75mFvgSSX=$w^T\\p//~H_\\n
+          \t\t \r\f\u000b\t {\f  \t \\n\r\r(\f \t\u000b\r\f\\n\\n\\n\r ''''\"\"\"''''''''\\vi<Lu(>O<*c6f\bu)iU\t/^U":
+          "ls8gGe"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 932106-22-auto
+- stages:
+  - stage:
+      input:
+        data: '{"T": "?J| $!\u000b\t\t\u000b\\n\t \t\r(\r\\n\r\t\f \\n \t''''''\"'''')))''.|/][/\"''''\\''\"p''\"\\\\w''\"''\"\"\"''\"''''d\bz{NDK7~386"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 932106-23-auto
+- stages:
+  - stage:
+      input:
+        data: '{"HTtD^Q;\r \u000b\t\t\u000b\f\t\u000b\t(\t\f  \r\t\u000b\u000b\u000b{{\r\t(\f\t\f\u000b\\n\\n
+          \r !\r\\n\\n\u000b\f\u000b\f!\f\f\t\\n\\n\u000biaagnh=$&H\\n\u000b\f\t\r\u000b\u000b(\t
+          \u000b$\t\f\r\t\\n\r\"''''''''''\"''\"-+(?-.-..\\/\"\\''\"''\"a''\\''\\''\"''\\''\\p\\''\\t\"\"\"\"\"''\"\"\"''i''t''\\u''\"''\"''\\\"''''d\"''\\''\\\"e\">(S\b>[Xu\\":
+          "X_yd4CR"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 932106-24-auto
+- stages:
+  - stage:
+      input:
+        data: '{"Rv": "1?,_;o|\f\f  \f\u000b\t\f\t!\f\f\r\f 8=<D04u={\\n\\n\\n \u000b\t\f\\n\\n\f\f\"\"\"\"''''\"\"\"\\\"\"''\"''\"a\\''p\"\"''\\\"\\''\"t\\\\\\i''''\"t''''''''u\\\\\"''\"\"\"d\\e\\\\''''<1.\bg<FlO"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 932106-25-auto
+- stages:
+  - stage:
+      input:
+        data: '{"@WM$(\u000b(\r\u000b\r\f\t\f\\n\u000b {$!\r\r\f\u000b\u000b\f\\n\tdiXUESC=''?(I]b'']ZN''\\n\u000b\r\f\f
+          \t\rmyKpbEaSs=$pw\f\t\f\f\f\r{!  \f\u000b\f\t\r\u000b \u000b\f\t\f''''''\"\"\"''\"''[+d?])[+/''\"\\\\\\v\"\"i\\\t\bWvysa":
+          "1g"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 932106-26-auto
+- stages:
+  - stage:
+      input:
+        data: '{"m316Kxz": "hepJWw~YB%&&\f\r\f\u000b\r\u000b\t\r\u000b( byvAusLPRw=$~[R?*8Vl\u000b  \f\\n\f\\n\t\\n{{\f(\f\r\t\u000b\r\f\r
+          \u000b\t ''\"\"''\"''\\\\''\"''\\\\\\\\w\"''\\\"''''\\\"\\<:mlo>+1O\b4im^0Du]\u000bB"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 932106-27-auto
+- stages:
+  - stage:
+      input:
+        data: '{"3dA9yDh2": "<#cV9aca&\\n\r\u000b\u000b\r\t\\n\u000b\u000b\r\\n\u000b\u000b
+          \f\t\\n\r\u000b''\"\"''''\"|(\\]+[/a\\\"''p''\"\\''''\\\"\"t''i\\''\\''\"''t\"\"ud''\\\"\\\"''\\''e\\\\\\''\\''''''\"''\rsF
+          ;\fnz?\bsQ%H-~X"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 932106-28-auto
+- stages:
+  - stage:
+      input:
+        data: '{"iUg": "h\\n\t\r\f\f \u000b\f\\n(\t\f\\n\r\f\u000b!\f\t\t\r \r\f !\f\t!\tp=''''\t\r\r\u000b${{\u000b\f\r\u000b
+          \u000b\\n\"''''''\"\"''+//?/''\"\"w''\\''\"h''\"\\''''''\\''o\b> Ns \f2G|8"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 932106-29-auto
+- stages:
+  - stage:
+      input:
+        data: '{"nQP~69vnK()\t \f\f\\n $dMdt=E\"m!\t\r\t\r\t\f\f\f(\f{\t\u000b\"\"''\"\"''''\"''\\\\p\"\\''''''\"\"\\''''w\"\\\\\"''\"d\b/}w,o@e1W":
+          "I4rWbWnM"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 932106-30-auto
+- stages:
+  - stage:
+      input:
+        data: '{"JsaAn": "^+{8&G|\r\\n \r\f\u000b\\n\t  DPQ23BXn=$Dw|2ZCS\r\f\\n \u000b
+          \f\u000bBQ5csb=%<W6gg \r\t\\n \\n\u000b\\n\\n\u000b\u000b \f\f\u000b\f\u000b\r\u000b\f''''\"\"''\"''''''''\\\\\"\"\\d\"\"''\"\\n''''f''''\"\"\"\t]xe@_!X3SI\biL$''p&l"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 932106-31-auto
+- stages:
+  - stage:
+      input:
+        data: '{"jJ": "C.GsHn ||\f \u000b\t \\n{$f=''U(nC*Pkj''\t\u000b \u000b\t(\u000b\u000b\t
+          \f\\n\t\f\f\t\u000b\\n\r''\"''''\"\"\"''\"\"p\"\\w''''\"''d\b,4<"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 932106-32-auto
+- stages:
+  - stage:
+      input:
+        data: '{"0=& !\\n \f\f!\\n\\n\r\\n({\\n\r\\n\f\f\t\r\t\t\\n''''''''''\"\"''\"\"|\"/o+].'')|/p\\\"''\\\"''''\"s\bJJa":
+          "ZyprfHzT8F"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 932106-33-auto
+- stages:
+  - stage:
+      input:
+        data: '{"IfH7wL5|<(\t  \u000b\u000b$z9sm9kFw3=\"A:e8N\"\u000b\\n\r\u000b\u000b
+          \t\u000b\r''\"\"''\\''\"\\\\vi\"\\''\"''''\\\">P#+>#B\b<-nA": "tFcA1"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 932106-34-auto
+- stages:
+  - stage:
+      input:
+        data: '{"h": "&\rgGnm|\u000b\f\t\f\r\u000b \u000b\r\f7EOa4sewd=>\t\r\r\\n\f
+          \r\\n( \u000b f1x1EQ=$&sdSknZUU9\\n\t\\n\t \u000b!\r\t\\n\u000b\"\"\"\"''''\"\\\\\\''\"''\\w\\\\<\bI"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 932106-35-auto
+- stages:
+  - stage:
+      input:
+        data: '{"kYkG7": "26].=||\u000b\r\r\u000b\u000b\f \u000b{$\\n\\n\t \t\t (\t\r\t\r\t\u000b\r\r\u000b{\r\f\r
+          \u000b\u000b \u000b''''''''''\"\"([](-\\*+/\"\\\\d''\"\"\\\\\"\\\"\"n\\\"\"''''\"''\"\"f''\\''\\\\\\\\\\>6\rgs\b[,)XtGgw"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 932106-36-auto
+- stages:
+  - stage:
+      input:
+        data: '{"TB+m\"_sK$\\n\r\f\tZYQY1tm=>\u000b \t\f!\t\t\f \\n \r\f{$ \r   \f  (  \t(
+          \u000b \\n$\f \"\"\"''''w\\\"\\h''\\''\"o\bU\fhZ": "vVWS4ZnXU"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 932106-37-auto
