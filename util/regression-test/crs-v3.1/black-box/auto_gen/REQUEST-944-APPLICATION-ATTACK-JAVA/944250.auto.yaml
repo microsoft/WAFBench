@@ -1074,3 +1074,326 @@ tests:
         status:
         - 403
   test_title: 944250-70-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>GE.Java!16CrunTIME?UO&amp;Q"]S</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944250-71-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>zJAVA~L'QRUNtimEj&gt;</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944250-72-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>=h@Sd`)_%kjavA]?&amp;runtiMEBBU*z[</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944250-73-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>o`*noJava\KvbMpROcESsbuIlDER0XD%PZY</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944250-74-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>1W%=K&lt;88I\tJava&lt;F}&gt;RUnTIme$?R</Foo_key>"
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944250-75-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>6JAvA.p,|?P!RUnTiMeZ</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944250-76-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>XTLZIAWOJaVa~|YSOEruNTIMe4XfXEFo</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944250-77-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>HZt#3java,ppw|\rPROcESSBuiLdER0}=r\
+          \ =VF</Foo_key>"
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944250-78-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>784/=PjaVA*)EwprocESSBUILDer&amp;YIy&gt;</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944250-79-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>~]8JavA)N~O,M!pRoceSSBuILdEr1K=Hq&gt;`q</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944250-80-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>uZ3@Pfh?VJavA\rS9D\"Bp2SMProcESsbuILDErdY\\\
+          ?FMKI</Foo_key>"
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944250-81-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>F+W]bJAvA&amp;\rX9Va*cPROCesSBUILdER^|</Foo_key>"
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944250-82-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>{"&amp;B4jAva}gA]#N%O-RunTiMEREWcN'U</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944250-83-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>w[BV]O\t5&amp;jaVa`;=HKprOcessBUildERPD\
+          \ UX]Z</Foo_key>"
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944250-84-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>)JAVa)}\\dproCEsSbUilDer-\t4</Foo_key>"
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944250-85-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>XJAvA;8ruNtIme[PzC=</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944250-86-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>@`\P[JK9JAVA/VProceSSBUIldER9=wOW</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944250-87-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>KJava-!RuntiMe Wk;Cz</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944250-88-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>?5ItJAVa'rUnTiMEIAK,W,"</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944250-89-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>5jAVA#e1!IG^\rJrUntiMe</Foo_key>"
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944250-90-auto
