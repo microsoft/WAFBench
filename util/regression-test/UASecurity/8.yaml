@@ -1,0 +1,72 @@
+meta:
+  author: msra
+  description: None
+  enabled: true
+  name: 8.yaml
+tests:
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: Mozilla/5.0 (X11; U; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.46 Safari/537.36
+        method: GET
+        port: 80
+        protocol: http
+        uri: /
+        version: HTTP/1.1
+      output:
+        status:
+        - 200
+        - 404
+  test_title: 8-1
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: Mozilla/5.0 (X11; U; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3541.6 Safari/537.36
+        method: GET
+        port: 80
+        protocol: http
+        uri: /
+        version: HTTP/1.1
+      output:
+        status:
+        - 200
+        - 404
+  test_title: 8-2
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: Mozilla/5.0 (X11; U; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3541.6 Safari/534.30
+        method: GET
+        port: 80
+        protocol: http
+        uri: /
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 8-3
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/535.39
+        method: GET
+        port: 80
+        protocol: http
+        uri: /
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 8-4

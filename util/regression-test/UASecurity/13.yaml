@@ -1,0 +1,105 @@
+meta:
+  author: msra
+  description: None
+  enabled: true
+  name: 13.yaml
+tests:
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:21.0) Gecko/20100101 Firefox/21.0
+        method: GET
+        port: 80
+        protocol: http
+        uri: /
+        version: HTTP/1.1
+      output:
+        status:
+        - 200
+        - 404
+  test_title: 13-1
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: Mozilla/5.0(Windows; U; Windows NT 5.2; rv:1.9.2) Gecko/20100101 Firefox/3.6
+        method: GET
+        port: 80
+        protocol: http
+        uri: /
+        version: HTTP/1.1
+      output:
+        status:
+        - 200
+        - 404
+  test_title: 13-2
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: Mozilla/5.0 (Macintosh; U; Intel Mac OS X; en-US; rv:1.8.1) Gecko/20061010 Firefox/3.0.6
+        method: GET
+        port: 80
+        protocol: http
+        uri: /
+        version: HTTP/1.1
+      output:
+        status:
+        - 200
+        - 404
+  test_title: 13-3
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; rv:43.2) Gecko/20100101 Firefox/43.2
+        method: GET
+        port: 80
+        protocol: http
+        uri: /
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 13-4
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:21.0) Gecko/20100101 Firefox/21.1
+        method: GET
+        port: 80
+        protocol: http
+        uri: /
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 13-5
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:50.0) Gecko/20100101 Firefox/50.01549082088575
+        method: GET
+        port: 80
+        protocol: http
+        uri: /
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 13-6
