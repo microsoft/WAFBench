@@ -1,6 +1,6 @@
 meta:
   author: msra
-  description: None
+  description: Firefox gecko version should exist and be no higher than "20100101"
   enabled: true
   name: 12.yaml
 tests:

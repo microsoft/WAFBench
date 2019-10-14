@@ -1,6 +1,6 @@
 meta:
   author: msra
-  description: None
+  description: This Firefox version doesn't exist in official releases 
   enabled: true
   name: 13.yaml
 tests:

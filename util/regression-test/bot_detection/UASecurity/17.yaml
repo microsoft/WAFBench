@@ -1,6 +1,6 @@
 meta:
   author: msra
-  description: None
+  description: IE version is too new/old to run on this Windows version
   enabled: true
   name: 17.yaml
 tests:

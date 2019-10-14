@@ -1,6 +1,6 @@
 meta:
   author: msra
-  description: None
+  description: AppleWebKit version must be equal to Safari version for Chrome
   enabled: true
   name: 8.yaml
 tests:
