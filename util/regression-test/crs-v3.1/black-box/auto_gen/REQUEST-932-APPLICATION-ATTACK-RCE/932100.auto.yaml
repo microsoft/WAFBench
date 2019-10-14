@@ -746,3 +746,179 @@ tests:
         status:
         - 403
   test_title: 932100-47-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>Tyk-xK{ \t \t\r (\r\\n\r dj1V7=&lt;\\\
+          n\\n\\nNFRg=\"B+\"\r \t\r   \r(\r \r\\n\\n$$\r  \"'\"\"\"'\"'/\"\"''\\\\\
+          'ho\\\"\\\"\"'\\\"s\"\\'\\\\\"'t\"\"\"\\'\"n\\\\\\\\'''\"\\'a'\"\\\"'\"\
+          m'eV</Foo_key>"
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 932100-48-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>u]9$J'\rX6&gt;(IKFbJRvP=&gt;8TZ?:M&lt;B\t\
+          $\r\t \\n\r\r (\t\r\t\\ny=\"V\"\t \\n\\n \\n{(\r \\n    \t\r\r\t'\"\"\"\
+          '\"'\"'\"?/]\\*|/\"\\\"'\\\\i\\\"\"'\\\"\\\\\"\\d\\\"\\\"\"\\&gt;+@~P53j</Foo_key>"
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 932100-49-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>+,J=p; \\n\t\r\t\"\"\"'\"\"'\"\"]-)/\\\
+          \\\"\\'\"'\\g\\\"\"'\\'d'\\\"'\\'b{Fo'Gg/m</Foo_key>"
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 932100-50-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>XA5c&amp;&amp;  \\n\r \t!\\n {\r\\\
+          n\r\t(  \t\t  ox2KP=$8\\n\t{\\n \\n \r''\"'\"'\"\"\\\"'f\\''i&gt;&amp;OvIH</Foo_key>"
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 932100-51-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>w1F(  \r\r){{{\r\r\r \t\"'''\\'m\\\
+          '\"\"\"'\"\\l\"\\\"o'\"\"\\c'\"'\\\"\"'\"\\a\"teab(#v\\</Foo_key>"
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 932100-52-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>g@\r\t\t\\n\r\t\\n\\n\t\tzPgWVD6TW='*$vA]ik5'i'\t\
+          \\n\r {{{!\\n \\n\rHrcU4B_=&lt;kM+[6\r$$Z3XBS=$[Az|EmuB\\n\\n\t\\n\r\t\r\
+          \"'\"\"\"''']l\"/-]/'\\\"\\'\"\\\"e\\\"\\''\"\"\"\"'v\"a\"\\\"\\'lT?(t</Foo_key>"
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 932100-53-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>A!$((\t\r\t \r$$! \r\r\r\t  \t\r '|/|/(/b'\\\
+          \"'\\\"\"\\s'\\\\\\\\\\d\\\"ta\"\\'r[bGQ</Foo_key>"
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 932100-54-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>2K_&gt;(lWyFoPgNj=$]XFGLUt:] \\n${!\t\
+          \t \t\r(\r{  \\n\\n\r \t\\n\r(\\n$\r(\t\r\t\t\t!\r \\n\\n\r \"'+\"|/'\"\
+          d\"\"\\\\o\"\\''\"\\''\\\"a\"\"'sB</Foo_key>"
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 932100-55-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>i &amp;o2|h$((\t\\n\\n \r''\"\"'\"\
+          '\\a\\'\\'\\r\"'\\ch\\\"\"''\\\\\" =I/txl'\"yp</Foo_key>"
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 932100-56-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>&amp;zTZA&lt;(\r\r\\n\t\t \t\\n\\n\
+          \ \r\r(\r \tJiD_6GG=h\r\t\\n$\t\r \t\\n\t\r'''''\"'\"\"\")][-+0/\\'h\\'\"\
+          \"\"\"'t\"'\\pa\"\"'\\'\\'\"s\\s'\\\"\\\\w'd*(k6t&gt;|U</Foo_key>"
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 932100-57-auto

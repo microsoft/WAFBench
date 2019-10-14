@@ -560,3 +560,169 @@ tests:
       output:
         log_contains: id "932106"
   test_title: 932106-37-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>7FHk.H\\0&amp;&amp;$4dro6qdSU='B5wh'\r\
+          \ \\n$h8ntl=}?8qd9/$B\\n!\r\r\t'\"''\"'\"\"\\\"\\\"\"'d\"\\'n'\"\\\\'f\"\
+          '\\\\\\\\\"\\&lt;@Uo(;k,V\r</Foo_key>"
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "932106"
+  test_title: 932106-38-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>&gt;wvXd{2nDuvXXY=$ : TUkrS \\n\r\r\
+          \r\r\t\\n \r\"'\"'\"\"\"\"\"\\\\\\\\\\'\"'\\'v\\'\"i\\\"'&gt;*t!Q~&gt;Kw'R(ub2Q</Foo_key>"
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "932106"
+  test_title: 932106-39-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>'Dn\t6G?qI;!\tR_dQKWX='7&gt;#'\t\t\
+          \ \t\r\\n\\n$\r\r(\t {dSoqMq=Eg3lvM,{P9\\n\r\t!\\n\\n\t(\\n \r\\n?/\"+-[]'\\\
+          |/'\\\"\\\\\"\\''w\"'\"'h\"o&amp;!,\rY\"!P7</Foo_key>"
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "932106"
+  test_title: 932106-40-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>[2m8X2{\r\t\r\r\r! $mEH2e82QD=&gt;m9ii,mu+4{$\r\
+          \t\t( \t  \t\\n\"''\"''\"\\\"\"\\\"\\\\\\w YDBu0m\\nC</Foo_key>"
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "932106"
+  test_title: 932106-41-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>W ~FQ`J~&amp; \\n\r \r\r\\n\t\r\r(\t\
+          \r\\n !\\n  \t \t\\n\t{J0=&gt;76p!LJr;\\n \\n\\n\t!\\n!  { \\n\r\r\r(\r\r\
+          \  \r\t\"'''\"'\"\"'\"\"'\"'\"\\\\'d''\"'\\\"\"'\"n'\\'\\\"\"\"f\\\\\"\\\
+          \"'&lt;8a}\"</Foo_key>"
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "932106"
+  test_title: 932106-42-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>|K]oG#5y/o\r\\n\r\t\t\\n\\n\\n{N=\"\
+          %;}&gt;;{\"\\n\\n\r{\\n\t \t ''''\"''+\\?-[|?/\"\"'\"'\\w'''\"&gt;S:otZ6</Foo_key>"
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "932106"
+  test_title: 932106-43-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>6x#.r(; \t  \r ! \\n{$!\\n\\n\\n\\\
+          n\\n\r$xAGG=&gt;]XV2\t4&lt;\r\"\r\\n \r\t\t\"\"'''\"\"\")---/\"\\v''\\i\"\
+          &lt;cC+C#:u%~*Jn5</Foo_key>"
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "932106"
+  test_title: 932106-44-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>&lt;{c`\t\r\r\\n  \t\tq=@xvxT,\\n \\\
+          n\t${{\t\r\\n'\"\"''4\\-]/''''''\\'\"v\\'i\\\\\"\\&gt;oJw~w%</Foo_key>"
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "932106"
+  test_title: 932106-45-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>=p||\\n \\n o2Usssyrk=\"\rCCED$Gx\"\
+          \\n\t!\t\t \t!\t\t\\n!\\n\r\r4blf=&lt;Q_[*6\t\r\tFgem0cs=p=@3 \r  \r''\"\
+          \"\"'\\'\\\\v''\"\"\"\\i\\'''''\\'&lt;$gMq3c&gt;</Foo_key>"
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "932106"
+  test_title: 932106-46-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>&gt;%v-M{\t{{$!qu=&lt;UV\t|-/+\\+/v\"\
+          '\"\\\\\"\\'i'\"'\"'\\'''&gt;HrBIMYiL5</Foo_key>"
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "932106"
+  test_title: 932106-47-auto

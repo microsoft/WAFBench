@@ -938,3 +938,160 @@ tests:
       output:
         log_contains: id "933160"
   test_title: 933160-65-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>/array_map(NU[Ul)&lt;x:Ap</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933160"
+  test_title: 933160-66-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>*)eval//&lt;H7^//]YZ\\n\t(4Ff!ZUp$)~~jbpxvq</Foo_key>"
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933160"
+  test_title: 933160-67-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>^MbxgWm{-\\socket_create\r//MF//\r\
+          ##J:/**/#az^NF)[h/*6e2In?*//*c|[*/(&amp;w`-nuV)U]^</Foo_key>"
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933160"
+  test_title: 933160-68-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>='8{.eval//]UCL.o#H#fh/*QaxK5*/(xC)\r\
+          )Lwrt9sl</Foo_key>"
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933160"
+  test_title: 933160-69-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>!&amp;j0;assert_options/*;L&gt;pHMKL*/(qn=S)U^\r\
+          ;ga</Foo_key>"
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933160"
+  test_title: 933160-70-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>Z&gt;bUVp}uksort/*Zq1r*//**?cwn&lt;w7*///j/*-~*///R|l/**D)kQ(@`r\t\
+          *///X&lt;v0i&amp;^bH## //E\"/&gt;()(j8fzs</Foo_key>"
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933160"
+  test_title: 933160-71-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>Z2iaM\rbzopen/*W5oh.007@*///-VL@eN&lt;,]#///*5*Hw!Yi*/#Jf(92~T#J*e^,/*u+L*/(gQ))5Cv)m</Foo_key>"
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933160"
+  test_title: 933160-72-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>pP&gt;[array_filter/*H^8+O*///ng~J//3*e!9:c//D&gt;&amp;cST\t\
+          7|//;s(+Y7e*Z%T)7I6c</Foo_key>"
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933160"
+  test_title: 933160-73-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>lJCtm?\\runkit_function_add/*3.nI*/\r\
+          /*^gL=Hn*///zXi^6&gt;(\\_ym),ZX~;#</Foo_key>"
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933160"
+  test_title: 933160-74-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>(yXY'chr///*Uyv3Vx7i&amp;*///]Ox0@\t\
+          khW/*V[y(+L^+*///0^Q]&gt;s(GtO]0{)cxJ3t</Foo_key>"
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933160"
+  test_title: 933160-75-auto
