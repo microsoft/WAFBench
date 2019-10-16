@@ -564,3 +564,183 @@ tests:
       output:
         log_contains: id "920271"
   test_title: 920271-40-auto
+- stages:
+  - stage:
+      input:
+        data: '{"%16%1B%02%05%0B%1E%0F%7F%19%7F%1D":"wmq0A4"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "920271"
+  test_title: 920271-41-auto
+- stages:
+  - stage:
+      input:
+        data: '{"T":"%7F%1D%03%17%00%11%00%13%05%0F%1E"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "920271"
+  test_title: 920271-42-auto
+- stages:
+  - stage:
+      input:
+        data: '{"%13%13%02%7F%1A%1B%18%1C%13%03%07":"B8tF"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "920271"
+  test_title: 920271-43-auto
+- stages:
+  - stage:
+      input:
+        data: '{"%16%0E%17%01%00%18%01%01%08%1A%1F":"f0V3ekf"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "920271"
+  test_title: 920271-44-auto
+- stages:
+  - stage:
+      input:
+        data: '{"2x":"%13%1B%1C%10%06%12%10%1B%10%07%7F"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "920271"
+  test_title: 920271-45-auto
+- stages:
+  - stage:
+      input:
+        data: '{"%12%12%1A%08%15%01%03%1E%08%1B%13":"jciPIV"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "920271"
+  test_title: 920271-46-auto
+- stages:
+  - stage:
+      input:
+        data: '{"%08%14%11%0B%0C%02%1C%18%0C%1C%03":"YhuG"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "920271"
+  test_title: 920271-47-auto
+- stages:
+  - stage:
+      input:
+        data: '{"u3dWd1":"%0C%17%06%7F%18%0F%16%0B%0C%13%0F"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "920271"
+  test_title: 920271-48-auto
+- stages:
+  - stage:
+      input:
+        data: '{"gw3VIWux":"%16%01%13%1F%01%10%1D%1F%14%1A%08"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "920271"
+  test_title: 920271-49-auto
+- stages:
+  - stage:
+      input:
+        data: '{"Ypu2wQ":"%08%0C%0E%08%10%1E%0F%19%05%1A%10"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "920271"
+  test_title: 920271-50-auto
+- stages:
+  - stage:
+      input:
+        data: '{"%1D%17%1D%10%1C%00%19%10%11%1B%16":"MWHGI_2Tt_"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "920271"
+  test_title: 920271-51-auto
+- stages:
+  - stage:
+      input:
+        data: '{"zgS":"%1A%03%1E%14%0B%07%19%19%0F%1F%1D"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "920271"
+  test_title: 920271-52-auto

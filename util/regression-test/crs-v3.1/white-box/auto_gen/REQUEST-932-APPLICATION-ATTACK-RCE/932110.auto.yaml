@@ -340,3 +340,395 @@ tests:
       output:
         log_contains: id "932110"
   test_title: 932110-24-auto
+- stages:
+  - stage:
+      input:
+        data: '{"U0icFGT": ";(D` \\n\t\u000b\t \f\t\u000b('',\"\",@^''''^\\\\^\\^o\"\"\":''{\r.f\\\"\"c^\"\"\"\"\"^\"l^^^\"\"e^^^^\"^a\"\"^^n^^\"^^\"m^\"g^\"\"^\"^^^^^r.\"^^^\"^R5oI\b9AQr~e"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "932110"
+  test_title: 932110-25-auto
+- stages:
+  - stage:
+      input:
+        data: '{"e0uqfrv": "NA6@35&\r\r@(\"\"\"f^i\"\"\"^\"\"^n\"^\"^^^^^^d^^^\"^s^^t\"\"\"r\bf\fp@w@H|b"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "932110"
+  test_title: 932110-26-auto
+- stages:
+  - stage:
+      input:
+        data: '{"]|\u000b\fn\"^\"^^\"\"^b\"\"^^^\"\"\"^^t\"\"\"^^^\"s^^\"\"^t^\"a\"^^\"^t.\"\"\"^\"\"\"\"\"Yq\bQfv":
+          "8EX80"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "932110"
+  test_title: 932110-27-auto
+- stages:
+  - stage:
+      input:
+        data: '{"zPvzgwGpJ": "q<b,nh&\\n\u000b\u000b\f\r\\n\\n\t \\n''\"@\\n\\n\r''@\"\\.\\\"^e^\"n\"\"\"\"^\"^\"^d^\"\"^^\"^^\"l\"^\"^^^^^o\"^^\"c\"\"a^\"\"^\"l\b=WbU"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "932110"
+  test_title: 932110-28-auto
+- stages:
+  - stage:
+      input:
+        data: '{"~lyyPIWk=}|\u000b(\f\u000b@''(@@''/''\"\"''/^^^\"\"^j\"^a\"\"\"v\"^\"\"a^^\"^\"\"^^>.CdQ\b[dR\tH/":
+          "BA7sl"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "932110"
+  test_title: 932110-29-auto
+- stages:
+  - stage:
+      input:
+        data: '{"<&&\t\u000b''\t(\"@ ''/\\\"\\/\"H\"\\\"^^^^^^n^^^\"m^\"\"\"\"\"a^^^\"^^^\"p\b9:4i'';9K":
+          "H"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "932110"
+  test_title: 932110-30-auto
+- stages:
+  - stage:
+      input:
+        data: '{"wy''}-`o&\\n\f\r \r\u000b\r\t\"''@''''\"\\\\''\\''G^\\\\:$uj=Y\\=n\\\"^c\"\"\"h\"d\"^^\"^^\"\"^\"i^^^\"\"\"r\";M6.\"^3\bQ|=":
+          "7jBvqA_Yd"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "932110"
+  test_title: 932110-31-auto
+- stages:
+  - stage:
+      input:
+        data: '{"rqu": "`_p~X0||\f \f\t\f \t\"@@@'',\",\"^\"^\"mk^^^^\"^\"\"d^\"^^\"^^\"i^^\"r\"\"\".dz\u000b~Kb*gu5.^N3sJU\bq`1"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "932110"
+  test_title: 932110-32-auto
+- stages:
+  - stage:
+      input:
+        data: '{"fOMpP": "fcP\r\f\r, .\".^\\H\"''\\\"^^\"^^^^e\"n^^d\"^^^\"\"\"\"^l\"^\"^o\"\"\"^\"\"\"\"^\"c^^\"^^^a\"^\"\"\"^l.^^^^^5BQ8\b22("}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "932110"
+  test_title: 932110-33-auto
+- stages:
+  - stage:
+      input:
+        data: '{"FGe": "gEGp&\" @@^\"^^^\"^\"^g^\"^\"\"pr\"\"\"^^^^^\"e^sul\"^^^^t\b,w"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "932110"
+  test_title: 932110-34-auto
+- stages:
+  - stage:
+      input:
+        data: '{"uHu": "}WH*\\|\u000b\\n \\n\u000b\f@\"''''\\''^z''\\:|\\^^^\"\"\"^\"\"i^n\"\"^^\"\"\"^e^^t\"^\"^^^\"^^cp^l\bG"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "932110"
+  test_title: 932110-35-auto
+- stages:
+  - stage:
+      input:
+        data: '{"nFu72Zc": "\\&\r\r\u000b\t\u000b'''',(n^^^\"\":~yLKD)*>\\\"\"^m\"^\"^^^\"^\"\"bs^^\"\"\"^\"a^\"^^c^^^\"^\"^\"\"^l\"\"\"\"^\"^i.\"\"\"^\"6v\b.{SX*G\rDJ"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "932110"
+  test_title: 932110-36-auto
+- stages:
+  - stage:
+      input:
+        data: '{"vO4|| \t\\n\f\\n\\n\f\f\r\f(\"@'''',\"^^^^^\"\"a^^^^\"s\"^\"^\"s\"\"^o^^^\"^\"^c.\"^^^\"^yEAUxDGj\bRaVejWK":
+          "1UepDL2DH"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "932110"
+  test_title: 932110-37-auto
+- stages:
+  - stage:
+      input:
+        data: '{"^z}@.y;>/\r\r \u000b @\"\"^^\"^\"m^\"^^^\"y\"^^\"^\"s\"^^\"\"^\"qlh\"\"^o^\"t^c\"\"\"\"\"^^^\"^o\"^^^\"\"\"p\"\"\"^\"y.^\"^\"^^\"^^nR\b\tL":
+          "_"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "932110"
+  test_title: 932110-38-auto
+- stages:
+  - stage:
+      input:
+        data: '{"Oz[u\\\fE#nk{ \r\u000b\r\f\u000b\r\\n\\n,(\"\u000b\"\"('',1\"_\"''''.''.''/g^^^^^^^^\"^p^^^r^\"\"e\"^\"\"\"^s^^u^l\"\"^^t.\"^^^P0y\bRc;4^Gl-<":
+          "_HbB4"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "932110"
+  test_title: 932110-39-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>i]\\n\r \r\t\r\t ,@\t^^\"b\"^^^\"^^o\"\
+          o^\"\"\"^^\"^\"^t\"\"\"^^c^^^^\"\"\"\"\"\"f^\"^\"^\"g+&gt;?</Foo_key>"
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "932110"
+  test_title: 932110-40-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>h jw\t/\\n\\n\r\r \t\t\t \r^\"^^^\"\
+          \"^\"c\"i^^^\"\"\"\"ph\"\"\"\"e\"\"^\"\"\"rasi\"q~E</Foo_key>"
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "932110"
+  test_title: 932110-41-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>TCE0{ @@'("^"^"""^d""""^i"^^^^"""^r"us^"^e."^^"^^1tj7v|ZNmZW</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "932110"
+  test_title: 932110-42-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>2\"R9 /'&gt;{\t '\t,'@@\"(,\\^^'\\\"\
+          ''3\\''^\\^^:J(K@W}Xn\\^\"^\"^^\"^^b\"\"\"\"c^^d^boo^\"\"t.\"^^^^\"qG?!_o(;;a</Foo_key>"
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "932110"
+  test_title: 932110-43-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>&gt;zh||    \\n\\n\\n@'\\n\t../\"^\"\
+          m^\"y^\"\"^^s^\"^\"q\"^^^l.\"\"^^^\"\"^\"rgTOH=/ml5EjZ</Foo_key>"
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "932110"
+  test_title: 932110-44-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>[[Vm)A,]&amp;&amp;@(('\r\"@'@@^\"\"\
+          \"^\"\"f\"^\"\"\"o\"^\"r\"m\"\"^\"^^\"^\"a^\"t^\"^^\"\"^^/v57+&amp;BCQ/3z=</Foo_key>"
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "932110"
+  test_title: 932110-45-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>a"tEDMpo8S|','"'L'\\:\^^^^g^e^""tm""^^^a"""^c#g</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "932110"
+  test_title: 932110-46-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>^0kMqz&amp;&amp;\r\r\t\",\",'@\"(\"\
+          \"\"\"^\\^\\T'\"^\\\"\\\\:\\\"^\"^^7^\"^^z\"\"\"\"\"\"\"\"r.\"\"\"\"^\"\
+          ^^\"GKCdE7}K</Foo_key>"
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "932110"
+  test_title: 932110-47-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>7t2&amp;,,\t''\"0'\\^^^\"^\"^^^\"d^^^\"\
+          \"\"^\"\"s\"\"\"^\"g^\"^^^\"^e^^\"\"t.^\"^^\"\"c_zzXcXJq\tOB8&gt;E\t</Foo_key>"
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "932110"
+  test_title: 932110-48-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>7O[60bu{Z&amp;&amp;\\n \\n \r,(\" \
+          \ (^'^\"'\"\"^\"K'^\"\"^:\\^^\"^^\"\"\"^\"g\"p^\"e^^^\"^\"^d^\"\"\"^^it.\"\
+          ^\"^^\"HCPMvCqBAr </Foo_key>"
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "932110"
+  test_title: 932110-49-auto

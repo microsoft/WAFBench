@@ -800,3 +800,138 @@ tests:
       output:
         log_contains: id "944100"
   test_title: 944100-56-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>9\t\"8CJr?A(JAVA.LanG.PROCEsSBUIlDERU4{</Foo_key>"
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "944100"
+  test_title: 944100-57-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>G R2ZL]O+Java.lang.PrOcesSbuILDerR3^g</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "944100"
+  test_title: 944100-58-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>oVO!PT?p2jAVA.LaNG.rUnTImENA'</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "944100"
+  test_title: 944100-59-auto
+- stages:
+  - stage:
+      input:
+        data: '{"eq<%wjaVA.lAng.rUntImeh|R@~SqH":"nkc0LaFcK"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "944100"
+  test_title: 944100-60-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>V\#ttEkYJavA.lAnG.ruNTimEDT</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "944100"
+  test_title: 944100-61-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>L2g{java.lANg.RuNTImE,kK</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "944100"
+  test_title: 944100-62-auto
+- stages:
+  - stage:
+      input:
+        data: '{"AT-R=L{A8DjAvA.laNG.rUnTIMevL":"Kt"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "944100"
+  test_title: 944100-63-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>w`jAVA.LaNG.RuNTImEG{C</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "944100"
+  test_title: 944100-64-auto
+- stages:
+  - stage:
+      input:
+        data: '{"{CjAva.lANg.runTImeSj":"ujvvzd"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "944100"
+  test_title: 944100-65-auto

@@ -284,3 +284,93 @@ tests:
       output:
         log_contains: id "913120"
   test_title: 913120-20-auto
+- stages:
+  - stage:
+      input:
+        data: '{"g1xQAG":"/.adsEnSePOSTnottHeReNoNObOOk"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "913120"
+  test_title: 913120-21-auto
+- stages:
+  - stage:
+      input:
+        data: '{"j4":"/CYbERCop"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "913120"
+  test_title: 913120-22-auto
+- stages:
+  - stage:
+      input:
+        data: '{"6m9y4":"/W3Af/ReMOTEfiLeIncLudE.htmL"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "913120"
+  test_title: 913120-23-auto
+- stages:
+  - stage:
+      input:
+        data: '{"Cxd3oO":"/RfiinC.txT"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "913120"
+  test_title: 913120-24-auto
+- stages:
+  - stage:
+      input:
+        data: '{"K4NXXC":"/ARacHNI-"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "913120"
+  test_title: 913120-25-auto
+- stages:
+  - stage:
+      input:
+        data: '{"jSjZ":"/ThEREISNOWAyTHAT-YOu-CANBethERE"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "913120"
+  test_title: 913120-26-auto

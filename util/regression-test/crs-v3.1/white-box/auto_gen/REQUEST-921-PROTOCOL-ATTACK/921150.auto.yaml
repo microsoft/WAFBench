@@ -144,3 +144,93 @@ tests:
       output:
         log_contains: id "921150"
   test_title: 921150-10-auto
+- stages:
+  - stage:
+      input:
+        data: '{"uT%0A%7C%3E%2C%23":"3"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "921150"
+  test_title: 921150-11-auto
+- stages:
+  - stage:
+      input:
+        data: '{"%5Cjm%40.%0AH%0D%7Co%5B":"CBk"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "921150"
+  test_title: 921150-12-auto
+- stages:
+  - stage:
+      input:
+        data: '{"%5D/%5D%25%0AeV":"rl52GtGkC"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "921150"
+  test_title: 921150-13-auto
+- stages:
+  - stage:
+      input:
+        data: '{"%3F%0A%26gt%3Bm%2B%5D0N":"F1q3LPHWc"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "921150"
+  test_title: 921150-14-auto
+- stages:
+  - stage:
+      input:
+        data: '{"B1%23%26quot%3Be%2AM%0D%3F":"eXy1Z96w"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "921150"
+  test_title: 921150-15-auto
+- stages:
+  - stage:
+      input:
+        data: '{"U%0D3":"IC3n"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "921150"
+  test_title: 921150-16-auto

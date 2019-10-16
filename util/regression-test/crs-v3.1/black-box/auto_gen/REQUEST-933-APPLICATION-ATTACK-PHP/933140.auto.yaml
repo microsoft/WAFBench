@@ -574,3 +574,131 @@ tests:
         status:
         - 403
   test_title: 933140-38-auto
+- stages:
+  - stage:
+      input:
+        data: '{"a":"J?php://fdrT|b "}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 933140-39-auto
+- stages:
+  - stage:
+      input:
+        data: '{"aphp://stderrBXK:uIVU{z":"y"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 933140-40-auto
+- stages:
+  - stage:
+      input:
+        data: '{"gX1]$/u;aphp://memory->Iq2,^!":"REg4s"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 933140-41-auto
+- stages:
+  - stage:
+      input:
+        data: '{"D&krphp://tempAn$h":"DrBYOo_Fd"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 933140-42-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>a0nphp://filterDyi}adUW</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 933140-43-auto
+- stages:
+  - stage:
+      input:
+        data: '{"bA":"*0;ecN`php://stdin/v"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 933140-44-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>G~php://output+17.aXd\</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 933140-45-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>HG5ML7bFfTphp://stdoutudjq[@</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 933140-46-auto

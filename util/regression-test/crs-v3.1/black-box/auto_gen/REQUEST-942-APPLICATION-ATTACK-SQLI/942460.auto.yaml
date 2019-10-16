@@ -154,3 +154,99 @@ tests:
         status:
         - 403
   test_title: 942460-10-auto
+- stages:
+  - stage:
+      input:
+        data: '{"wPyol":"OH%3D_RSg%25%29/%0DM%20YU%22%3B/T"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 942460-11-auto
+- stages:
+  - stage:
+      input:
+        data: '{"9Y2":"h%21/r%7B%60%3C%60%7Be"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 942460-12-auto
+- stages:
+  - stage:
+      input:
+        data: '{"Fqx6Qt":"%5C9J%217%5D%5D%29%22%5E0%09%3FqOaKwZ"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 942460-13-auto
+- stages:
+  - stage:
+      input:
+        data: '{"FLQ":"b%0Bo%29d%5B%3F%25%20%7D8Y"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 942460-14-auto
+- stages:
+  - stage:
+      input:
+        data: '{"ff":"%3BSH-%0B%0ByC%40%0B%3B%0Ai%2B%0D%5BT"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 942460-15-auto
+- stages:
+  - stage:
+      input:
+        data: '{"hKx":"R%24%25IXkS4I%23.%7E%22HR.J%3D"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 942460-16-auto

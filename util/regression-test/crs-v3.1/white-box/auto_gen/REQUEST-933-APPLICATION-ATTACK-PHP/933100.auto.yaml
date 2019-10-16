@@ -564,3 +564,273 @@ tests:
       output:
         log_contains: id "933100"
   test_title: 933100-40-auto
+- stages:
+  - stage:
+      input:
+        data: '{"%7C%3C%3Fx4Q%09K-0%0B%3C":"p09LwMaD"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933100"
+  test_title: 933100-41-auto
+- stages:
+  - stage:
+      input:
+        data: '{"vD":"5U%3C%3FPhPm0I"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933100"
+  test_title: 933100-42-auto
+- stages:
+  - stage:
+      input:
+        data: '{"YNJm":"c%40%267BWA5H%3C%3FV-%24%7E%5E"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933100"
+  test_title: 933100-43-auto
+- stages:
+  - stage:
+      input:
+        data: '{"%20%3C%3F%21DK%23O%3F":"PD0UQBvvHW"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933100"
+  test_title: 933100-44-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>O%40%5B/PHP%5D%27%26IoC.%25</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933100"
+  test_title: 933100-45-auto
+- stages:
+  - stage:
+      input:
+        data: '{"OI4.%40%3D/_%3C%3FphPWY":"7Y7Qb"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933100"
+  test_title: 933100-46-auto
+- stages:
+  - stage:
+      input:
+        data: '{"mLOpfrrF9z":"R%2B6x%24PX5VI%3C%3F2F8OE%3D"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933100"
+  test_title: 933100-47-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>%23HTE%26%7C%3C%3FPHp47Q0TP</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933100"
+  test_title: 933100-48-auto
+- stages:
+  - stage:
+      input:
+        data: '{"%21Fp%26%7D%5B/PHP%5DPS7_K%3A%0COq":"SYiA"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933100"
+  test_title: 933100-49-auto
+- stages:
+  - stage:
+      input:
+        data: '{"ATIlnl6b":"SU5%2C%22XU%3C%3F%60B"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933100"
+  test_title: 933100-50-auto
+- stages:
+  - stage:
+      input:
+        data: '{"JFZI3fyw":"BLW6P%3C%3FPHP%23WOOV9W%5CC"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933100"
+  test_title: 933100-51-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>EI%3C%3FpHpG</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933100"
+  test_title: 933100-52-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>%25%5B.%5B%5CphP%5DeOzs</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933100"
+  test_title: 933100-53-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>/E%3FE%3C%3FPHP%3CbwY%5DQU%23</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933100"
+  test_title: 933100-54-auto
+- stages:
+  - stage:
+      input:
+        data: '{"t":"%60R%5Cihw%3B%3FH%5BphP%5D9%7E%60"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933100"
+  test_title: 933100-55-auto
+- stages:
+  - stage:
+      input:
+        data: '{"OM%3C%3FLC%3C3X%22%21dv":"XPfIcVJ7T"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933100"
+  test_title: 933100-56-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>%25dBM%5B/php%5DZLNS%23</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933100"
+  test_title: 933100-57-auto
+- stages:
+  - stage:
+      input:
+        data: '{"%7C%7DTHM%0CG%408%5B%3C%3FC7":"qmHg4X"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "933100"
+  test_title: 933100-58-auto

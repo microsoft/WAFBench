@@ -754,3 +754,291 @@ tests:
         status:
         - 403
   test_title: 933150-50-auto
+- stages:
+  - stage:
+      input:
+        data: '{"pfsoCKOpen":"kxjh2B"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 933150-51-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>WP_rEmOTe_REqUeST</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 933150-52-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>wP_Safe_ReMoTE_head</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 933150-53-auto
+- stages:
+  - stage:
+      input:
+        data: '{"WP_ReMoTe_heaD":"i8G9u5"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 933150-54-auto
+- stages:
+  - stage:
+      input:
+        data: '{"Pt":"pOsIX_unaMe"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 933150-55-auto
+- stages:
+  - stage:
+      input:
+        data: '{"0y":"fSoCKopEN"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 933150-56-auto
+- stages:
+  - stage:
+      input:
+        data: '{"Y":"invokeargS"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 933150-57-auto
+- stages:
+  - stage:
+      input:
+        data: '{"L":"syS_GET_teMp_DIr"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 933150-58-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>POSIx_GETcWD</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 933150-59-auto
+- stages:
+  - stage:
+      input:
+        data: '{"KtW":"wP_SAfE_ReMote_head"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 933150-60-auto
+- stages:
+  - stage:
+      input:
+        data: '{"InclUde_oNcE":"J0xi6QBFdQ"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 933150-61-auto
+- stages:
+  - stage:
+      input:
+        data: '{"posIX_unamE":"oEZH68S27S"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 933150-62-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>zLIB_dEcODe</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 933150-63-auto
+- stages:
+  - stage:
+      input:
+        data: '{"sPAJAIY":"WP_REmOtE_HEad"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 933150-64-auto
+- stages:
+  - stage:
+      input:
+        data: '{"apAChE_ChiLd_teRmINATE":"zZd7Bhk"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 933150-65-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>CaLl_uSeR_MEtHoD</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 933150-66-auto
+- stages:
+  - stage:
+      input:
+        data: '{"pcNTl_fOrk":"hTLi_"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 933150-67-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>iNCLuDE_oNce</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 933150-68-auto

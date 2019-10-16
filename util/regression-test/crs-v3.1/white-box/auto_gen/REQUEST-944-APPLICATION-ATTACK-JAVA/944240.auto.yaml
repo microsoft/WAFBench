@@ -864,3 +864,168 @@ tests:
       output:
         log_contains: id "944240"
   test_title: 944240-60-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>f>IQFiLEwriTeRj?8h></Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "944240"
+  test_title: 944240-61-auto
+- stages:
+  - stage:
+      input:
+        data: '{"2XXINVOKertRaNSfOrMER=":"yu0v"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "944240"
+  test_title: 944240-62-auto
+- stages:
+  - stage:
+      input:
+        data: '{"8fILewRiterWdf@#":"X3"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "944240"
+  test_title: 944240-63-auto
+- stages:
+  - stage:
+      input:
+        data: '{"M?CE(X''BV_iNvOKERTrANsformErm":"QbAUcw"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "944240"
+  test_title: 944240-64-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>UsRQInSTANtIaTEfAcTOryoiD</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "944240"
+  test_title: 944240-65-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>D^uFORclOsUre-G5=CZjaV</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "944240"
+  test_title: 944240-66-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>4D3ZM$prototypeclOnEfAcToRY'Y</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "944240"
+  test_title: 944240-67-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>?\r/]H:/GINsTantiaTEfactory(NgL~I;[8</Foo_key>"
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "944240"
+  test_title: 944240-68-auto
+- stages:
+  - stage:
+      input:
+        data: '{"xMimj4E9x":"eXmldecoder!|m["}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "944240"
+  test_title: 944240-69-auto
+- stages:
+  - stage:
+      input:
+        data: '{"rp3Z5ewyu":"VWhiLecloSURE^OHm~I!"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "944240"
+  test_title: 944240-70-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>AfEINVOKertRanSfoRMErLLG.C/'</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        log_contains: id "944240"
+  test_title: 944240-71-auto

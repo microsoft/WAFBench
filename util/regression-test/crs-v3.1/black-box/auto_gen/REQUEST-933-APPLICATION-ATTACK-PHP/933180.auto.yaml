@@ -709,3 +709,19 @@ tests:
         status:
         - 403
   test_title: 933180-47-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>}$$$$$$$${^J~^.}//%\tsv)[orV/M0](|F)G$_){Zd/'S</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 933180-48-auto

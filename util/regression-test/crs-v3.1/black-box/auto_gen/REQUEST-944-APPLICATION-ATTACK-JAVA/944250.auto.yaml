@@ -754,3 +754,646 @@ tests:
         status:
         - 403
   test_title: 944250-50-auto
+- stages:
+  - stage:
+      input:
+        data: '{"SBBf018y5": "dRPJKfjaVA\b:BKx[5KU_proCessBUilderLSS"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944250-51-auto
+- stages:
+  - stage:
+      input:
+        data: '{"LD5qQYB6?jAVa\bD|2ruNtImey''": "vvMNI"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944250-52-auto
+- stages:
+  - stage:
+      input:
+        data: '{"Eh31qp": ">''i+RX!jaVa\boProcesSBUILDeR@44GQN&)7"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944250-53-auto
+- stages:
+  - stage:
+      input:
+        data: '{"SjmA)jAVA\bWruNTIMESd&;K": "aL6q"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944250-54-auto
+- stages:
+  - stage:
+      input:
+        data: '{"XOV}+FjavA\bt>9ruNTimeZ": "iCLg3fC4"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944250-55-auto
+- stages:
+  - stage:
+      input:
+        data: '{"#EjAva\bETgC,P{DgCrunTimEX": "O3eQ"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944250-56-auto
+- stages:
+  - stage:
+      input:
+        data: '{"CpM": "+6JAVa\b]TN),\r^pROcESSBUIldeR`T:"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944250-57-auto
+- stages:
+  - stage:
+      input:
+        data: '{" :hgv>jAVA\b0(IU\rBprocEssbUILdEr\r)`HMV}": "0Fwuip2"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944250-58-auto
+- stages:
+  - stage:
+      input:
+        data: '{"03JJavA\bK''(4yTh1lProcesSbUIlDEr+v": "n9Qt"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944250-59-auto
+- stages:
+  - stage:
+      input:
+        data: '{"JIi?-~Xue\rjaVa\b/7E{WK\"NpRoceSsbUIlDerr#7DZ+=": "1ral3Q"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944250-60-auto
+- stages:
+  - stage:
+      input:
+        data: '{"Z2GoMd": "zJAva\bVRuntiMEPEQhR}"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944250-61-auto
+- stages:
+  - stage:
+      input:
+        data: '{":*vWZjAvA\bE.?rUNTIMe5\\EAiW''": "oa0BC9gD"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944250-62-auto
+- stages:
+  - stage:
+      input:
+        data: '{">pzBKjAvA\bb~''MRUnTIME>YVL7A.": "fV4v"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944250-63-auto
+- stages:
+  - stage:
+      input:
+        data: '{"$\tmNWDiC[YjaVa\bq$Y8ILk%RunTiMe\fAi": "8oE3"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944250-64-auto
+- stages:
+  - stage:
+      input:
+        data: '{"F7ZnE3ZICL": "\\PL\f)jaVA\bKIrUNtime{7"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944250-65-auto
+- stages:
+  - stage:
+      input:
+        data: '{"bDtdQC8N": "{iNYjAVA\b`A\\AOgZprOceSsBuILdeRVLnNB0''^]"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944250-66-auto
+- stages:
+  - stage:
+      input:
+        data: '{"WeE": ".DYWuAjAVA\bdrUntIMeDq/"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944250-67-auto
+- stages:
+  - stage:
+      input:
+        data: '{"seHT5QBpv": "\t4\f&ACM2JjavA\bB5\fU?RUNTime3K* "}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944250-68-auto
+- stages:
+  - stage:
+      input:
+        data: '{"4ZeaaZkGv": "&8\"UAYQjaVa\b\rCC=)P.PProceSsBUILder\"a\u000bN"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944250-69-auto
+- stages:
+  - stage:
+      input:
+        data: '{"L": "+jaVA\b()W''ZprOCESSBUIlDern~)GLt?\""}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944250-70-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>GE.Java!16CrunTIME?UO&amp;Q"]S</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944250-71-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>zJAVA~L'QRUNtimEj&gt;</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944250-72-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>=h@Sd`)_%kjavA]?&amp;runtiMEBBU*z[</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944250-73-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>o`*noJava\KvbMpROcESsbuIlDER0XD%PZY</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944250-74-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>1W%=K&lt;88I\tJava&lt;F}&gt;RUnTIme$?R</Foo_key>"
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944250-75-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>6JAvA.p,|?P!RUnTiMeZ</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944250-76-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>XTLZIAWOJaVa~|YSOEruNTIMe4XfXEFo</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944250-77-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>HZt#3java,ppw|\rPROcESSBuiLdER0}=r\
+          \ =VF</Foo_key>"
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944250-78-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>784/=PjaVA*)EwprocESSBUILDer&amp;YIy&gt;</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944250-79-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>~]8JavA)N~O,M!pRoceSSBuILdEr1K=Hq&gt;`q</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944250-80-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>uZ3@Pfh?VJavA\rS9D\"Bp2SMProcESsbuILDErdY\\\
+          ?FMKI</Foo_key>"
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944250-81-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>F+W]bJAvA&amp;\rX9Va*cPROCesSBUILdER^|</Foo_key>"
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944250-82-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>{"&amp;B4jAva}gA]#N%O-RunTiMEREWcN'U</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944250-83-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>w[BV]O\t5&amp;jaVa`;=HKprOcessBUildERPD\
+          \ UX]Z</Foo_key>"
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944250-84-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>)JAVa)}\\dproCEsSbUilDer-\t4</Foo_key>"
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944250-85-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>XJAvA;8ruNtIme[PzC=</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944250-86-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>@`\P[JK9JAVA/VProceSSBUIldER9=wOW</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944250-87-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>KJava-!RuntiMe Wk;Cz</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944250-88-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>?5ItJAVa'rUnTiMEIAK,W,"</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944250-89-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>5jAVA#e1!IG^\rJrUntiMe</Foo_key>"
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 944250-90-auto

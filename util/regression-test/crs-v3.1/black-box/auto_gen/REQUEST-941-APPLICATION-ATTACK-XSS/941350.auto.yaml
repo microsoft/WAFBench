@@ -64,3 +64,83 @@ tests:
         status:
         - 403
   test_title: 941350-4-auto
+- stages:
+  - stage:
+      input:
+        data: '{"3oLWE":"tI%255C141%255C%2526%2523x31%253B56%2526%252337%253B%252B%2526%252392%253B101%255C104%2526%2523x77%253B%255Cx2d%255C143%252B%2526%2523x5c%253Bx41%255C%2526%2523x78%253B44w%255Cx2%2526%2523x64%253B%2526amp%253B%2523%255Cx4c%255Cx33D%255E%255Cx7d%255C134%2526%2523121%253B"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 941350-5-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>%257C%2526lt%253B%255C100%2526lt%253B%2526%2523x5c%253B53AD%255C167-%255C151%252B%255C1%2526%252348%253B1%255Cx44%255Cx77%255C55%255Cx26%255Cx3e%255Cx5b%255Cx67u%255C67z</Foo_key>
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 941350-6-auto
+- stages:
+  - stage:
+      input:
+        data: '{"6SgIjWgGpH":"8%2526%2523x5c%253B141%255C152%2526%2523x5c%253Bx%2526%252355%253B%2526%252397%253Ba%2526lt%253B%255Cx0b%255Cx60%252B%255Cx41%255C%2526%252349%253B04%255Cx34-%255Cx23%255C173y%255D"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 941350-7-auto
+- stages:
+  - stage:
+      input:
+        data: '{"%253D%2526%2523x30%253B%255C134%255Cx34%255Cx66%255C115%255Cx6e%257B%255Cx32%255C53%255C101%2526%2523x44%253B4%255Cx2d%255Cx7a%2526gt%253B3%2526amp%253B%255B0%2524%250B%2526gt%253B%255C151%255D%257C%255Cx4e%255C%2526%252349%253B30%255C77%2528":"o2_Ee"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 941350-8-auto
+- stages:
+  - stage:
+      input:
+        data: '{"%255Cx71%255C%2526%2523120%253B2%2526%2523x62%253B%255Cx41%255Cx444%2526%252392%253Bx%2526%2523x32%253Bd5%255Cx50m%2526%2523x5c%253Bx3%2526%2523101%253B%255C140%2528%2526amp%253B%255C167n":"6N"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 941350-9-auto
