@@ -1,0 +1,472 @@
+meta:
+  author: msra
+  description: None
+  enabled: true
+  name: 10.yaml
+tests:
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)
+        method: GET
+        port: 80
+        protocol: http
+        uri: /
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 10-1
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)
+        method: GET
+        port: 80
+        protocol: http
+        uri: /
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 10-2
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)
+        method: GET
+        port: 80
+        protocol: http
+        uri: /
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 10-3
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: msnbot/1.1 (+http://search.msn.com/msnbot.htm)
+        method: GET
+        port: 80
+        protocol: http
+        uri: /
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 10-4
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: adidxbot/2.0 (+http://search.msn.com/msnbot.htm)
+        method: GET
+        port: 80
+        protocol: http
+        uri: /
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 10-5
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: Mozilla/5.0 (compatible; Googlebot/2.1 +http://www.googlebot.com/bot.html)
+        method: GET
+        port: 80
+        protocol: http
+        uri: /
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 10-6
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: Mozilla/5.0 (Linux; Android 5.0; SM-G920A) AppleWebKit (KHTML, like Gecko) Chrome Mobile Safari (compatible; AdsBot-Google-Mobile; +http://www.google.com/mobile/adsbot.html)
+        method: GET
+        port: 80
+        protocol: http
+        uri: /
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 10-7
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: Mediapartners-Google
+        method: GET
+        port: 80
+        protocol: http
+        uri: /
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 10-8
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko; Google Web Preview) Chrome/27.0.1453 Safari/537.36
+        method: GET
+        port: 80
+        protocol: http
+        uri: /
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 10-9
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.75 Safari/537.36 Google Favicon
+        method: GET
+        port: 80
+        protocol: http
+        uri: /
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 10-10
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: YahooCacheSystem
+        method: GET
+        port: 80
+        protocol: http
+        uri: /
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 10-11
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)
+        method: GET
+        port: 80
+        protocol: http
+        uri: /
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 10-12
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: Sogou web spider/4.0(+http://www.sogou.com/docs/help/webmasters.htm#07)
+        method: GET
+        port: 80
+        protocol: http
+        uri: /
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 10-13
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: Sogou Pic Spider/3.0( http://www.sogou.com/docs/help/webmasters.htm#07)
+        method: GET
+        port: 80
+        protocol: http
+        uri: /
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 10-14
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: Mozilla/5.0 (compatible; Applebot/0.3; +http://www.apple.com/go/applebot)
+        method: GET
+        port: 80
+        protocol: http
+        uri: /
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 10-15
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 10_3 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) CriOS/56.0.2924.75 Mobile/14E5239e YisouSpider/5.0 Safari/602.1
+        method: GET
+        port: 80
+        protocol: http
+        uri: /
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 10-16
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: DuckDuckBot/1.1; (+http://duckduckgo.com/duckduckbot.html)
+        method: GET
+        port: 80
+        protocol: http
+        uri: /
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 10-17
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: Mozilla/5.0 (compatible; DuckDuckGo-Favicons-Bot/1.0; +http://duckduckgo.com)
+        method: GET
+        port: 80
+        protocol: http
+        uri: /
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 10-18
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: Mozilla/5.0 (compatible; Baiduspider/2.0; +http://www.baidu.com/search/spider.html)"
+        method: GET
+        port: 80
+        protocol: http
+        uri: /
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 10-19
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: Mozilla/5.0 (compatible; coccocbot-web/1.0; +http://help.coccoc.com/searchengine)
+            Robot)
+        method: GET
+        port: 80
+        protocol: http
+        uri: /
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 10-20
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: Mozilla/4.0 (compatible; MSIE 4.01; Windows NT; MS Search 6.0 Robot)
+        method: GET
+        port: 80
+        protocol: http
+        uri: /
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 10-21
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.0 Safari/537.36 (compatible; Yeti/1.1; +http://naver.me/spd)
+        method: GET
+        port: 80
+        protocol: http
+        uri: /
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 10-22
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: YahooMailProxy; https://help.yahoo.com/kb/yahoo-mail-proxy-SLN28749.html
+        method: GET
+        port: 80
+        protocol: http
+        uri: /
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 10-23
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: Mozilla/5.0 (compatible; Yahoo Ad Monitoring https://help.yahoo.com/kb/yahoo-ad-monitoring-SLN24857.html)
+        method: GET
+        port: 80
+        protocol: http
+        uri: /
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 10-24
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: yacybot (x86 Windows XP 5.1; java 1.6.0_12; Europe/de) http://yacy.net/bot.html
+        method: GET
+        port: 80
+        protocol: http
+        uri: /
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 10-25
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: Mozilla/5.0 (compatible; SeznamBot/3.2; +http://napoveda.seznam.cz/en/seznambot-intro/)
+        method: GET
+        port: 80
+        protocol: http
+        uri: /
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 10-26
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36; 360Spider
+        method: GET
+        port: 80
+        protocol: http
+        uri: /
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 10-27
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: Hatena::UserAgent/0.02
+        method: GET
+        port: 80
+        protocol: http
+        uri: /
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 10-28
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: Mozilla/5.0 (compatible; SputnikBot/2.3; +http://corp.sputnik.ru/webmaster)
+        method: GET
+        port: 80
+        protocol: http
+        uri: /
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 10-29
+
