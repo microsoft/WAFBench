@@ -1,0 +1,150 @@
+meta:
+  author: msra
+  description: Link checker
+  enabled: true
+  name: 20.yaml
+tests:
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: Twitterbot/1.0
+        method: GET
+        port: 80
+        protocol: http
+        uri: /
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 20-1
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: Slackbot-LinkExpanding 1.0 (+https://api.slack.com/robots)
+        method: GET
+        port: 80
+        protocol: http
+        uri: /
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 20-2
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: facebookexternalua
+        method: GET
+        port: 80
+        protocol: http
+        uri: /
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 20-3
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: facebookexternalhit/1.0 (+http://www.facebook.com/externalhit_uatext.php)
+        method: GET
+        port: 80
+        protocol: http
+        uri: /
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 20-4
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36 TelegramBot (like TwitterBot)
+        method: GET
+        port: 80
+        protocol: http
+        uri: /
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 20-5
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: LinkedInBot/1.0 (compatible; Mozilla/5.0; Jakarta Commons-HttpClient/3.1 +http://www.linkedin.com)
+        method: GET
+        port: 80
+        protocol: http
+        uri: /
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 20-6
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: Iframely/0.7.3 (+http://iframely.com/;)
+        method: GET
+        port: 80
+        protocol: http
+        uri: /
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 20-7
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.0) LinkCheck by Siteimprove.com
+        method: GET
+        port: 80
+        protocol: http
+        uri: /
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 20-8
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: HubSpot Connect 2.0 (http://dev.hubspot.com/) - UrlBlacklistsKafkaWorkers-urlchecksworker
+        method: GET
+        port: 80
+        protocol: http
+        uri: /
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: 20-9
