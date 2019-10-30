@@ -1,6 +1,6 @@
 meta:
   author: msra
-  description: SQLI
+  description: SQL injection
   enabled: true
   name: SQLI.yaml
 tests:

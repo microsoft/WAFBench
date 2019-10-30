@@ -1,6 +1,6 @@
 meta:
   author: msra
-  description: XSS payloads
+  description: XSS injection
   enabled: true
   name: XSS_payloads.yaml
 tests:
