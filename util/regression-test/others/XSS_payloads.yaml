@@ -1,0 +1,81 @@
+meta:
+  author: msra
+  description: XSS payloads
+  enabled: true
+  name: XSS_payloads.yaml
+tests:
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?t=XSS - <svg onload="prompt(1)"></svg>
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: XSS_payloads-1
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?t=XSS - <iframe src="javascript:alert(`xss`)">
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: XSS_payloads-2
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?t=<iframe/onload=alert(/INJECTX/)>
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: XSS_payloads-3
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?t=<<script>Foo</script>iframe src=”javascript:alert(1)”>
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: XSS_payloads-4
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?t=424242<svg onload="prompt(1)"></svg>
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: XSS_payloads-5
