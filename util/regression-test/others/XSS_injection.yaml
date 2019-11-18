@@ -1,0 +1,81 @@
+meta:
+  author: msra
+  description: XSS injection
+  enabled: true
+  name: XSS_payloads.yaml
+tests:
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?t=XSS%20-%20%3Csvg%20onload%3D%22prompt%281%29%22%3E%3C/svg%3E
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: XSS_payloads-1
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?t=XSS%20-%20%3Ciframe%20src%3D%22javascript%3Aalert%28%60xss%60%29%22%3E
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: XSS_payloads-2
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?t=%3Ciframe/onload%3Dalert%28/INJECTX/%29%3E
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: XSS_payloads-3
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?t=%3C%3Cscript%3EFoo%3C/script%3Eiframe%20src%3D%E2%80%9Djavascript%3Aalert%281%29%E2%80%9D%3E
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: XSS_payloads-4
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?t=424242%3Csvg%20onload%3D%22prompt%281%29%22%3E%3C/svg%3E
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: XSS_payloads-5

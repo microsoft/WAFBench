@@ -1,0 +1,36 @@
+meta:
+  author: msra
+  description: HTML injection
+  enabled: true
+  name: HTML injection.yaml
+tests:
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?g=%3Ch1%3E%3Cb%3ETESTTESTEST%3Cb%3E%3C/h1%3E
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: HTML injection-1
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?g=%3Ch1%3E%20TITLE%20%3C/h1%3E
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: HTML injection-2

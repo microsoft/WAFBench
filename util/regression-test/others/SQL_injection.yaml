@@ -1,0 +1,23 @@
+meta:
+  author: msra
+  description: SQL injection
+  enabled: true
+  name: SQLI.yaml
+tests:
+- stages:
+  - stage:
+      input:
+        data: '{"email": "1'' or 1=1; -- ", "password": "2"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/json
+          Host: localhost
+        method: POST
+        port: 80
+        protocol: http
+        uri: /?
+        version: HTTP/1.1
+      output:
+        status:
+        - 403
+  test_title: SQLI-1
