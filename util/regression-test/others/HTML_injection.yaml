@@ -13,7 +13,7 @@ tests:
         method: GET
         port: 80
         protocol: http
-        uri: /?g=<h1><b>TESTTESTEST<b></h1>
+        uri: /?g=%3Ch1%3E%3Cb%3ETESTTESTEST%3Cb%3E%3C/h1%3E
         version: HTTP/1.1
       output:
         status:
@@ -28,7 +28,7 @@ tests:
         method: GET
         port: 80
         protocol: http
-        uri: /?g=<h1> TITLE </h1>
+        uri: /?g=%3Ch1%3E%20TITLE%20%3C/h1%3E
         version: HTTP/1.1
       output:
         status:

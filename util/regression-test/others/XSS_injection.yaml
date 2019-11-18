@@ -13,7 +13,7 @@ tests:
         method: GET
         port: 80
         protocol: http
-        uri: /?t=XSS - <svg onload="prompt(1)"></svg>
+        uri: /?t=XSS%20-%20%3Csvg%20onload%3D%22prompt%281%29%22%3E%3C/svg%3E
         version: HTTP/1.1
       output:
         status:
@@ -28,7 +28,7 @@ tests:
         method: GET
         port: 80
         protocol: http
-        uri: /?t=XSS - <iframe src="javascript:alert(`xss`)">
+        uri: /?t=XSS%20-%20%3Ciframe%20src%3D%22javascript%3Aalert%28%60xss%60%29%22%3E
         version: HTTP/1.1
       output:
         status:
@@ -43,7 +43,7 @@ tests:
         method: GET
         port: 80
         protocol: http
-        uri: /?t=<iframe/onload=alert(/INJECTX/)>
+        uri: /?t=%3Ciframe/onload%3Dalert%28/INJECTX/%29%3E
         version: HTTP/1.1
       output:
         status:
@@ -58,7 +58,7 @@ tests:
         method: GET
         port: 80
         protocol: http
-        uri: /?t=<<script>Foo</script>iframe src=”javascript:alert(1)”>
+        uri: /?t=%3C%3Cscript%3EFoo%3C/script%3Eiframe%20src%3D%E2%80%9Djavascript%3Aalert%281%29%E2%80%9D%3E
         version: HTTP/1.1
       output:
         status:
@@ -73,7 +73,7 @@ tests:
         method: GET
         port: 80
         protocol: http
-        uri: /?t=424242<svg onload="prompt(1)"></svg>
+        uri: /?t=424242%3Csvg%20onload%3D%22prompt%281%29%22%3E%3C/svg%3E
         version: HTTP/1.1
       output:
         status:
