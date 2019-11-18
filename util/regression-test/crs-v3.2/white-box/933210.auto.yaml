@@ -39,21 +39,6 @@ tests:
       input:
         dest_addr: 127.0.0.1
         headers:
-          Cookie: a=1
-          Host: localhost
-        method: GET
-        uri: /(/**/system)(ls/**/);
-        port: 80
-        protocol: http
-        version: HTTP/1.1
-      output:
-        log_contains: id "933210"
-  test_title: 933210-3-auto
-- stages:
-  - stage:
-      input:
-        dest_addr: 127.0.0.1
-        headers:
           Cookie: (system)('uname')=1
           Host: localhost
         method: GET
@@ -63,7 +48,7 @@ tests:
         version: HTTP/1.1
       output:
         log_contains: id "933210"
-  test_title: 933210-4-auto
+  test_title: 933210-3-auto
 - stages:
   - stage:
       input:
@@ -78,7 +63,7 @@ tests:
         version: HTTP/1.1
       output:
         log_contains: id "933210"
-  test_title: 933210-5-auto
+  test_title: 933210-4-auto
 - stages:
   - stage:
       input:
@@ -95,5 +80,5 @@ tests:
         version: HTTP/1.1
       output:
         log_contains: id "933210"
-  test_title: 933210-6-auto
+  test_title: 933210-5-auto
 
