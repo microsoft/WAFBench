@@ -41,22 +41,6 @@ tests:
       input:
         dest_addr: 127.0.0.1
         headers:
-          Cookie: a=1
-          Host: localhost
-        method: GET
-        port: 80
-        protocol: http
-        uri: /(/**/system)(ls/**/);
-        version: HTTP/1.1
-      output:
-        status:
-        - 403
-  test_title: 933210-3-auto
-- stages:
-  - stage:
-      input:
-        dest_addr: 127.0.0.1
-        headers:
           Cookie: (system)('uname')=1
           Host: localhost
         method: GET
@@ -67,7 +51,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 933210-4-auto
+  test_title: 933210-3-auto
 - stages:
   - stage:
       input:
@@ -83,7 +67,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 933210-5-auto
+  test_title: 933210-4-auto
 - stages:
   - stage:
       input:
@@ -101,5 +85,5 @@ tests:
       output:
         status:
         - 403
-  test_title: 933210-6-auto
+  test_title: 933210-5-auto
 
