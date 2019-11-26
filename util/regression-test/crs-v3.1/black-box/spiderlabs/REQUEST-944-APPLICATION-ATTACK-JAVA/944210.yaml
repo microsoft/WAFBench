@@ -378,7 +378,7 @@ tests:
         version: HTTP/1.0
       output:
         status:
-        - 403
+        - 405
   test_title: 944210-16
 - desc: XML attribute name includes keyword KztAAU
   stages:
@@ -399,7 +399,7 @@ tests:
         version: HTTP/1.0
       output:
         status:
-        - 403
+        - 405
   test_title: 944210-17
 - desc: XML attribute value includes keyword KztAAU
   stages:
@@ -796,7 +796,7 @@ tests:
         version: HTTP/1.0
       output:
         status:
-        - 403
+        - 405
   test_title: 944210-34
 - desc: Request header test includes keyword rO0ABQ
   stages:
@@ -839,7 +839,7 @@ tests:
         version: HTTP/1.0
       output:
         status:
-        - 403
+        - 405
   test_title: 944210-36
 - desc: XML attribute value includes keyword Cs7QAF
   stages:
@@ -1076,7 +1076,7 @@ tests:
         version: HTTP/1.0
       output:
         status:
-        - 403
+        - 405
   test_title: 944210-46
 - desc: Content-Type multipart/form-data XML element value includes keyword Cs7QAF
   stages:
@@ -1127,7 +1127,7 @@ tests:
         version: HTTP/1.0
       output:
         status:
-        - 403
+        - 405
   test_title: 944210-48
 - desc: XML attribute value includes keyword rO0ABQ
   stages:

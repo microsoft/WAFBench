@@ -66,7 +66,7 @@ tests:
         version: HTTP/1.0
       output:
         status:
-        - 403
+        - 405
   test_title: 944110-3
 - desc: XML attribute name includes keywords java. and Runtime
   stages:
@@ -87,7 +87,7 @@ tests:
         version: HTTP/1.0
       output:
         status:
-        - 403
+        - 405
   test_title: 944110-4
 - desc: XML attribute value includes keywords java. and Runtime
   stages:
@@ -151,7 +151,7 @@ tests:
         version: HTTP/1.0
       output:
         status:
-        - 403
+        - 405
   test_title: 944110-7
 - desc: XML attribute name includes keyworda java. and ProcessBuilder
   stages:
@@ -172,7 +172,7 @@ tests:
         version: HTTP/1.0
       output:
         status:
-        - 403
+        - 405
   test_title: 944110-8
 - desc: XML attribute value includes keywords java. and ProcessBuilder
   stages:

@@ -63,7 +63,7 @@ tests:
         port: 80
         version: HTTP/1.0
       output:
-        log_contains: id "944110"
+        no_log_contains: id "944110"
   test_title: 944110-3
 - desc: XML attribute name includes keywords java. and Runtime
   stages:
@@ -83,7 +83,7 @@ tests:
         port: 80
         version: HTTP/1.0
       output:
-        log_contains: id "944110"
+        no_log_contains: id "944110"
   test_title: 944110-4
 - desc: XML attribute value includes keywords java. and Runtime
   stages:
@@ -144,7 +144,7 @@ tests:
         port: 80
         version: HTTP/1.0
       output:
-        log_contains: id "944110"
+        no_log_contains: id "944110"
   test_title: 944110-7
 - desc: XML attribute name includes keyworda java. and ProcessBuilder
   stages:
@@ -164,7 +164,7 @@ tests:
         port: 80
         version: HTTP/1.0
       output:
-        log_contains: id "944110"
+        no_log_contains: id "944110"
   test_title: 944110-8
 - desc: XML attribute value includes keywords java. and ProcessBuilder
   stages:

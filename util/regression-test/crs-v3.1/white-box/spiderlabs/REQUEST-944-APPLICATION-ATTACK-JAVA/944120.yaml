@@ -244,7 +244,7 @@ tests:
         port: 80
         version: HTTP/1.0
       output:
-        log_contains: id "944120"
+        no_log_contains: id "944120"
   test_title: 944120-11
 - desc: XML attribute name includes keyword ProcessBuilder.evil.prototypeserializationfactory
   stages:
@@ -264,7 +264,7 @@ tests:
         port: 80
         version: HTTP/1.0
       output:
-        log_contains: id "944120"
+        no_log_contains: id "944120"
   test_title: 944120-12
 - desc: XML attribute value includes keyword ProcessBuilder.evil.prototypeserializationfactory
   stages:
@@ -663,7 +663,7 @@ tests:
         port: 80
         version: HTTP/1.0
       output:
-        log_contains: id "944120"
+        no_log_contains: id "944120"
   test_title: 944120-30
 - desc: XML attribute name includes keyword ProcessBuilder.evil.whileclosure
   stages:
@@ -683,7 +683,7 @@ tests:
         port: 80
         version: HTTP/1.0
       output:
-        log_contains: id "944120"
+        no_log_contains: id "944120"
   test_title: 944120-31
 - desc: XML attribute value includes keyword ProcessBuilder.evil.whileclosure
   stages:
@@ -1179,7 +1179,7 @@ tests:
         port: 80
         version: HTTP/1.0
       output:
-        log_contains: id "944120"
+        no_log_contains: id "944120"
   test_title: 944120-52
 - desc: XML attribute name includes keyword ProcessBuilder.evil.forclosure
   stages:
@@ -1199,7 +1199,7 @@ tests:
         port: 80
         version: HTTP/1.0
       output:
-        log_contains: id "944120"
+        no_log_contains: id "944120"
   test_title: 944120-53
 - desc: XML attribute value includes keyword ProcessBuilder.evil.forclosure
   stages:
@@ -1579,7 +1579,7 @@ tests:
         port: 80
         version: HTTP/1.0
       output:
-        log_contains: id "944120"
+        no_log_contains: id "944120"
   test_title: 944120-70
 - desc: Request header test includes keyword ProcessBuilder.evil.clonetransformer
   stages:
@@ -1620,7 +1620,7 @@ tests:
         port: 80
         version: HTTP/1.0
       output:
-        log_contains: id "944120"
+        no_log_contains: id "944120"
   test_title: 944120-72
 - desc: XML attribute value includes keyword ProcessBuilder.evil.instantiatefactory
   stages:
@@ -1847,7 +1847,7 @@ tests:
         port: 80
         version: HTTP/1.0
       output:
-        log_contains: id "944120"
+        no_log_contains: id "944120"
   test_title: 944120-82
 - desc: Content-Type multipart/form-data XML element value includes keyword ProcessBuilder.evil.instantiatefactory
   stages:
@@ -2000,7 +2000,7 @@ tests:
         port: 80
         version: HTTP/1.0
       output:
-        log_contains: id "944120"
+        no_log_contains: id "944120"
   test_title: 944120-89
 - desc: XML attribute name includes keyword ProcessBuilder.evil.instantiatetransformer
   stages:
@@ -2020,7 +2020,7 @@ tests:
         port: 80
         version: HTTP/1.0
       output:
-        log_contains: id "944120"
+        no_log_contains: id "944120"
   test_title: 944120-90
 - desc: XML attribute value includes keyword ProcessBuilder.evil.instantiatetransformer
   stages:
@@ -2080,7 +2080,7 @@ tests:
         port: 80
         version: HTTP/1.0
       output:
-        log_contains: id "944120"
+        no_log_contains: id "944120"
   test_title: 944120-93
 - desc: Nested XML element value includes keyword ProcessBuilder.evil.instantiatetransformer
   stages:
@@ -2419,7 +2419,7 @@ tests:
         port: 80
         version: HTTP/1.0
       output:
-        log_contains: id "944120"
+        no_log_contains: id "944120"
   test_title: 944120-108
 - desc: XML attribute name includes keyword ProcessBuilder.evil.invokertransformer
   stages:
@@ -2439,7 +2439,7 @@ tests:
         port: 80
         version: HTTP/1.0
       output:
-        log_contains: id "944120"
+        no_log_contains: id "944120"
   test_title: 944120-109
 - desc: XML attribute value includes keyword ProcessBuilder.evil.invokertransformer
   stages:
@@ -2839,7 +2839,7 @@ tests:
         port: 80
         version: HTTP/1.0
       output:
-        log_contains: id "944120"
+        no_log_contains: id "944120"
   test_title: 944120-127
 - desc: XML attribute name includes keyword ProcessBuilder.evil.prototypeclonefactory
   stages:
@@ -2859,7 +2859,7 @@ tests:
         port: 80
         version: HTTP/1.0
       output:
-        log_contains: id "944120"
+        no_log_contains: id "944120"
   test_title: 944120-128
 - desc: XML attribute value includes keyword ProcessBuilder.evil.prototypeclonefactory
   stages:
