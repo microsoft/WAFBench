@@ -235,49 +235,6 @@ tests:
         status:
         - 403
   test_title: 944120-10
-- desc: XML element includes keyword ProcessBuilder.evil.prototypeserializationfactory
-  stages:
-  - stage:
-      input:
-        data: <?xml version="1.0"?><xml><ProcessBuilder.evil.prototypeserializationfactory
-          attribute_name="attribute_value">value</ProcessBuilder.evil.prototypeserializationfactory></xml>
-        dest_addr: 127.0.0.1
-        headers:
-          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
-          Accept-Encoding: gzip,deflate
-          Accept-Language: en-us,en;q=0.5
-          Content-Type: application/xml
-          Host: localhost
-          User-Agent: ModSecurity CRS 3 Tests
-        method: POST
-        port: 80
-        version: HTTP/1.0
-      output:
-        status:
-        - 403
-  test_title: 944120-11
-- desc: XML attribute name includes keyword ProcessBuilder.evil.prototypeserializationfactory
-  stages:
-  - stage:
-      input:
-        data: <?xml version="1.0"?><xml><element ProcessBuilder.evil.prototypeserializationfactory="attribute_value">element_value</element></xml>
-        dest_addr: 127.0.0.1
-        headers:
-          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
-          Accept-Encoding: gzip,deflate
-          Accept-Language: en-us,en;q=0.5
-          Content-Type: application/xml
-          Host: localhost
-          User-Agent: ModSecurity CRS 3 Tests
-        method: POST
-        port: 80
-        version: HTTP/1.0
-      output:
-        status:
-        - 403
-  test_title: 944120-12
 - desc: XML attribute value includes keyword ProcessBuilder.evil.prototypeserializationfactory
   stages:
   - stage:
@@ -298,7 +255,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-13
+  test_title: 944120-11
 - desc: Content-Type application/json arg value includes keyword ProcessBuilder.evil.clonetransformer
   stages:
   - stage:
@@ -319,7 +276,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-14
+  test_title: 944120-12
 - desc: XML element value includes keyword ProcessBuilder.evil.prototypeserializationfactory
   stages:
   - stage:
@@ -340,7 +297,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-15
+  test_title: 944120-13
 - desc: Nested XML element value includes keyword ProcessBuilder.evil.prototypeserializationfactory
   stages:
   - stage:
@@ -361,7 +318,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-16
+  test_title: 944120-14
 - desc: Content-Type text/plain includes keyword ProcessBuilder.evil.prototypeserializationfactory
   stages:
   - stage:
@@ -382,7 +339,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-17
+  test_title: 944120-15
 - desc: Content-Type application/json arg value includes keyword ProcessBuilder.evil.prototypeserializationfactory
   stages:
   - stage:
@@ -403,7 +360,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-18
+  test_title: 944120-16
 - desc: Content-Type application/json arg name includes keyword ProcessBuilder.evil.prototypeserializationfactory
   stages:
   - stage:
@@ -424,7 +381,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-19
+  test_title: 944120-17
 - desc: Content-Type multipart/form-data json arg name includes keyword ProcessBuilder.evil.prototypeserializationfactory
   stages:
   - stage:
@@ -454,7 +411,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-20
+  test_title: 944120-18
 - desc: Content-Type multipart/form-data json arg value includes keyword ProcessBuilder.evil.prototypeserializationfactory
   stages:
   - stage:
@@ -484,67 +441,67 @@ tests:
       output:
         status:
         - 403
+  test_title: 944120-19
+- desc: Content-Type multipart/form-data XML element value includes keyword ProcessBuilder.evil.prototypeserializationfactory
+  stages:
+  - stage:
+      input:
+        data: '-----------------------------thisissparta
+
+          Content-Disposition: form-data; name="payload"
+
+          Content-Type: application/xml
+
+
+          <?xml version="1.0"?><xml><element attribute_name="attribute_value">ProcessBuilder.evil.prototypeserializationfactory</element></xml>
+
+          -----------------------------thisissparta--'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: multipart/form-data; boundary=---------------------------thisissparta
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944120-20
+- desc: Content-Type multipart/form-data XML element value includes keyword ProcessBuilder.evil.prototypeserializationfactory
+  stages:
+  - stage:
+      input:
+        data: '-----------------------------thisissparta
+
+          Content-Disposition: form-data; name="payload"
+
+          Content-Type: application/xml
+
+
+          <?xml version="1.0"?><xml><element attribute_name="attribute_value">ProcessBuilder.evil.prototypeserializationfactory</element></xml>
+
+          -----------------------------thisissparta--'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: multipart/form-data; boundary=---------------------------thisissparta
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
   test_title: 944120-21
-- desc: Content-Type multipart/form-data XML element value includes keyword ProcessBuilder.evil.prototypeserializationfactory
-  stages:
-  - stage:
-      input:
-        data: '-----------------------------thisissparta
-
-          Content-Disposition: form-data; name="payload"
-
-          Content-Type: application/xml
-
-
-          <?xml version="1.0"?><xml><element attribute_name="attribute_value">ProcessBuilder.evil.prototypeserializationfactory</element></xml>
-
-          -----------------------------thisissparta--'
-        dest_addr: 127.0.0.1
-        headers:
-          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
-          Accept-Encoding: gzip,deflate
-          Accept-Language: en-us,en;q=0.5
-          Content-Type: multipart/form-data; boundary=---------------------------thisissparta
-          Host: localhost
-          User-Agent: ModSecurity CRS 3 Tests
-        method: POST
-        port: 80
-        version: HTTP/1.0
-      output:
-        status:
-        - 403
-  test_title: 944120-22
-- desc: Content-Type multipart/form-data XML element value includes keyword ProcessBuilder.evil.prototypeserializationfactory
-  stages:
-  - stage:
-      input:
-        data: '-----------------------------thisissparta
-
-          Content-Disposition: form-data; name="payload"
-
-          Content-Type: application/xml
-
-
-          <?xml version="1.0"?><xml><element attribute_name="attribute_value">ProcessBuilder.evil.prototypeserializationfactory</element></xml>
-
-          -----------------------------thisissparta--'
-        dest_addr: 127.0.0.1
-        headers:
-          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
-          Accept-Encoding: gzip,deflate
-          Accept-Language: en-us,en;q=0.5
-          Content-Type: multipart/form-data; boundary=---------------------------thisissparta
-          Host: localhost
-          User-Agent: ModSecurity CRS 3 Tests
-        method: POST
-        port: 80
-        version: HTTP/1.0
-      output:
-        status:
-        - 403
-  test_title: 944120-23
 - desc: Argument test includes keyword ProcessBuilder.evil.whileclosure
   stages:
   - stage:
@@ -565,7 +522,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-24
+  test_title: 944120-22
 - desc: Content-Type application/json arg name includes keyword ProcessBuilder.evil.clonetransformer
   stages:
   - stage:
@@ -586,7 +543,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-25
+  test_title: 944120-23
 - desc: Argument name includes keyword ProcessBuilder.evil.whileclosure
   stages:
   - stage:
@@ -607,7 +564,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-26
+  test_title: 944120-24
 - desc: Cookie test includes keyword ProcessBuilder.evil.whileclosure
   stages:
   - stage:
@@ -629,7 +586,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-27
+  test_title: 944120-25
 - desc: Cookie name includes keyword ProcessBuilder.evil.whileclosure
   stages:
   - stage:
@@ -651,7 +608,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-28
+  test_title: 944120-26
 - desc: Request header test includes keyword ProcessBuilder.evil.whileclosure
   stages:
   - stage:
@@ -673,49 +630,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-29
-- desc: XML element includes keyword ProcessBuilder.evil.whileclosure
-  stages:
-  - stage:
-      input:
-        data: <?xml version="1.0"?><xml><ProcessBuilder.evil.whileclosure attribute_name="attribute_value">value</ProcessBuilder.evil.whileclosure></xml>
-        dest_addr: 127.0.0.1
-        headers:
-          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
-          Accept-Encoding: gzip,deflate
-          Accept-Language: en-us,en;q=0.5
-          Content-Type: application/xml
-          Host: localhost
-          User-Agent: ModSecurity CRS 3 Tests
-        method: POST
-        port: 80
-        version: HTTP/1.0
-      output:
-        status:
-        - 403
-  test_title: 944120-30
-- desc: XML attribute name includes keyword ProcessBuilder.evil.whileclosure
-  stages:
-  - stage:
-      input:
-        data: <?xml version="1.0"?><xml><element ProcessBuilder.evil.whileclosure="attribute_value">element_value</element></xml>
-        dest_addr: 127.0.0.1
-        headers:
-          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
-          Accept-Encoding: gzip,deflate
-          Accept-Language: en-us,en;q=0.5
-          Content-Type: application/xml
-          Host: localhost
-          User-Agent: ModSecurity CRS 3 Tests
-        method: POST
-        port: 80
-        version: HTTP/1.0
-      output:
-        status:
-        - 403
-  test_title: 944120-31
+  test_title: 944120-27
 - desc: XML attribute value includes keyword ProcessBuilder.evil.whileclosure
   stages:
   - stage:
@@ -736,7 +651,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-32
+  test_title: 944120-28
 - desc: XML element value includes keyword ProcessBuilder.evil.whileclosure
   stages:
   - stage:
@@ -757,7 +672,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-33
+  test_title: 944120-29
 - desc: Nested XML element value includes keyword ProcessBuilder.evil.whileclosure
   stages:
   - stage:
@@ -778,7 +693,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-34
+  test_title: 944120-30
 - desc: Content-Type text/plain includes keyword ProcessBuilder.evil.whileclosure
   stages:
   - stage:
@@ -799,7 +714,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-35
+  test_title: 944120-31
 - desc: Content-Type multipart/form-data json arg name includes keyword ProcessBuilder.evil.clonetransformer
   stages:
   - stage:
@@ -829,7 +744,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-36
+  test_title: 944120-32
 - desc: Content-Type application/json arg value includes keyword ProcessBuilder.evil.whileclosure
   stages:
   - stage:
@@ -850,7 +765,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-37
+  test_title: 944120-33
 - desc: Content-Type application/json arg name includes keyword ProcessBuilder.evil.whileclosure
   stages:
   - stage:
@@ -871,7 +786,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-38
+  test_title: 944120-34
 - desc: Content-Type multipart/form-data json arg name includes keyword ProcessBuilder.evil.whileclosure
   stages:
   - stage:
@@ -901,7 +816,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-39
+  test_title: 944120-35
 - desc: Content-Type multipart/form-data json arg value includes keyword ProcessBuilder.evil.whileclosure
   stages:
   - stage:
@@ -931,7 +846,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-40
+  test_title: 944120-36
 - desc: Content-Type multipart/form-data XML element value includes keyword ProcessBuilder.evil.whileclosure
   stages:
   - stage:
@@ -961,7 +876,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-41
+  test_title: 944120-37
 - desc: Content-Type multipart/form-data XML element value includes keyword ProcessBuilder.evil.whileclosure
   stages:
   - stage:
@@ -991,7 +906,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-42
+  test_title: 944120-38
 - desc: Content-Type multipart/form-data json arg value includes keyword ProcessBuilder.evil.clonetransformer
   stages:
   - stage:
@@ -1021,7 +936,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-43
+  test_title: 944120-39
 - desc: Content-Type multipart/form-data XML element value includes keyword ProcessBuilder.evil.clonetransformer
   stages:
   - stage:
@@ -1051,7 +966,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-44
+  test_title: 944120-40
 - desc: Content-Type multipart/form-data XML element value includes keyword ProcessBuilder.evil.clonetransformer
   stages:
   - stage:
@@ -1081,7 +996,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-45
+  test_title: 944120-41
 - desc: Argument test includes keyword ProcessBuilder.evil.forclosure
   stages:
   - stage:
@@ -1102,7 +1017,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-46
+  test_title: 944120-42
 - desc: Argument name includes keyword ProcessBuilder.evil.forclosure
   stages:
   - stage:
@@ -1123,7 +1038,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-47
+  test_title: 944120-43
 - desc: Cookie test includes keyword ProcessBuilder.evil.forclosure
   stages:
   - stage:
@@ -1145,7 +1060,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-48
+  test_title: 944120-44
 - desc: Cookie test includes keyword ProcessBuilder.evil.clonetransformer
   stages:
   - stage:
@@ -1167,7 +1082,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-49
+  test_title: 944120-45
 - desc: Cookie name includes keyword ProcessBuilder.evil.forclosure
   stages:
   - stage:
@@ -1189,7 +1104,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-50
+  test_title: 944120-46
 - desc: Request header test includes keyword ProcessBuilder.evil.forclosure
   stages:
   - stage:
@@ -1211,49 +1126,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-51
-- desc: XML element includes keyword ProcessBuilder.evil.forclosure
-  stages:
-  - stage:
-      input:
-        data: <?xml version="1.0"?><xml><ProcessBuilder.evil.forclosure attribute_name="attribute_value">value</ProcessBuilder.evil.forclosure></xml>
-        dest_addr: 127.0.0.1
-        headers:
-          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
-          Accept-Encoding: gzip,deflate
-          Accept-Language: en-us,en;q=0.5
-          Content-Type: application/xml
-          Host: localhost
-          User-Agent: ModSecurity CRS 3 Tests
-        method: POST
-        port: 80
-        version: HTTP/1.0
-      output:
-        status:
-        - 403
-  test_title: 944120-52
-- desc: XML attribute name includes keyword ProcessBuilder.evil.forclosure
-  stages:
-  - stage:
-      input:
-        data: <?xml version="1.0"?><xml><element ProcessBuilder.evil.forclosure="attribute_value">element_value</element></xml>
-        dest_addr: 127.0.0.1
-        headers:
-          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
-          Accept-Encoding: gzip,deflate
-          Accept-Language: en-us,en;q=0.5
-          Content-Type: application/xml
-          Host: localhost
-          User-Agent: ModSecurity CRS 3 Tests
-        method: POST
-        port: 80
-        version: HTTP/1.0
-      output:
-        status:
-        - 403
-  test_title: 944120-53
+  test_title: 944120-47
 - desc: XML attribute value includes keyword ProcessBuilder.evil.forclosure
   stages:
   - stage:
@@ -1274,7 +1147,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-54
+  test_title: 944120-48
 - desc: XML element value includes keyword ProcessBuilder.evil.forclosure
   stages:
   - stage:
@@ -1295,7 +1168,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-55
+  test_title: 944120-49
 - desc: Nested XML element value includes keyword ProcessBuilder.evil.forclosure
   stages:
   - stage:
@@ -1316,7 +1189,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-56
+  test_title: 944120-50
 - desc: Content-Type text/plain includes keyword ProcessBuilder.evil.forclosure
   stages:
   - stage:
@@ -1337,7 +1210,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-57
+  test_title: 944120-51
 - desc: Content-Type application/json arg value includes keyword ProcessBuilder.evil.forclosure
   stages:
   - stage:
@@ -1358,7 +1231,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-58
+  test_title: 944120-52
 - desc: Content-Type application/json arg name includes keyword ProcessBuilder.evil.forclosure
   stages:
   - stage:
@@ -1379,7 +1252,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-59
+  test_title: 944120-53
 - desc: Cookie name includes keyword ProcessBuilder.evil.clonetransformer
   stages:
   - stage:
@@ -1401,7 +1274,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-60
+  test_title: 944120-54
 - desc: Content-Type multipart/form-data json arg name includes keyword ProcessBuilder.evil.forclosure
   stages:
   - stage:
@@ -1431,7 +1304,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-61
+  test_title: 944120-55
 - desc: Content-Type multipart/form-data json arg value includes keyword ProcessBuilder.evil.forclosure
   stages:
   - stage:
@@ -1461,7 +1334,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-62
+  test_title: 944120-56
 - desc: Content-Type multipart/form-data XML element value includes keyword ProcessBuilder.evil.forclosure
   stages:
   - stage:
@@ -1491,7 +1364,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-63
+  test_title: 944120-57
 - desc: Content-Type multipart/form-data XML element value includes keyword ProcessBuilder.evil.forclosure
   stages:
   - stage:
@@ -1521,7 +1394,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-64
+  test_title: 944120-58
 - desc: Argument test includes keyword ProcessBuilder.evil.instantiatefactory
   stages:
   - stage:
@@ -1542,7 +1415,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-65
+  test_title: 944120-59
 - desc: Argument name includes keyword ProcessBuilder.evil.instantiatefactory
   stages:
   - stage:
@@ -1563,7 +1436,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-66
+  test_title: 944120-60
 - desc: Cookie test includes keyword ProcessBuilder.evil.instantiatefactory
   stages:
   - stage:
@@ -1585,7 +1458,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-67
+  test_title: 944120-61
 - desc: Cookie name includes keyword ProcessBuilder.evil.instantiatefactory
   stages:
   - stage:
@@ -1607,7 +1480,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-68
+  test_title: 944120-62
 - desc: Request header test includes keyword ProcessBuilder.evil.instantiatefactory
   stages:
   - stage:
@@ -1629,28 +1502,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-69
-- desc: XML element includes keyword ProcessBuilder.evil.instantiatefactory
-  stages:
-  - stage:
-      input:
-        data: <?xml version="1.0"?><xml><ProcessBuilder.evil.instantiatefactory attribute_name="attribute_value">value</ProcessBuilder.evil.instantiatefactory></xml>
-        dest_addr: 127.0.0.1
-        headers:
-          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
-          Accept-Encoding: gzip,deflate
-          Accept-Language: en-us,en;q=0.5
-          Content-Type: application/xml
-          Host: localhost
-          User-Agent: ModSecurity CRS 3 Tests
-        method: POST
-        port: 80
-        version: HTTP/1.0
-      output:
-        status:
-        - 403
-  test_title: 944120-70
+  test_title: 944120-63
 - desc: Request header test includes keyword ProcessBuilder.evil.clonetransformer
   stages:
   - stage:
@@ -1672,28 +1524,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-71
-- desc: XML attribute name includes keyword ProcessBuilder.evil.instantiatefactory
-  stages:
-  - stage:
-      input:
-        data: <?xml version="1.0"?><xml><element ProcessBuilder.evil.instantiatefactory="attribute_value">element_value</element></xml>
-        dest_addr: 127.0.0.1
-        headers:
-          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
-          Accept-Encoding: gzip,deflate
-          Accept-Language: en-us,en;q=0.5
-          Content-Type: application/xml
-          Host: localhost
-          User-Agent: ModSecurity CRS 3 Tests
-        method: POST
-        port: 80
-        version: HTTP/1.0
-      output:
-        status:
-        - 403
-  test_title: 944120-72
+  test_title: 944120-64
 - desc: XML attribute value includes keyword ProcessBuilder.evil.instantiatefactory
   stages:
   - stage:
@@ -1714,7 +1545,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-73
+  test_title: 944120-65
 - desc: XML element value includes keyword ProcessBuilder.evil.instantiatefactory
   stages:
   - stage:
@@ -1735,7 +1566,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-74
+  test_title: 944120-66
 - desc: Nested XML element value includes keyword ProcessBuilder.evil.instantiatefactory
   stages:
   - stage:
@@ -1756,7 +1587,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-75
+  test_title: 944120-67
 - desc: Content-Type text/plain includes keyword ProcessBuilder.evil.instantiatefactory
   stages:
   - stage:
@@ -1777,7 +1608,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-76
+  test_title: 944120-68
 - desc: Content-Type application/json arg value includes keyword ProcessBuilder.evil.instantiatefactory
   stages:
   - stage:
@@ -1798,7 +1629,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-77
+  test_title: 944120-69
 - desc: Content-Type application/json arg name includes keyword ProcessBuilder.evil.instantiatefactory
   stages:
   - stage:
@@ -1819,7 +1650,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-78
+  test_title: 944120-70
 - desc: Content-Type multipart/form-data json arg name includes keyword ProcessBuilder.evil.instantiatefactory
   stages:
   - stage:
@@ -1849,7 +1680,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-79
+  test_title: 944120-71
 - desc: Content-Type multipart/form-data json arg value includes keyword ProcessBuilder.evil.instantiatefactory
   stages:
   - stage:
@@ -1879,7 +1710,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-80
+  test_title: 944120-72
 - desc: Content-Type multipart/form-data XML element value includes keyword ProcessBuilder.evil.instantiatefactory
   stages:
   - stage:
@@ -1909,28 +1740,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-81
-- desc: XML element includes keyword ProcessBuilder.evil.clonetransformer
-  stages:
-  - stage:
-      input:
-        data: <?xml version="1.0"?><xml><ProcessBuilder.evil.clonetransformer attribute_name="attribute_value">value</ProcessBuilder.evil.clonetransformer></xml>
-        dest_addr: 127.0.0.1
-        headers:
-          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
-          Accept-Encoding: gzip,deflate
-          Accept-Language: en-us,en;q=0.5
-          Content-Type: application/xml
-          Host: localhost
-          User-Agent: ModSecurity CRS 3 Tests
-        method: POST
-        port: 80
-        version: HTTP/1.0
-      output:
-        status:
-        - 403
-  test_title: 944120-82
+  test_title: 944120-73
 - desc: Content-Type multipart/form-data XML element value includes keyword ProcessBuilder.evil.instantiatefactory
   stages:
   - stage:
@@ -1960,7 +1770,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-83
+  test_title: 944120-74
 - desc: Argument test includes keyword ProcessBuilder.evil.instantiatetransformer
   stages:
   - stage:
@@ -1981,7 +1791,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-84
+  test_title: 944120-75
 - desc: Argument name includes keyword ProcessBuilder.evil.instantiatetransformer
   stages:
   - stage:
@@ -2002,7 +1812,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-85
+  test_title: 944120-76
 - desc: Cookie test includes keyword ProcessBuilder.evil.instantiatetransformer
   stages:
   - stage:
@@ -2024,7 +1834,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-86
+  test_title: 944120-77
 - desc: Cookie name includes keyword ProcessBuilder.evil.instantiatetransformer
   stages:
   - stage:
@@ -2046,7 +1856,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-87
+  test_title: 944120-78
 - desc: Request header test includes keyword ProcessBuilder.evil.instantiatetransformer
   stages:
   - stage:
@@ -2068,50 +1878,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-88
-- desc: XML element includes keyword ProcessBuilder.evil.instantiatetransformer
-  stages:
-  - stage:
-      input:
-        data: <?xml version="1.0"?><xml><ProcessBuilder.evil.instantiatetransformer
-          attribute_name="attribute_value">value</ProcessBuilder.evil.instantiatetransformer></xml>
-        dest_addr: 127.0.0.1
-        headers:
-          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
-          Accept-Encoding: gzip,deflate
-          Accept-Language: en-us,en;q=0.5
-          Content-Type: application/xml
-          Host: localhost
-          User-Agent: ModSecurity CRS 3 Tests
-        method: POST
-        port: 80
-        version: HTTP/1.0
-      output:
-        status:
-        - 403
-  test_title: 944120-89
-- desc: XML attribute name includes keyword ProcessBuilder.evil.instantiatetransformer
-  stages:
-  - stage:
-      input:
-        data: <?xml version="1.0"?><xml><element ProcessBuilder.evil.instantiatetransformer="attribute_value">element_value</element></xml>
-        dest_addr: 127.0.0.1
-        headers:
-          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
-          Accept-Encoding: gzip,deflate
-          Accept-Language: en-us,en;q=0.5
-          Content-Type: application/xml
-          Host: localhost
-          User-Agent: ModSecurity CRS 3 Tests
-        method: POST
-        port: 80
-        version: HTTP/1.0
-      output:
-        status:
-        - 403
-  test_title: 944120-90
+  test_title: 944120-79
 - desc: XML attribute value includes keyword ProcessBuilder.evil.instantiatetransformer
   stages:
   - stage:
@@ -2132,7 +1899,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-91
+  test_title: 944120-80
 - desc: XML element value includes keyword ProcessBuilder.evil.instantiatetransformer
   stages:
   - stage:
@@ -2153,28 +1920,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-92
-- desc: XML attribute name includes keyword ProcessBuilder.evil.clonetransformer
-  stages:
-  - stage:
-      input:
-        data: <?xml version="1.0"?><xml><element ProcessBuilder.evil.clonetransformer="attribute_value">element_value</element></xml>
-        dest_addr: 127.0.0.1
-        headers:
-          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
-          Accept-Encoding: gzip,deflate
-          Accept-Language: en-us,en;q=0.5
-          Content-Type: application/xml
-          Host: localhost
-          User-Agent: ModSecurity CRS 3 Tests
-        method: POST
-        port: 80
-        version: HTTP/1.0
-      output:
-        status:
-        - 403
-  test_title: 944120-93
+  test_title: 944120-81
 - desc: Nested XML element value includes keyword ProcessBuilder.evil.instantiatetransformer
   stages:
   - stage:
@@ -2195,7 +1941,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-94
+  test_title: 944120-82
 - desc: Content-Type text/plain includes keyword ProcessBuilder.evil.instantiatetransformer
   stages:
   - stage:
@@ -2216,7 +1962,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-95
+  test_title: 944120-83
 - desc: Content-Type application/json arg value includes keyword ProcessBuilder.evil.instantiatetransformer
   stages:
   - stage:
@@ -2237,7 +1983,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-96
+  test_title: 944120-84
 - desc: Content-Type application/json arg name includes keyword ProcessBuilder.evil.instantiatetransformer
   stages:
   - stage:
@@ -2258,7 +2004,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-97
+  test_title: 944120-85
 - desc: Content-Type multipart/form-data json arg name includes keyword ProcessBuilder.evil.instantiatetransformer
   stages:
   - stage:
@@ -2288,7 +2034,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-98
+  test_title: 944120-86
 - desc: Content-Type multipart/form-data json arg value includes keyword ProcessBuilder.evil.instantiatetransformer
   stages:
   - stage:
@@ -2318,7 +2064,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-99
+  test_title: 944120-87
 - desc: Content-Type multipart/form-data XML element value includes keyword ProcessBuilder.evil.instantiatetransformer
   stages:
   - stage:
@@ -2348,7 +2094,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-100
+  test_title: 944120-88
 - desc: Content-Type multipart/form-data XML element value includes keyword ProcessBuilder.evil.instantiatetransformer
   stages:
   - stage:
@@ -2378,7 +2124,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-101
+  test_title: 944120-89
 - desc: Argument test includes keyword ProcessBuilder.evil.invokertransformer
   stages:
   - stage:
@@ -2399,7 +2145,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-102
+  test_title: 944120-90
 - desc: Argument name includes keyword ProcessBuilder.evil.invokertransformer
   stages:
   - stage:
@@ -2420,7 +2166,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-103
+  test_title: 944120-91
 - desc: XML attribute value includes keyword ProcessBuilder.evil.clonetransformer
   stages:
   - stage:
@@ -2441,7 +2187,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-104
+  test_title: 944120-92
 - desc: Cookie test includes keyword ProcessBuilder.evil.invokertransformer
   stages:
   - stage:
@@ -2463,7 +2209,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-105
+  test_title: 944120-93
 - desc: Cookie name includes keyword ProcessBuilder.evil.invokertransformer
   stages:
   - stage:
@@ -2485,7 +2231,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-106
+  test_title: 944120-94
 - desc: Request header test includes keyword ProcessBuilder.evil.invokertransformer
   stages:
   - stage:
@@ -2507,49 +2253,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-107
-- desc: XML element includes keyword ProcessBuilder.evil.invokertransformer
-  stages:
-  - stage:
-      input:
-        data: <?xml version="1.0"?><xml><ProcessBuilder.evil.invokertransformer attribute_name="attribute_value">value</ProcessBuilder.evil.invokertransformer></xml>
-        dest_addr: 127.0.0.1
-        headers:
-          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
-          Accept-Encoding: gzip,deflate
-          Accept-Language: en-us,en;q=0.5
-          Content-Type: application/xml
-          Host: localhost
-          User-Agent: ModSecurity CRS 3 Tests
-        method: POST
-        port: 80
-        version: HTTP/1.0
-      output:
-        status:
-        - 403
-  test_title: 944120-108
-- desc: XML attribute name includes keyword ProcessBuilder.evil.invokertransformer
-  stages:
-  - stage:
-      input:
-        data: <?xml version="1.0"?><xml><element ProcessBuilder.evil.invokertransformer="attribute_value">element_value</element></xml>
-        dest_addr: 127.0.0.1
-        headers:
-          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
-          Accept-Encoding: gzip,deflate
-          Accept-Language: en-us,en;q=0.5
-          Content-Type: application/xml
-          Host: localhost
-          User-Agent: ModSecurity CRS 3 Tests
-        method: POST
-        port: 80
-        version: HTTP/1.0
-      output:
-        status:
-        - 403
-  test_title: 944120-109
+  test_title: 944120-95
 - desc: XML attribute value includes keyword ProcessBuilder.evil.invokertransformer
   stages:
   - stage:
@@ -2570,7 +2274,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-110
+  test_title: 944120-96
 - desc: XML element value includes keyword ProcessBuilder.evil.invokertransformer
   stages:
   - stage:
@@ -2591,7 +2295,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-111
+  test_title: 944120-97
 - desc: Nested XML element value includes keyword ProcessBuilder.evil.invokertransformer
   stages:
   - stage:
@@ -2612,7 +2316,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-112
+  test_title: 944120-98
 - desc: Content-Type text/plain includes keyword ProcessBuilder.evil.invokertransformer
   stages:
   - stage:
@@ -2633,7 +2337,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-113
+  test_title: 944120-99
 - desc: Content-Type application/json arg value includes keyword ProcessBuilder.evil.invokertransformer
   stages:
   - stage:
@@ -2654,7 +2358,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-114
+  test_title: 944120-100
 - desc: XML element value includes keyword ProcessBuilder.evil.clonetransformer
   stages:
   - stage:
@@ -2675,7 +2379,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-115
+  test_title: 944120-101
 - desc: Content-Type application/json arg name includes keyword ProcessBuilder.evil.invokertransformer
   stages:
   - stage:
@@ -2696,7 +2400,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-116
+  test_title: 944120-102
 - desc: Content-Type multipart/form-data json arg name includes keyword ProcessBuilder.evil.invokertransformer
   stages:
   - stage:
@@ -2726,7 +2430,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-117
+  test_title: 944120-103
 - desc: Content-Type multipart/form-data json arg value includes keyword ProcessBuilder.evil.invokertransformer
   stages:
   - stage:
@@ -2756,7 +2460,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-118
+  test_title: 944120-104
 - desc: Content-Type multipart/form-data XML element value includes keyword ProcessBuilder.evil.invokertransformer
   stages:
   - stage:
@@ -2786,7 +2490,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-119
+  test_title: 944120-105
 - desc: Content-Type multipart/form-data XML element value includes keyword ProcessBuilder.evil.invokertransformer
   stages:
   - stage:
@@ -2816,7 +2520,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-120
+  test_title: 944120-106
 - desc: Argument test includes keyword ProcessBuilder.evil.prototypeclonefactory
   stages:
   - stage:
@@ -2837,7 +2541,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-121
+  test_title: 944120-107
 - desc: Argument name includes keyword ProcessBuilder.evil.prototypeclonefactory
   stages:
   - stage:
@@ -2858,7 +2562,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-122
+  test_title: 944120-108
 - desc: Cookie test includes keyword ProcessBuilder.evil.prototypeclonefactory
   stages:
   - stage:
@@ -2880,7 +2584,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-123
+  test_title: 944120-109
 - desc: Cookie name includes keyword ProcessBuilder.evil.prototypeclonefactory
   stages:
   - stage:
@@ -2902,7 +2606,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-124
+  test_title: 944120-110
 - desc: Request header test includes keyword ProcessBuilder.evil.prototypeclonefactory
   stages:
   - stage:
@@ -2924,7 +2628,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-125
+  test_title: 944120-111
 - desc: Nested XML element value includes keyword ProcessBuilder.evil.clonetransformer
   stages:
   - stage:
@@ -2945,50 +2649,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-126
-- desc: XML element includes keyword ProcessBuilder.evil.prototypeclonefactory
-  stages:
-  - stage:
-      input:
-        data: <?xml version="1.0"?><xml><ProcessBuilder.evil.prototypeclonefactory
-          attribute_name="attribute_value">value</ProcessBuilder.evil.prototypeclonefactory></xml>
-        dest_addr: 127.0.0.1
-        headers:
-          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
-          Accept-Encoding: gzip,deflate
-          Accept-Language: en-us,en;q=0.5
-          Content-Type: application/xml
-          Host: localhost
-          User-Agent: ModSecurity CRS 3 Tests
-        method: POST
-        port: 80
-        version: HTTP/1.0
-      output:
-        status:
-        - 403
-  test_title: 944120-127
-- desc: XML attribute name includes keyword ProcessBuilder.evil.prototypeclonefactory
-  stages:
-  - stage:
-      input:
-        data: <?xml version="1.0"?><xml><element ProcessBuilder.evil.prototypeclonefactory="attribute_value">element_value</element></xml>
-        dest_addr: 127.0.0.1
-        headers:
-          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
-          Accept-Encoding: gzip,deflate
-          Accept-Language: en-us,en;q=0.5
-          Content-Type: application/xml
-          Host: localhost
-          User-Agent: ModSecurity CRS 3 Tests
-        method: POST
-        port: 80
-        version: HTTP/1.0
-      output:
-        status:
-        - 403
-  test_title: 944120-128
+  test_title: 944120-112
 - desc: XML attribute value includes keyword ProcessBuilder.evil.prototypeclonefactory
   stages:
   - stage:
@@ -3009,7 +2670,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-129
+  test_title: 944120-113
 - desc: XML element value includes keyword ProcessBuilder.evil.prototypeclonefactory
   stages:
   - stage:
@@ -3030,7 +2691,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-130
+  test_title: 944120-114
 - desc: Nested XML element value includes keyword ProcessBuilder.evil.prototypeclonefactory
   stages:
   - stage:
@@ -3051,7 +2712,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-131
+  test_title: 944120-115
 - desc: Content-Type text/plain includes keyword ProcessBuilder.evil.prototypeclonefactory
   stages:
   - stage:
@@ -3072,7 +2733,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-132
+  test_title: 944120-116
 - desc: Content-Type application/json arg value includes keyword ProcessBuilder.evil.prototypeclonefactory
   stages:
   - stage:
@@ -3093,7 +2754,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-133
+  test_title: 944120-117
 - desc: Content-Type application/json arg name includes keyword ProcessBuilder.evil.prototypeclonefactory
   stages:
   - stage:
@@ -3114,7 +2775,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-134
+  test_title: 944120-118
 - desc: Content-Type multipart/form-data json arg name includes keyword ProcessBuilder.evil.prototypeclonefactory
   stages:
   - stage:
@@ -3144,7 +2805,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-135
+  test_title: 944120-119
 - desc: Content-Type multipart/form-data json arg value includes keyword ProcessBuilder.evil.prototypeclonefactory
   stages:
   - stage:
@@ -3174,4 +2835,4 @@ tests:
       output:
         status:
         - 403
-  test_title: 944120-136
+  test_title: 944120-120

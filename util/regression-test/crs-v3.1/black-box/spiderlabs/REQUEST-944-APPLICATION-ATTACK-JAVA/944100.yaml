@@ -47,48 +47,6 @@ tests:
         status:
         - 403
   test_title: 944100-2
-- desc: XML element includes keywords java.lang.Runtime
-  stages:
-  - stage:
-      input:
-        data: <?xml version="1.0"?><xml><java.lang.Runtime attribute_name="attribute_value">value</java.lang.Runtime></xml>
-        dest_addr: 127.0.0.1
-        headers:
-          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
-          Accept-Encoding: gzip,deflate
-          Accept-Language: en-us,en;q=0.5
-          Content-Type: application/xml
-          Host: localhost
-          User-Agent: ModSecurity CRS 3 Tests
-        method: POST
-        port: 80
-        version: HTTP/1.0
-      output:
-        status:
-        - 403
-  test_title: 944100-3
-- desc: XML attribute name includes keywords java.lang.Runtime
-  stages:
-  - stage:
-      input:
-        data: <?xml version="1.0"?><xml><element java.lang.Runtime="attribute_value">element_value</element></xml>
-        dest_addr: 127.0.0.1
-        headers:
-          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
-          Accept-Encoding: gzip,deflate
-          Accept-Language: en-us,en;q=0.5
-          Content-Type: application/xml
-          Host: localhost
-          User-Agent: ModSecurity CRS 3 Tests
-        method: POST
-        port: 80
-        version: HTTP/1.0
-      output:
-        status:
-        - 403
-  test_title: 944100-4
 - desc: XML attribute value includes keywords java.lang.Runtime
   stages:
   - stage:
@@ -109,7 +67,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944100-5
+  test_title: 944100-3
 - desc: XML element value includes keywords java.lang.Runtime
   stages:
   - stage:
@@ -130,49 +88,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944100-6
-- desc: XML element includes keywords java.lang.ProcessBuilder
-  stages:
-  - stage:
-      input:
-        data: <?xml version="1.0"?><xml><java.lang.ProcessBuilder attribute_name="attribute_value">value</java.lang.ProcessBuilder></xml>
-        dest_addr: 127.0.0.1
-        headers:
-          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
-          Accept-Encoding: gzip,deflate
-          Accept-Language: en-us,en;q=0.5
-          Content-Type: application/xml
-          Host: localhost
-          User-Agent: ModSecurity CRS 3 Tests
-        method: POST
-        port: 80
-        version: HTTP/1.0
-      output:
-        status:
-        - 403
-  test_title: 944100-7
-- desc: XML attribute name includes keywords java.lang.ProcessBuilder
-  stages:
-  - stage:
-      input:
-        data: <?xml version="1.0"?><xml><element java.lang.ProcessBuilder="attribute_value">element_value</element></xml>
-        dest_addr: 127.0.0.1
-        headers:
-          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
-          Accept-Encoding: gzip,deflate
-          Accept-Language: en-us,en;q=0.5
-          Content-Type: application/xml
-          Host: localhost
-          User-Agent: ModSecurity CRS 3 Tests
-        method: POST
-        port: 80
-        version: HTTP/1.0
-      output:
-        status:
-        - 403
-  test_title: 944100-8
+  test_title: 944100-4
 - desc: XML attribute value includes keywords java.lang.ProcessBuilder
   stages:
   - stage:
@@ -193,7 +109,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944100-9
+  test_title: 944100-5
 - desc: XML element value includes keywords java.lang.ProcessBuilder
   stages:
   - stage:
@@ -214,7 +130,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944100-10
+  test_title: 944100-6
 - desc: Argument test includes keywords java.lang.ProcessBuilder
   stages:
   - stage:
@@ -235,7 +151,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944100-11
+  test_title: 944100-7
 - desc: Argument name includes keywords java.lang.Runtime
   stages:
   - stage:
@@ -256,7 +172,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944100-12
+  test_title: 944100-8
 - desc: Argument name includes keywords java.lang.ProcessBuilder
   stages:
   - stage:
@@ -277,7 +193,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944100-13
+  test_title: 944100-9
 - desc: Cookie test includes keywords java.lang.Runtime
   stages:
   - stage:
@@ -299,7 +215,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944100-14
+  test_title: 944100-10
 - desc: Cookie test includes keywords java.lang.ProcessBuilder
   stages:
   - stage:
@@ -321,7 +237,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944100-15
+  test_title: 944100-11
 - desc: Cookie name includes keywords java.lang.Runtime
   stages:
   - stage:
@@ -343,7 +259,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944100-16
+  test_title: 944100-12
 - desc: Cookie name includes keywords java.lang.ProcessBuilder
   stages:
   - stage:
@@ -365,7 +281,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944100-17
+  test_title: 944100-13
 - desc: Request header test includes keywords java.lang.Runtime
   stages:
   - stage:
@@ -387,4 +303,4 @@ tests:
       output:
         status:
         - 403
-  test_title: 944100-18
+  test_title: 944100-14

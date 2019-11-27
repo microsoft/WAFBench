@@ -79,7 +79,7 @@ tests:
         method: POST
         port: 80
       output:
-        log_contains: id "920240"
+        no_log_contains: id "920240"
   test_title: 920240-4
 - stages:
   - stage:
