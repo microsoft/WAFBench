@@ -359,48 +359,6 @@ tests:
         status:
         - 403
   test_title: 944210-15
-- desc: XML element includes keyword KztAAU
-  stages:
-  - stage:
-      input:
-        data: <?xml version="1.0"?><xml><KztAAU attribute_name="attribute_value">value</KztAAU></xml>
-        dest_addr: 127.0.0.1
-        headers:
-          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
-          Accept-Encoding: gzip,deflate
-          Accept-Language: en-us,en;q=0.5
-          Content-Type: application/xml
-          Host: localhost
-          User-Agent: ModSecurity CRS 3 Tests
-        method: POST
-        port: 80
-        version: HTTP/1.0
-      output:
-        status:
-        - 405
-  test_title: 944210-16
-- desc: XML attribute name includes keyword KztAAU
-  stages:
-  - stage:
-      input:
-        data: <?xml version="1.0"?><xml><element KztAAU="attribute_value">element_value</element></xml>
-        dest_addr: 127.0.0.1
-        headers:
-          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
-          Accept-Encoding: gzip,deflate
-          Accept-Language: en-us,en;q=0.5
-          Content-Type: application/xml
-          Host: localhost
-          User-Agent: ModSecurity CRS 3 Tests
-        method: POST
-        port: 80
-        version: HTTP/1.0
-      output:
-        status:
-        - 405
-  test_title: 944210-17
 - desc: XML attribute value includes keyword KztAAU
   stages:
   - stage:
@@ -421,7 +379,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944210-18
+  test_title: 944210-16
 - desc: XML element value includes keyword KztAAU
   stages:
   - stage:
@@ -442,7 +400,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944210-19
+  test_title: 944210-17
 - desc: Nested XML element value includes keyword KztAAU
   stages:
   - stage:
@@ -463,7 +421,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944210-20
+  test_title: 944210-18
 - desc: Content-Type text/plain includes keyword KztAAU
   stages:
   - stage:
@@ -484,7 +442,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944210-21
+  test_title: 944210-19
 - desc: Content-Type application/json arg value includes keyword KztAAU
   stages:
   - stage:
@@ -505,7 +463,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944210-22
+  test_title: 944210-20
 - desc: Content-Type application/json arg name includes keyword KztAAU
   stages:
   - stage:
@@ -526,7 +484,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944210-23
+  test_title: 944210-21
 - desc: Cookie name includes keyword rO0ABQ
   stages:
   - stage:
@@ -548,7 +506,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944210-24
+  test_title: 944210-22
 - desc: Content-Type multipart/form-data json arg name includes keyword KztAAU
   stages:
   - stage:
@@ -578,7 +536,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944210-25
+  test_title: 944210-23
 - desc: Content-Type multipart/form-data json arg value includes keyword KztAAU
   stages:
   - stage:
@@ -608,67 +566,67 @@ tests:
       output:
         status:
         - 403
+  test_title: 944210-24
+- desc: Content-Type multipart/form-data XML element value includes keyword KztAAU
+  stages:
+  - stage:
+      input:
+        data: '-----------------------------thisissparta
+
+          Content-Disposition: form-data; name="payload"
+
+          Content-Type: application/xml
+
+
+          <?xml version="1.0"?><xml><element attribute_name="attribute_value">KztAAU</element></xml>
+
+          -----------------------------thisissparta--'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: multipart/form-data; boundary=---------------------------thisissparta
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944210-25
+- desc: Content-Type multipart/form-data XML element value includes keyword KztAAU
+  stages:
+  - stage:
+      input:
+        data: '-----------------------------thisissparta
+
+          Content-Disposition: form-data; name="payload"
+
+          Content-Type: application/xml
+
+
+          <?xml version="1.0"?><xml><element attribute_name="attribute_value">KztAAU</element></xml>
+
+          -----------------------------thisissparta--'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: multipart/form-data; boundary=---------------------------thisissparta
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
   test_title: 944210-26
-- desc: Content-Type multipart/form-data XML element value includes keyword KztAAU
-  stages:
-  - stage:
-      input:
-        data: '-----------------------------thisissparta
-
-          Content-Disposition: form-data; name="payload"
-
-          Content-Type: application/xml
-
-
-          <?xml version="1.0"?><xml><element attribute_name="attribute_value">KztAAU</element></xml>
-
-          -----------------------------thisissparta--'
-        dest_addr: 127.0.0.1
-        headers:
-          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
-          Accept-Encoding: gzip,deflate
-          Accept-Language: en-us,en;q=0.5
-          Content-Type: multipart/form-data; boundary=---------------------------thisissparta
-          Host: localhost
-          User-Agent: ModSecurity CRS 3 Tests
-        method: POST
-        port: 80
-        version: HTTP/1.0
-      output:
-        status:
-        - 403
-  test_title: 944210-27
-- desc: Content-Type multipart/form-data XML element value includes keyword KztAAU
-  stages:
-  - stage:
-      input:
-        data: '-----------------------------thisissparta
-
-          Content-Disposition: form-data; name="payload"
-
-          Content-Type: application/xml
-
-
-          <?xml version="1.0"?><xml><element attribute_name="attribute_value">KztAAU</element></xml>
-
-          -----------------------------thisissparta--'
-        dest_addr: 127.0.0.1
-        headers:
-          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
-          Accept-Encoding: gzip,deflate
-          Accept-Language: en-us,en;q=0.5
-          Content-Type: multipart/form-data; boundary=---------------------------thisissparta
-          Host: localhost
-          User-Agent: ModSecurity CRS 3 Tests
-        method: POST
-        port: 80
-        version: HTTP/1.0
-      output:
-        status:
-        - 403
-  test_title: 944210-28
 - desc: Argument test includes keyword Cs7QAF
   stages:
   - stage:
@@ -689,7 +647,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944210-29
+  test_title: 944210-27
 - desc: Argument name includes keyword Cs7QAF
   stages:
   - stage:
@@ -710,7 +668,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944210-30
+  test_title: 944210-28
 - desc: Cookie test includes keyword Cs7QAF
   stages:
   - stage:
@@ -732,7 +690,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944210-31
+  test_title: 944210-29
 - desc: Cookie name includes keyword Cs7QAF
   stages:
   - stage:
@@ -754,7 +712,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944210-32
+  test_title: 944210-30
 - desc: Request header test includes keyword Cs7QAF
   stages:
   - stage:
@@ -776,28 +734,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944210-33
-- desc: XML element includes keyword Cs7QAF
-  stages:
-  - stage:
-      input:
-        data: <?xml version="1.0"?><xml><Cs7QAF attribute_name="attribute_value">value</Cs7QAF></xml>
-        dest_addr: 127.0.0.1
-        headers:
-          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
-          Accept-Encoding: gzip,deflate
-          Accept-Language: en-us,en;q=0.5
-          Content-Type: application/xml
-          Host: localhost
-          User-Agent: ModSecurity CRS 3 Tests
-        method: POST
-        port: 80
-        version: HTTP/1.0
-      output:
-        status:
-        - 405
-  test_title: 944210-34
+  test_title: 944210-31
 - desc: Request header test includes keyword rO0ABQ
   stages:
   - stage:
@@ -819,28 +756,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944210-35
-- desc: XML attribute name includes keyword Cs7QAF
-  stages:
-  - stage:
-      input:
-        data: <?xml version="1.0"?><xml><element Cs7QAF="attribute_value">element_value</element></xml>
-        dest_addr: 127.0.0.1
-        headers:
-          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
-          Accept-Encoding: gzip,deflate
-          Accept-Language: en-us,en;q=0.5
-          Content-Type: application/xml
-          Host: localhost
-          User-Agent: ModSecurity CRS 3 Tests
-        method: POST
-        port: 80
-        version: HTTP/1.0
-      output:
-        status:
-        - 405
-  test_title: 944210-36
+  test_title: 944210-32
 - desc: XML attribute value includes keyword Cs7QAF
   stages:
   - stage:
@@ -861,7 +777,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944210-37
+  test_title: 944210-33
 - desc: XML element value includes keyword Cs7QAF
   stages:
   - stage:
@@ -882,7 +798,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944210-38
+  test_title: 944210-34
 - desc: Nested XML element value includes keyword Cs7QAF
   stages:
   - stage:
@@ -903,7 +819,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944210-39
+  test_title: 944210-35
 - desc: Content-Type text/plain includes keyword Cs7QAF
   stages:
   - stage:
@@ -924,7 +840,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944210-40
+  test_title: 944210-36
 - desc: Content-Type application/json arg value includes keyword Cs7QAF
   stages:
   - stage:
@@ -945,7 +861,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944210-41
+  test_title: 944210-37
 - desc: Content-Type application/json arg name includes keyword Cs7QAF
   stages:
   - stage:
@@ -966,7 +882,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944210-42
+  test_title: 944210-38
 - desc: Content-Type multipart/form-data json arg name includes keyword Cs7QAF
   stages:
   - stage:
@@ -996,7 +912,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944210-43
+  test_title: 944210-39
 - desc: Content-Type multipart/form-data json arg value includes keyword Cs7QAF
   stages:
   - stage:
@@ -1026,7 +942,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944210-44
+  test_title: 944210-40
 - desc: Content-Type multipart/form-data XML element value includes keyword Cs7QAF
   stages:
   - stage:
@@ -1056,28 +972,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944210-45
-- desc: XML element includes keyword rO0ABQ
-  stages:
-  - stage:
-      input:
-        data: <?xml version="1.0"?><xml><rO0ABQ attribute_name="attribute_value">value</rO0ABQ></xml>
-        dest_addr: 127.0.0.1
-        headers:
-          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
-          Accept-Encoding: gzip,deflate
-          Accept-Language: en-us,en;q=0.5
-          Content-Type: application/xml
-          Host: localhost
-          User-Agent: ModSecurity CRS 3 Tests
-        method: POST
-        port: 80
-        version: HTTP/1.0
-      output:
-        status:
-        - 405
-  test_title: 944210-46
+  test_title: 944210-41
 - desc: Content-Type multipart/form-data XML element value includes keyword Cs7QAF
   stages:
   - stage:
@@ -1107,28 +1002,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944210-47
-- desc: XML attribute name includes keyword rO0ABQ
-  stages:
-  - stage:
-      input:
-        data: <?xml version="1.0"?><xml><element rO0ABQ="attribute_value">element_value</element></xml>
-        dest_addr: 127.0.0.1
-        headers:
-          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
-          Accept-Encoding: gzip,deflate
-          Accept-Language: en-us,en;q=0.5
-          Content-Type: application/xml
-          Host: localhost
-          User-Agent: ModSecurity CRS 3 Tests
-        method: POST
-        port: 80
-        version: HTTP/1.0
-      output:
-        status:
-        - 405
-  test_title: 944210-48
+  test_title: 944210-42
 - desc: XML attribute value includes keyword rO0ABQ
   stages:
   - stage:
@@ -1149,7 +1023,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944210-49
+  test_title: 944210-43
 - desc: XML element value includes keyword rO0ABQ
   stages:
   - stage:
@@ -1170,7 +1044,7 @@ tests:
       output:
         status:
         - 403
-  test_title: 944210-50
+  test_title: 944210-44
 - desc: Nested XML element value includes keyword rO0ABQ
   stages:
   - stage:
@@ -1191,4 +1065,4 @@ tests:
       output:
         status:
         - 403
-  test_title: 944210-51
+  test_title: 944210-45
