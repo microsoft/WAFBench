@@ -11,6 +11,8 @@ tests:
         headers:
           Cookie: UySbVxd=n-%26%23x5c%3Bx2d%5C13%26%23x34%3B%5Cx300%5Cx30%5Cx30%5Cx33%5Cx6%26%2351%3B%5Cx6d%5Cx5c%5C60%5C60%5C60%5C60%5C60%5C142%5Cx%26%23x35%3Bc0%5Cx%26%2351%3B00%5Cx30%5Cx300%5C134%26%23x30%3B%5C60%5Cx30%26%2392%3Bx30%5C66f%5C134%5Cx30%5C%26%23x78%3B300%26%23x30%3B%26%2392%3Bx3%26%23x32%3B%5Cx37%5C134%5C600%26%2392%3B60%5Cx%26%23x33%3B0%5Cx%26%23x33%3B7%5C1%26%2352%3B1%5Cx5c0000%5C60%5Cx30%5C1340%5C60005c%26%23x2d%3B%5Cx00%26%2363%3B%5C1340%5Cx3000%26%2392%3Bx36%5C62%5C151%3Fn%5Cx0%26%23x30%3B%5C13400%5C%26%23x78%3B300%26%23x5c%3Bx36%5Cx34%5C151%26%23x5c%3B156%3F%5Cx5c0000%5Cx30%5Cx30%5Cx%26%2353%3Bc0%26%23x30%3B00%5Cx3%26%2354%3B%5Cx37%5Cx%26%2353%3Bc0%26%23x30%3B00%5C%26%2354%3B2%5C14%26%2352%3B%5C134%5C6%26%23x30%3B%5Cx300%5C603%5C141%5C13%26%2352%3B0%5C%26%23120%3B3%26%2348%3B002%5C%26%23x36%3B1u%26%23x5c%3Bx%26%23x37%3B2%5Cx00%5Cx%26%2353%3Bc%5Cx30%5Cx300%5C60%26%2354%3B%5Cx63%5Cx5c%5C6%26%23x30%3B%5C600%5C6028%5Cx00%5C134000041
           Host: localhost
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
         method: GET
         port: 80
         protocol: http
@@ -26,6 +28,8 @@ tests:
         headers:
           Cookie: i1gV84fhrF=%5C14%5C15%26%23x32%3B%5Cx61%5Cx5c0%26%2392%3B60%5Cx300%5C67%26%23x5c%3B66%5C%26%23x78%3B5c%5Cx3000%5Cx30%5Cx361s%5C143%5C134000%5C60%5C%26%2354%3B7%5Cx32%5C1%26%2351%3B40%5Cx%26%23x33%3B000%5C6%26%2348%3B0%5C1340%5C600%5Cx3069%5Cx5c%5Cx30%5C60%5Cx30%5C60%5Cx37%5C60%5C134%26%2392%3Bx3000%5Cx307%26%2352%3B%5C134%26%2392%3Bx300%5Cx3000%5Cx30%26%2392%3B134000%5Cx30%5Cx33%5Cx61%5Cx5b%5Cx75%5C134%26%23x30%3B%26%23x30%3B%5Cx%26%2351%3B0%5C60%26%23x5c%3B6%26%2355%3B8%5Cx5c%26%2392%3B60%5Cx300%5C%26%23120%3B305%26%23x64%3B%5C66%5B
           Host: localhost
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
         method: GET
         port: 80
         protocol: http
@@ -41,6 +45,8 @@ tests:
         headers:
           Cookie: f=%5C44%40%5C4%26%23x32%3Bi%5Cx5c000%5C606%5Cx64%5C160%25%5Cx%26%2353%3Bc00006%5Cx66r%5C1340%5C60%26%23x30%3B0%26%2355%3B4%00%5Cx5c%5Cx3%26%2348%3B0%5Cx300%5Cx%26%2351%3B2%5C60%5C%26%23120%3B5c%5C60%26%23x30%3B%5C60%5Cx30%5Cx%26%23x33%3B2f%5C52%26%23x5c%3B134%26%2348%3B%5Cx30%5C60%26%2348%3B0%26%2392%3B60%5Cx5c%26%23x5c%3B60%5C60002%5Cx39%5C13400%5Cx30075%5Cx5c0%5Cx30%5Cx30%5C607%5Cx%26%23x33%3B%26%23x32%3B%5Cx6c%26%23x5c%3Bx5c%26%23x5c%3B6000%5C60%5Cx34%5Cx65%5Cx5c000%5Cx3%26%2348%3B28%5C%26%23x78%3B5%26%23x63%3B%5Cx300%5Cx3%26%2348%3B%5Cx303%5Cx31
           Host: localhost
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
         method: GET
         port: 80
         protocol: http
@@ -56,6 +62,8 @@ tests:
         headers:
           Cookie: d91_ZR10X8p9rL6IGpw=%5C56%40%5C1%26%23x33%3B40%5C60%5Cx30%5C%26%2354%3B0%5C600i%5Cx2b%5C155%5C134%5C6%26%2348%3B0%5Cx30%5C60%5C%26%2354%3B70o%5C73%5C%26%23x31%3B62%5C134%5Cx30%5C6%26%2348%3B00%26%2355%3Be%5Cx74%5C%26%23x78%3B5c00%5Cx3%26%2348%3B%5Cx3%26%23x30%3B0%26%2399%3B%00%5Cx5c0%26%23x30%3B0%5C60%5Cx32%5Cx66%5Cx5%26%2399%3B%5C60%5Cx30%26%23x5c%3Bx%26%2351%3B00%5Cx32a%5Cx5c%5Cx%26%23x33%3B0%5C%26%2354%3B0%5C600%5Cx%26%2351%3B%26%2355%3B%5Cx35r%26%2336%3B%5C1340%5C%26%23x36%3B0%5Cx%26%23x33%3B00%5Cx36%5C%26%23x78%3B63%5Cx%26%2352%3B%26%2399%3B%26%2392%3Bx5c%5Cx30%5C%26%2354%3B0%5C60%26%23x30%3B0%5Cx30%5C134%5C60%5Cx300%5Cx3028%5C13400%5C%26%23120%3B300%5C60%5Cx30%5Cx53
           Host: localhost
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
         method: GET
         port: 80
         protocol: http
@@ -71,6 +79,8 @@ tests:
         headers:
           Cookie: ciNoeaJKpu=w%0Bd%5Cx5c0%5C60%5C60%5C60%5Cx361%5Cx00%5C164%5Cx5c0%5Cx3000%5C600%5C1%26%2352%3B%26%2349%3B%3A%5C%26%23x78%3B5c%5Cx300%5C6000%5C60M%5Cx%26%2353%3Bc%5Cx30%26%23x30%3B%5C%26%23x78%3B30%5Cx30%5Cx33%5Cx62%26%23x5c%3B134000%5Cx3008%5Cx6%26%2350%3Ba%26%23x5c%3B%26%23x78%3B5c0%5Cx3000%5Cx37%5C63%5C%26%23120%3B65%5C13%26%23x34%3B%5C600%5C6003%5C%26%23x78%3B36%5C%26%23120%3B%26%2353%3Bc00%5Cx300%5Cx33%5C64%26%23x5c%3Bx5c%26%2392%3B%26%23x78%3B30%5C%26%23120%3B30%5C60%5C%26%2354%3B0%5C%26%23x78%3B32d
           Host: localhost
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
         method: GET
         port: 80
         protocol: http
@@ -86,6 +96,8 @@ tests:
         headers:
           Cookie: U3aqom4_8Kihp=%5Cx5%26%23x63%3B%26%23x30%3B%26%23x5c%3Bx%26%2351%3B%26%23x30%3B%5C%26%23x78%3B300%5Cx37d%5C134%5C%26%23x36%3B00%5C60%5C%26%23x36%3B0%5C66a%5C13%26%23x34%3B%5Cx30%26%2392%3B60%5Cx300%5Cx36%5Cx%26%23x33%3B1%5C166%5Cx61s%5C%26%2349%3B340%5C600%5C60%5C60%5Cx30%5C1%26%23x34%3B3r%5Cx5c000%5Cx300%5C60i%00%5C%26%23120%3B70%5C13400%5C6007%5Cx34%00%5C%26%23x78%3B5c%26%2348%3B%5C60%26%23x30%3B%5Cx303a%5Cx5c%5C6%26%23x30%3B%5C60%5Cx30%26%2348%3B%26%23x30%3B8%26%23110%3B%5Cx5c%26%2392%3B60%5C%26%23x78%3B30%5C60%5C%26%2354%3B061%00%26%2392%3B13400%5Cx%26%2351%3B006%5C144%5C134%5Cx%26%23x33%3B%26%2348%3B%5C60%5C600%5Cx365%5Cx5c0%26%23x30%3B%5Cx3%26%2348%3B%26%23x30%3B%5C%26%23x78%3B%26%23x33%3B086
           Host: localhost
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
         method: GET
         port: 80
         protocol: http
@@ -101,6 +113,8 @@ tests:
         headers:
           Cookie: mEDvsext5z=%5Cx5%26%23x63%3B%5C6000%5Cx3%26%2348%3B%5C67%26%2392%3Bx33%5Cx5c0%5C6000%5C67%5Cx63%5C55%26%2392%3Bx%26%23x35%3Bc%5C600006%5C144%5C134%5Cx30%26%23x30%3B%5Cx300%5C65%5Cx65o%5Cx00%5Cx5c%5C6%26%23x30%3B%26%23x5c%3B60000c%5Cx5c%5Cx30%5C6%26%2348%3B0%5Cx307%26%2397%3B%5Cx5%26%23x63%3B%26%23x30%3B000%5Cx30%5C60%5C5%26%2353%3B%5Cx5c%5Cx30%26%23x30%3B0%5Cx3%26%2348%3B%5Cx3%26%23x36%3B%5C62%5Cx5c%5C%26%23120%3B3000%5C607d%5C%26%23x31%3B%26%2351%3B4%5C6%26%23x30%3B00%5Cx306%5C71%5C1%26%2351%3B400%5Cx%26%23x33%3B0%5C%26%23x78%3B306%5C%26%23120%3B65%5Cx5c00%5Cx300%5Cx300%5Cx2e%5C13%26%23x34%3B%5Cx30000%5Cx364i%00%5C57%5C134%5C60%5Cx300%5C60%5Cx%26%2351%3B6%5C14%26%23x35%3B%7C%5Cx5c00%5Cx3006%5C67%5Cx00%5Cx5c%5C%26%2354%3B0%5C600%5C60%5C60c%3A%5C173%5C165%00rl%5C134%5C60%26%23x5c%3B60%5C60%26%2392%3Bx30%5Cx32%5Cx38%5C134%5C60%5C600%5C6073
           Host: localhost
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
         method: GET
         port: 80
         protocol: http
@@ -116,6 +130,8 @@ tests:
         headers:
           Cookie: jNLj3YEUkIGhAtX=I%5Cx5c0%26%23x5c%3B60%5C600%5C62%5C%26%23120%3B38%5C%26%2349%3B34%5C60000%5C%26%23x36%3B2%5C%26%2349%3B44%5Cx5%26%2399%3B0%5C60%5Cx30%5C60%26%23x5c%3Bx36%5C1%26%2352%3B4%5Cx%26%2348%3B0%26%2392%3B1%26%23x33%3B40%5C60%5C60%5Cx3%26%2348%3B%5Cx36%5Cx66%5C172%26%23x2d%3B%26%23x5c%3B%26%23120%3B5c%26%2392%3Bx3000%5C%26%23x36%3B0%26%2350%3B%26%2392%3Bx33b%5Cx5c00%5C60%26%23x5c%3B6027%00i%27%26%23x5c%3Bx6e-%5C%26%2349%3B3400%5C60%5C60%5Cx36%26%2352%3B%5C%26%23120%3B%26%2354%3B9%5C1340%5Cx3%26%23x30%3B%5C6005%26%2398%3B%26%2392%3Bx5c%5C%26%23x78%3B30%5C60006e%5C134%26%23x30%3B00%26%23x30%3B%5Cx32c%00g%26%2392%3B1340%5Cx30%5C60%5C60%5C6000%5Cx%26%2353%3Bc%5Cx3000%5C60%26%23x5c%3Bx33a%5C13%26%2352%3B%5Cx300%5C6003%5C%26%23x78%3B61%5C42%5Cx75%0B%5C1340%5Cx30%5Cx300%5C60%5C60%5Cx72l%5C%26%2349%3B34%26%2348%3B%26%2348%3B0%5C%26%2354%3B0%5C62%5C60%5C134%26%2348%3B%5C600%5Cx30%26%2350%3B8%5C%26%23x31%3B34%26%23x30%3B%5C6%26%23x30%3B%5Cx30%5C602%5C%26%23120%3B33
           Host: localhost
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
         method: GET
         port: 80
         protocol: http
@@ -131,6 +147,8 @@ tests:
         headers:
           Cookie: a=%5C133%5C134%5C%26%23120%3B300%5C6%26%2348%3B%26%23x30%3B%26%2353%3B%5C145%5C1340%5Cx30%5C600%5Cx32d%5Cx00%5Cx5%26%2399%3B%26%2392%3Bx%26%23x33%3B00%5Cx30%5Cx3%26%23x30%3B%5C66d%5Cx5c%5C6000%5Cx3000%5Cx5c0%5C600%5Cx30%5Cx36%26%23x5c%3B146%7Bz%26%2392%3Bx5c%5Cx300%5Cx30%26%2392%3B60%5Cx35e%5Cx2d%5Cx00%5C134%5Cx3%26%23x30%3B0000c%26%2392%3Bx5c%5C600%5C6006%5C62i%0B%5C1340%5Cx%26%23x33%3B00%5Cx30%5Cx36%5Cx65%2B%5Cx64%5C134%5C60%5Cx300%26%23x30%3B6%5C%26%23x78%3B39%5C00%5Cx5c00%5Cx30%5C60%5Cx36e%5Cx5c%5C60%5Cx30%5Cx3006%5Cx37%5Cx5c0%5C6000%5C600%5C13%26%23x34%3B00%5C60%5C%26%2354%3B0%5C67%5C145%5C1%26%2351%3B4%5C60%26%2348%3B%5Cx%26%2351%3B%26%23x30%3B03%5Cx61j%5Cx5c00%5C600%5C62%26%2392%3B62%5C134%5C6%26%23x30%3B00%5Cx307%5C65%5Cx5c%26%2348%3B%26%23x5c%3Bx30%26%23x30%3B%5C%26%23x78%3B300%5Cx30%26%23x72%3Bl%5C1340%5Cx3000%5Cx3%26%2348%3B%5Cx63%5C50%5C134%5C60%5Cx30%5C60%5C%26%23x36%3B0%5Cx351
           Host: localhost
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
         method: GET
         port: 80
         protocol: http
@@ -146,6 +164,8 @@ tests:
         headers:
           Cookie: 3XArWCkEB9=%5Cx5c%5C60%5C%26%2354%3B0%5Cx3%26%2348%3B%5Cx30%26%23x5c%3Bx320%5C%26%23x31%3B34%5Cx30%5Cx30%5C6%26%2348%3B%5Cx302%26%2349%3B%5Cx00%5C134%5C6%26%23x30%3B%5C60%5Cx%26%23x33%3B00%5C664%5Cx5c00%5Cx30%5C6061%5C13%26%23x34%3B%5Cx30%5Cx300%5Cx3000%5Cx5c00%5C600%26%23x37%3B4%5C134%26%23x30%3B%5C60%5C60%5Cx30%5C661%5C13%26%2352%3B%5C%26%2354%3B0%5C60%5Cx30%5C60%5C63am%5C%26%23x78%3B5c%5Cx30%5C%26%23x78%3B3%26%23x30%3B0045/%5C1%26%23x33%3B%26%2352%3B000%5C60%5Cx370%5C%26%2349%3B340%5Cx3000%5Cx32b%00%5C13%26%2352%3B%5C60%26%2348%3B%5C60%5C60%5Cx35%5Cx37%5Cx3b%7B
           Host: localhost
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
         method: GET
         port: 80
         protocol: http
@@ -161,6 +181,8 @@ tests:
         headers:
           Cookie: '%5Cx2a%40%26%2311%3B%5C151%5C155%26%23x5c%3Bx5c0%5C60%26%23x5c%3Bx300%5Cx370o%5C162t%26%23x5c%3Bx5c%5Cx3000%26%23x30%3B%5Cx35%26%23x5c%3Bx6%26%23x33%3B%5Cx%26%2355%3B%26%2353%3B%2A%5Cx5c0%5Cx3000%26%2355%3B2l%26%23x0%3B%5Cx28%26%2392%3Bx5c%5C%26%23x36%3B0%26%2392%3Bx30%26%23x30%3B05d=4Hg0NZYTdp'
           Host: localhost
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
         method: GET
         port: 80
         protocol: http
@@ -176,6 +198,8 @@ tests:
         headers:
           Cookie: '%5C134%26%2348%3B0000%26%2348%3B%5Cx%26%2353%3Bc0%5Cx30%5C60069%5C1%26%23x33%3B40%5Cx3%26%23x30%3B%5C60%5C60%5C600%40i%5Cx0cm%26%2392%3Bx5c000%26%23x5c%3Bx30%5C60%5Cx62%5C160%00%5C15%26%23x37%3B%5C1%26%23x33%3B4%5C%26%23120%3B30%26%2392%3Bx30%5C60%5C%26%23x36%3B0%5Cx33ar%5C52%5C134%5Cx3%26%2348%3B%5Cx30%5Cx30%5Cx307%5Cx34%5Cx5c0%5C60%26%2348%3B%5C%26%2354%3B0%5Cx32%26%23x5c%3B65u%5C13%26%2352%3B%5Cx3000%5Cx30%5C%26%23x78%3B372%3C%5C1%26%2351%3B4%5Cx300%5Cx%26%2351%3B000%26%2348%3Bl%5C13400%5C6%26%23x30%3B00%5Cx63%5Cx28%5Cx5c%5C600%5C6%26%23x30%3B0%5Cx34%5C63=fCB'
           Host: localhost
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
         method: GET
         port: 80
         protocol: http
@@ -191,6 +215,8 @@ tests:
         headers:
           Cookie: '%5C134000%26%2348%3B%26%23x34%3B%5Cx%26%2354%3B2%26%23x5c%3B100%5C144%26%23x5c%3Bx00a%5Cx5c000%5C607%5C%26%23x78%3B34%5C134%5C600%26%23x30%3B%5C%26%23x78%3B30%5Cx361%3A%5Cx2c%5Cx0c%5C%26%2355%3B4%27%5Cx72%5C134%5Cx3%26%2348%3B%5Cx30%5Cx30%5C60%26%23x5c%3B63%5C145%5C134%5Cx30%5C60002a=EsxPn'
           Host: localhost
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
         method: GET
         port: 80
         protocol: http
@@ -206,6 +232,8 @@ tests:
         headers:
           Cookie: '%5C13400%26%23x30%3B%5Cx30%5C621d%5C13400%5Cx%26%23x33%3B00%26%2354%3B1%5Cx5c%5C60%5C60%5C600%26%23x37%3B4%5Cx5c00006%5Cx3%26%23x31%3B%5C1340%5Cx%26%2351%3B0003a%5C134%26%2348%3B%5C60%5Cx3003%5C70%3B%08%00%5C13%26%2352%3B%5C60000%5C%26%23x36%3B62%5Cx5c%5Cx30%5Cx%26%2351%3B0%5C60%5C%26%23x78%3B3%26%23x30%3B6%5Cx31%5C%26%23120%3B5c00%5Cx300%5C67%5C63e%5C%26%23x31%3B340%5Cx30%5Cx300%5Cx3%26%2351%3B6%5C13%26%2352%3B00%5C600%26%2351%3B%5C64%5Cx30=w'
           Host: localhost
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
         method: GET
         port: 80
         protocol: http
@@ -220,6 +248,8 @@ tests:
         dest_addr: 127.0.0.1
         headers:
           Host: localhost
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
         method: GET
         port: 80
         protocol: http
@@ -235,6 +265,8 @@ tests:
         dest_addr: 127.0.0.1
         headers:
           Host: localhost
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
         method: GET
         port: 80
         protocol: http
@@ -250,6 +282,8 @@ tests:
         dest_addr: 127.0.0.1
         headers:
           Host: localhost
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
         method: GET
         port: 80
         protocol: http
@@ -265,6 +299,8 @@ tests:
         dest_addr: 127.0.0.1
         headers:
           Host: localhost
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
         method: GET
         port: 80
         protocol: http
@@ -280,6 +316,8 @@ tests:
         dest_addr: 127.0.0.1
         headers:
           Host: localhost
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
         method: GET
         port: 80
         protocol: http
@@ -295,6 +333,8 @@ tests:
         dest_addr: 127.0.0.1
         headers:
           Host: localhost
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
         method: GET
         port: 80
         protocol: http
@@ -310,6 +350,8 @@ tests:
         dest_addr: 127.0.0.1
         headers:
           Host: localhost
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
         method: GET
         port: 80
         protocol: http
@@ -325,6 +367,8 @@ tests:
         dest_addr: 127.0.0.1
         headers:
           Host: localhost
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
         method: GET
         port: 80
         protocol: http
@@ -340,6 +384,8 @@ tests:
         dest_addr: 127.0.0.1
         headers:
           Host: localhost
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
         method: GET
         port: 80
         protocol: http
@@ -355,6 +401,8 @@ tests:
         dest_addr: 127.0.0.1
         headers:
           Host: localhost
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
         method: GET
         port: 80
         protocol: http
@@ -370,6 +418,8 @@ tests:
         dest_addr: 127.0.0.1
         headers:
           Host: localhost
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
         method: GET
         port: 80
         protocol: http
@@ -385,6 +435,8 @@ tests:
         dest_addr: 127.0.0.1
         headers:
           Host: localhost
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
         method: GET
         port: 80
         protocol: http
@@ -400,6 +452,8 @@ tests:
         dest_addr: 127.0.0.1
         headers:
           Host: localhost
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
         method: GET
         port: 80
         protocol: http
@@ -415,6 +469,8 @@ tests:
         dest_addr: 127.0.0.1
         headers:
           Host: localhost
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
         method: GET
         port: 80
         protocol: http
@@ -430,6 +486,8 @@ tests:
         dest_addr: 127.0.0.1
         headers:
           Host: localhost
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
         method: GET
         port: 80
         protocol: http
@@ -445,6 +503,8 @@ tests:
         dest_addr: 127.0.0.1
         headers:
           Host: localhost
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
         method: GET
         port: 80
         protocol: http
@@ -596,6 +656,8 @@ tests:
         headers:
           Host: localhost
           Referer: '%26%23x5c%3B134%5C6%26%2348%3B0%5C60%5C60%5Cx37%26%2392%3Bx37%5Cx%26%23x35%3Bc%5C60%5C600%5C60%5C62d%5Cx5c%26%2348%3B%5Cx30%5Cx30%5Cx30%5C62%5Cx64m%0C%5Cx%26%2354%3B%26%23x66%3B%26%23x5c%3Bx5c0%5C60%5Cx3007a%00%5C134%5C60%26%23x30%3B0%5Cx30%5Cx32%5Cx%26%2354%3B4%28%26%23x5c%3Bx5c0%5C%26%23x36%3B0%5Cx30%5C6062%26%23x69%3B%5C173n%7C%5Cx5c0%5C60%5C60%5C%26%23120%3B30%5C664%5Cx5c000021%26%2392%3B1%26%23x33%3B40%5C600%5C60%5C66%5C71%00%0C%5C1340%5Cx3%26%23x30%3B%5Cx30%5C%26%23x36%3B0%5C66%5Cx65%26%23103%3B%5C%26%23x31%3B340%26%2392%3B60%5C600%26%2352%3B3%26%23x5c%3B72%5C%26%2349%3B6%26%2353%3B%5Cx5c0%26%2348%3B%5C%26%23x78%3B30020%5Cx5%26%2399%3B%5Cx30%5C600%5Cx%26%23x33%3B07%5Cx32%5C%26%23x30%3B0%5Cx5c0%5C%26%23120%3B30%5Cx30%5C600b%5C1%26%23x33%3B4%5Cx30%5Cx%26%23x33%3B0%5C600%26%2354%3B%5C%26%23120%3B6%26%23x33%3B%5C%26%23120%3B28%5C1%26%23x33%3B400%5Cx30%5C600%5Cx30%5C134%5Cx30%5C60%26%2392%3Bx30%26%2392%3B603%26%2392%3Bx64'
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
         method: GET
         port: 80
         protocol: http
@@ -611,6 +673,8 @@ tests:
         headers:
           Host: localhost
           Referer: '%5Cx3d%5C1340%26%2348%3B%5C6%26%2348%3B04%5C60%5C134%5C6%26%2348%3B000%5C62%5C66i%5C51%5C155%5C134000%5C6070%3C%5C1340%5Cx30%5C%26%23x36%3B%26%2348%3B%5Cx30%5C6%26%23x36%3Bfrt%28%5Cx5c00%5C600%26%23x30%3B0%5Cx5c%26%23x30%3B%5C%26%23x78%3B30%5Cx3002%5Cx66%2A%5Cx5%26%2399%3B000%5Cx30%5Cx322%5C71'
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
         method: GET
         port: 80
         protocol: http
@@ -626,6 +690,8 @@ tests:
         headers:
           Host: localhost
           Referer: '%5Cx4%26%2399%3B%5Cx40%5C151m%5C%26%23120%3B5c0%5C60%26%2348%3B0%5C67%26%2348%3B%00%5C134%5Cx30%5Cx30%5Cx%26%2351%3B0%5Cx306f%29%26%23114%3B%5C1340%5C6000%5Cx374%5C134%26%2348%3B0%5Cx30%5C607%5C6%26%2353%3B%5Cx3crl%5Cx%26%2353%3Bc%5C600%5C60%5C607%5C70%5C%26%23x31%3B34%5Cx3%26%2348%3B%5C60002%5C7%26%23x30%3B%5C1340%5Cx300%5C60%5Cx%26%23x33%3B3%26%23x5c%3B141'
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
         method: GET
         port: 80
         protocol: http
@@ -641,6 +707,8 @@ tests:
         headers:
           Host: localhost
           Referer: '%00%5C%26%23120%3B5c%5C60%5Cx%26%23x33%3B0%5C60%5C60%26%2352%3B2%5C1%26%23x33%3B40%5C60%5C60%5C%26%23x36%3B02%26%23100%3B%5Cx28%26%2392%3Bx5c%5C60%26%23x30%3B0%26%2348%3B%5Cx36d%5C13%26%23x34%3B%5C6000%5C60%5C%26%23x36%3B6f%5C45%5Cx%26%23x35%3Bc00%5C600%26%23x37%3B%26%2397%3B-%5Cx3b%26%2398%3B%5C00%26%2392%3Bx5c%26%23x30%3B%5Cx30%5C60%5Cx30%5C%26%23120%3B30c%5Cx5c%5Cx300%5C6006%5C71%5C%26%23x78%3B5c%26%23x5c%3Bx30000%5C66%5Cx65%5C%26%2349%3B4%26%2352%3B%5C13400%26%23x30%3B00c%5C13%26%23x34%3B%5Cx3000%5C60%5Cx36%5Cx%26%23x33%3B9%5C15%26%2354%3B%5C13400%5C%26%23120%3B300%5C6%26%2354%3B%5Cx37%00%5Cx%26%23x33%3B3%5C72%26%2312%3B%5C%26%23x78%3B5c00%5Cx3002%5Cx3%26%2348%3Bu%0Cr%5Cx6%26%2399%3B%5Cx5c0%5C600%5C6028y'
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
         method: GET
         port: 80
         protocol: http
@@ -656,6 +724,8 @@ tests:
         headers:
           Host: localhost
           Referer: '%5Cx5c00%5C%26%23x36%3B00%5C646%5Cx5c000%5C%26%23120%3B3%26%2348%3B3f%5Cx64%5Cx00a%5Cx5%26%23x63%3B0%5C60%5Cx30%5Cx3074%26%23x5c%3B1%26%2351%3B%26%2352%3B000%5Cx30%5C600%5Cx5c0%5Cx30%5C600%5Cx36%26%2349%3B%5C%26%23x78%3B%26%2353%3Bc0%5Cx3%26%23x30%3B%5C60%5Cx30%5C6%26%23x33%3B%5Cx61%5C1%26%2351%3B40%5C6%26%2348%3B%5C600%5Cx33b%5Cx5c0%5Cx300%5Cx30%5C608%5Cx5c%5Cx300%5Cx%26%2351%3B00%5Cx36%5Cx32%5C1340%5Cx%26%23x33%3B00%5C60%5Cx361%5C1%26%2354%3B3%5C1340000%5C%26%2354%3B6%5C65%5Cx%26%23x35%3Bc%5C60%5Cx300%5C%26%23x78%3B3%26%23x30%3B%26%2351%3B%5Cx364%5Cx5c%5C60%5Cx30007%26%2355%3B'
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
         method: GET
         port: 80
         protocol: http
@@ -671,6 +741,8 @@ tests:
         headers:
           Host: localhost
           Referer: '%5C%26%23120%3B70%5C1340%5C60000%5C60%5C5%26%23x34%3B%5C13%26%2352%3B0%5Cx30%5C%26%23x78%3B30%5C602%5C1%26%2352%3B4%5C1340%5C60%5C6002%5Cx32m%26%23x5c%3B134%5Cx30%5C600%5C6%26%23x30%3B6%5Cx66%5C1340%5Cx30%26%23x30%3B000%5C%26%23x31%3B%26%23x33%3B4%5Cx30%5Cx300%5Cx307a%5Cx2d%28%5Cx5c%5Cx30%5Cx30%26%2392%3Bx30%26%2392%3B6000%5C134%5C600006%5C62%5C00%5Cx69%5Cx5c%5Cx30%5C60%5Cx30%5Cx306%5C%26%23x78%3B65%26%2392%3B134%5C600%5Cx30%26%23x30%3B00%5C134000%5Cx302%5Cx36%5C134%5C%26%23x78%3B30%5C60%5C60%5Cx3%26%23x30%3B%5Cx300%26%2392%3B144%5Cx5c%5Cx30%5C600%5C60%5Cx30c%5C13400%5C60069%5C13%26%2352%3B%5C60%5Cx30000%5C%26%2354%3B0%3A%5Cx6e%5C1%26%2351%3B400%26%23x30%3B%5Cx300b%5Cx5c%5C6000%5Cx306%5C%26%2354%3B7%26%2392%3B%26%23120%3B54%5C1%26%2351%3B40%5C60%5C60%26%23x5c%3Bx30%26%2392%3Bx3%26%23x30%3B%5C60%5C134%5C60%5C60%5C60%26%23x5c%3B603aM%5C%26%23120%3B%26%23x35%3Bc0000%5C62%5C60%26%2392%3Bx5c%5Cx30000%5C675%5Cx5c00%5C600%5C60%5C%26%23x78%3B30%5C75%5C%26%23x78%3B72%5C%26%23120%3B5c%5C60%5C600%5Cx306%5C143%5C1340%26%2392%3Bx300%5Cx%26%2351%3B%26%2348%3B28v'
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
         method: GET
         port: 80
         protocol: http
@@ -686,6 +758,8 @@ tests:
         headers:
           Host: localhost
           Referer: '%5C134%26%2392%3Bx3000%5Cx30%5Cx377%5Cx5%26%2399%3B00%5C600%5Cx300%5Cx7b%5C%26%23x78%3B2d%5Cx5c0%5Cx30%5Cx30%5C60%5C66d%5C133%5Cx6%26%23x66%3B%5C134%5C6%26%23x30%3B0002az%26quot%3B%5Cx5%26%23x63%3B0%5C6000%5Cx32d%5C134%5Cx300%5Cx3%26%23x30%3B06%5C62i%5C%26%23120%3B5c%5C6000%5Cx30%5C67dn.%5Cx5c0%5C600%26%2348%3B%26%23x30%3B0%5C1%26%2352%3B4%5Cx5c%5Cx%26%23x33%3B0%5C60%5Cx3000%5C143%5C134%26%23x5c%3Bx30%5Cx3000%5Cx369%5Cx5c000%5Cx30%26%23x36%3B%5C145%5C147%5C%26%23x78%3B%26%2353%3Bc0%5C600%5Cx30%5Cx30c%5C1340%5Cx%26%2351%3B00%5C600%5C60%3A%5C14%5C1%26%2351%3B40%5Cx30%5Cx30%5C607%5Cx35%5Cx5c0%5Cx30%26%23x30%3B%26%2348%3B0%5Cx30r%5Cx5c0%5Cx30007%5C142l%5C13400%5C6%26%23x30%3B0%5C6%26%2348%3B%5Cx63%28%5C77'
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
         method: GET
         port: 80
         protocol: http
@@ -701,6 +775,8 @@ tests:
         headers:
           Host: localhost
           Referer: '%5D%5C%26%23x78%3B5c%26%2392%3B60%26%2348%3B0%5C60%5C62c%5Cx2d%26%2392%3Bx%26%2354%3Bd%5Cx0%26%23x63%3B%26%2392%3Bx6f%26%2392%3Bx5c%5C600%5C%26%2354%3B0%5C600%5Cx62%26%23x7a%3B-%5C142%26%2392%3Bx5c%5C6000%26%23x30%3B%26%2392%3Bx32%5C67%26%2392%3Bx5c0%5Cx30%5Cx300%5Cx36%5C%26%23x78%3B39%5C1340000%26%23x5c%3Bx36e%5C1%26%23x33%3B40%5C60%5Cx3007%5C145%5Cx5c00%5C60%5Cx%26%23x33%3B064i%5C156g%5C134%5C60%5C6%26%23x30%3B0%5Cx30%5C60c%5C7%26%23x32%3B%5C14%5Cx5c%5Cx3%26%2348%3B%5Cx3000%5Cx3%26%2350%3Ba%00%5C134%5Cx%26%23x33%3B0%5Cx300075%5Cx5c0%26%2348%3B0022%5C00%5C162%26%23x6c%3B%7B%00%5C134%5Cx300%26%23x5c%3B%26%23x78%3B300%5Cx32%5Cx38%5Cx5%26%23x63%3B0%5Cx3000%5Cx37%5C6%26%2350%3B'
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
         method: GET
         port: 80
         protocol: http
@@ -716,6 +792,8 @@ tests:
         headers:
           Host: localhost
           Referer: '%26%2392%3B1%26%23x33%3B40%5C60%5Cx3000c%5Cx3bj%5Cx5c%5Cx300%5C%26%23x36%3B%26%23x30%3B06%5C%26%23x36%3B1v%5C134%5C6%26%2348%3B0006%5C61%5C%26%23x78%3B5c0%5C6%26%23x30%3B%5C60073%5C1%26%2351%3B40%5C%26%23x36%3B00%26%2392%3Bx306%5C63r%5Cx5%26%2399%3B0%5Cx300%5C60%26%2354%3B9p%5Cx74%5Cx3a%5C134%5Cx30%26%23x5c%3Bx3000%5Cx%26%2351%3B0%26%23x5c%3B142%5Cx08%5C%26%23x78%3B00%5C156a%5C%26%2349%3B34%5C%26%2354%3B0%5C60%5C6006%5C144%26%23101%3B%5Cx08%5Cx5c0%5Cx30%5C%26%2354%3B0%5Cx3000%5C134%5C60%26%2348%3B006%5C%26%2354%3B5'
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
         method: GET
         port: 80
         protocol: http
@@ -731,6 +809,8 @@ tests:
         headers:
           Host: localhost
           Referer: '%5C00%0C%5C%26%23120%3B5c%26%2392%3B60%5C60%5C60%5Cx304%5Cx30%5Cx23%5C134%26%2392%3Bx30%5Cx300%5C60%5Cx300i%5Cx5c%26%23x5c%3Bx3000%5C60%5C66%5C144%5C%26%23x78%3B5c0%5C600%5C6%26%23x30%3B%5Cx37%26%23x5c%3B60%5C1340%26%2348%3B%5C600%5Cx30%5C%26%23x36%3B0%5C%26%23x31%3B34%26%2348%3B00%26%2348%3B%5Cx360%5C134%26%2348%3B0%5Cx300%5Cx3%26%2354%3Bf%5Cx5c%5Cx300%26%23x5c%3B60%5C607%5Cx32%5Cx3e%5C164%5C134%5C600%5C6002%5C146%2A%5Cx5c%5C60%5C60%5C60%5Cx30%5C6%26%23x30%3Bc%5Cx%26%2353%3Bc0%5Cx30%5C600%5Cx327%5C%26%2349%3B3400%5Cx300%26%2392%3Bx32f'
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
         method: GET
         port: 80
         protocol: http
@@ -747,6 +827,8 @@ tests:
         headers:
           Content-Type: application/json
           Host: localhost
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
         method: POST
         port: 80
         protocol: http
@@ -763,6 +845,8 @@ tests:
         headers:
           Content-Type: text/xml
           Host: localhost
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
         method: POST
         port: 80
         protocol: http
@@ -779,6 +863,8 @@ tests:
         headers:
           Content-Type: text/xml
           Host: localhost
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
         method: POST
         port: 80
         protocol: http
@@ -795,6 +881,8 @@ tests:
         headers:
           Content-Type: text/xml
           Host: localhost
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
         method: POST
         port: 80
         protocol: http
@@ -811,6 +899,8 @@ tests:
         headers:
           Content-Type: application/json
           Host: localhost
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
         method: POST
         port: 80
         protocol: http
@@ -827,6 +917,8 @@ tests:
         headers:
           Content-Type: application/json
           Host: localhost
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
         method: POST
         port: 80
         protocol: http
@@ -843,6 +935,8 @@ tests:
         headers:
           Content-Type: application/json
           Host: localhost
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
         method: POST
         port: 80
         protocol: http
@@ -859,6 +953,8 @@ tests:
         headers:
           Content-Type: application/json
           Host: localhost
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
         method: POST
         port: 80
         protocol: http
@@ -875,6 +971,8 @@ tests:
         headers:
           Content-Type: text/xml
           Host: localhost
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
         method: POST
         port: 80
         protocol: http
@@ -891,6 +989,8 @@ tests:
         headers:
           Content-Type: application/json
           Host: localhost
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
         method: POST
         port: 80
         protocol: http
@@ -907,6 +1007,8 @@ tests:
         headers:
           Content-Type: text/xml
           Host: localhost
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
         method: POST
         port: 80
         protocol: http
@@ -923,6 +1025,8 @@ tests:
         headers:
           Content-Type: application/json
           Host: localhost
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
         method: POST
         port: 80
         protocol: http
@@ -939,6 +1043,8 @@ tests:
         headers:
           Content-Type: application/json
           Host: localhost
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
         method: POST
         port: 80
         protocol: http
@@ -955,6 +1061,8 @@ tests:
         headers:
           Content-Type: application/json
           Host: localhost
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
         method: POST
         port: 80
         protocol: http
@@ -971,6 +1079,8 @@ tests:
         headers:
           Content-Type: application/json
           Host: localhost
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
         method: POST
         port: 80
         protocol: http
@@ -987,6 +1097,8 @@ tests:
         headers:
           Content-Type: application/json
           Host: localhost
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
         method: POST
         port: 80
         protocol: http
@@ -1003,6 +1115,8 @@ tests:
         headers:
           Content-Type: application/json
           Host: localhost
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
         method: POST
         port: 80
         protocol: http
@@ -1019,6 +1133,8 @@ tests:
         headers:
           Content-Type: text/xml
           Host: localhost
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
         method: POST
         port: 80
         protocol: http

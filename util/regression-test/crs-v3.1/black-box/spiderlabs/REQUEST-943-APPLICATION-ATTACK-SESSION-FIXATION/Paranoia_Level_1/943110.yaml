@@ -37,6 +37,8 @@ tests:
         headers:
           Host: localhost
           Referer: https://localhost.attackersite.com/
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
         method: GET
         port: 80
         uri: /?phpsessid=asdfdasfadsads
@@ -53,6 +55,8 @@ tests:
         headers:
           Host: localhost
           Referer: https://attackersite.com/
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
         method: GET
         port: 80
         uri: /?phpsessid=asdfdasfadsads
