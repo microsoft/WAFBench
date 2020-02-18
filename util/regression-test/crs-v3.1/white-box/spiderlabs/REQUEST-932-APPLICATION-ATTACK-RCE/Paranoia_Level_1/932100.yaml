@@ -51,6 +51,9 @@ tests:
   - stage:
       input:
         encoded_request: UE9TVCAvaW5kZXguaHRtbCBIVFRQLzEuMQpIb3N0OiAxOTIuMTY4LjEuMjMKVXNlci1BZ2VudDogY3VybC83LjQzLjAKQWNjZXB0OiAqLyoKQ29udGVudC1MZW5ndGg6IDY0CkNvbnRlbnQtVHlwZTogYXBwbGljYXRpb24veC13d3ctZm9ybS11cmxlbmNvZGVkCkNvbm5lY3Rpb246IGNsb3NlCgpkPTE7MjszOzQ7NVxuMTtAU1VNKDErMSkqY21kfCcgcG93ZXJzaGVsbCBJRVgod2dldCAwci5wZS9wKSdcIUEwOzM=
+        headers:
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
       output:
         status:
         - 403

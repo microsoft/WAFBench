@@ -12,6 +12,8 @@ tests:
         dest_addr: 127.0.0.1
         headers:
           Host: localhost
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
           User-agent: user agent
         method: GET
         port: 80
@@ -28,6 +30,8 @@ tests:
         dest_addr: 127.0.0.1
         headers:
           Host: localhost
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
           User-agent: user agent
         method: GET
         port: 80
@@ -43,6 +47,8 @@ tests:
         dest_addr: 127.0.0.1
         headers:
           Host: localhost
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
           User-agent: user agent
         method: GET
         port: 80
@@ -59,6 +65,8 @@ tests:
         dest_addr: 127.0.0.1
         headers:
           Host: localhost
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
           User-agent: user agent
         method: GET
         port: 80
@@ -75,6 +83,8 @@ tests:
         dest_addr: 127.0.0.1
         headers:
           Host: localhost
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
           User-agent: user agent
         method: GET
         port: 80

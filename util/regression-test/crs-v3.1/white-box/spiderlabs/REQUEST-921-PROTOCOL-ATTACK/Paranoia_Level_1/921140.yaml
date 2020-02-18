@@ -12,6 +12,8 @@ tests:
         headers:
           Host: localhost
           SomeHeader: "Headerdata\rInjectedHeader: response_splitting_code"
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
         method: GET
         port: 80
         uri: /
@@ -27,6 +29,8 @@ tests:
         headers:
           Host: localhost
           SomeHeader: 'Headerdata%0dInjectedHeader: response_splitting_code'
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
         method: GET
         port: 80
         uri: /

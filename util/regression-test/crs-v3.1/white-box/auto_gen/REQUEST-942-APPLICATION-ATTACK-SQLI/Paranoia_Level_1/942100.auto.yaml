@@ -12,6 +12,8 @@ tests:
           Cookie: a=1
           Host: localhost
           Referer: SELECT * FROM Articles WHERE id = '1''';
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
         method: GET
         port: 80
         protocol: http
@@ -26,6 +28,8 @@ tests:
         headers:
           Cookie: SELECT * FROM Articles WHERE id = '1''';=1
           Host: localhost
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
         method: GET
         port: 80
         protocol: http
@@ -40,6 +44,8 @@ tests:
         headers:
           Cookie: a=SELECT * FROM Articles WHERE id = '1''';
           Host: localhost
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
         method: GET
         port: 80
         protocol: http
@@ -69,10 +75,12 @@ tests:
         headers:
           Cookie: a=1
           Host: localhost
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
         method: GET
-        uri: /?key=SELECT * FROM Articles WHERE id = '1''';
         port: 80
         protocol: http
+        uri: /?key=SELECT * FROM Articles WHERE id = '1''';
         version: HTTP/1.1
       output:
         log_contains: id "942100"
@@ -84,10 +92,12 @@ tests:
         headers:
           Cookie: a=1
           Host: localhost
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
         method: GET
-        uri: /?SELECT * FROM Articles WHERE id = '1''';=100
         port: 80
         protocol: http
+        uri: /?SELECT * FROM Articles WHERE id = '1''';=100
         version: HTTP/1.1
       output:
         log_contains: id "942100"
@@ -98,13 +108,15 @@ tests:
         data: <?xml version="1.0"?><a>SELECT * FROM Articles WHERE id = '1'''</a>
         dest_addr: 127.0.0.1
         headers:
+          Content-Type: text/xml
           Cookie: a=1
           Host: localhost
-          Content-Type: text/xml
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
         method: POST
         port: 80
-        uri: /sqli.xml
         protocol: http
+        uri: /sqli.xml
         version: HTTP/1.1
       output:
         log_contains: id "942100"
