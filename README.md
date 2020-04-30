@@ -82,11 +82,13 @@ Using WAFBench at Docker environment is the easiest and recommended method.
 # Install Docker
 curl -fsSL get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
+# Clone this repository
+git clone https://github.com/microsoft/WAFBench.git
 # Build WAFBench
-docker build -t wafbench .
+docker build -t wafbench WAFBench
 ```
 
-#### Commands
+- Commands
 
 If you install WAFBench by Dockerfile, [wb](wb), [pywb](pywb), [ftw_compatible_tool](ftw_compatible_tool) has been install in image wafbench. You can use them just as a local application by below commands:
 
@@ -97,6 +99,17 @@ docker run -ti --rm wafbench ftw_compatible_tool
 ```
 
 The detail usage can be found at their corresponding sections.
+
+- Example
+
+The black box regression test with crs-v3.1 (please replace hostname and port to the service under test)
+
+``` bash
+docker run -ti --rm -v `pwd`:/data --rm wafbench ftw_compatible_tool -d /data/regression.db -x "load util/regression-test/crs-v3.1/black-box/ | gen | start hostname:port| report | exit"
+```
+
+The result file is regression.db with sqlite3 format, you can open it by [DB Browser for SQLite](https://sqlitebrowser.org/).
+
 
 ### **Install at native machine**
 
