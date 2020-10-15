@@ -427,32 +427,3 @@ ________________________      __          _________
             except TypeError as e:
                 print(e)
 
-
-if __name__ == "__main__":
-    import testdata
-
-    ctx = context.Context(
-        broker.Broker(),
-        delimiter=traffic.Delimiter("334787923864975794240893756898805143302"))
-    ui = CLI(ctx)
-
-    traffic.RawRequestCollector(ctx)
-    traffic.RawResponseCollector(ctx)
-    traffic.RealTrafficCollector(ctx)
-
-    ctx.broker.publish(broker.TOPICS.SHOW_UI, "welcome")
-    ctx.broker.publish(broker.TOPICS.CHECK_RESULT, {
-        "output": {
-            "a": "b",
-            "b": "c",
-        },
-        "title": "title"
-    }, {
-        "a": True,
-        "b": False,
-    })
-
-    for line in testdata.TEST_PYWB_OUTPUT.split('\n'):
-        ctx.broker.publish(broker.TOPICS.PYWB_OUTPUT, line + "\n")
-
-    ctx.broker.publish(broker.TOPICS.SHOW_UI, "bye")

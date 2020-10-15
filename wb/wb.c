@@ -2999,20 +2999,17 @@ static void test(void)
      * Combine headers and (optional) post file into one continuous buffer
      */
 
-// #ifdef _WAF_BENCH_ // avoid copying post data to request
-// // previous system allocates one single buffer holding header and body
-// // wb uses seperate buffers to hold them, and send them seperately
-//     if (g_pkt_length > 0)
-//         fprintf(stderr, "\n read %zu packets from file with total length(%zu).\n", 
-//             g_MAX_PKT_COUNT, g_pkt_length);
-// #else // original code goes here
+#ifdef _WAF_BENCH_
+    if (g_pkt_length > 0)
+        fprintf(stderr, "\n read %zu packets from file with total length(%zu).\n", 
+            g_MAX_PKT_COUNT, g_pkt_length);
+#endif // _WAF_BENCH_
     if (send_body) {
         char *buff = xmalloc(postlen + reqlen + 1);
         strcpy(buff, request);
         memcpy(buff + reqlen, postdata, postlen);
         request = buff;
     }
-// #endif // _WAF_BENCH_ // avoid copying post data to request
 
 #ifdef NOT_ASCII
     inbytes_left = outbytes_left = reqlen;
