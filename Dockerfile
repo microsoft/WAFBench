@@ -17,7 +17,7 @@ RUN \
     pip install -r requirements.txt && \
     make -C wb && make -C wb install && \
     ln -sf /WAFBench/pywb/main.py /bin/pywb && \
-    chmod 777 /bin/pywb && \
+    chmod 744 /bin/pywb && \
     ln -sf /WAFBench/ftw_compatible_tool/main.py /bin/ftw_compatible_tool && \
-    chmod 777 /bin/ftw_compatible_tool
+    chmod 744 /bin/ftw_compatible_tool
 
