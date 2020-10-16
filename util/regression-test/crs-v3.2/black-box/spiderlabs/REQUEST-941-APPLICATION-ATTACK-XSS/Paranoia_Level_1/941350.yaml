@@ -1,0 +1,22 @@
+meta:
+  author: fgsch
+  description: Test rule 941350
+  enabled: true
+  name: 941350.yaml
+tests:
+- desc: GH issue
+  stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: '*/*'
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: GET
+        port: 80
+        uri: /xx?id=%25252bADw-script%25252bADw-
+      output:
+        status:
+        - 403
+  test_title: 941350-1

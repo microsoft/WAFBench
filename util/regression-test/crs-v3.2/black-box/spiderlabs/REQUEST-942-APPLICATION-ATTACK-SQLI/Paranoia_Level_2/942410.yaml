@@ -1,0 +1,1878 @@
+meta:
+  author: Christoph Hansen
+  description: None
+  enabled: true
+  name: 942410.yaml
+tests:
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: ABS(
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-1
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: benchmark(
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-2
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: BENChmARk(
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-3
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: cast(
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-4
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: CAST(
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-5
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: char(
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-6
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: chaR(
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-7
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: chr(
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-8
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: CHR(
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-9
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: COALESCE(
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-10
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: Compress (
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-11
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: concat (
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-12
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: cOnCaT(
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-13
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: concat_ws(
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-14
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: convert(
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-15
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: cOnVeRt(
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-16
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: COS(
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-17
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: COUNT(
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-18
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: CURRENT_USER(
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-19
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: database (
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-20
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: date(
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-21
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=date%5D%3D%28
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-22
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=day.+%28
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-23
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=day%26%27%28
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-24
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=decode%28
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-25
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=default%28
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-26
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=ELT%28
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-27
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=encode%3D%28
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-28
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=ExtractValue%28
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-29
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=EXTRACTVALUE%28
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-30
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=floor%28
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-31
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=FLOOR+%28
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-32
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=format%28
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-33
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=GROUP_CONCAT%28
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-34
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=hex%28
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-35
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=hEx%28
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-36
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=if+%21%28
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-37
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=if+%28
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-38
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=if%28
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-39
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=if%5C%28
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-40
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=IFNULL%28
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-41
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=in+%27%24%28
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-42
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=IN+%28
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-43
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=IN%2F%2A%2A%2F%28
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-44
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=insert%28
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-45
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=left%27%29%3F%24%28
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-46
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=LEFT%28
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-47
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=length%7C%7C%21%21%24%28
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-48
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=length%7C%7C%28
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-49
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=length%26%26%21%21%21%24%28
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-51
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=length%26%26%28
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-52
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=LENGTH%28
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-53
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=ln+%28
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-54
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=ln%29+%28
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-55
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=load_file%28
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-56
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=local%28
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-57
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=log%28
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-58
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=log%26%26%28
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-59
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=lower%28
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-60
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=MAKE_SET%28
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-61
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=MAX%28
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-62
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=md5%28
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-63
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=md5%5C%28
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-64
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=MID%28
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-65
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=minute+%28
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-66
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=month%3D%28
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-67
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: name_const(
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-68
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: now(
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-69
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: nOW(
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-70
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: ord(
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-71
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: password?(
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-72
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: password/?(
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-73
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: Password>$(
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-74
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pg_sleep(
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-75
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pi(
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-76
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: PI(
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-77
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pow(
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-78
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: POW(
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-79
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: quarter. (
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-80
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: rand(
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-81
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: Rand (
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-82
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: RAND(
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-83
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: replace(
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-84
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: REPLACE(
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-85
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: round (
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-86
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: round(
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-87
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: rtrim(
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-88
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: RTRIM(
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-89
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=sin (
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-90
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: SIN(
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-91
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=sleep(
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-92
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: SLEEP   (
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-93
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=strcmp(
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-94
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=substr(
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-95
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: SUBSTR(
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-96
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=substring(
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-97
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: SUBSTRING(
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-98
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=sysdate(
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-99
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: time (
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-100
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=time%28
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-101
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=trim%28
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-102
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=Uncompress+%28
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-103
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=unhex%28
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-104
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=uNhEx%28
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-105
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=updatexml%28
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-106
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=UpdateXML%28
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-107
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=UPPER%28
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-108
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=user+%28
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-109
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=user%2F%3F%28
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-110
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=user%28
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-111
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=values+%28
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-112
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=VALUES%28
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-113
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=version%3D%28
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-114
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=version%28
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-115
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=xmltype%28
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-116
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=XMLType%28
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-117
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=year%5D%3D%28
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942410-118

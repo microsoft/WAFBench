@@ -1,0 +1,22 @@
+meta:
+  author: lifeforms
+  description: None
+  enabled: true
+  name: 933161.yaml
+tests:
+- desc: dl/*foo*/()
+  stages:
+  - stage:
+      input:
+        data: gethostbynamE(
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        uri: /?foo=xucfirst%28%29
+      output:
+        status:
+        - 403
+  test_title: 933161-5

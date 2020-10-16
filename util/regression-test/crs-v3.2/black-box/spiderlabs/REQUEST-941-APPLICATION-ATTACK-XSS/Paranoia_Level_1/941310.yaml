@@ -1,0 +1,22 @@
+meta:
+  author: Christian S.J. Peron
+  description: None
+  enabled: true
+  name: 941310.yaml
+tests:
+- desc: US-ASCII Malformed Encoding XSS Filter
+  stages:
+  - stage:
+      input:
+        data: "var=.*\xBE.*\xBC.*"
+        dest_addr: 127.0.0.1
+        headers:
+          Content-type: iso-8859-15
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+      output:
+        status:
+        - 403
+  test_title: 941310-1

@@ -1,0 +1,232 @@
+meta:
+  author: Christian Folini
+  description: Various SQL injection tests
+  enabled: true
+  name: 942100.yaml
+tests:
+- desc: Simple SQL Injection
+  stages:
+  - stage:
+      input:
+        data: var=1234 OR 1=1
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942100-1
+- desc: Simple SQL injection
+  stages:
+  - stage:
+      input:
+        data: var=-1839' or '1'='1
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942100-2
+- desc: Simple SQL injection
+  stages:
+  - stage:
+      input:
+        data: var=-1839" or "1"="2
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942100-3
+- desc: Basic SQL injection
+  stages:
+  - stage:
+      input:
+        data: var=2010-01-01'+sleep(20.to_i)+'
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942100-4
+- desc: Simple SQL injection
+  stages:
+  - stage:
+      input:
+        data: var=EmptyValue' and 526=527
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942100-5
+- desc: Simple SQL injection
+  stages:
+  - stage:
+      input:
+        data: var=foo') UNION ALL select NULL --
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942100-6
+- desc: Advanced SQL injection
+  stages:
+  - stage:
+      input:
+        data: var=foo')waitfor%20delay'5%3a0%3a20'--
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942100-7
+- desc: Simple SQL Injection
+  stages:
+  - stage:
+      input:
+        data: var=JKGHUKGDI8TDHLFJH72FZLFJSKFH' and sleep(12) --
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942100-8
+- desc: Simple SQL injection
+  stages:
+  - stage:
+      input:
+        data: var=/path/to/file/unitests.txt') UNION ALL select NULL --
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942100-9
+- desc: Advanced SQL Injection
+  stages:
+  - stage:
+      input:
+        data: 1'||(select extractvalue(xmltype('<?xml version="1.1" encoding="UTF-8"?><!DOCTYPE
+          root [ <!ENTITY % toyop SYSTEM "https://coreruleset.org/">%toyop;
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942100-10
+- desc: Simple function call
+  stages:
+  - stage:
+      input:
+        data: var=sleep(20)
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942100-11
+- desc: Advanced SQL injection
+  stages:
+  - stage:
+      input:
+        data: var=unittests@coreruleset.org" sleep(10.to_i) "
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942100-12
+- desc: Advanced injection
+  stages:
+  - stage:
+      input:
+        data: var=" | type %SystemDrive%\\config.ini | "
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942100-13
+- desc: Advanced SQL injection
+  stages:
+  - stage:
+      input:
+        data: var="unittests@coreruleset.org"')) and (select*from(select(sleep(5)))x)
+          --
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942100-14

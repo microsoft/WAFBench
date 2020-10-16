@@ -1,0 +1,149 @@
+meta:
+  author: Christian S.J. Peron, Christoph Hansen
+  description: None
+  enabled: true
+  name: 942160.yaml
+tests:
+- desc: 'SQL Injection Attack: Common DB Names Detected'
+  stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        uri: /?sql_table=sleep%28534543%29
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942160-1
+- desc: 'SQL Injection Attack: Common DB Names Detected'
+  stages:
+  - stage:
+      input:
+        data: sleEP(3)
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942160-2
+- desc: 'SQL Injection Attack: Common DB Names Detected'
+  stages:
+  - stage:
+      input:
+        data: sleep(5000)
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942160-3
+- desc: 'SQL Injection Attack: Common DB Names Detected'
+  stages:
+  - stage:
+      input:
+        data: BENChmARk(2999/**/999,Md5(NoW()
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942160-4
+- desc: 'SQL Injection Attack: Common DB Names Detected'
+  stages:
+  - stage:
+      input:
+        data: BEncHMARk(2999999,Md5(NoW('')
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942160-5
+- desc: 'SQL Injection Attack: Common DB Names Detected'
+  stages:
+  - stage:
+      input:
+        data: BENCHMARK(5000000,MD5(0x48416166)
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942160-6
+- desc: 'SQL Injection Attack: Common DB Names Detected'
+  stages:
+  - stage:
+      input:
+        data: benchmark(3000000,M%445(4)
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942160-7
+- desc: 'SQL Injection Attack: Common DB Names Detected'
+  stages:
+  - stage:
+      input:
+        data: pay=BENCHMARK(1000000, md5" AND 1883=1883-- GSCC('')
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942160-8
+- desc: 'SQL Injection Attack: Common DB Names Detected'
+  stages:
+  - stage:
+      input:
+        data: pay=BeNChMaRK(1000000, md5 AND 9796=4706('')
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942160-9

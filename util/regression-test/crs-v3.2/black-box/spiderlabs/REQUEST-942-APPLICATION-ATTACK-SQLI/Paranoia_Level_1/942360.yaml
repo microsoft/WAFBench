@@ -1,0 +1,453 @@
+meta:
+  author: Christian S.J. Peron, Christoph Hansen
+  description: None
+  enabled: true
+  name: 942360.yaml
+tests:
+- desc: concatenated basic SQL injection and SQLLFI
+  stages:
+  - stage:
+      input:
+        data: var=1234%20AS%20%22foobar%22%20FROM%20tablevar2=whatever
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942360-1
+- desc: Detects concatenated basic SQL injection and SQLLFI attempts
+  stages:
+  - stage:
+      input:
+        data: select Char(
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942360-2
+- desc: Detects concatenated basic SQL injection and SQLLFI attempts
+  stages:
+  - stage:
+      input:
+        data: SELECT CHAR(
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942360-3
+- desc: Detects concatenated basic SQL injection and SQLLFI attempts
+  stages:
+  - stage:
+      input:
+        data: SELECT GROUP_CONCAT(
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942360-4
+- desc: Detects concatenated basic SQL injection and SQLLFI attempts
+  stages:
+  - stage:
+      input:
+        data: SELECT group_cOnCat(
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942360-5
+- desc: Detects concatenated basic SQL injection and SQLLFI attempts
+  stages:
+  - stage:
+      input:
+        data: ) as cc FROM
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942360-6
+- desc: Detects concatenated basic SQL injection and SQLLFI attempts
+  stages:
+  - stage:
+      input:
+        data: ) AS orders FROM
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942360-7
+- desc: Detects concatenated basic SQL injection and SQLLFI attempts
+  stages:
+  - stage:
+      input:
+        data: ) AS `carrier_id` from
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942360-8
+- desc: Detects concatenated basic SQL injection and SQLLFI attempts
+  stages:
+  - stage:
+      input:
+        data: select load_file(
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942360-9
+- desc: Detects concatenated basic SQL injection and SQLLFI attempts
+  stages:
+  - stage:
+      input:
+        data: ) AS Role FROM
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942360-10
+- desc: Detects concatenated basic SQL injection and SQLLFI attempts
+  stages:
+  - stage:
+      input:
+        data: '` AS `edit_user_id` from'
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942360-11
+- desc: Detects concatenated basic SQL injection and SQLLFI attempts
+  stages:
+  - stage:
+      input:
+        data: ) AS val FROM
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942360-12
+- desc: Detects concatenated basic SQL injection and SQLLFI attempts
+  stages:
+  - stage:
+      input:
+        data: pay=%60+REGEXP%20
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942360-13
+- desc: Detects concatenated basic SQL injection and SQLLFI attempts
+  stages:
+  - stage:
+      input:
+        data: ) AS 'Durchschnitt_Importzeit' FROM
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942360-14
+- desc: Detects concatenated basic SQL injection and SQLLFI attempts
+  stages:
+  - stage:
+      input:
+        data: '` AS `OXTIMESTAMP` from'
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942360-15
+- desc: Detects concatenated basic SQL injection and SQLLFI attempts
+  stages:
+  - stage:
+      input:
+        data: ) as col_0_0_ from
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942360-16
+- desc: Detects concatenated basic SQL injection and SQLLFI attempts
+  stages:
+  - stage:
+      input:
+        data: ) AS `count` FROM
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942360-17
+- desc: Detects concatenated basic SQL injection and SQLLFI attempts
+  stages:
+  - stage:
+      input:
+        data: ) AS schlagwoerter FROM
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942360-18
+- desc: Detects concatenated basic SQL injection and SQLLFI attempts
+  stages:
+  - stage:
+      input:
+        data: ) AS t FROM
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942360-20
+- desc: Detects concatenated basic SQL injection and SQLLFI attempts
+  stages:
+  - stage:
+      input:
+        data: (load_file(
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942360-21
+- desc: Detects concatenated basic SQL injection and SQLLFI attempts
+  stages:
+  - stage:
+      input:
+        data: ) as ExecuteTheseSQLCommands FROM
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942360-22
+- desc: Detects concatenated basic SQL injection and SQLLFI attempts
+  stages:
+  - stage:
+      input:
+        data: )      AS schlagwoerter      FROM
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942360-23
+- desc: Detects concatenated basic SQL injection and SQLLFI attempts
+  stages:
+  - stage:
+      input:
+        data: '` AS `documentType` FROM'
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942360-24
+- desc: Detects concatenated basic SQL injection and SQLLFI attempts
+  stages:
+  - stage:
+      input:
+        data: '! Aside from'
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942360-25
+- desc: Detects concatenated basic SQL injection and SQLLFI attempts
+  stages:
+  - stage:
+      input:
+        data: . Aside from
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942360-26
+- desc: Detects concatenated basic SQL injection and SQLLFI attempts
+  stages:
+  - stage:
+      input:
+        data: SELECT load_file(
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942360-27
+- desc: Detects concatenated basic SQL injection and SQLLFI attempts
+  stages:
+  - stage:
+      input:
+        data: 6 Aside from
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942360-28
+- desc: Detects concatenated basic SQL injection and SQLLFI attempts
+  stages:
+  - stage:
+      input:
+        data: ) as day1 FROM
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942360-29

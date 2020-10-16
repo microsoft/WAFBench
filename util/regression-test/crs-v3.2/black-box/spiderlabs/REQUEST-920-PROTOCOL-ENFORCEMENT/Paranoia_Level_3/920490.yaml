@@ -1,0 +1,38 @@
+meta:
+  author: Christian Folini
+  description: Tests for the charset protection in combination with the x-up-devcap-post-charset
+    header
+  enabled: true
+  name: 920490.yaml
+tests:
+- stages:
+  - stage:
+      input:
+        data: '%89%95%97%A4%A3%F1=%A7%A7%A7%A7%A7%A7%A7'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/x-www-form-urlencoded; charset=utf-8
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+          x-up-devcap-post-charset: ibm500
+        method: POST
+        port: 80
+      output:
+        status:
+        - 405
+  test_title: 920490-2
+- stages:
+  - stage:
+      input:
+        data: '%89%95%97%A4%A3%F1=%A7%A7%A7%A7%A7%A7%A7'
+        dest_addr: 127.0.0.1
+        headers:
+          Content-Type: application/x-www-form-urlencoded; charset=utf-8
+          Host: localhost
+          User-Agent: UP ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+      output:
+        status:
+        - 405
+  test_title: 920490-3

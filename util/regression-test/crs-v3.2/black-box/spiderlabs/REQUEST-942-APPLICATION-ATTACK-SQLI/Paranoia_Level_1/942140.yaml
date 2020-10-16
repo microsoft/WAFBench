@@ -1,0 +1,261 @@
+meta:
+  author: Christian S.J. Peron, Christoph Hansen
+  description: None
+  enabled: true
+  name: 942140.yaml
+tests:
+- desc: 'SQL Injection Attack: Common DB Names Detected'
+  stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        uri: /?sql_table=pg_catalog
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942140-1
+- desc: 'SQL Injection Attack: Common DB Names Detected'
+  stages:
+  - stage:
+      input:
+        data: INFORMATION_SCHEMA
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942140-2
+- desc: 'SQL Injection Attack: Common DB Names Detected'
+  stages:
+  - stage:
+      input:
+        data: database(
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942140-3
+- desc: 'SQL Injection Attack: Common DB Names Detected'
+  stages:
+  - stage:
+      input:
+        data: DaTaBasE(
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942140-5
+- desc: 'SQL Injection Attack: Common DB Names Detected'
+  stages:
+  - stage:
+      input:
+        data: InFoRmaTioN_ScHemA
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942140-6
+- desc: 'SQL Injection Attack: Common DB Names Detected'
+  stages:
+  - stage:
+      input:
+        data: DB_NAME(
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942140-7
+- desc: 'SQL Injection Attack: Common DB Names Detected'
+  stages:
+  - stage:
+      input:
+        data: tempdb
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942140-8
+- desc: 'SQL Injection Attack: Common DB Names Detected'
+  stages:
+  - stage:
+      input:
+        data: msdb
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942140-9
+- desc: 'SQL Injection Attack: Common DB Names Detected'
+  stages:
+  - stage:
+      input:
+        data: mysql.db
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942140-10
+- desc: 'SQL Injection Attack: Common DB Names Detected'
+  stages:
+  - stage:
+      input:
+        data: MSysAccessObjects
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942140-11
+- desc: 'SQL Injection Attack: Common DB Names Detected'
+  stages:
+  - stage:
+      input:
+        data: Northwind
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942140-12
+- desc: 'SQL Injection Attack: Common DB Names Detected'
+  stages:
+  - stage:
+      input:
+        data: northwind
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942140-13
+- desc: 'SQL Injection Attack: Common DB Names Detected'
+  stages:
+  - stage:
+      input:
+        data: SCHEMA_NAME
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942140-14
+- desc: 'SQL Injection Attack: Common DB Names Detected'
+  stages:
+  - stage:
+      input:
+        data: DATABASE(
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942140-15
+- desc: 'SQL Injection Attack: Common DB Names Detected'
+  stages:
+  - stage:
+      input:
+        data: schema_name
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942140-16
+- desc: 'SQL Injection Attack: Common DB Names Detected'
+  stages:
+  - stage:
+      input:
+        data: information_schema
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942140-17

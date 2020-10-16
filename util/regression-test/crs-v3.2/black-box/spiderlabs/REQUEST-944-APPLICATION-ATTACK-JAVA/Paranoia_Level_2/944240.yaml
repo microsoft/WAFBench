@@ -1,0 +1,1878 @@
+meta:
+  author: spartantri
+  description: Positive tests for rule 944240
+  enabled: true
+  name: 944240.yaml
+tests:
+- desc: Argument test includes keyword runtime.clonetransformer
+  stages:
+  - stage:
+      input:
+        data: test=runtime.clonetransformer
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-0
+- desc: Argument name includes keyword runtime.clonetransformer
+  stages:
+  - stage:
+      input:
+        data: runtime.clonetransformer=test
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-1
+- desc: Cookie test includes keyword runtime.clonetransformer
+  stages:
+  - stage:
+      input:
+        data: test=value
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Cookie: test=runtime.clonetransformer
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-2
+- desc: Cookie name includes keyword runtime.clonetransformer
+  stages:
+  - stage:
+      input:
+        data: test=value
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Cookie: runtime.clonetransformer=test
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-3
+- desc: Request header test includes keyword runtime.clonetransformer
+  stages:
+  - stage:
+      input:
+        data: test=value
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+          test: runtime.clonetransformer
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-4
+- desc: XML attribute value includes keyword runtime.clonetransformer
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><element attribute_name="runtime.clonetransformer">element_value</element></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-5
+- desc: XML element value includes keyword runtime.clonetransformer
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><element attribute_name="attribute_value">runtime.clonetransformer</element></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-6
+- desc: Nested XML element value includes keyword runtime.clonetransformer
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><l1><l2><l3><element attribute_name="attribute_value">runtime.clonetransformer</element></l3></l2></l1></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-7
+- desc: Content-Type text/plain includes keyword runtime.clonetransformer
+  stages:
+  - stage:
+      input:
+        data: test=runtime.clonetransformer
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: text/plain
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-8
+- desc: Content-Type application/json arg value includes keyword runtime.clonetransformer
+  stages:
+  - stage:
+      input:
+        data: '{"test": "runtime.clonetransformer"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/json
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-9
+- desc: Content-Type application/json arg name includes keyword runtime.clonetransformer
+  stages:
+  - stage:
+      input:
+        data: '{"runtime.clonetransformer": "test"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/json
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-10
+- desc: Argument test includes keyword runtime.forclosure
+  stages:
+  - stage:
+      input:
+        data: test=runtime.forclosure
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-11
+- desc: Argument name includes keyword runtime.forclosure
+  stages:
+  - stage:
+      input:
+        data: runtime.forclosure=test
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-12
+- desc: Cookie test includes keyword runtime.forclosure
+  stages:
+  - stage:
+      input:
+        data: test=value
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Cookie: test=runtime.forclosure
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-13
+- desc: Cookie name includes keyword runtime.forclosure
+  stages:
+  - stage:
+      input:
+        data: test=value
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Cookie: runtime.forclosure=test
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-14
+- desc: Request header test includes keyword runtime.forclosure
+  stages:
+  - stage:
+      input:
+        data: test=value
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+          test: runtime.forclosure
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-15
+- desc: XML attribute value includes keyword runtime.forclosure
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><element attribute_name="runtime.forclosure">element_value</element></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-16
+- desc: XML element value includes keyword runtime.forclosure
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><element attribute_name="attribute_value">runtime.forclosure</element></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-17
+- desc: Nested XML element value includes keyword runtime.forclosure
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><l1><l2><l3><element attribute_name="attribute_value">runtime.forclosure</element></l3></l2></l1></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-18
+- desc: Content-Type text/plain includes keyword runtime.forclosure
+  stages:
+  - stage:
+      input:
+        data: test=runtime.forclosure
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: text/plain
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-19
+- desc: Content-Type application/json arg value includes keyword runtime.forclosure
+  stages:
+  - stage:
+      input:
+        data: '{"test": "runtime.forclosure"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/json
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-20
+- desc: Content-Type application/json arg name includes keyword runtime.forclosure
+  stages:
+  - stage:
+      input:
+        data: '{"runtime.forclosure": "test"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/json
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-21
+- desc: Argument test includes keyword runtime.instantiatefactory
+  stages:
+  - stage:
+      input:
+        data: test=runtime.instantiatefactory
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-22
+- desc: Argument name includes keyword runtime.instantiatefactory
+  stages:
+  - stage:
+      input:
+        data: runtime.instantiatefactory=test
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-23
+- desc: Cookie test includes keyword runtime.instantiatefactory
+  stages:
+  - stage:
+      input:
+        data: test=value
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Cookie: test=runtime.instantiatefactory
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-24
+- desc: Cookie name includes keyword runtime.instantiatefactory
+  stages:
+  - stage:
+      input:
+        data: test=value
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Cookie: runtime.instantiatefactory=test
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-25
+- desc: Request header test includes keyword runtime.instantiatefactory
+  stages:
+  - stage:
+      input:
+        data: test=value
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+          test: runtime.instantiatefactory
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-26
+- desc: XML attribute value includes keyword runtime.instantiatefactory
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><element attribute_name="runtime.instantiatefactory">element_value</element></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-27
+- desc: XML element value includes keyword runtime.instantiatefactory
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><element attribute_name="attribute_value">runtime.instantiatefactory</element></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-28
+- desc: Nested XML element value includes keyword runtime.instantiatefactory
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><l1><l2><l3><element attribute_name="attribute_value">runtime.instantiatefactory</element></l3></l2></l1></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-29
+- desc: Content-Type text/plain includes keyword runtime.instantiatefactory
+  stages:
+  - stage:
+      input:
+        data: test=runtime.instantiatefactory
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: text/plain
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-30
+- desc: Content-Type application/json arg value includes keyword runtime.instantiatefactory
+  stages:
+  - stage:
+      input:
+        data: '{"test": "runtime.instantiatefactory"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/json
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-31
+- desc: Content-Type application/json arg name includes keyword runtime.instantiatefactory
+  stages:
+  - stage:
+      input:
+        data: '{"runtime.instantiatefactory": "test"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/json
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-32
+- desc: Argument test includes keyword runtime.instantiatetransformer
+  stages:
+  - stage:
+      input:
+        data: test=runtime.instantiatetransformer
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-33
+- desc: Argument name includes keyword runtime.instantiatetransformer
+  stages:
+  - stage:
+      input:
+        data: runtime.instantiatetransformer=test
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-34
+- desc: Cookie test includes keyword runtime.instantiatetransformer
+  stages:
+  - stage:
+      input:
+        data: test=value
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Cookie: test=runtime.instantiatetransformer
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-35
+- desc: Cookie name includes keyword runtime.instantiatetransformer
+  stages:
+  - stage:
+      input:
+        data: test=value
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Cookie: runtime.instantiatetransformer=test
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-36
+- desc: Request header test includes keyword runtime.instantiatetransformer
+  stages:
+  - stage:
+      input:
+        data: test=value
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+          test: runtime.instantiatetransformer
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-37
+- desc: XML attribute value includes keyword runtime.instantiatetransformer
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><element attribute_name="runtime.instantiatetransformer">element_value</element></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-38
+- desc: XML element value includes keyword runtime.instantiatetransformer
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><element attribute_name="attribute_value">runtime.instantiatetransformer</element></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-39
+- desc: Nested XML element value includes keyword runtime.instantiatetransformer
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><l1><l2><l3><element attribute_name="attribute_value">runtime.instantiatetransformer</element></l3></l2></l1></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-40
+- desc: Content-Type text/plain includes keyword runtime.instantiatetransformer
+  stages:
+  - stage:
+      input:
+        data: test=runtime.instantiatetransformer
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: text/plain
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-41
+- desc: Content-Type application/json arg value includes keyword runtime.instantiatetransformer
+  stages:
+  - stage:
+      input:
+        data: '{"test": "runtime.instantiatetransformer"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/json
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-42
+- desc: Content-Type application/json arg name includes keyword runtime.instantiatetransformer
+  stages:
+  - stage:
+      input:
+        data: '{"runtime.instantiatetransformer": "test"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/json
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-43
+- desc: Argument test includes keyword runtime.invokertransformer
+  stages:
+  - stage:
+      input:
+        data: test=runtime.invokertransformer
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-44
+- desc: Argument name includes keyword runtime.invokertransformer
+  stages:
+  - stage:
+      input:
+        data: runtime.invokertransformer=test
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-45
+- desc: Cookie test includes keyword runtime.invokertransformer
+  stages:
+  - stage:
+      input:
+        data: test=value
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Cookie: test=runtime.invokertransformer
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-46
+- desc: Cookie name includes keyword runtime.invokertransformer
+  stages:
+  - stage:
+      input:
+        data: test=value
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Cookie: runtime.invokertransformer=test
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-47
+- desc: Request header test includes keyword runtime.invokertransformer
+  stages:
+  - stage:
+      input:
+        data: test=value
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+          test: runtime.invokertransformer
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-48
+- desc: XML attribute value includes keyword runtime.invokertransformer
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><element attribute_name="runtime.invokertransformer">element_value</element></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-49
+- desc: XML element value includes keyword runtime.invokertransformer
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><element attribute_name="attribute_value">runtime.invokertransformer</element></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-50
+- desc: Nested XML element value includes keyword runtime.invokertransformer
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><l1><l2><l3><element attribute_name="attribute_value">runtime.invokertransformer</element></l3></l2></l1></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-51
+- desc: Content-Type text/plain includes keyword runtime.invokertransformer
+  stages:
+  - stage:
+      input:
+        data: test=runtime.invokertransformer
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: text/plain
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-52
+- desc: Content-Type application/json arg value includes keyword runtime.invokertransformer
+  stages:
+  - stage:
+      input:
+        data: '{"test": "runtime.invokertransformer"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/json
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-53
+- desc: Content-Type application/json arg name includes keyword runtime.invokertransformer
+  stages:
+  - stage:
+      input:
+        data: '{"runtime.invokertransformer": "test"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/json
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-54
+- desc: Argument test includes keyword runtime.prototypeclonefactory
+  stages:
+  - stage:
+      input:
+        data: test=runtime.prototypeclonefactory
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-55
+- desc: Argument name includes keyword runtime.prototypeclonefactory
+  stages:
+  - stage:
+      input:
+        data: runtime.prototypeclonefactory=test
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-56
+- desc: Cookie test includes keyword runtime.prototypeclonefactory
+  stages:
+  - stage:
+      input:
+        data: test=value
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Cookie: test=runtime.prototypeclonefactory
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-57
+- desc: Cookie name includes keyword runtime.prototypeclonefactory
+  stages:
+  - stage:
+      input:
+        data: test=value
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Cookie: runtime.prototypeclonefactory=test
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-58
+- desc: Request header test includes keyword runtime.prototypeclonefactory
+  stages:
+  - stage:
+      input:
+        data: test=value
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+          test: runtime.prototypeclonefactory
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-59
+- desc: XML attribute value includes keyword runtime.prototypeclonefactory
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><element attribute_name="runtime.prototypeclonefactory">element_value</element></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-60
+- desc: XML element value includes keyword runtime.prototypeclonefactory
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><element attribute_name="attribute_value">runtime.prototypeclonefactory</element></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-61
+- desc: Nested XML element value includes keyword runtime.prototypeclonefactory
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><l1><l2><l3><element attribute_name="attribute_value">runtime.prototypeclonefactory</element></l3></l2></l1></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-62
+- desc: Content-Type text/plain includes keyword runtime.prototypeclonefactory
+  stages:
+  - stage:
+      input:
+        data: test=runtime.prototypeclonefactory
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: text/plain
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-63
+- desc: Content-Type application/json arg value includes keyword runtime.prototypeclonefactory
+  stages:
+  - stage:
+      input:
+        data: '{"test": "runtime.prototypeclonefactory"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/json
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-64
+- desc: Content-Type application/json arg name includes keyword runtime.prototypeclonefactory
+  stages:
+  - stage:
+      input:
+        data: '{"runtime.prototypeclonefactory": "test"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/json
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-65
+- desc: Argument test includes keyword runtime.prototypeserializationfactory
+  stages:
+  - stage:
+      input:
+        data: test=runtime.prototypeserializationfactory
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-66
+- desc: Argument name includes keyword runtime.prototypeserializationfactory
+  stages:
+  - stage:
+      input:
+        data: runtime.prototypeserializationfactory=test
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-67
+- desc: Cookie test includes keyword runtime.prototypeserializationfactory
+  stages:
+  - stage:
+      input:
+        data: test=value
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Cookie: test=runtime.prototypeserializationfactory
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-68
+- desc: Cookie name includes keyword runtime.prototypeserializationfactory
+  stages:
+  - stage:
+      input:
+        data: test=value
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Cookie: runtime.prototypeserializationfactory=test
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-69
+- desc: Request header test includes keyword runtime.prototypeserializationfactory
+  stages:
+  - stage:
+      input:
+        data: test=value
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+          test: runtime.prototypeserializationfactory
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-70
+- desc: XML attribute value includes keyword runtime.prototypeserializationfactory
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><element attribute_name="runtime.prototypeserializationfactory">element_value</element></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-71
+- desc: XML element value includes keyword runtime.prototypeserializationfactory
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><element attribute_name="attribute_value">runtime.prototypeserializationfactory</element></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-72
+- desc: Nested XML element value includes keyword runtime.prototypeserializationfactory
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><l1><l2><l3><element attribute_name="attribute_value">runtime.prototypeserializationfactory</element></l3></l2></l1></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-73
+- desc: Content-Type text/plain includes keyword runtime.prototypeserializationfactory
+  stages:
+  - stage:
+      input:
+        data: test=runtime.prototypeserializationfactory
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: text/plain
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-74
+- desc: Content-Type application/json arg value includes keyword runtime.prototypeserializationfactory
+  stages:
+  - stage:
+      input:
+        data: '{"test": "runtime.prototypeserializationfactory"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/json
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-75
+- desc: Content-Type application/json arg name includes keyword runtime.prototypeserializationfactory
+  stages:
+  - stage:
+      input:
+        data: '{"runtime.prototypeserializationfactory": "test"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/json
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-76
+- desc: Argument test includes keyword runtime.whileclosure
+  stages:
+  - stage:
+      input:
+        data: test=runtime.whileclosure
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-77
+- desc: Argument name includes keyword runtime.whileclosure
+  stages:
+  - stage:
+      input:
+        data: runtime.whileclosure=test
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-78
+- desc: Cookie test includes keyword runtime.whileclosure
+  stages:
+  - stage:
+      input:
+        data: test=value
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Cookie: test=runtime.whileclosure
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-79
+- desc: Cookie name includes keyword runtime.whileclosure
+  stages:
+  - stage:
+      input:
+        data: test=value
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Cookie: runtime.whileclosure=test
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-80
+- desc: Request header test includes keyword runtime.whileclosure
+  stages:
+  - stage:
+      input:
+        data: test=value
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+          test: runtime.whileclosure
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-81
+- desc: XML attribute value includes keyword runtime.whileclosure
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><element attribute_name="runtime.whileclosure">element_value</element></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-82
+- desc: XML element value includes keyword runtime.whileclosure
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><element attribute_name="attribute_value">runtime.whileclosure</element></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-83
+- desc: Nested XML element value includes keyword runtime.whileclosure
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><l1><l2><l3><element attribute_name="attribute_value">runtime.whileclosure</element></l3></l2></l1></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-84
+- desc: Content-Type text/plain includes keyword runtime.whileclosure
+  stages:
+  - stage:
+      input:
+        data: test=runtime.whileclosure
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: text/plain
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-85
+- desc: Content-Type application/json arg value includes keyword runtime.whileclosure
+  stages:
+  - stage:
+      input:
+        data: '{"test": "runtime.whileclosure"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/json
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-86
+- desc: Content-Type application/json arg name includes keyword runtime.whileclosure
+  stages:
+  - stage:
+      input:
+        data: '{"runtime.whileclosure": "test"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/json
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944240-87

@@ -1,0 +1,21 @@
+meta:
+  author: Christian S.J. Peron
+  description: None
+  enabled: true
+  name: 942330.yaml
+tests:
+- desc: classic SQL injection probings 1/3
+  stages:
+  - stage:
+      input:
+        data: var=%22%27&var2=whatever
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942330-1

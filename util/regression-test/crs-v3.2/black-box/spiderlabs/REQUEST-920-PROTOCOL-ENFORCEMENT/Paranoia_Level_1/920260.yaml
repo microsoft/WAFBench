@@ -1,0 +1,51 @@
+meta:
+  author: csanders-git
+  description: Description
+  enabled: true
+  name: 920260.yaml
+tests:
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        port: 80
+        uri: /?test=%uff0F
+      output:
+        status:
+        - 403
+  test_title: 920260-1
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        port: 80
+        uri: /?test=%u0F
+      output:
+        status:
+        - 403
+  test_title: 920260-2
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Language: en-us,en;q=0.5
+          Host: localhost
+          Keep-Alive: '300'
+          Proxy-Connection: keep-alive
+          User-Agent: ModSecurity CRS 3 Tests
+        port: 80
+        uri: /?param=foo%uFF01
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 920260-3

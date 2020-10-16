@@ -1,0 +1,166 @@
+meta:
+  author: Christoph Hansen
+  description: None
+  enabled: true
+  name: 942470.yaml
+tests:
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=nvarchar
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942470-1
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=xp_cmdshell
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942470-2
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=varchar
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942470-3
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=xp_dirtree
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942470-4
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=xp_regread
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942470-5
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=sp_password
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942470-6
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=UTL_HTTP
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942470-7
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=OPENROWSET
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942470-8
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: pay=sp_executesql
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942470-9
+- desc: SQL Injection Attack
+  stages:
+  - stage:
+      input:
+        data: sp_executesql
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942470-10

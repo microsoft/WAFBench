@@ -1,0 +1,565 @@
+meta:
+  author: Christian S.J. Peron, Christoph Hansen
+  description: None
+  enabled: true
+  name: 942190.yaml
+tests:
+- desc: MSSQL code execution and information gathering attempts
+  stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: GET
+        port: 80
+        uri: /?var=%20exec%20xp_cmdshell
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942190-1
+- desc: MSSQL Code Execution and Information gathering attempts
+  stages:
+  - stage:
+      input:
+        data: '%22%21%22%0A'
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942190-2
+- desc: MSSQL Code Execution and Information gathering attempts
+  stages:
+  - stage:
+      input:
+        data: '%22+union+s%0A'
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942190-3
+- desc: MSSQL Code Execution and Information gathering attempts
+  stages:
+  - stage:
+      input:
+        data: current_user%28%0A
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942190-4
+- desc: MSSQL Code Execution and Information gathering attempts
+  stages:
+  - stage:
+      input:
+        data: FROM+INFORMATION_SCHEMA.%0A
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942190-5
+- desc: MSSQL Code Execution and Information gathering attempts
+  stages:
+  - stage:
+      input:
+        data: '%27%3BSELECT+P%0A'
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942190-6
+- desc: MSSQL Code Execution and Information gathering attempts
+  stages:
+  - stage:
+      input:
+        data: UnIon+seleCt%0A
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942190-7
+- desc: MSSQL Code Execution and Information gathering attempts
+  stages:
+  - stage:
+      input:
+        data: '%27union%2F%0A'
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942190-8
+- desc: MSSQL Code Execution and Information gathering attempts
+  stages:
+  - stage:
+      input:
+        data: from%2F%2A%2A%2Finformation_schema.%0A
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942190-9
+- desc: MSSQL Code Execution and Information gathering attempts
+  stages:
+  - stage:
+      input:
+        data: select%5D%3Dpolygon%28%28%2F%2A%2100000select%2A%2F%2A%2F%2A%2100000from%2A%2F%28%2F%2A%2100000select%2A%2F%2A%2F%2A%2100000from%2A%2F%28%2F%2A%2100000select%2A%2Fconcat_ws%280x7e3a%2C0x6d616b6d616e%2Cversion%28%29%2Cuser%28%0A
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942190-10
+- desc: MSSQL Code Execution and Information gathering attempts
+  stages:
+  - stage:
+      input:
+        data: user%28%0A
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942190-11
+- desc: MSSQL Code Execution and Information gathering attempts
+  stages:
+  - stage:
+      input:
+        data: database%28%0A
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942190-12
+- desc: MSSQL Code Execution and Information gathering attempts
+  stages:
+  - stage:
+      input:
+        data: select%28user%28%0A
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942190-13
+- desc: MSSQL Code Execution and Information gathering attempts
+  stages:
+  - stage:
+      input:
+        data: SeLect%2A%2F+1%2C2%2C3%2Cuser%28%0A
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942190-14
+- desc: MSSQL Code Execution and Information gathering attempts
+  stages:
+  - stage:
+      input:
+        data: select%5D%3D%28ExtractValue%281%2C%28select%2520concat_ws%280x3a%2Cuser%28%0A
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942190-15
+- desc: MSSQL Code Execution and Information gathering attempts
+  stages:
+  - stage:
+      input:
+        data: '%27select+H%0A'
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942190-17
+- desc: MSSQL Code Execution and Information gathering attempts
+  stages:
+  - stage:
+      input:
+        data: '%27%3Bselect+p%0A'
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942190-18
+- desc: MSSQL Code Execution and Information gathering attempts
+  stages:
+  - stage:
+      input:
+        data: FROM%2F%2A%2A%2FINFORMATION_SCHEMA.%0A
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942190-19
+- desc: MSSQL Code Execution and Information gathering attempts
+  stages:
+  - stage:
+      input:
+        data: +EXEC+xp_cmdshell%0A
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942190-20
+- desc: MSSQL Code Execution and Information gathering attempts
+  stages:
+  - stage:
+      input:
+        data: '%22%21+Y%0A'
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942190-21
+- desc: MSSQL Code Execution and Information gathering attempts
+  stages:
+  - stage:
+      input:
+        data: exec+master.%0A
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942190-22
+- desc: MSSQL Code Execution and Information gathering attempts
+  stages:
+  - stage:
+      input:
+        data: into+outfile+%27%0A
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942190-23
+- desc: MSSQL Code Execution and Information gathering attempts
+  stages:
+  - stage:
+      input:
+        data: Union+sElect%0A
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942190-24
+- desc: MSSQL Code Execution and Information gathering attempts
+  stages:
+  - stage:
+      input:
+        data: selectect%2520user%28%0A
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942190-25
+- desc: MSSQL Code Execution and Information gathering attempts
+  stages:
+  - stage:
+      input:
+        data: +exec+master..xp_cmdshell%0A
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942190-26
+- desc: MSSQL Code Execution and Information gathering attempts
+  stages:
+  - stage:
+      input:
+        data: selectect%252520user%28%0A
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942190-27
+- desc: MSSQL Code Execution and Information gathering attempts
+  stages:
+  - stage:
+      input:
+        data: '%27%21%60%0A'
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942190-29
+- desc: MSSQL Code Execution and Information gathering attempts
+  stages:
+  - stage:
+      input:
+        data: '%22+UNION+A%0A'
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942190-30
+- desc: MSSQL Code Execution and Information gathering attempts
+  stages:
+  - stage:
+      input:
+        data: EXec%2F%2A%2A%2Fxp_cmdshell%0A
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942190-31
+- desc: MSSQL Code Execution and Information gathering attempts
+  stages:
+  - stage:
+      input:
+        data: FrOM%2F%2A%2A%2Finformation_schema.%0A
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942190-32
+- desc: MSSQL Code Execution and Information gathering attempts
+  stages:
+  - stage:
+      input:
+        data: select+1+FROM%28select+count%28%2A%29%2Cconcat%28%28select+%28select+concat%28user%28%0A
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942190-33
+- desc: MSSQL Code Execution and Information gathering attempts
+  stages:
+  - stage:
+      input:
+        data: '%60%211%0A'
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942190-34
+- desc: MSSQL Code Execution and Information gathering attempts
+  stages:
+  - stage:
+      input:
+        data: uNioN++sElecT%0A
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942190-35
+- desc: MSSQL Code Execution and Information gathering attempts
+  stages:
+  - stage:
+      input:
+        data: '%22%3BSELECT+P%0A'
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942190-36
+- desc: MSSQL Code Execution and Information gathering attempts
+  stages:
+  - stage:
+      input:
+        data: pay=UnIoN+SeLeCt%0A
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942190-37
