@@ -1,0 +1,68 @@
+meta: {author: msra, description: null, enabled: true, name: 933180.auto.yaml}
+tests:
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: "\"6CBYCE$$$$$$$$$$\_\x99tal_\xFFF\xDB//8:W!q_YS{A3ia<v7{M}#`//-q0`S[/\\\
+            +b1%i%a4]{3dM}{&V<t9ne}#k)>_Z}7(%q}C^|'[w)Zx=qp05n", Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 933180-1-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /EPk%5B/Z-%24%24%24%24%24%0D%0A%0C%09%20%0B%20%20%0B%0D%7B%7E%7D%5BF1%5D%0B%28%3CHLgWL%22%28%29%21%0D%09%23x%29m%22
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 933180-2-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?%5EO%27%28%5EU%24%24_%C3%90r_%7B7%0Cx2i6Gbs%5E%7D%0A%09/%2AG%20T%2A///oFo8FWk%25.%23_40y/%2A%3C%0C98%22%2A/%23%23%28%29tpB%40=iK58iWdQ9B
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 933180-3-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?z1oErWQaMU=F%23zXjxq%7C%24%24%24%24%24%24%24%24%0B%0A%0D%0D%7B%2CC%7D%09/%2A%2A/%0B%5B%7C%28y-L%7E3%2B%5D%0C%7BJ%0D2U%28yo%7D//Ky%3E%3A/1HnB//%3C%3Byw//07%3B%0D%280Z%2566%28Py54%294%23f%0D
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 933180-4-auto
+- stages:
+  - stage:
+      input:
+        data: '<?xml version="1.0"?><Foo_key>}\$$&#188;_&#205;U_T_&#224;&#253;Z(g)&amp;:
+          !R</Foo_key>'
+        dest_addr: 127.0.0.1
+        headers: {Content-Type: text/xml, Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 933180-5-auto

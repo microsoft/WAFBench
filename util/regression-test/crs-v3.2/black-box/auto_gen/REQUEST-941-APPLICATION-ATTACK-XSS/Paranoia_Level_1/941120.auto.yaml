@@ -1,0 +1,54 @@
+meta: {author: msra, description: null, enabled: true, name: 941120.auto.yaml}
+tests:
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost, User-Agent: "I`;\t'\t`(1(;onTeYAd,;,\f,\t=R i"}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 941120-2-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?E%7DJ7_%2Bu%0Cb%0B%09%2C%0C%0C%3B%3B3%3D%0Conft%0B%0C%0B%20%0A%3B%3D%3C%3A=wpX7haI1kC
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 941120-4-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?ff9hxG2oBw=1%0B%09onROvGCY%28%3Df%24%26DkI%3C3
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 941120-5-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>aCSRGJG~#,7;onZcwXaMNK\t\t\r;;\t,=-3DsW\t\
+          </Foo_key>"
+        dest_addr: 127.0.0.1
+        headers: {Content-Type: text/xml, Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 941120-6-auto

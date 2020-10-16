@@ -1,0 +1,53 @@
+meta: {author: msra, description: null, enabled: true, name: 941160.auto.yaml}
+tests:
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: "Ozf,</ ]-[}+/\f)@\\|']*\".A}.\"uDi{o&P\"J=b0dd", Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 941160-1-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?J%23%7D%3Cw%0A%3A%60%0CL%09PInG%08%0C%0C%3DWzw%3B%2CZ=5UHtWcUE
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 941160-4-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?IvL2c8OlLs=d/Qj%5Dz0C5%3CY/Src%08%08%3Dk%09j8%20
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 941160-5-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>Bv^@ON/\"oNcfStATECHANgE\t  =DPzu7G#</Foo_key>"
+        dest_addr: 127.0.0.1
+        headers: {Content-Type: text/xml, Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 941160-6-auto

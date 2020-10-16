@@ -1,0 +1,78 @@
+meta: {author: msra, description: null, enabled: true, name: 933150.auto.yaml}
+tests:
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: XyRdgl2Ld1iauPS=posix_uname, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 933150-0-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: wp_remote_post=j84QDn, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 933150-1-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /zlib_decode
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 933150-2-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?invokeargs=zx
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 933150-3-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?dHkk=require_once
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 933150-4-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>fsockopen</Foo_key>
+        dest_addr: 127.0.0.1
+        headers: {Content-Type: text/xml, Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 933150-5-auto

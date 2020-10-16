@@ -1,0 +1,65 @@
+meta: {author: msra, description: null, enabled: true, name: 942470.auto.yaml}
+tests:
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: "RZIVdbRf_JPIKKIH=@MX\fzIZ`opeNOwA_uTIlL)c.r{F\"F", Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 942470-0-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: 'KXP_SeRVicECoNtrol\:]U5Em=VY', Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 942470-1-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?_U%5CI%7D/4owauTonomous_TRaNsacTioNx%3F=BY7JUiEOvu
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 942470-2-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?c4T=th%0BHAUTOnomOuS_tRANsactiont
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 942470-3-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>M9!QUVARChArRscfFyAD.e</Foo_key>
+        dest_addr: 127.0.0.1
+        headers: {Content-Type: text/xml, Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 942470-4-auto

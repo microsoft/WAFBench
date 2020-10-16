@@ -1,0 +1,41 @@
+meta: {author: msra, description: null, enabled: true, name: 930100.auto.yaml}
+tests:
+- stages:
+  - stage:
+      input:
+        data: Foo_key=Gcrx1\0x2e.\+*&u1+;Q
+        dest_addr: 127.0.0.1
+        headers: {Content-Length: 28, Content-Type: application/x-www-form-urlencoded,
+          Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 930100-1-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {4mJDh7hpVrCanP7: 'Dnd\0x2e.?/z1&c,p9', Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 930100-2-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>yr\%%32%45%u2024\T=p$;r </Foo_key>
+        dest_addr: 127.0.0.1
+        headers: {Content-Type: text/xml, Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 930100-3-auto

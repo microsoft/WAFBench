@@ -1,0 +1,78 @@
+meta: {author: msra, description: null, enabled: true, name: 944240.auto.yaml}
+tests:
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?oreASy53=Ll5%5CZ%3C0V23getpropertyDXN%3Fi6G-1D
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 944240-0-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?2VSclonetransformer%22UJ%24UEMQ6=TKO
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 944240-1-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: qhIs108MaWfvWacN6=|~j _c6clonetransformer.bL4, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 944240-2-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost, xbhQ7: M5ieprototypeserializationfactoryn>}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 944240-5-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>.f"hE+Ygetpropertye</Foo_key>
+        dest_addr: 127.0.0.1
+        headers: {Content-Type: text/xml, Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 944240-6-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>sbXinvokertransformer?#m</Foo_key>
+        dest_addr: 127.0.0.1
+        headers: {Content-Type: text/xml, Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 944240-7-auto

@@ -1,0 +1,42 @@
+meta: {author: msra, description: null, enabled: true, name: 932110.auto.yaml}
+tests:
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?fDjP%26%26%26%0A%0A%20%0C%20%20%09%20%0A%40%40%28%2C%22%27%5E%22%5Ej%5E%22%22%22%22%22%5E%22%5E%5Ea%22%5E%5E%5E%22%22%5E%22v%22%5E%22%22a%5E%22%22%5E%5E%5E%5E%5E%22%22%3Eg%2C8n%5C%5B%0D6/E.=b
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 932110-2-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?x2ilZ1I7=%3Da1O%2B-%26%0D%20%0B%09%28%09%0A%2C%40%5CaU%22%5E%27%20%5C/.%5C%5C%5E%5Enc%22%5E%5E%22%22%22%22%22%3EK%2AKL9
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 932110-3-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>j)Vw**j/| \t\r\r \t\\/.  \"\"/\\\\\"\
+          \"^^\"^\"d\"s^g\"^^e\"^^\"^^\"\"t.^\"^^^SDGcj)mHxp</Foo_key>"
+        dest_addr: 127.0.0.1
+        headers: {Content-Type: text/xml, Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 932110-4-auto

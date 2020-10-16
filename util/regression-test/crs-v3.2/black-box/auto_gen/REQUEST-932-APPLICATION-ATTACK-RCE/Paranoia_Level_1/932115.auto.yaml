@@ -1,0 +1,43 @@
+meta: {author: msra, description: null, enabled: true, name: 932115.auto.yaml}
+tests:
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?p%7B%0B%20%20%0A%0B%0C%0A%22%22%27%27%28%0D%2Ck%5C%5C%22%5C%5E%5C%5C%3A%09%27SYeX%09A6%5C%5C%5E%5E%22%22%22z%5E%22%22%5E%22%5Ei%22%22p%22%5E%5E%22%5E%5E%22%22%22%3E%297aRsYm.%22%22%5E%5E%22%5E%5E%5E4IY4j/=IIap_
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 932115-2-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?adK=SMbNDr%7C%7C%0D%0A%22%2C%20%0A%2C%28%28%22%40%22%27B./%22%22%5E%5E%22%22%22p%5E%22%22%22%5E%5E%5E%5E%22%22s%5E%22%5E%22%5E%22e%22%22%22%22x%22%22%22%22%22%5E%5E%22e%5E%5E%5E%5E%5E%5E%5E%5E%5E%5Ec
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 932115-3-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>dv:_'Ch&gt;N;\t\n\t\r \r,\"\",\",c3^\\\
+          \\\"\"\"^\"o^\"\"^\"d^^b\"\"^\"^^^^\"c\"^^\"\"a^\"\"d\"\"\"\"\"\"^^^3\"\
+          2</Foo_key>"
+        dest_addr: 127.0.0.1
+        headers: {Content-Type: text/xml, Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 932115-4-auto

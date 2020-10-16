@@ -1,0 +1,28 @@
+meta: {author: msra, description: null, enabled: true, name: 930110.auto.yaml}
+tests:
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /..
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 930110-0-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>}7NrVz?/../IcxNK</Foo_key>
+        dest_addr: 127.0.0.1
+        headers: {Content-Type: text/xml, Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 930110-3-auto

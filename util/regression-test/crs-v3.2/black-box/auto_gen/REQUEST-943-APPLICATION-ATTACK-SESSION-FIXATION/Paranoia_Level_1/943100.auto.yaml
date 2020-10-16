@@ -1,0 +1,55 @@
+meta: {author: msra, description: null, enabled: true, name: 943100.auto.yaml}
+tests:
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: 'g=hTtp-eqUiV[&SET-cOOKiE', Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 943100-0-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?%3F%7DHx%27hTtp-EQUiV%2B%25/%2A%3C%26%5D%0D%25SET-COOkIe%29%21%5E%2BoanC%3A=7hiGk
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 943100-2-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?zTCEzKHJgL=81%7BNO.cOOkiE%27%5En1%20%3B%0BdOMAIN%7C%29%7C%22%23%3Diav
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 943100-3-auto
+- stages:
+  - stage:
+      input:
+        data: '<?xml version="1.0"?><Foo_key>HtTp-EqUIV)
+
+          }&gt;SEt-cookIe</Foo_key>'
+        dest_addr: 127.0.0.1
+        headers: {Content-Type: text/xml, Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 943100-4-auto

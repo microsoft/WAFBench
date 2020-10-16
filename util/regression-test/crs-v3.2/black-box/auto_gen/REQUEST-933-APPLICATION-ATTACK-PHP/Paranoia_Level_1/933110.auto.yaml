@@ -1,0 +1,26 @@
+meta: {author: msra, description: null, enabled: true, name: 933110.auto.yaml}
+tests:
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost, X-Filename: 2~HjtJBHq~.phtml..}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 933110-1-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost, X-File-Name: "u|&uqrd&`O\f\\u.phtml......."}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 933110-4-auto

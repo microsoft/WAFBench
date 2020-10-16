@@ -1,0 +1,28 @@
+meta: {author: msra, description: null, enabled: true, name: 941230.auto.yaml}
+tests:
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?CX-%29%3D%0Ci%3D%3CEMBED%2Btype%0DkW%600%29%20%3DcZ=bCg
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 941230-2-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?a1C4=.%3CEMBED%2BKIExNOsrc%3D50o6
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 941230-3-auto

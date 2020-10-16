@@ -1,0 +1,65 @@
+meta: {author: msra, description: null, enabled: true, name: 921130.auto.yaml}
+tests:
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: g=KB(Zfgn2'http/1.1C, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 921130-0-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: "+\fV<meta=fNUtXP6DUd", Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 921130-1-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?http/1.1rqc57FW=gCMffmE4D
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 921130-2-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?rKPUb7=0ha%2BAx/deX%3Chtml%09%0D_%0D%2C
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 921130-3-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>*$BS&lt;html#b</Foo_key>
+        dest_addr: 127.0.0.1
+        headers: {Content-Type: text/xml, Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 921130-4-auto

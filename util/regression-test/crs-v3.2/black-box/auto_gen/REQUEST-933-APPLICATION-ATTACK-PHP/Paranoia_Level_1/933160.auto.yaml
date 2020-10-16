@@ -1,0 +1,67 @@
+meta: {author: msra, description: null, enabled: true, name: 933160.auto.yaml}
+tests:
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: posix_mkfifo//~O#*H(Sj33g)'1~c1E.- =tTURz, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 933160-1-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /htmlspecialchars/%2AS/Wc%2A/%28%29%22B/bbKv%23J
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 933160-2-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?escapeshellarg//ju%27/%2ASz5byA%3F%7E1%2A/%23%2A%40%0A%28lFzHU7%3Cl1u%29zSC%2APA=I
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 933160-3-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?5xg48yvPQ=rawurlencode//A%7C%26Q%28//M/%2A%29F%2A/%09//q.%23%7BzT%7DD%0B/%2AcE%24U%7D%3AFx%2A/%0A/%2AUmh5r%24%5Cws%2A/%28%3D%29%3EZoW%29sRIZm
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 933160-4-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>mkdir #:\tZwHDa//Km`+s#//U\tA/*.(3*//*mb9s1,u15^*//**/#GwiSM\n\
+          (uE\t&gt;1\th5r)~XV)</Foo_key>"
+        dest_addr: 127.0.0.1
+        headers: {Content-Type: text/xml, Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 933160-5-auto

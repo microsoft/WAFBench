@@ -1,0 +1,65 @@
+meta: {author: msra, description: null, enabled: true, name: 932160.auto.yaml}
+tests:
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: 6hYfNCS3rkFNKMfY=usr/bin/head, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 932160-0-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: dev/stdout=IiVlK, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 932160-1-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?usr/bin/ftp=kSfp2y3zcN
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 932160-2-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?C4L24=bin/ps
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 932160-3-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>usr/bin/python3</Foo_key>
+        dest_addr: 127.0.0.1
+        headers: {Content-Type: text/xml, Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 932160-4-auto

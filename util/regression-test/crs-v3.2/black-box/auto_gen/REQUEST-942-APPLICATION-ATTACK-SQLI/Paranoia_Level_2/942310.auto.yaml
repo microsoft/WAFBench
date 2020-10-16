@@ -1,0 +1,15 @@
+meta: {author: msra, description: null, enabled: true, name: 942310.auto.yaml}
+tests:
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>as*/FRomO~Z.H=T'</Foo_key>
+        dest_addr: 127.0.0.1
+        headers: {Content-Type: text/xml, Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 942310-4-auto

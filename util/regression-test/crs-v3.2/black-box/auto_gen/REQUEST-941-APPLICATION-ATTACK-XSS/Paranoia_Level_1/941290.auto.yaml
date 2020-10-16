@@ -1,0 +1,53 @@
+meta: {author: msra, description: null, enabled: true, name: 941290.auto.yaml}
+tests:
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: 1xXL<APPLET/(=oxLBysc, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 941290-1-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?jSNz%3CAPPLET/%3Cy%60w=UFd7W8
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 941290-2-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?0DqvrTuUQ=B%3CAPPLET%2BW-n%29%3D%7B
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 941290-3-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key> 1&lt;APPLET/</Foo_key>
+        dest_addr: 127.0.0.1
+        headers: {Content-Type: text/xml, Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 941290-4-auto

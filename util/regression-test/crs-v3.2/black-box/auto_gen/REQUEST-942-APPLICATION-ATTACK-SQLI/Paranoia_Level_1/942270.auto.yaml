@@ -1,0 +1,66 @@
+meta: {author: msra, description: null, enabled: true, name: 942270.auto.yaml}
+tests:
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: "ZWDDbhNcqHpJvtqIz=Sw\t U]}Qyunion1:&\"]e.selectfrom\fA*.C",
+          Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 942270-0-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: "}#kgD2union\fbo3mxamselect-Qr6*qwfrom]$o)49{=x8", Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 942270-1-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?aO%60M%5Bx%2Cws%2AunionselectXfromAiE%40i1K=rhjUOSKno
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 942270-2-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?NAlFhr=Xuniona%7EselectJM-QvvVzemfromLe%28%28%0B%26G%25
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 942270-3-auto
+- stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><Foo_key>7i.O55Bunion!^yIA:6G[^selectpodYW@Ffrom\,x}s=Hsu</Foo_key>
+        dest_addr: 127.0.0.1
+        headers: {Content-Type: text/xml, Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 942270-4-auto

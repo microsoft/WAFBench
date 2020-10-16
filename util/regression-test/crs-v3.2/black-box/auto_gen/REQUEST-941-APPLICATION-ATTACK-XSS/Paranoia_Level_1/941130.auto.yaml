@@ -1,0 +1,53 @@
+meta: {author: msra, description: null, enabled: true, name: 941130.auto.yaml}
+tests:
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost, User-Agent: KIxhtml}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 941130-2-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?g7s%5D%21%2B%3A%3F%26.%09formaction%29%5CwVr=ApM62NbD
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 941130-3-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?ijW299l=%27lw-Ppattern.-TK%2Bk%7C%24%5B%26%3DA
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 941130-4-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>y.A|?oQ~\r\t!ENTITYE&lt;)YSYSTEM</Foo_key>"
+        dest_addr: 127.0.0.1
+        headers: {Content-Type: text/xml, Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 941130-5-auto

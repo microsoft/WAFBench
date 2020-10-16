@@ -1,0 +1,52 @@
+meta: {author: msra, description: null, enabled: true, name: 932120.auto.yaml}
+tests:
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: PJ2Fj=get-authenticodesignature, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 932120-0-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: start-transaction=3n5to, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 932120-1-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?where-object=IFUo6jNvtP
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 932120-2-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?9uVSa=connect-wsman
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 932120-3-auto
