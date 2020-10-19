@@ -1,0 +1,42 @@
+meta: {author: msra, description: null, enabled: true, name: 941200.auto.yaml}
+tests:
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?%0B%5BDci%7Ci%25U%3CVmLfRAMELr%22pZnb%7E%2BSRc%3DK%60r%22rE9a=G2g
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 941200-2-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?krafs3dRdM=%24%3EsI%3C%60BVMLfrAmeh%21%5Ci%2B%0Csrc%2B%2B%3DwS%3FWc
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 941200-3-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>#gy&lt;[xD&lt;uq!:vMlFrAmeC:4'5\\/+++/++\n\
+          /sRc++++///\r+=OD7:T</Foo_key>"
+        dest_addr: 127.0.0.1
+        headers: {Content-Type: text/xml, Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 941200-4-auto

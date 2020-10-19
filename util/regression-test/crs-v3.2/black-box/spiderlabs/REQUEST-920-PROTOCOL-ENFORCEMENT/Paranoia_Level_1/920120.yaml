@@ -1,0 +1,32 @@
+meta:
+  author: csanders-git
+  description: Tests to trigger rule 920120
+  enabled: true
+  name: 920120.yaml
+tests:
+- stages:
+  - stage:
+      input:
+        data:
+        - '----------397236876'
+        - 'Content-Disposition: form-data; name="fileRap"; filename="file=.txt"'
+        - 'Content-Type: text/plain'
+        - ''
+        - 555-555-0199@example.com
+        - '----------397236876--'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: '*/*'
+          Accept-Language: en
+          Connection: close
+          Content-Type: multipart/form-data; boundary=--------397236876
+          Host: localhost
+          Referer: http://localhost/
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        protocol: http
+      output:
+        status:
+        - 403
+  test_title: 920120-1

@@ -1,0 +1,90 @@
+meta: {author: msra, description: null, enabled: true, name: 944250.auto.yaml}
+tests:
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?nAZ2AD2GY=%23JaVa%25/JpRoCEssbuIldeR%0Ci7E%7C%3Ek
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 944250-0-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?DG%60%21JavA%5B%2A%5DKTprocESsbUilDerw3%21H%603-t=Y6ylaBf
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 944250-1-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: 'rhinVOs=>lG<Q|jAVa}U]RUNtImE=49-9', Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 944250-2-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: "MX`PjavA\fB}tLruNTIMeE=G9DW", Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 944250-3-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost, qT8rJM: /=sH%Q%m2rJavA;rUNTImEZ6Z}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 944250-5-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>}K|FJAVa|,R&gt;mSRunTIMEf+_^1F\r</Foo_key>"
+        dest_addr: 127.0.0.1
+        headers: {Content-Type: text/xml, Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 944250-6-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>sFJAva.#r~2proCEsSbUIlDer\r0Gy</Foo_key>"
+        dest_addr: 127.0.0.1
+        headers: {Content-Type: text/xml, Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 944250-7-auto

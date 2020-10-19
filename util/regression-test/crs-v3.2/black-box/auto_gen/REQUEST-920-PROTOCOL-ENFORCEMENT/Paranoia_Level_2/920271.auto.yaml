@@ -1,0 +1,54 @@
+meta: {author: msra, description: null, enabled: true, name: 920271.auto.yaml}
+tests:
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /%1B%7F%06%01%02%17%0F%1E%7F%03%16
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 920271-0-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost, jYQmxNeOGM: "\f\x19\x01\x06\b\x10\x19\x10\x13\x03\
+            \x1D"}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 920271-1-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?C8mrxFkAFR=%11%07%1D%07%10%08%06%1E%0E%04%13
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 920271-2-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?%06%0E%16%10%03%0E%19%1D%01%06%12=plOhk
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 920271-3-auto

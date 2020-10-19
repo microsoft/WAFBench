@@ -1,0 +1,34 @@
+meta:
+  author: csanders-git
+  description: Tests functionality of stricter sibiling 933131
+  enabled: true
+  name: 933131.yaml
+tests:
+- desc: SERVER request URLEncoded
+  stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        port: 80
+        uri: /?x=$_%53ERVER['test'];
+      output:
+        status:
+        - 403
+  test_title: 933131-1
+- desc: SERVER request URLEncoded
+  stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        port: 80
+        uri: /?%24_COOKIE=value;
+      output:
+        status:
+        - 403
+  test_title: 933131-2

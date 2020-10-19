@@ -1,0 +1,474 @@
+meta:
+  author: spartantri
+  description: Positive tests for rule 944250
+  enabled: true
+  name: 944250.yaml
+tests:
+- desc: Argument test includes keyword java.evil.runtime
+  stages:
+  - stage:
+      input:
+        data: test=java.evil.runtime
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944250-0
+- desc: Argument name includes keyword java.evil.runtime
+  stages:
+  - stage:
+      input:
+        data: java.evil.runtime=test
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944250-1
+- desc: Cookie test includes keyword java.evil.runtime
+  stages:
+  - stage:
+      input:
+        data: test=value
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Cookie: test=java.evil.runtime
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944250-2
+- desc: Cookie name includes keyword java.evil.runtime
+  stages:
+  - stage:
+      input:
+        data: test=value
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Cookie: java.evil.runtime=test
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944250-3
+- desc: Request header test includes keyword java.evil.runtime
+  stages:
+  - stage:
+      input:
+        data: test=value
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+          test: java.evil.runtime
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944250-4
+- desc: XML attribute value includes keyword java.evil.runtime
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><element attribute_name="java.evil.runtime">element_value</element></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944250-5
+- desc: XML element value includes keyword java.evil.runtime
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><element attribute_name="attribute_value">java.evil.runtime</element></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944250-6
+- desc: Nested XML element value includes keyword java.evil.runtime
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><l1><l2><l3><element attribute_name="attribute_value">java.evil.runtime</element></l3></l2></l1></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944250-7
+- desc: Content-Type text/plain includes keyword java.evil.runtime
+  stages:
+  - stage:
+      input:
+        data: test=java.evil.runtime
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: text/plain
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944250-8
+- desc: Content-Type application/json arg value includes keyword java.evil.runtime
+  stages:
+  - stage:
+      input:
+        data: '{"test": "java.evil.runtime"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/json
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944250-9
+- desc: Content-Type application/json arg name includes keyword java.evil.runtime
+  stages:
+  - stage:
+      input:
+        data: '{"java.evil.runtime": "test"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/json
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944250-10
+- desc: Argument test includes keyword java.evil.processbuilder
+  stages:
+  - stage:
+      input:
+        data: test=java.evil.processbuilder
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944250-11
+- desc: Argument name includes keyword java.evil.processbuilder
+  stages:
+  - stage:
+      input:
+        data: java.evil.processbuilder=test
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944250-12
+- desc: Cookie test includes keyword java.evil.processbuilder
+  stages:
+  - stage:
+      input:
+        data: test=value
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Cookie: test=java.evil.processbuilder
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944250-13
+- desc: Cookie name includes keyword java.evil.processbuilder
+  stages:
+  - stage:
+      input:
+        data: test=value
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Cookie: java.evil.processbuilder=test
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944250-14
+- desc: Request header test includes keyword java.evil.processbuilder
+  stages:
+  - stage:
+      input:
+        data: test=value
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+          test: java.evil.processbuilder
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944250-15
+- desc: XML attribute value includes keyword java.evil.processbuilder
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><element attribute_name="java.evil.processbuilder">element_value</element></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944250-16
+- desc: XML element value includes keyword java.evil.processbuilder
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><element attribute_name="attribute_value">java.evil.processbuilder</element></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944250-17
+- desc: Nested XML element value includes keyword java.evil.processbuilder
+  stages:
+  - stage:
+      input:
+        data: <?xml version="1.0"?><xml><l1><l2><l3><element attribute_name="attribute_value">java.evil.processbuilder</element></l3></l2></l1></xml>
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/xml
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944250-18
+- desc: Content-Type text/plain includes keyword java.evil.processbuilder
+  stages:
+  - stage:
+      input:
+        data: test=java.evil.processbuilder
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: text/plain
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944250-19
+- desc: Content-Type application/json arg value includes keyword java.evil.processbuilder
+  stages:
+  - stage:
+      input:
+        data: '{"test": "java.evil.processbuilder"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/json
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944250-20
+- desc: Content-Type application/json arg name includes keyword java.evil.processbuilder
+  stages:
+  - stage:
+      input:
+        data: '{"java.evil.processbuilder": "test"}'
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+          Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+          Accept-Encoding: gzip,deflate
+          Accept-Language: en-us,en;q=0.5
+          Content-Type: application/json
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 944250-21

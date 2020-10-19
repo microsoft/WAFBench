@@ -1,0 +1,118 @@
+meta:
+  author: Christoph Hansen
+  description: None
+  enabled: true
+  name: 942361.yaml
+tests:
+- desc: Detects basic SQL injection based on keyword alter or union
+  stages:
+  - stage:
+      input:
+        data: '''alter a'
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942361-1
+- desc: Detects basic SQL injection based on keyword alter or union
+  stages:
+  - stage:
+      input:
+        data: '" ALTER A'
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942361-2
+- desc: Detects basic SQL injection based on keyword alter or union
+  stages:
+  - stage:
+      input:
+        data: '''ALTER A'
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942361-3
+- desc: Detects basic SQL injection based on keyword alter or union
+  stages:
+  - stage:
+      input:
+        data: ''' alter/'
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942361-4
+- desc: Detects basic SQL injection based on keyword alter or union
+  stages:
+  - stage:
+      input:
+        data: '" UNION A'
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942361-5
+- desc: Detects basic SQL injection based on keyword alter or union
+  stages:
+  - stage:
+      input:
+        data: '''UNION A'
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942361-6
+- desc: Detects basic SQL injection based on keyword alter or union
+  stages:
+  - stage:
+      input:
+        data: ''' union/'
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942361-7

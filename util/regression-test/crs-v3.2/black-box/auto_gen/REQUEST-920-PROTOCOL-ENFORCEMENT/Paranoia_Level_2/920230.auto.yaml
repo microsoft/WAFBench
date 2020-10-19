@@ -1,0 +1,15 @@
+meta: {author: msra, description: null, enabled: true, name: 920230.auto.yaml}
+tests:
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?7g=HMYhQx%2571R%257ZOpS
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 920230-0-auto

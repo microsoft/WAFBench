@@ -1,0 +1,21 @@
+meta:
+  author: Christian S.J. Peron
+  description: None
+  enabled: true
+  name: 942300.yaml
+tests:
+- desc: MySQL comments, conditions and ch(a)r injectionss
+  stages:
+  - stage:
+      input:
+        data: var=) when 234 then&foo=bar
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942300-1

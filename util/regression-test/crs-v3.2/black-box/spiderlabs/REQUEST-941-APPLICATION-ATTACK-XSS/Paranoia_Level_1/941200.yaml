@@ -1,0 +1,54 @@
+meta:
+  author: zmallen
+  description: Tests to trigger, or not trigger 941200
+  enabled: true
+  name: 941200.yaml
+tests:
+- desc: Microsoft vmlframe xss, ARGS
+  stages:
+  - stage:
+      input:
+        data: 941200-1=%3Cv%3Avmlframe%20src%3D%22foo.com%2Fsup.fml%22%2F%3E
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: GET
+        port: 80
+        uri: /foo
+      output:
+        status:
+        - 403
+  test_title: 941200-1
+- desc: Microsoft vmlframe xss, ARGS_NAMES
+  stages:
+  - stage:
+      input:
+        data: '%3Cv%3Avmlframe%20src%3D%22foo.com%2Fsup.fml%22%2F%3E=941200-2'
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: GET
+        port: 80
+        uri: /bar
+      output:
+        status:
+        - 403
+  test_title: 941200-2
+- desc: Microsoft vmlframe xss, REQUEST_COOKIE_NAMES
+  stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Cookie: '%3Cv%3Avmlframe%20src%3D%22foo.com%2Fsup.fml%22%2F%3E=941200-3'
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests
+        method: GET
+        port: 80
+        uri: /baz
+      output:
+        status:
+        - 403
+  test_title: 941200-3

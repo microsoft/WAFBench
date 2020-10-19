@@ -1,0 +1,67 @@
+meta: {author: msra, description: null, enabled: true, name: 944100.auto.yaml}
+tests:
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?17awaudF=%7BnOR%3CEAW%7C%26java.lang.runtime%3CC
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 944100-0-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?s%28%09%3FQA6java.lang.processbuilderc%21q=1
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 944100-1-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: '!q>j;$Rdjava.lang.runtime*Z=ILo3rKFj6X', Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 944100-3-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>T\rjava.lang.processbuilder0^]B</Foo_key>"
+        dest_addr: 127.0.0.1
+        headers: {Content-Type: text/xml, Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 944100-6-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>x'|AlL@sjava.lang.processbuilder\r\
+          </Foo_key>"
+        dest_addr: 127.0.0.1
+        headers: {Content-Type: text/xml, Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 944100-7-auto

@@ -1,0 +1,41 @@
+meta: {author: msra, description: null, enabled: true, name: 921120.auto.yaml}
+tests:
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?Fg%24%09DXI%0D%25%26%2B%60%24%5D%3F%22%21location%3AoE%20M/q%5C%40k=X
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 921120-2-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?MQvFTSN=TIQ%0A%22%27content-length%3Af%25nbj%3F%0B563
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 921120-3-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>'CU?\r]#(`-set-cookie:$bQss\rkv~</Foo_key>"
+        dest_addr: 127.0.0.1
+        headers: {Content-Type: text/xml, Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 921120-4-auto

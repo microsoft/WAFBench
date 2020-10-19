@@ -1,0 +1,41 @@
+meta: {author: msra, description: null, enabled: true, name: 932180.auto.yaml}
+tests:
+- stages:
+  - stage:
+      input:
+        data: ['------abc', 'Content-Disposition: form-data; name="files[]"; filename="settings.php"',
+          'Content-Type: text/plain', '', 'Content ', '', '------abc--']
+        dest_addr: 127.0.0.1
+        headers: {Cache-Control: no-cache, Content-Type: multipart/form-data; boundary=----abc,
+          Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 932180-0-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost, X-Filename: routing.yml}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 932180-1-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost, X-File-Name: .htpasswd}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 932180-3-auto

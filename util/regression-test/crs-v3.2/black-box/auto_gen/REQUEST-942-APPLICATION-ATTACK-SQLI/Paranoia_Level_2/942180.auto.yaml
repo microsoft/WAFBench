@@ -1,0 +1,65 @@
+meta: {author: msra, description: null, enabled: true, name: 942180.auto.yaml}
+tests:
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: sa123sjvRprIbKctxdcc=pw/*/*/*/*/*/*/*/*/*/*'"'``aP'4, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 942180-0-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: CS/*/*/*/*/*"`--.%^=e, Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 942180-1-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?admiN%27u1=0gIQdmsLy
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 942180-2-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?64Iw7j1pv=_%27%0Dut%60%0D%20%0A%09%0C%0B%09%0ALiKE%3B%0C%60%3C%40%7D%5C%28%22v%28W%24P2A%2ALd
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 942180-3-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>r*ZwZ|E\ris\t\r\n\r\n0^3 </Foo_key>"
+        dest_addr: 127.0.0.1
+        headers: {Content-Type: text/xml, Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 942180-4-auto

@@ -1,0 +1,46 @@
+meta:
+  author: csanders-git
+  description: Description
+  enabled: true
+  name: 920311.yaml
+tests:
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: ''
+          Host: localhost
+        port: 80
+      output:
+        status:
+        - 200
+        - 404
+  test_title: 920311-1
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: ''
+          Host: localhost
+        method: OPTIONS
+        port: 80
+      output:
+        status:
+        - 405
+  test_title: 920311-2
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers:
+          Accept: text/plain, text/html
+          Host: localhost
+          User-Agent: ModSecurity CRS 3 Tests Enterprise
+        port: 80
+      output:
+        status:
+        - 200
+        - 404
+  test_title: 920311-3

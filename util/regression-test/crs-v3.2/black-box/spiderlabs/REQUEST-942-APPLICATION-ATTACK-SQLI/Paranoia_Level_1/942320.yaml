@@ -1,0 +1,69 @@
+meta:
+  author: Christian S.J. Peron, Christoph Hansen
+  description: None
+  enabled: true
+  name: 942320.yaml
+tests:
+- desc: Detects MySQL and PostgreSQL stored procedure/function injections
+  stages:
+  - stage:
+      input:
+        data: var=procedure%20analyse%20%28
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942320-1
+- desc: Detects MySQL and PostgreSQL stored procedure/function injections
+  stages:
+  - stage:
+      input:
+        data: pay=exec+%28%40%0A
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942320-2
+- desc: Detects MySQL and PostgreSQL stored procedure/function injections
+  stages:
+  - stage:
+      input:
+        data: pay=declare+%40b%0A
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942320-3
+- desc: Detects MySQL and PostgreSQL stored procedure/function injections
+  stages:
+  - stage:
+      input:
+        data: pay=DECLARE%2F%2A%2A%2F%40x%0A
+        dest_addr: 127.0.0.1
+        headers:
+          Host: localhost
+        method: POST
+        port: 80
+        uri: /
+        version: HTTP/1.0
+      output:
+        status:
+        - 403
+  test_title: 942320-4

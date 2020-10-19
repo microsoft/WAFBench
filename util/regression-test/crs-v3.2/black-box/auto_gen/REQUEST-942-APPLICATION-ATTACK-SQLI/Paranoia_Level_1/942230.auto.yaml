@@ -1,0 +1,40 @@
+meta: {author: msra, description: null, enabled: true, name: 942230.auto.yaml}
+tests:
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Cookie: "DMtmK4rREHvp=te#:HaViNG\t\v\tE [(+U2sCG[", Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 942230-0-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?%0D%5EAfeVIf%289%0B%0D%20%0B%20%0D%20%3E6%224%3D%0B=WfCpJ_THv
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 942230-2-auto
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?qBnfxxF=e.m%3Fav4r%29%0D%09liKE%0D%0A%28s2ef%27%201%3AF%25
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 942230-3-auto

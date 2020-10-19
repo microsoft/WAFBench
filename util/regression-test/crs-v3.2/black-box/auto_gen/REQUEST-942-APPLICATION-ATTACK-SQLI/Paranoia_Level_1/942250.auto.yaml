@@ -1,0 +1,29 @@
+meta: {author: msra, description: null, enabled: true, name: 942250.auto.yaml}
+tests:
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {Host: localhost}
+        method: GET
+        port: 80
+        protocol: http
+        uri: /?GUYeXECutE%20%0B%0D%09%0B%20%20%0D%0C%0DIMmEDiAte%0B%09%0A%09%20%0A%0B%09%0A%274%608sG=cGt
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 942250-2-auto
+- stages:
+  - stage:
+      input:
+        data: "<?xml version=\"1.0\"?><Foo_key>QBV`=D];}MERgEE\"u:%O&lt;|\\UsiNg \
+          \ \r\r\n( )22P.Xb$</Foo_key>"
+        dest_addr: 127.0.0.1
+        headers: {Content-Type: text/xml, Host: localhost}
+        method: POST
+        port: 80
+        protocol: http
+        version: HTTP/1.1
+      output:
+        status: [403]
+  test_title: 942250-4-auto
