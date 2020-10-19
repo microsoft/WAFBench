@@ -15,6 +15,7 @@ Coverage: 165 supported rules / 219 total rules
 |  913120 |                   SCANNER-DETECTION |                          0 |                       0 |                          2 |                       2 |
 |  920100 |                PROTOCOL-ENFORCEMENT |                          0 |                       0 |                          2 |                       2 |
 |  920120 |                PROTOCOL-ENFORCEMENT |                          0 |                       0 |                          2 |                       0 |
+|  920121 |                PROTOCOL-ENFORCEMENT |                          0 |                       0 |                          0 |                       1 |
 |  920160 |                PROTOCOL-ENFORCEMENT |                          0 |                       0 |                          2 |                       0 |
 |  920170 |                PROTOCOL-ENFORCEMENT |                          0 |                       0 |                          2 |                       0 |
 |  920180 |                PROTOCOL-ENFORCEMENT |                          0 |                       0 |                          2 |                       2 |
