@@ -2,8 +2,8 @@
 
 ## Test cases summary
 
-Total test cases: 536
-Coverage: 165 supported rules / 219 total rules
+Total test cases: 539
+Coverage: 168 supported rules / 219 total rules
 
 | rule_id |                                type | white-box_spiderlabs_count | white-box_autogen_count | black-box_spiderlabs_count | black-box_autogen_count |
 |--------:|------------------------------------:|---------------------------:|------------------------:|---------------------------:|------------------------:|
@@ -18,9 +18,11 @@ Coverage: 165 supported rules / 219 total rules
 |  920121 |                PROTOCOL-ENFORCEMENT |                          0 |                       0 |                          0 |                       1 |
 |  920160 |                PROTOCOL-ENFORCEMENT |                          0 |                       0 |                          2 |                       0 |
 |  920170 |                PROTOCOL-ENFORCEMENT |                          0 |                       0 |                          2 |                       0 |
+|  920171 |                PROTOCOL-ENFORCEMENT |                          0 |                       0 |                          0 |                       1 |
 |  920180 |                PROTOCOL-ENFORCEMENT |                          0 |                       0 |                          2 |                       2 |
 |  920190 |                PROTOCOL-ENFORCEMENT |                          0 |                       0 |                          2 |                       2 |
 |  920200 |                PROTOCOL-ENFORCEMENT |                          0 |                       0 |                          2 |                       0 |
+|  920201 |                PROTOCOL-ENFORCEMENT |                          0 |                       0 |                          0 |                       1 |
 |  920210 |                PROTOCOL-ENFORCEMENT |                          0 |                       0 |                          2 |                       2 |
 |  920220 |                PROTOCOL-ENFORCEMENT |                          0 |                       0 |                          2 |                       2 |
 |  920230 |                PROTOCOL-ENFORCEMENT |                          0 |                       0 |                          2 |                       2 |
@@ -39,6 +41,7 @@ Coverage: 165 supported rules / 219 total rules
 |  920320 |                PROTOCOL-ENFORCEMENT |                          0 |                       0 |                          2 |                       2 |
 |  920330 |                PROTOCOL-ENFORCEMENT |                          0 |                       0 |                          2 |                       2 |
 |  920340 |                PROTOCOL-ENFORCEMENT |                          0 |                       0 |                          2 |                       0 |
+|  920341 |                PROTOCOL-ENFORCEMENT |                          0 |                       0 |                          0 |                       1 |
 |  920350 |                PROTOCOL-ENFORCEMENT |                          0 |                       0 |                          2 |                       0 |
 |  920420 |                PROTOCOL-ENFORCEMENT |                          0 |                       0 |                          2 |                       2 |
 |  920430 |                PROTOCOL-ENFORCEMENT |                          0 |                       0 |                          2 |                       0 |

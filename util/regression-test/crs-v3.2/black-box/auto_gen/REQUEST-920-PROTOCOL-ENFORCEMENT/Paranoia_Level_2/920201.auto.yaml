@@ -1,0 +1,19 @@
+meta: {author: msra, description: null, enabled: true, name: 920201.auto.yaml}
+tests:
+- stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
+        headers: {
+          Host: localhost,
+          User-Agent: AppleWebKit Android,
+          Range: bytes=1-11-11-11-11-11-11-11-11-11-11-11-11-11-11-11-11-11-11-11-11-11-11-11-11-11-11-11-11-11-11-11-11-11-11-11-11-11-11-11-11-11-11-11-11-11-11-11-11-11-11-11-11-11-11-11-11-11-11-11-11-11-11-1
+          }
+        method: GET
+        port: 80
+        protocol: http
+        uri: /abc.pdf
+        version: HTTP/1.1
+      output:
+        status: [403, 405]
+  test_title: 920201-0-auto
