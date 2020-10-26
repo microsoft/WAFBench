@@ -2,8 +2,8 @@
 
 ## Test cases summary
 
-Total test cases: 539
-Coverage: 168 supported rules / 219 total rules
+Total test cases: 542
+Coverage: 169 supported rules / 219 total rules
 
 | rule_id |                                type | white-box_spiderlabs_count | white-box_autogen_count | black-box_spiderlabs_count | black-box_autogen_count |
 |--------:|------------------------------------:|---------------------------:|------------------------:|---------------------------:|------------------------:|
@@ -27,6 +27,7 @@ Coverage: 168 supported rules / 219 total rules
 |  920220 |                PROTOCOL-ENFORCEMENT |                          0 |                       0 |                          2 |                       2 |
 |  920230 |                PROTOCOL-ENFORCEMENT |                          0 |                       0 |                          2 |                       2 |
 |  920240 |                PROTOCOL-ENFORCEMENT |                          0 |                       0 |                          2 |                       0 |
+|  920250 |                PROTOCOL-ENFORCEMENT |                          0 |                       0 |                          3 |                       0 |
 |  920260 |                PROTOCOL-ENFORCEMENT |                          0 |                       0 |                          2 |                       2 |
 |  920270 |                PROTOCOL-ENFORCEMENT |                          0 |                       0 |                          2 |                       2 |
 |  920271 |                PROTOCOL-ENFORCEMENT |                          0 |                       0 |                          2 |                       2 |
