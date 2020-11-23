@@ -81,6 +81,34 @@ Black-box test does not require modifying ModSecurity configuration or importing
 python ./ftw_compatible_tool/main.py -d test.db -x "load example.yaml | gen | start hostname:port | report | exit"
 ```
 
+### Black-box Test over HTTP
+
+You can test target server using FTW-Compatible over HTTP. 
+
+First, start the HTTP server
+```bash
+cd ftw_compatible_tool
+gunicorn --bind 0.0.0.0:5000 web_interface:app
+```
+
+Then, send a HTTP GET request to the host running the HTTP server
+```bash
+curl --request GET \
+  --url host.server \
+  --form hostname=http://netsys44:28080 \
+  --form file=test-1-2kb-packets.yaml
+```
+
+The server will return a json contains both test title and HTTP status code
+```json
+[
+  {
+    "status": [403],
+    "title": "913100-1"
+  }
+]
+```
+
 ### FTW-Compatible Tool help
 
 ```bash
