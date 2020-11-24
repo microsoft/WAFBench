@@ -95,7 +95,7 @@ Then, send a HTTP GET request to the host running the HTTP server
 ```bash
 curl --request GET \
   --url host.server \
-  --form hostname=http://netsys44:28080 \
+  --form hostname=http://example.com:8080 \
   --form file=test-1-2kb-packets.yaml
 ```
 
