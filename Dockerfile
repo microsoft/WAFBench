@@ -21,3 +21,5 @@ RUN \
     ln -sf /WAFBench/ftw_compatible_tool/main.py /bin/ftw_compatible_tool && \
     chmod 744 /bin/ftw_compatible_tool
 
+#  Install Gunicorn
+RUN apt-get install -y gunicorn
