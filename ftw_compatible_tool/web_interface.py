@@ -70,14 +70,12 @@ def execute():
     json_result = []
     conn = sqlite3.connect(result_name)
     c = conn.cursor()
-    c.execute('SELECT test_title, output FROM Traffic')
+    c.execute('SELECT test_title, testing_result FROM Traffic')
     for row in c:
-        test_title, output = row
-        # this is necessary because output col in db use
-        # single quotation mark, which is not a valid json format
-        output = output.replace("\'", "\"")
-        payload = json.loads(output)
+        test_title, testing_result = row
+        payload = {}
         payload['title'] = test_title
+        payload['result'] = testing_result
         json_result.append(payload)
 
     # clean up
