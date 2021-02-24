@@ -1,4 +1,5 @@
 import os
+import re
 import time
 import subprocess
 import json
@@ -66,16 +67,19 @@ def execute():
         shutil.rmtree(yaml_path)
         return 'Failed to retrieve result files', 500
 
+    # regex to match status code in raw response
+    p = re.compile('HTTP\/\d\.\d (\d{3})')
+
     # preparing json return
     json_result = []
     conn = sqlite3.connect(result_name)
     c = conn.cursor()
-    c.execute('SELECT test_title, testing_result FROM Traffic')
+    c.execute('SELECT test_title, raw_response FROM Traffic')
     for row in c:
-        test_title, testing_result = row
+        test_title, raw_response = row
         payload = {}
         payload['title'] = test_title
-        payload['result'] = testing_result
+        payload['result'] = p.match(raw_response).groups()[0]
         json_result.append(payload)
 
     # clean up
