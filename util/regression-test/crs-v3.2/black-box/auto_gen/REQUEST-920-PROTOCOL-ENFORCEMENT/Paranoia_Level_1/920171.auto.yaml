@@ -1,14 +1,25 @@
-meta: {author: msra, description: null, enabled: true, name: 920171.auto.yaml}
+meta:
+  author: msra
+  enabled: true
+  name: 920171.auto.yaml
+  description: ""
 tests:
-- stages:
+- test_title: 920171-0-auto
+  desc: ""
+  stages:
   - stage:
       input:
         dest_addr: 127.0.0.1
-        headers: {Host: localhost, User-Agent: AppleWebKit Android, Transfer-Encoding: identity}
         method: GET
         port: 80
         protocol: http
+        uri: /
         version: HTTP/1.1
+        headers:
+          Host: localhost
+          Transfer-Encoding: identity
+          User-Agent: AppleWebKit Android
       output:
-        status: [403, 405]
-  test_title: 920171-0-auto
+        status:
+        - 403
+        - 405

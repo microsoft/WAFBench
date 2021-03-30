@@ -1,42 +1,62 @@
-meta: {author: msra, description: null, enabled: true, name: 942170.auto.yaml}
+meta:
+  author: msra
+  enabled: true
+  name: 942170.auto.yaml
+  description: ""
 tests:
-- stages:
+- test_title: 942170-2-auto
+  desc: ""
+  stages:
   - stage:
       input:
         dest_addr: 127.0.0.1
-        headers: {Host: localhost}
         method: GET
         port: 80
         protocol: http
         uri: /?e_/-%5B/%3B%0C%0D%09%0B%0Bif%09%20%0A%28%0C%0D%0D%20%09%0A%20%20%0A%28%0B%09%09%20%0B%0A%0C%0B%0B%0CaB.%7BS/k=nsNu5MP
         version: HTTP/1.1
+        headers:
+          Host: localhost
       output:
-        status: [403]
-  test_title: 942170-2-auto
-- stages:
+        status:
+        - 403
+- test_title: 942170-3-auto
+  desc: ""
+  stages:
   - stage:
       input:
         dest_addr: 127.0.0.1
-        headers: {Host: localhost}
         method: GET
         port: 80
         protocol: http
         uri: /?UD6=j%3Br%26.l.SELECT%09%20%0D%0B%09IF%09%0C%0D%0A%0D%0B%28%09%0A%20%0B%0A%20yPb%246%24I%21uLj
         version: HTTP/1.1
+        headers:
+          Host: localhost
       output:
-        status: [403]
-  test_title: 942170-3-auto
-- stages:
+        status:
+        - 403
+- test_title: 942170-4-auto
+  desc: ""
+  stages:
   - stage:
       input:
-        data: "<?xml version=\"1.0\"?><Foo_key>A?6HyjseLeCT\t\n \nBenCHmARk \n\r(\n\
-          \t\r\t(\t \r \n5cG0</Foo_key>"
         dest_addr: 127.0.0.1
-        headers: {Content-Type: text/xml, Host: localhost}
         method: POST
         port: 80
         protocol: http
+        uri: /
         version: HTTP/1.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        data:
+        - "<?xml version=\"1.0\"?><Foo_key>A?6HyjseLeCT\t"
+        - ' '
+        - 'BenCHmARk '
+        - "\r("
+        - "\t\r\t(\t \r "
+        - 5cG0</Foo_key>
       output:
-        status: [403]
-  test_title: 942170-4-auto
+        status:
+        - 403

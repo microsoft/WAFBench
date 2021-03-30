@@ -1,65 +1,91 @@
-meta: {author: msra, description: null, enabled: true, name: 933100.auto.yaml}
+meta:
+  author: msra
+  enabled: true
+  name: 933100.auto.yaml
+  description: ""
 tests:
-- stages:
+- test_title: 933100-0-auto
+  desc: ""
+  stages:
   - stage:
       input:
         dest_addr: 127.0.0.1
-        headers: {Cookie: "G=gn`ijU'Tc[/php]\r", Host: localhost}
         method: GET
         port: 80
         protocol: http
+        uri: /
         version: HTTP/1.1
+        headers:
+          Cookie: "G=gn`ijU'Tc[/php]\r"
+          Host: localhost
       output:
-        status: [403]
-  test_title: 933100-0-auto
-- stages:
+        status:
+        - 403
+- test_title: 933100-1-auto
+  desc: ""
+  stages:
   - stage:
       input:
         dest_addr: 127.0.0.1
-        headers: {Cookie: '8lv<?~rEP9dZwb&=BPQpNLPC', Host: localhost}
         method: GET
         port: 80
         protocol: http
+        uri: /
         version: HTTP/1.1
+        headers:
+          Cookie: 8lv<?~rEP9dZwb&=BPQpNLPC
+          Host: localhost
       output:
-        status: [403]
-  test_title: 933100-1-auto
-- stages:
+        status:
+        - 403
+- test_title: 933100-2-auto
+  desc: ""
+  stages:
   - stage:
       input:
         dest_addr: 127.0.0.1
-        headers: {Host: localhost}
         method: GET
         port: 80
         protocol: http
         uri: /?%0C_%3A%7C%5Bphp%5D%5ElUk%40gf=uLOXa6_
         version: HTTP/1.1
+        headers:
+          Host: localhost
       output:
-        status: [403]
-  test_title: 933100-2-auto
-- stages:
+        status:
+        - 403
+- test_title: 933100-3-auto
+  desc: ""
+  stages:
   - stage:
       input:
         dest_addr: 127.0.0.1
-        headers: {Host: localhost}
         method: GET
         port: 80
         protocol: http
         uri: /?9Ay=-%28%2A9Y%3C%3F%7DfJ%28
         version: HTTP/1.1
+        headers:
+          Host: localhost
       output:
-        status: [403]
-  test_title: 933100-3-auto
-- stages:
+        status:
+        - 403
+- test_title: 933100-4-auto
+  desc: ""
+  stages:
   - stage:
       input:
-        data: "<?xml version=\"1.0\"?><Foo_key>+[`\t]R9\t[php]G</Foo_key>"
         dest_addr: 127.0.0.1
-        headers: {Content-Type: text/xml, Host: localhost}
         method: POST
         port: 80
         protocol: http
+        uri: /
         version: HTTP/1.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        data:
+        - "<?xml version=\"1.0\"?><Foo_key>+[`\t]R9\t[php]G</Foo_key>"
       output:
-        status: [403]
-  test_title: 933100-4-auto
+        status:
+        - 403

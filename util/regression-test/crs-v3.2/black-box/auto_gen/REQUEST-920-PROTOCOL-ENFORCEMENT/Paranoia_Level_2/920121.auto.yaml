@@ -1,17 +1,33 @@
-meta: {author: msra, description: null, enabled: true, name: 920121.auto.yaml}
+meta:
+  author: msra
+  enabled: true
+  name: 920121.auto.yaml
+  description: ""
 tests:
-- stages:
+- test_title: 920121-0-auto
+  desc: ""
+  stages:
   - stage:
       input:
-        data: ['------abc', 'Content-Disposition: form-data; name="files[]"; filename="%26apos%3B"',
-          'Content-Type: text/plain', '', 'Content ', '', '------abc--']
         dest_addr: 127.0.0.1
-        headers: {Cache-Control: no-cache, Content-Type: multipart/form-data; boundary=----abc,
-          Host: localhost, User-Agent: AppleWebKit Android}
         method: POST
         port: 80
         protocol: http
+        uri: /
         version: HTTP/1.1
+        headers:
+          Cache-Control: no-cache
+          Content-Type: multipart/form-data; boundary=----abc
+          Host: localhost
+          User-Agent: AppleWebKit Android
+        data:
+        - '------abc'
+        - 'Content-Disposition: form-data; name="files[]"; filename="%26apos%3B"'
+        - 'Content-Type: text/plain'
+        - ""
+        - 'Content '
+        - ""
+        - '------abc--'
       output:
-        status: [403]
-  test_title: 920121-0-auto
+        status:
+        - 403

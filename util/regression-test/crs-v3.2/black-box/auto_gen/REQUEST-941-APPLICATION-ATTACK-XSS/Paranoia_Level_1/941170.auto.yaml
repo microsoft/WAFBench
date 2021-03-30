@@ -1,28 +1,38 @@
-meta: {author: msra, description: null, enabled: true, name: 941170.auto.yaml}
+meta:
+  author: msra
+  enabled: true
+  name: 941170.auto.yaml
+  description: ""
 tests:
-- stages:
+- test_title: 941170-4-auto
+  desc: ""
+  stages:
   - stage:
       input:
         dest_addr: 127.0.0.1
-        headers: {Host: localhost}
         method: GET
         port: 80
         protocol: http
         uri: /?x%60b9E%40%23%21i%27%2B%2B%0D%3C%28%26%5D%3B%25m%0B%5B%7E%5C%3E%5Cp%0B%0A%3C%5D%7D.%24%3Eo%5B%7C%22%09%22%3F%22%7D%28%3Art%22.%3D%3A%7B-%7B%0A%3F%26.%5D-%7B.%2B%7E%0B%20%2Cu%26r%2B%3E%7D%26%27.%3E%3A%7E%5El%09oo%28%3Du%7BU=FzIko
         version: HTTP/1.1
+        headers:
+          Host: localhost
       output:
-        status: [403]
-  test_title: 941170-4-auto
-- stages:
+        status:
+        - 403
+- test_title: 941170-5-auto
+  desc: ""
+  stages:
   - stage:
       input:
         dest_addr: 127.0.0.1
-        headers: {Host: localhost}
         method: GET
         port: 80
         protocol: http
         uri: /?APNZBu1F=SOEQpH%40-%21%24%5B%0C%0D%2Bi%60%0B%2Bm%21p%2B%3C%5D%5C%20%3Eo/%0D%3F%26%7Br%27%7E%23%5D%7Ct%2A%5C%27l
         version: HTTP/1.1
+        headers:
+          Host: localhost
       output:
-        status: [403]
-  test_title: 941170-5-auto
+        status:
+        - 403

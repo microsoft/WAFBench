@@ -1,43 +1,58 @@
-meta: {author: msra, description: null, enabled: true, name: 942280.auto.yaml}
+meta:
+  author: msra
+  enabled: true
+  name: 942280.auto.yaml
+  description: ""
 tests:
-- stages:
+- test_title: 942280-2-auto
+  desc: ""
+  stages:
   - stage:
       input:
         dest_addr: 127.0.0.1
-        headers: {Host: localhost}
         method: GET
         port: 80
         protocol: http
         uri: /?3%2CL%3Bl/%3EWAITfoR%0C%20%20dELAy%27%2222Et%7D=ShimEwi8bz
         version: HTTP/1.1
+        headers:
+          Host: localhost
       output:
-        status: [403]
-  test_title: 942280-2-auto
-- stages:
+        status:
+        - 403
+- test_title: 942280-3-auto
+  desc: ""
+  stages:
   - stage:
       input:
         dest_addr: 127.0.0.1
-        headers: {Host: localhost}
         method: GET
         port: 80
         protocol: http
         uri: /?m8yQN1R3S=w%3B9%0C%3BshutdoWn%09%7B%7E%2CY%2Ai
         version: HTTP/1.1
+        headers:
+          Host: localhost
       output:
-        status: [403]
-  test_title: 942280-3-auto
-- stages:
+        status:
+        - 403
+- test_title: 942280-4-auto
+  desc: ""
+  stages:
   - stage:
       input:
-        data: '<?xml version="1.0"?><Foo_key>eBaWaITFor
-
-          DeLaY''```''"8,6</Foo_key>'
         dest_addr: 127.0.0.1
-        headers: {Content-Type: text/xml, Host: localhost}
         method: POST
         port: 80
         protocol: http
+        uri: /
         version: HTTP/1.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        data:
+        - <?xml version="1.0"?><Foo_key>eBaWaITFor
+        - DeLaY'```'"8,6</Foo_key>
       output:
-        status: [403]
-  test_title: 942280-4-auto
+        status:
+        - 403

@@ -1,15 +1,22 @@
-meta: {author: msra, description: null, enabled: true, name: 921150.auto.yaml}
+meta:
+  author: msra
+  enabled: true
+  name: 921150.auto.yaml
+  description: ""
 tests:
-- stages:
+- test_title: 921150-0-auto
+  desc: ""
+  stages:
   - stage:
       input:
         dest_addr: 127.0.0.1
-        headers: {Host: localhost}
         method: GET
         port: 80
         protocol: http
         uri: /?2UXP%0D%3D.%3C%26=ojzVk
         version: HTTP/1.1
+        headers:
+          Host: localhost
       output:
-        status: [403]
-  test_title: 921150-0-auto
+        status:
+        - 403

@@ -1,65 +1,91 @@
-meta: {author: msra, description: null, enabled: true, name: 932140.auto.yaml}
+meta:
+  author: msra
+  enabled: true
+  name: 932140.auto.yaml
+  description: ""
 tests:
-- stages:
+- test_title: 932140-0-auto
+  desc: ""
+  stages:
   - stage:
       input:
         dest_addr: 127.0.0.1
-        headers: {Cookie: 'Jxvn8DxjZf=if not cmdextversion*fS:NGfn', Host: localhost}
         method: GET
         port: 80
         protocol: http
+        uri: /
         version: HTTP/1.1
+        headers:
+          Cookie: Jxvn8DxjZf=if not cmdextversion*fS:NGfn
+          Host: localhost
       output:
-        status: [403]
-  test_title: 932140-0-auto
-- stages:
+        status:
+        - 403
+- test_title: 932140-1-auto
+  desc: ""
+  stages:
   - stage:
       input:
         dest_addr: 127.0.0.1
-        headers: {Cookie: if defined=B_, Host: localhost}
         method: GET
         port: 80
         protocol: http
+        uri: /
         version: HTTP/1.1
+        headers:
+          Cookie: if defined=B_
+          Host: localhost
       output:
-        status: [403]
-  test_title: 932140-1-auto
-- stages:
+        status:
+        - 403
+- test_title: 932140-2-auto
+  desc: ""
+  stages:
   - stage:
       input:
         dest_addr: 127.0.0.1
-        headers: {Host: localhost}
         method: GET
         port: 80
         protocol: http
         uri: /?%3Fif%20not%20defined=10Y
         version: HTTP/1.1
+        headers:
+          Host: localhost
       output:
-        status: [403]
-  test_title: 932140-2-auto
-- stages:
+        status:
+        - 403
+- test_title: 932140-3-auto
+  desc: ""
+  stages:
   - stage:
       input:
         dest_addr: 127.0.0.1
-        headers: {Host: localhost}
         method: GET
         port: 80
         protocol: http
         uri: /?AelPY6U1=if/i%20errorlevel
         version: HTTP/1.1
+        headers:
+          Host: localhost
       output:
-        status: [403]
-  test_title: 932140-3-auto
-- stages:
+        status:
+        - 403
+- test_title: 932140-4-auto
+  desc: ""
+  stages:
   - stage:
       input:
-        data: <?xml version="1.0"?><Foo_key>for/rN %%ym.|?|- in([b)do5jT4</Foo_key>
         dest_addr: 127.0.0.1
-        headers: {Content-Type: text/xml, Host: localhost}
         method: POST
         port: 80
         protocol: http
+        uri: /
         version: HTTP/1.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        data:
+        - <?xml version="1.0"?><Foo_key>for/rN %%ym.|?|- in([b)do5jT4</Foo_key>
       output:
-        status: [403]
-  test_title: 932140-4-auto
+        status:
+        - 403

@@ -1,29 +1,46 @@
-meta: {author: msra, description: null, enabled: true, name: 941370.auto.yaml}
+meta:
+  author: msra
+  enabled: true
+  name: 941370.auto.yaml
+  description: ""
 tests:
-- stages:
+- test_title: 941370-2-auto
+  desc: ""
+  stages:
   - stage:
       input:
         dest_addr: 127.0.0.1
-        headers: {Host: localhost}
         method: GET
         port: 80
         protocol: http
         uri: /?eiIvoRtnxc=%2B%09g%3BY4d%0CO1window%0B%0A%0C%0D%20%0A%0C%0D%09%29%29%29.%09%20%0C%0Cdocument%3AtN%3A%7Ea%0Bb%7CH
         version: HTTP/1.1
+        headers:
+          Host: localhost
       output:
-        status: [403]
-  test_title: 941370-2-auto
-- stages:
+        status:
+        - 403
+- test_title: 941370-3-auto
+  desc: ""
+  stages:
   - stage:
       input:
-        data: "<?xml version=\"1.0\"?><Foo_key>mt\"5B-E(ywindow\r\n\r\t\n\n\n\n))))).\
-          \ \tdocument3y'{dp-</Foo_key>"
         dest_addr: 127.0.0.1
-        headers: {Content-Type: text/xml, Host: localhost}
         method: POST
         port: 80
         protocol: http
+        uri: /
         version: HTTP/1.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        data:
+        - "<?xml version=\"1.0\"?><Foo_key>mt\"5B-E(ywindow\r"
+        - "\r\t"
+        - ""
+        - ""
+        - ""
+        - "))))). \tdocument3y'{dp-</Foo_key>"
       output:
-        status: [403]
-  test_title: 941370-3-auto
+        status:
+        - 403

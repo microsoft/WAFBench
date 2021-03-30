@@ -1,43 +1,68 @@
-meta: {author: msra, description: null, enabled: true, name: 941140.auto.yaml}
+meta:
+  author: msra
+  enabled: true
+  name: 941140.auto.yaml
+  description: ""
 tests:
-- stages:
+- test_title: 941140-4-auto
+  desc: ""
+  stages:
   - stage:
       input:
         dest_addr: 127.0.0.1
-        headers: {Host: localhost}
         method: GET
         port: 80
         protocol: http
         uri: /?%3A5%60%3D/%0B%29%3Cembed%3E85.8A%24=UF1qGfS41x
         version: HTTP/1.1
+        headers:
+          Host: localhost
       output:
-        status: [403]
-  test_title: 941140-4-auto
-- stages:
+        status:
+        - 403
+- test_title: 941140-5-auto
+  desc: ""
+  stages:
   - stage:
       input:
         dest_addr: 127.0.0.1
-        headers: {Host: localhost}
         method: GET
         port: 80
         protocol: http
         uri: /?LYlN=OnIG7Ab%40%220U%0B%0D%0D%0A%0B%0A%0A%0D%0D%0BR%20L%0C%0C%0C%0A%0D%0D%0D%0A%28%20%0C%0B%0C%20%0B%0B%0Bu%7ELmvWI%0A%0A%0C%0D%0D%0AS%0D%0A%09%20%0C%09%0CC%09%0D%0DR%20IP%0A%0CT%09%0A%0B%09%0B%0D%3A%5Dq%25%21kK
         version: HTTP/1.1
+        headers:
+          Host: localhost
       output:
-        status: [403]
-  test_title: 941140-5-auto
-- stages:
+        status:
+        - 403
+- test_title: 941140-6-auto
+  desc: ""
+  stages:
   - stage:
       input:
-        data: "<?xml version=\"1.0\"?><Foo_key>Y2l_l-3U\t\t\nR L\r\t\t\t\t\t ( \n\t\
-          \ \r;%d\ta_(\n\tSC\tR\r \n\n\rI\n\r\n\r\r\r\n P\r\r \n\r \t\n\tT\n\t\r\t\
-          \ \r:J-H}}&amp;FU</Foo_key>"
         dest_addr: 127.0.0.1
-        headers: {Content-Type: text/xml, Host: localhost}
         method: POST
         port: 80
         protocol: http
+        uri: /
         version: HTTP/1.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        data:
+        - "<?xml version=\"1.0\"?><Foo_key>Y2l_l-3U\t\t"
+        - "R L\r\t\t\t\t\t ( "
+        - "\t \r;%d\ta_("
+        - "\tSC\tR\r "
+        - ""
+        - "\rI"
+        - "\r"
+        - "\r\r\r"
+        - " P\r\r "
+        - "\r \t"
+        - "\tT"
+        - "\t\r\t \r:J-H}}&amp;FU</Foo_key>"
       output:
-        status: [403]
-  test_title: 941140-6-auto
+        status:
+        - 403

@@ -1,53 +1,75 @@
-meta: {author: msra, description: null, enabled: true, name: 942160.auto.yaml}
+meta:
+  author: msra
+  enabled: true
+  name: 942160.auto.yaml
+  description: ""
 tests:
-- stages:
+- test_title: 942160-1-auto
+  desc: ""
+  stages:
   - stage:
       input:
         dest_addr: 127.0.0.1
-        headers: {Cookie: "aEfyIcibEncHMArk(\" 4hC,*x\f'&50)}!&X,~=TNaPR", Host: localhost}
         method: GET
         port: 80
         protocol: http
+        uri: /
         version: HTTP/1.1
+        headers:
+          Cookie: "aEfyIcibEncHMArk(\" 4hC,*x\f'&50)}!&X,~=TNaPR"
+          Host: localhost
       output:
-        status: [403]
-  test_title: 942160-1-auto
-- stages:
+        status:
+        - 403
+- test_title: 942160-2-auto
+  desc: ""
+  stages:
   - stage:
       input:
         dest_addr: 127.0.0.1
-        headers: {Host: localhost}
         method: GET
         port: 80
         protocol: http
         uri: /?4%23%5DbeNchmArk%28L9l5%2C%21jwJvN1%29K%28E%3C%0C%5CtkH%3F=FVTKU9O
         version: HTTP/1.1
+        headers:
+          Host: localhost
       output:
-        status: [403]
-  test_title: 942160-2-auto
-- stages:
+        status:
+        - 403
+- test_title: 942160-3-auto
+  desc: ""
+  stages:
   - stage:
       input:
         dest_addr: 127.0.0.1
-        headers: {Host: localhost}
         method: GET
         port: 80
         protocol: http
         uri: /?ZDAK5R=B%29ysLeep%2851%0A%0C%0C%09%29%5DHg%21
         version: HTTP/1.1
+        headers:
+          Host: localhost
       output:
-        status: [403]
-  test_title: 942160-3-auto
-- stages:
+        status:
+        - 403
+- test_title: 942160-4-auto
+  desc: ""
+  stages:
   - stage:
       input:
-        data: "<?xml version=\"1.0\"?><Foo_key>[o8HQ/8sLeEP(197998821\r\n)S</Foo_key>"
         dest_addr: 127.0.0.1
-        headers: {Content-Type: text/xml, Host: localhost}
         method: POST
         port: 80
         protocol: http
+        uri: /
         version: HTTP/1.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        data:
+        - "<?xml version=\"1.0\"?><Foo_key>[o8HQ/8sLeEP(197998821\r"
+        - )S</Foo_key>
       output:
-        status: [403]
-  test_title: 942160-4-auto
+        status:
+        - 403

@@ -1,41 +1,57 @@
-meta: {author: msra, description: null, enabled: true, name: 941300.auto.yaml}
+meta:
+  author: msra
+  enabled: true
+  name: 941300.auto.yaml
+  description: ""
 tests:
-- stages:
+- test_title: 941300-2-auto
+  desc: ""
+  stages:
   - stage:
       input:
         dest_addr: 127.0.0.1
-        headers: {Host: localhost}
         method: GET
         port: 80
         protocol: http
         uri: /?RNf2%3CFx0%3COBJECT%0DrLZ4BLtype%3D.CkI=6y
         version: HTTP/1.1
+        headers:
+          Host: localhost
       output:
-        status: [403]
-  test_title: 941300-2-auto
-- stages:
+        status:
+        - 403
+- test_title: 941300-3-auto
+  desc: ""
+  stages:
   - stage:
       input:
         dest_addr: 127.0.0.1
-        headers: {Host: localhost}
         method: GET
         port: 80
         protocol: http
         uri: /?RP=T%3COBJECT%0DJk%0Badata/%2B%2B/%3Dd%5D%23cyk%22qT%7D
         version: HTTP/1.1
+        headers:
+          Host: localhost
       output:
-        status: [403]
-  test_title: 941300-3-auto
-- stages:
+        status:
+        - 403
+- test_title: 941300-4-auto
+  desc: ""
+  stages:
   - stage:
       input:
-        data: <?xml version="1.0"?><Foo_key>tlv`r&lt;OBJECT/L#type/=)M</Foo_key>
         dest_addr: 127.0.0.1
-        headers: {Content-Type: text/xml, Host: localhost}
         method: POST
         port: 80
         protocol: http
+        uri: /
         version: HTTP/1.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        data:
+        - <?xml version="1.0"?><Foo_key>tlv`r&lt;OBJECT/L#type/=)M</Foo_key>
       output:
-        status: [403]
-  test_title: 941300-4-auto
+        status:
+        - 403

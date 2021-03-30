@@ -1,16 +1,28 @@
-meta: {author: msra, description: null, enabled: true, name: 920341.auto.yaml}
+meta:
+  author: msra
+  enabled: true
+  name: 920341.auto.yaml
+  description: ""
 tests:
-- stages:
+- test_title: 920341-0-auto
+  desc: ""
+  stages:
   - stage:
       input:
-        data: "ab"
+        stop_magic: true
         dest_addr: 127.0.0.1
-        headers: {Host: localhost, User-Agent: AppleWebKit Android, Content-Length: 2}
         method: POST
         port: 80
         protocol: http
+        uri: /
         version: HTTP/1.1
-        stop_magic: true
+        headers:
+          Content-Length: "2"
+          Host: localhost
+          User-Agent: AppleWebKit Android
+        data:
+        - ab
       output:
-        status: [403, 405]
-  test_title: 920341-0-auto
+        status:
+        - 403
+        - 405

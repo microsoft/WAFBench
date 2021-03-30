@@ -1,42 +1,57 @@
-meta: {author: msra, description: null, enabled: true, name: 942430.auto.yaml}
+meta:
+  author: msra
+  enabled: true
+  name: 942430.auto.yaml
+  description: ""
 tests:
-- stages:
+- test_title: 942430-0-auto
+  desc: ""
+  stages:
   - stage:
       input:
         dest_addr: 127.0.0.1
-        headers: {Host: localhost}
         method: GET
         port: 80
         protocol: http
         uri: /?%60L8%7DZ-.A1zYl%5D4D0MG%0A/%3Cw%0CM%2B7gbFB%0D-AO%0DNztF%24BWyplM_%09%27%40WGgIe-I%092%2BzlXPL%0BEmg_%3EdN%5CQADk%23_%0By3id%20dkuH=_qz
         version: HTTP/1.1
+        headers:
+          Host: localhost
       output:
-        status: [403]
-  test_title: 942430-0-auto
-- stages:
+        status:
+        - 403
+- test_title: 942430-1-auto
+  desc: ""
+  stages:
   - stage:
       input:
         dest_addr: 127.0.0.1
-        headers: {Host: localhost}
         method: GET
         port: 80
         protocol: http
         uri: /?5=M%3B%2A_j%0AR3%3Fb62s%7D3f%2C1vHLAUO%23R%24GlvH9%2CDn6%3CN3f%22FU5U%0DwQ%7Bu9dG/f8%7Bm%2676jDMd3%2Ci%40yOwsv5yZ5%C2%B4_G7aO-G%2CUldSS3aB57
         version: HTTP/1.1
+        headers:
+          Host: localhost
       output:
-        status: [403]
-  test_title: 942430-1-auto
-- stages:
+        status:
+        - 403
+- test_title: 942430-2-auto
+  desc: ""
+  stages:
   - stage:
       input:
-        data: "<?xml version=\"1.0\"?><Foo_key>`L&amp;wa.-JVR&#180;jLPJqdP|O1~$0RVi2Cf\r\
-          &#8216;,Icc^N~GjB:GWNObzi;\"mE7B7mu6h$RvE0t&amp;xJ\\geu72yYz\r0E</Foo_key>"
         dest_addr: 127.0.0.1
-        headers: {Content-Type: text/xml, Host: localhost}
         method: POST
         port: 80
         protocol: http
+        uri: /
         version: HTTP/1.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        data:
+        - "<?xml version=\"1.0\"?><Foo_key>`L&amp;wa.-JVR&#180;jLPJqdP|O1~$0RVi2Cf\r&#8216;,Icc^N~GjB:GWNObzi;\"mE7B7mu6h$RvE0t&amp;xJ\\geu72yYz\r0E</Foo_key>"
       output:
-        status: [403]
-  test_title: 942430-2-auto
+        status:
+        - 403
