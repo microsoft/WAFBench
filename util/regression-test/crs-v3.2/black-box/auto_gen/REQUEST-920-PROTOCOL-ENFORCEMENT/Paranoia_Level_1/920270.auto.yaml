@@ -1,28 +1,38 @@
-meta: {author: msra, description: null, enabled: true, name: 920270.auto.yaml}
+meta:
+  author: msra
+  enabled: true
+  name: 920270.auto.yaml
+  description: ""
 tests:
-- stages:
+- test_title: 920270-2-auto
+  desc: ""
+  stages:
   - stage:
       input:
         dest_addr: 127.0.0.1
-        headers: {Host: localhost}
         method: GET
         port: 80
         protocol: http
         uri: /?tlSiCz=%00%00%00%00%00%00%00%00%00%00%00
         version: HTTP/1.1
+        headers:
+          Host: localhost
       output:
-        status: [403]
-  test_title: 920270-2-auto
-- stages:
+        status:
+        - 403
+- test_title: 920270-3-auto
+  desc: ""
+  stages:
   - stage:
       input:
         dest_addr: 127.0.0.1
-        headers: {Host: localhost}
         method: GET
         port: 80
         protocol: http
         uri: /?%00%00%00%00%00%00%00%00%00%00%00=DuKHW
         version: HTTP/1.1
+        headers:
+          Host: localhost
       output:
-        status: [403]
-  test_title: 920270-3-auto
+        status:
+        - 403

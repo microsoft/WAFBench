@@ -1,44 +1,57 @@
-meta: {author: msra, description: Description, enabled: true, name: EXAMPLE.yaml}
+meta:
+  author: msra
+  enabled: true
+  name: EXAMPLE.yaml
+  description: Description
 tests:
-- stages:
+- test_title: 941330-1
+  desc: ""
+  stages:
   - stage:
       input:
         dest_addr: 127.0.0.1
-        headers: {Host: localhost}
         method: GET
         port: 80
         protocol: http
         uri: /?HLx%204h%7DQ%27%20iN9kl%5C%5Cu006f%5C%5Cu0063A%5C%5CU0074I%5C%5CU006FnX%24u%5B%28p%7E%3BB%3D%3F-.-e%28t%2C=soHR8gHKEY
         version: HTTP/1.1
+        headers:
+          Host: localhost
       output:
         status:
         - 403
-  test_title: 941330-1
-- stages:
+- test_title: 941330-2
+  desc: ""
+  stages:
   - stage:
       input:
         dest_addr: 127.0.0.1
-        headers: {Host: localhost}
         method: GET
         port: 80
         protocol: http
         uri: /?J9NNVOm=m%5ER%3Bv%29%3C%09G%22%20%20%20%20%20%20%20%20In%22%3C%0Cq6BA%3F5u%5C%5CU006f%5C%5Cu006ee%5C%5Cu0072r%5C%5CU006F%5C%5CU0072tV%22%22U%3DqV%2AaS
         version: HTTP/1.1
+        headers:
+          Host: localhost
       output:
         status:
         - 403
-  test_title: 941330-2
-- stages:
+- test_title: 941330-3
+  desc: ""
+  stages:
   - stage:
       input:
-        data: <?xml version="1.0"?><Foo_key>" c61/-"          iN*KphvS\\u006cO\\u0063\\u0061TI\\U006F\\U006e&gt;?Sa;O=R6Oe9V'D&lt;</Foo_key>
         dest_addr: 127.0.0.1
-        headers: {Content-Type: text/xml, Host: localhost}
         method: POST
         port: 80
         protocol: http
+        uri: /
         version: HTTP/1.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        data:
+        - <?xml version="1.0"?><Foo_key>" c61/-"          iN*KphvS\\u006cO\\u0063\\u0061TI\\U006F\\U006e&gt;?Sa;O=R6Oe9V'D&lt;</Foo_key>
       output:
         status:
         - 403
-  test_title: 941330-3

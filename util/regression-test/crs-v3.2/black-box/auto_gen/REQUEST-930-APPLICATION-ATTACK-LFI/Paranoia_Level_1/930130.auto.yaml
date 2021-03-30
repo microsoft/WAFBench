@@ -1,50 +1,57 @@
-meta: {author: msra, description: null, enabled: true, name: 930130.auto.yaml}
+meta:
+  author: msra
+  enabled: true
+  name: 930130.auto.yaml
+  description: ""
 tests:
-- stages:
+- test_title: 930130-1-auto
+  desc: ""
+  stages:
   - stage:
       input:
         dest_addr: 127.0.0.1
-        headers:
-          Host: localhost
-          User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:21.0) Gecko/20100101 Firefox/21.0
         method: GET
         port: 80
         protocol: http
         uri: /test.cshrc
         version: HTTP/1.1
-      output:
-        status:
-        - 403
-  test_title: 930130-1-auto
-- stages:
-  - stage:
-      input:
-        dest_addr: 127.0.0.1
         headers:
           Host: localhost
           User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:21.0) Gecko/20100101 Firefox/21.0
+      output:
+        status:
+        - 403
+- test_title: 930130-2-auto
+  desc: ""
+  stages:
+  - stage:
+      input:
+        dest_addr: 127.0.0.1
         method: GET
         port: 80
         protocol: http
         uri: /test.php_history
         version: HTTP/1.1
+        headers:
+          Host: localhost
+          User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:21.0) Gecko/20100101 Firefox/21.0
       output:
         status:
         - 403
-  test_title: 930130-2-auto
-- stages:
+- test_title: 930130-3-auto
+  desc: ""
+  stages:
   - stage:
-        input:
-          dest_addr: 127.0.0.1
-          headers:
-            Host: localhost
-            User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:21.0) Gecko/20100101 Firefox/21.0
-          method: GET
-          port: 80
-          protocol: http
-          uri: /.ssh/identity.pub
-          version: HTTP/1.1
-        output:
-          status:
-          - 403
-  test_title: 930130-3-auto
+      input:
+        dest_addr: 127.0.0.1
+        method: GET
+        port: 80
+        protocol: http
+        uri: /.ssh/identity.pub
+        version: HTTP/1.1
+        headers:
+          Host: localhost
+          User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:21.0) Gecko/20100101 Firefox/21.0
+      output:
+        status:
+        - 403

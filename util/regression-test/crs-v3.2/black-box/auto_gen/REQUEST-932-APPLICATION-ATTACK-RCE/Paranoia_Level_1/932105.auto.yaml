@@ -1,43 +1,60 @@
-meta: {author: msra, description: null, enabled: true, name: 932105.auto.yaml}
+meta:
+  author: msra
+  enabled: true
+  name: 932105.auto.yaml
+  description: ""
 tests:
-- stages:
+- test_title: 932105-2-auto
+  desc: ""
+  stages:
   - stage:
       input:
         dest_addr: 127.0.0.1
-        headers: {Host: localhost}
         method: GET
         port: 80
         protocol: http
         uri: /?%0B%3E%28%0B%0A%0A%0C%0D%0B%0A%7B%20%0A%0B%0D%0B%09%20%0B%0B%0A%28%20%0C%09%0A%09%0D%0A%09%0B%20%0A%0B%09%28%0A%20%20%20%27%2B/%2B%5C%28/%5C%27%5Cw%5C%27g%5C%27%5C%5C%5C%27%5C%5C%22%5Cet%7CE%60%7E=8IO4mYbpdK
         version: HTTP/1.1
+        headers:
+          Host: localhost
       output:
-        status: [403]
-  test_title: 932105-2-auto
-- stages:
+        status:
+        - 403
+- test_title: 932105-3-auto
+  desc: ""
+  stages:
   - stage:
       input:
         dest_addr: 127.0.0.1
-        headers: {Host: localhost}
         method: GET
         port: 80
         protocol: http
         uri: /?FJ=%60%0CsGRA%7B%0A%0A%09%0C%0D%0D%09%0C%0BsotH%3D%24%5Dx%5Eq%28%09%0D%24%0D%0B%09%0D%28%20%0A%0C%0C%0C%0A%0C%0C%20%20%0C%0B%0C%09%27%27%22%22%27%22%22%22%22%27%22%5Cro%5C%27%5C%22%5Cu%5C%27%22%5Ct%5C%5Ce%09%3B1o%5CV
         version: HTTP/1.1
+        headers:
+          Host: localhost
       output:
-        status: [403]
-  test_title: 932105-3-auto
-- stages:
+        status:
+        - 403
+- test_title: 932105-4-auto
+  desc: ""
+  stages:
   - stage:
       input:
-        data: "<?xml version=\"1.0\"?><Foo_key>\r%8Qv; \r\t\n\t \r \n \r(  \t \t\n\
-          \r\t\"''\"()\\**/\"\\\\'\\\\\\'\"\"v\"\"\\\"\\\\\\'\"i'\"\\\"\\\\\"\"\\\
-          g''\\\\'\"\"r/</Foo_key>"
         dest_addr: 127.0.0.1
-        headers: {Content-Type: text/xml, Host: localhost}
         method: POST
         port: 80
         protocol: http
+        uri: /
         version: HTTP/1.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        data:
+        - "<?xml version=\"1.0\"?><Foo_key>\r%8Qv; \r\t"
+        - "\t \r "
+        - " \r(  \t \t"
+        - "\r\t\"''\"()\\**/\"\\\\'\\\\\\'\"\"v\"\"\\\"\\\\\\'\"i'\"\\\"\\\\\"\"\\g''\\\\'\"\"r/</Foo_key>"
       output:
-        status: [403]
-  test_title: 932105-4-auto
+        status:
+        - 403

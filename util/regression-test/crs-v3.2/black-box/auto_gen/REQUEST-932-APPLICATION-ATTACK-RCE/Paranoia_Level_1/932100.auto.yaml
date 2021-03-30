@@ -1,42 +1,58 @@
-meta: {author: msra, description: null, enabled: true, name: 932100.auto.yaml}
+meta:
+  author: msra
+  enabled: true
+  name: 932100.auto.yaml
+  description: ""
 tests:
-- stages:
+- test_title: 932100-2-auto
+  desc: ""
+  stages:
   - stage:
       input:
         dest_addr: 127.0.0.1
-        headers: {Host: localhost}
         method: GET
         port: 80
         protocol: http
         uri: /?%5Ct%40E%27-%24%28%28%0D%20%0C%0A%0D%0A%0C%0C%28%0B%20%20%0C%20%0D%0B%09%20%21%0A%20%0B%0B%0D%20%20CVpT%3D%24fb%7B%2207%0D%7B%24%21%09%0B%0D%0C%0A%0D%21%20%09%0B%09%20%0C%20%0C%0D%20%7B%0D%0A%0A%0A%0D%27%22%27%27%22%5C%3F%28%29/%5C%5C%22%27%5C%5Cb%5C%27a%5C%22%27%27%27%27%5C%27%5Ct%5C%27%22%22%5C%5C%27%5Cc%5C%22%27h%27%22%27%5C%27%3E_tk6%7Cr79SV%5DW%29%7E%0D8_K=ENSzqi
         version: HTTP/1.1
+        headers:
+          Host: localhost
       output:
-        status: [403]
-  test_title: 932100-2-auto
-- stages:
+        status:
+        - 403
+- test_title: 932100-3-auto
+  desc: ""
+  stages:
   - stage:
       input:
         dest_addr: 127.0.0.1
-        headers: {Host: localhost}
         method: GET
         port: 80
         protocol: http
         uri: /?NsbIaF=z%5Da%21%0A%0A%0B%21%0C%0B%20%0B%0C%20%0C%7B%21%20%0A%09%20%09%0D%0A%0C%0D%09%7B%24%0D%0B%09%0B%0B%0A%0A%28%0D%09%0D%09%20%0A%0A%22%22d%27%5C%22%22m%5C%22%22%5C%27%22%27%22%27e%5Cs%5C%5C%5C%5C%5C%27g%7BPfh6mrR4
         version: HTTP/1.1
+        headers:
+          Host: localhost
       output:
-        status: [403]
-  test_title: 932100-3-auto
-- stages:
+        status:
+        - 403
+- test_title: 932100-4-auto
+  desc: ""
+  stages:
   - stage:
       input:
-        data: "<?xml version=\"1.0\"?><Foo_key>u[BgB*$((\t\tax8uYnE=$!{\t\r  \r \r\
-          \n'''\"'\"'\"'\\)|?++-)/\"''\\\\k'i\"\\'\\\"l\\\\l\\'\\'\\''\\'&lt;PNj4K2w</Foo_key>"
         dest_addr: 127.0.0.1
-        headers: {Content-Type: text/xml, Host: localhost}
         method: POST
         port: 80
         protocol: http
+        uri: /
         version: HTTP/1.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        data:
+        - "<?xml version=\"1.0\"?><Foo_key>u[BgB*$((\t\tax8uYnE=$!{\t\r  \r \r"
+        - '''''''"''"''"''\)|?++-)/"''''\\k''i"\''\"l\\l\''\''\''''\''&lt;PNj4K2w</Foo_key>'
       output:
-        status: [403]
-  test_title: 932100-4-auto
+        status:
+        - 403

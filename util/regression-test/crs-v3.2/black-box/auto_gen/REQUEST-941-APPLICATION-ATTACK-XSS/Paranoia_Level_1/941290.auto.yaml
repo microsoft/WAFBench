@@ -1,53 +1,74 @@
-meta: {author: msra, description: null, enabled: true, name: 941290.auto.yaml}
+meta:
+  author: msra
+  enabled: true
+  name: 941290.auto.yaml
+  description: ""
 tests:
-- stages:
+- test_title: 941290-1-auto
+  desc: ""
+  stages:
   - stage:
       input:
         dest_addr: 127.0.0.1
-        headers: {Cookie: 1xXL<APPLET/(=oxLBysc, Host: localhost}
         method: GET
         port: 80
         protocol: http
+        uri: /
         version: HTTP/1.1
+        headers:
+          Cookie: 1xXL<APPLET/(=oxLBysc
+          Host: localhost
       output:
-        status: [403]
-  test_title: 941290-1-auto
-- stages:
+        status:
+        - 403
+- test_title: 941290-2-auto
+  desc: ""
+  stages:
   - stage:
       input:
         dest_addr: 127.0.0.1
-        headers: {Host: localhost}
         method: GET
         port: 80
         protocol: http
         uri: /?jSNz%3CAPPLET/%3Cy%60w=UFd7W8
         version: HTTP/1.1
+        headers:
+          Host: localhost
       output:
-        status: [403]
-  test_title: 941290-2-auto
-- stages:
+        status:
+        - 403
+- test_title: 941290-3-auto
+  desc: ""
+  stages:
   - stage:
       input:
         dest_addr: 127.0.0.1
-        headers: {Host: localhost}
         method: GET
         port: 80
         protocol: http
         uri: /?0DqvrTuUQ=B%3CAPPLET%2BW-n%29%3D%7B
         version: HTTP/1.1
+        headers:
+          Host: localhost
       output:
-        status: [403]
-  test_title: 941290-3-auto
-- stages:
+        status:
+        - 403
+- test_title: 941290-4-auto
+  desc: ""
+  stages:
   - stage:
       input:
-        data: <?xml version="1.0"?><Foo_key> 1&lt;APPLET/</Foo_key>
         dest_addr: 127.0.0.1
-        headers: {Content-Type: text/xml, Host: localhost}
         method: POST
         port: 80
         protocol: http
+        uri: /
         version: HTTP/1.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        data:
+        - <?xml version="1.0"?><Foo_key> 1&lt;APPLET/</Foo_key>
       output:
-        status: [403]
-  test_title: 941290-4-auto
+        status:
+        - 403

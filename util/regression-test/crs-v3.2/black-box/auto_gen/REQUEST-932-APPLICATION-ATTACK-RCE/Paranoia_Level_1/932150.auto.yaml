@@ -1,42 +1,59 @@
-meta: {author: msra, description: null, enabled: true, name: 932150.auto.yaml}
+meta:
+  author: msra
+  enabled: true
+  name: 932150.auto.yaml
+  description: ""
 tests:
-- stages:
+- test_title: 932150-2-auto
+  desc: ""
+  stages:
   - stage:
       input:
         dest_addr: 127.0.0.1
-        headers: {Host: localhost}
         method: GET
         port: 80
         protocol: http
         uri: /?%0C%0CtZKd%3D%24kx%0D%0B%0B%0B%20%0B%0A%0C%22%22%5C%22%29%5B%28%5D%28/%5C%27%22%5C%5C%27%27%27%27%22v%22%5C%27%5C%5C%5C%5C%5Ci%27%5C%27%22%22pw%22%5C%27%22%22%22%3B%28%0D-4_7%7E=M8RHS0k
         version: HTTP/1.1
+        headers:
+          Host: localhost
       output:
-        status: [403]
-  test_title: 932150-2-auto
-- stages:
+        status:
+        - 403
+- test_title: 932150-3-auto
+  desc: ""
+  stages:
   - stage:
       input:
         dest_addr: 127.0.0.1
-        headers: {Host: localhost}
         method: GET
         port: 80
         protocol: http
         uri: /?4h=%24%21%0C%7B%7B%21%09%0D%0B%0D%0C%09%28%0B%0C%28%0B%0D%0D%0C%09%09%0D%7B%0C%0D%0B%0B%0C%09%27%27%22%27%22%22%22%22%22%5C%22%27%5C%5C%5C%5Ce%27%5C%5C%22%27%27%5Cgr%5C%27%5C%5C%5C%22%22%27e%27%5C%5C%27%5C%22%5Cp%5C%5C%5C%26%3Ft
         version: HTTP/1.1
+        headers:
+          Host: localhost
       output:
-        status: [403]
-  test_title: 932150-3-auto
-- stages:
+        status:
+        - 403
+- test_title: 932150-4-auto
+  desc: ""
+  stages:
   - stage:
       input:
-        data: "<?xml version=\"1.0\"?><Foo_key>\t{$P5TRS_=&lt;Sh&amp;u\n$\n'''\"'''\"\
-          \\'\\\"v\"\\\"i\"'\\p\"'\\w'\\'&amp;brZ*\t_:t$|</Foo_key>"
         dest_addr: 127.0.0.1
-        headers: {Content-Type: text/xml, Host: localhost}
         method: POST
         port: 80
         protocol: http
+        uri: /
         version: HTTP/1.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        data:
+        - "<?xml version=\"1.0\"?><Foo_key>\t{$P5TRS_=&lt;Sh&amp;u"
+        - $
+        - "'''\"'''\"\\'\\\"v\"\\\"i\"'\\p\"'\\w'\\'&amp;brZ*\t_:t$|</Foo_key>"
       output:
-        status: [403]
-  test_title: 932150-4-auto
+        status:
+        - 403

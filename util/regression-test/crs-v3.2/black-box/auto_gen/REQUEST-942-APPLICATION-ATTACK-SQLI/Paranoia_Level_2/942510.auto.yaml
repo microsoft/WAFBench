@@ -1,41 +1,55 @@
-meta: {author: msra, description: null, enabled: true, name: 942510.auto.yaml}
+meta:
+  author: msra
+  enabled: true
+  name: 942510.auto.yaml
+  description: ""
 tests:
-- stages:
+- test_title: 942510-0-auto
+  desc: ""
+  stages:
   - stage:
       input:
         dest_addr: 127.0.0.1
-        headers: {Cookie: "Ww7ExLoNHzGNMukjv6=`-\tW,#\\`P9`++/+/t5N/Y/b/3wqdG==`:l^|7",
-          Host: localhost}
         method: GET
         port: 80
         protocol: http
+        uri: /
         version: HTTP/1.1
+        headers:
+          Cookie: "Ww7ExLoNHzGNMukjv6=`-\tW,#\\`P9`++/+/t5N/Y/b/3wqdG==`:l^|7"
+          Host: localhost
       output:
-        status: [403]
-  test_title: 942510-0-auto
-- stages:
+        status:
+        - 403
+- test_title: 942510-2-auto
+  desc: ""
+  stages:
   - stage:
       input:
         dest_addr: 127.0.0.1
-        headers: {Host: localhost}
         method: GET
         port: 80
         protocol: http
         uri: /?%7E%3EC_%40NA6%60%2B%3C%3C%7B%29%7D%40%3C%7B%609T=8Wii32XZ
         version: HTTP/1.1
+        headers:
+          Host: localhost
       output:
-        status: [403]
-  test_title: 942510-2-auto
-- stages:
+        status:
+        - 403
+- test_title: 942510-3-auto
+  desc: ""
+  stages:
   - stage:
       input:
         dest_addr: 127.0.0.1
-        headers: {Host: localhost}
         method: GET
         port: 80
         protocol: http
         uri: /?OLYAmSMPm=yq%5C%3B9%5Do%6006N%2BQ/j%2BZm5%2B/Uk0249B%2B3R%2B4VEt/2k%2B6%2B%2B%2B%2B/%3D%3D%60%40l%60p
         version: HTTP/1.1
+        headers:
+          Host: localhost
       output:
-        status: [403]
-  test_title: 942510-3-auto
+        status:
+        - 403

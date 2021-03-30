@@ -1,41 +1,57 @@
-meta: {author: msra, description: null, enabled: true, name: 942410.auto.yaml}
+meta:
+  author: msra
+  enabled: true
+  name: 942410.auto.yaml
+  description: ""
 tests:
-- stages:
+- test_title: 942410-2-auto
+  desc: ""
+  stages:
   - stage:
       input:
         dest_addr: 127.0.0.1
-        headers: {Host: localhost}
         method: GET
         port: 80
         protocol: http
         uri: /?yEaRweeK%5D%0A%0A%09%5D%23%25%23%5D%7C%281MyZ=boUmATn
         version: HTTP/1.1
+        headers:
+          Host: localhost
       output:
-        status: [403]
-  test_title: 942410-2-auto
-- stages:
+        status:
+        - 403
+- test_title: 942410-3-auto
+  desc: ""
+  stages:
   - stage:
       input:
         dest_addr: 127.0.0.1
-        headers: {Host: localhost}
         method: GET
         port: 80
         protocol: http
         uri: /?E4w66VJOe=xmltypE%22%7D%7B%5D%3C%26%7B%28%28K%5BjML%29n
         version: HTTP/1.1
+        headers:
+          Host: localhost
       output:
-        status: [403]
-  test_title: 942410-3-auto
-- stages:
+        status:
+        - 403
+- test_title: 942410-4-auto
+  desc: ""
+  stages:
   - stage:
       input:
-        data: <?xml version="1.0"?><Foo_key>naME_cONst$:-&lt;(Hv{Di%d84R</Foo_key>
         dest_addr: 127.0.0.1
-        headers: {Content-Type: text/xml, Host: localhost}
         method: POST
         port: 80
         protocol: http
+        uri: /
         version: HTTP/1.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        data:
+        - <?xml version="1.0"?><Foo_key>naME_cONst$:-&lt;(Hv{Di%d84R</Foo_key>
       output:
-        status: [403]
-  test_title: 942410-4-auto
+        status:
+        - 403

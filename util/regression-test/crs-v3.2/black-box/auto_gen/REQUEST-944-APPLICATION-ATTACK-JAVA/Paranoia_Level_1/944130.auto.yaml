@@ -1,117 +1,163 @@
-meta: {author: msra, description: null, enabled: true, name: 944130.auto.yaml}
+meta:
+  author: msra
+  enabled: true
+  name: 944130.auto.yaml
+  description: ""
 tests:
-- stages:
+- test_title: 944130-0-auto
+  desc: ""
+  stages:
   - stage:
       input:
         dest_addr: 127.0.0.1
-        headers: {Host: localhost}
         method: GET
         port: 80
         protocol: http
         uri: /?wrsR=java.io.bytearrayinputstream
         version: HTTP/1.1
+        headers:
+          Host: localhost
       output:
-        status: [403]
-  test_title: 944130-0-auto
-- stages:
+        status:
+        - 403
+- test_title: 944130-1-auto
+  desc: ""
+  stages:
   - stage:
       input:
         dest_addr: 127.0.0.1
-        headers: {Host: localhost}
         method: GET
         port: 80
         protocol: http
         uri: /?java.io.stringreader=H
         version: HTTP/1.1
+        headers:
+          Host: localhost
       output:
-        status: [403]
-  test_title: 944130-1-auto
-- stages:
+        status:
+        - 403
+- test_title: 944130-2-auto
+  desc: ""
+  stages:
   - stage:
       input:
         dest_addr: 127.0.0.1
-        headers: {Cookie: oKSmHQxH=java.io.pipedoutputstream, Host: localhost}
         method: GET
         port: 80
         protocol: http
+        uri: /
         version: HTTP/1.1
+        headers:
+          Cookie: oKSmHQxH=java.io.pipedoutputstream
+          Host: localhost
       output:
-        status: [403]
-  test_title: 944130-2-auto
-- stages:
+        status:
+        - 403
+- test_title: 944130-3-auto
+  desc: ""
+  stages:
   - stage:
       input:
         dest_addr: 127.0.0.1
-        headers: {Cookie: java.lang.system=fTvp2v, Host: localhost}
         method: GET
         port: 80
         protocol: http
+        uri: /
         version: HTTP/1.1
+        headers:
+          Cookie: java.lang.system=fTvp2v
+          Host: localhost
       output:
-        status: [403]
-  test_title: 944130-3-auto
-- stages:
+        status:
+        - 403
+- test_title: 944130-4-auto
+  desc: ""
+  stages:
   - stage:
       input:
-        data: Foo_key=java.io.filterreader
         dest_addr: 127.0.0.1
-        headers: {Content-Length: 28, Content-Type: application/x-www-form-urlencoded,
-          Host: localhost}
         method: POST
         port: 80
         protocol: http
+        uri: /
         version: HTTP/1.1
+        headers:
+          Content-Length: "28"
+          Content-Type: application/x-www-form-urlencoded
+          Host: localhost
+        data:
+        - Foo_key=java.io.filterreader
       output:
-        status: [403]
-  test_title: 944130-4-auto
-- stages:
+        status:
+        - 403
+- test_title: 944130-5-auto
+  desc: ""
+  stages:
   - stage:
       input:
         dest_addr: 127.0.0.1
-        headers: {Host: localhost}
         method: GET
         port: 80
         protocol: http
         uri: /java.io.bufferedreader
         version: HTTP/1.1
+        headers:
+          Host: localhost
       output:
-        status: [403]
-  test_title: 944130-5-auto
-- stages:
+        status:
+        - 403
+- test_title: 944130-6-auto
+  desc: ""
+  stages:
   - stage:
       input:
         dest_addr: 127.0.0.1
-        headers: {Host: localhost, MZK4M7HlX: java.io.bufferedinputstream}
         method: GET
         port: 80
         protocol: http
+        uri: /
         version: HTTP/1.1
+        headers:
+          Host: localhost
+          MZK4M7HlX: java.io.bufferedinputstream
       output:
-        status: [403]
-  test_title: 944130-6-auto
-- stages:
+        status:
+        - 403
+- test_title: 944130-7-auto
+  desc: ""
+  stages:
   - stage:
       input:
-        data: <?xml version="1.0"?><Foo_key>java.io.inputstream</Foo_key>
         dest_addr: 127.0.0.1
-        headers: {Content-Type: text/xml, Host: localhost}
         method: POST
         port: 80
         protocol: http
+        uri: /
         version: HTTP/1.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        data:
+        - <?xml version="1.0"?><Foo_key>java.io.inputstream</Foo_key>
       output:
-        status: [403]
-  test_title: 944130-7-auto
-- stages:
+        status:
+        - 403
+- test_title: 944130-8-auto
+  desc: ""
+  stages:
   - stage:
       input:
-        data: <?xml version="1.0"?><Foo_key>java.io.reader</Foo_key>
         dest_addr: 127.0.0.1
-        headers: {Content-Type: text/xml, Host: localhost}
         method: POST
         port: 80
         protocol: http
+        uri: /
         version: HTTP/1.1
+        headers:
+          Content-Type: text/xml
+          Host: localhost
+        data:
+        - <?xml version="1.0"?><Foo_key>java.io.reader</Foo_key>
       output:
-        status: [403]
-  test_title: 944130-8-auto
+        status:
+        - 403
