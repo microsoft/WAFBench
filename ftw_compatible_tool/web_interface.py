@@ -92,14 +92,14 @@ def execute():
             response = HTTPResponse(FakeSocket(
                 raw_response.encode('ascii', 'ignore')))
             response.begin()
-            payload["status"] = response.status
+            payload["result"] = response.status
             if response.getheader("x-fd-int-waf-rule-hits"):  # parse AFD's hitrule
                 payload["hitRule"] = response.getheader(
                     "x-fd-int-waf-rule-hits")
             elif response.status == 302 and response.getheader("Location"):
                 res = parse_qs(urlparse(response.getheader("Location")).query)
                 payload["hitRule"] = res["modsec_ruleid"][0].replace('-', ',')
-                payload["status"] = res["status"][0]
+                payload["result"] = res["status"][0]
         json_result.append(payload)
 
     # clean up
