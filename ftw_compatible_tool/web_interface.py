@@ -92,7 +92,7 @@ def execute():
             response = HTTPResponse(FakeSocket(
                 raw_response.encode('ascii', 'ignore')))
             response.begin()
-            payload["result"] = response.status
+            payload["result"] = str(response.status)
             if response.getheader("x-fd-int-waf-rule-hits"):  # parse AFD's hitrule
                 payload["hitRule"] = response.getheader(
                     "x-fd-int-waf-rule-hits")
