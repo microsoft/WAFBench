@@ -98,7 +98,9 @@ def execute():
                     "x-fd-int-waf-rule-hits")
             elif response.status == 302 and response.getheader("Location"):
                 res = parse_qs(urlparse(response.getheader("Location")).query)
-                payload["hitRule"] = res["modsec_ruleid"][0].replace('-', ',')
+                hit_rules = ','.join(reversed(filter(None,
+                                                     res["modsec_ruleid"][0].split("-"))))
+                payload["hitRule"] = hit_rules
                 payload["result"] = res["status"][0]
         json_result.append(payload)
 
