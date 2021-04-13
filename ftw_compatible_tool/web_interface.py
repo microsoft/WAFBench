@@ -9,9 +9,21 @@ from flask import Flask, request, jsonify
 from werkzeug.utils import secure_filename
 import sqlite3
 
+from httplib import HTTPResponse
+from io import BytesIO
+from urlparse import urlparse, parse_qs
+
 
 app = Flask(__name__)
 app.config['UPLOAD_PATH'] = '/tmp'
+
+
+class FakeSocket():
+    def __init__(self, response_bytes):
+        self._file = BytesIO(response_bytes)
+
+    def makefile(self, *args, **kwargs):
+        return self._file
 
 
 @app.route('/', methods=['GET'])
@@ -67,9 +79,6 @@ def execute():
         shutil.rmtree(yaml_path)
         return 'Failed to retrieve result files', 500
 
-    # regex to match status code in raw response
-    p = re.compile('HTTP\/\d\.\d (\d{3})')
-
     # preparing json return
     json_result = []
     conn = sqlite3.connect(result_name)
@@ -79,7 +88,20 @@ def execute():
         test_title, raw_response = row
         payload = {}
         payload['title'] = test_title
-        payload['result'] = p.match(raw_response).groups()[0]
+        if raw_response:  # parse http resposne
+            response = HTTPResponse(FakeSocket(
+                raw_response.encode('ascii', 'ignore')))
+            response.begin()
+            payload["result"] = str(response.status)
+            if response.getheader("x-fd-int-waf-rule-hits"):  # parse AFD's hitrule
+                payload["hitRule"] = response.getheader(
+                    "x-fd-int-waf-rule-hits")
+            elif response.status == 302 and response.getheader("Location"):
+                res = parse_qs(urlparse(response.getheader("Location")).query)
+                hit_rules = ','.join(reversed(filter(None,
+                                                     res["modsec_ruleid"][0].split("-"))))
+                payload["hitRule"] = hit_rules
+                payload["result"] = res["status"][0]
         json_result.append(payload)
 
     # clean up
